@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>I AM NATURE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <section class="hero-section">
+        <div class="hero-logo">I AM NATURE</div>
+        <div class="hero-text-wrapper">
+          <h1>The Earth speaks. Are you Listening?</h1>
+          <p>
+            A journey through 100+ botanicals to restore your physical health
+            and spiritual essence
+          </p>
+          <a href="#" class="cta-button">Download the Full Guide</a>
+        </div>
+      </section>
+    </header>
+
+    <section class="controls">
+      <input type="text" id="searchInput" placeholder="Search by name..." />
+
+      <select id="typeFilter">
+        <option value="All">All Types</option>
+        <option value="Trees">Trees</option>
+        <option value="Herbs">Herbs</option>
+        <option value="Plants/Flowers">Plants/Flowers</option>
+        <option value="Seeds">Seeds</option>
+      </select>
+
+      <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Respiratory">Respiratory</option>
+        <option value="Digestive">Digestive</option>
+        <option value="Immune">Immune</option>
+        <option value="Skin">Skin</option>
+        <option value="Spiritual">Spiritual</option>
+        <option value="Environmental">Environmental</option>
+      </select>
+
+      <button id="resetBtn">Clear Filters</button>
+    </section>
+
+    <section class="origin-story" id="originStory">
+      <div class="story-content">
+        <span class="story-label">Where it began</span>
+        <p>
+          "A plant appeared on my path to work. It pulled me in for three days
+          before I finally listened. That was the beginning of everything."
+        </p>
+        <p class="story-signature">— Nomzamo Mbelebele</p>
+        <a href="journal.html" class="story-read-more">Read the full story →</a>
+      </div>
+    </section>
+
+    <section id="plants">
+      <div id="plantContainer"></div>
+
+      <div id="paginationControls" style="text-align: center; padding: 60px 0">
+        <button
+          id="prevBtn"
+          class="cta-button"
+          style="display: none; margin-right: 15px"
+        >
+          ← Previous
+        </button>
+        <span
+          id="pageIndicator"
+          style="
+            color: #fcf9f0;
+            font-family: Georgia, serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            vertical-align: middle;
+          "
+        ></span>
+        <button
+          id="nextBtn"
+          class="cta-button"
+          style="display: none; margin-left: 15px"
+        >
+          Next →
+        </button>
+      </div>
+    </section>
+
+    <div id="plantModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="modalDetails"></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-top">
+          <h2 class="footer-logo">I AM NATURE</h2>
+          <p class="footer-tagline">Rooted in truth. Guided by experience.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="journal.html">Journal</a>
+          <a href="index.html">Botanicals</a>
+          <a href="contact.html">Contact</a>
+          <a href="#" class="back-to-top">Back to Top ↑</a>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom">
+          <p>© 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.</p>
+          <p class="crafted-text">Crafted with Intention</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

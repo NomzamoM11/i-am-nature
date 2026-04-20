@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact — I AM NATURE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --forest:    #1b3022;
+      --clay:      #8a5a44;
+      --parchment: #fcf9f0;
+      --moss:      #849b84;
+      --umber:     #3e2b1e;
+      --gold:      #d7c091;
+      --sand:      #e5d9b6;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--parchment);
+      color: var(--umber);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background-color: var(--forest);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      color: var(--parchment);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--gold);
+      text-decoration: none;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover { color: var(--parchment); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background-color: var(--forest);
+      text-align: center;
+      padding: 100px 20px 80px;
+      border-bottom: 1px solid rgba(215, 192, 145, 0.2);
+    }
+
+    .page-header .label {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: var(--moss);
+      font-size: 0.78rem;
+      margin-bottom: 20px;
+      animation: fadeUp 1s ease both;
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--parchment);
+      line-height: 1.2;
+      margin-bottom: 20px;
+      animation: fadeUp 1s ease 0.15s both;
+    }
+
+    .page-header p {
+      color: var(--gold);
+      font-style: italic;
+      font-size: 1rem;
+      max-width: 480px;
+      margin: 0 auto;
+      animation: fadeUp 1s ease 0.3s both;
+    }
+
+    /* ── CONTACT WRAPPER ── */
+    .contact-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 90px 30px 80px;
+      animation: fadeUp 1s ease 0.4s both;
+    }
+
+    /* ── INTRO TEXT ── */
+    .contact-intro {
+      text-align: center;
+      margin-bottom: 60px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(138, 90, 68, 0.15);
+    }
+
+    .contact-intro p {
+      font-style: italic;
+      color: var(--umber);
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    /* ── CONTACT CARDS ── */
+    .contact-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .contact-card {
+      background-color: var(--sand);
+      border-radius: 14px;
+      padding: 35px 40px;
+      border-left: 5px solid var(--moss);
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-decoration: none;
+    }
+
+    .contact-card:hover {
+      transform: translateX(6px);
+      box-shadow: 0 8px 30px rgba(71, 45, 33, 0.15);
+    }
+
+    .contact-card-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background-color: var(--moss);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-card-body .card-label {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--moss);
+      margin-bottom: 5px;
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    .contact-card-body .card-value {
+      display: block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--forest);
+      letter-spacing: 0.5px;
+    }
+
+    .contact-card-body .card-note {
+      display: block;
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--clay);
+      margin-top: 4px;
+      opacity: 0.8;
+    }
+
+    /* ── WHAT TO EXPECT ── */
+    .expect-section {
+      background-color: var(--forest);
+      border-radius: 16px;
+      padding: 45px 45px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .expect-section .section-label {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--moss);
+      margin-bottom: 20px;
+    }
+
+    .expect-section h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--parchment);
+      margin-bottom: 30px;
+    }
+
+    .expect-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align: left;
+    }
+
+    .expect-list li {
+      color: var(--gold);
+      font-size: 0.95rem;
+      font-style: italic;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .expect-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--moss);
+      font-size: 0.65rem;
+      top: 5px;
+    }
+
+    /* ── CLOSING NOTE ── */
+    .closing-note {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(138, 90, 68, 0.15);
+    }
+
+    .closing-note p {
+      font-style: italic;
+      color: var(--clay);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .closing-note .signature {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--forest);
+      letter-spacing: 1px;
+    }
+
+    /* ── BACK LINK ── */
+    .back-link {
+      display: inline-block;
+      margin-top: 50px;
+      color: var(--clay);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .back-link:hover { border-color: var(--clay); }
+
+    /* ── FOOTER ── */
+    footer {
+      background-color: var(--forest);
+      color: var(--sand);
+      padding: 60px 20px 30px;
+      text-align: center;
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem;
+      letter-spacing: 8px;
+      color: var(--parchment);
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+
+    .footer-tagline {
+      font-style: italic;
+      font-size: 0.95rem;
+      opacity: 0.7;
+      margin-bottom: 35px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--sand);
+      text-decoration: none;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover { color: var(--moss); }
+
+    .footer-divider {
+      border: 0;
+      border-top: 1px solid rgba(229, 217, 182, 0.1);
+      margin-bottom: 25px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-bottom p {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin: 0;
+    }
+
+    .crafted {
+      font-style: italic;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    /* ── ANIMATION ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { padding: 18px 24px; }
+      .nav-links { gap: 18px; }
+      .contact-wrapper { padding: 60px 22px 50px; }
+      .contact-card { padding: 25px 22px; gap: 18px; }
+      .expect-section { padding: 35px 25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">I AM NATURE</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Botanicals</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <span class="label">Get in Touch</span>
+    <h1>Let's connect</h1>
+    <p>Questions about the site, the book, or anything in between — you are welcome here.</p>
+  </div>
+
+  <!-- CONTACT CONTENT -->
+  <div class="contact-wrapper">
+
+    <!-- INTRO -->
+    <div class="contact-intro">
+      <p>
+        I believe every question is the beginning of something. Whether you are curious about a plant, 
+        interested in the book, or simply felt something while reading — reach out. 
+        I read every message personally.
+      </p>
+    </div>
+
+    <!-- CONTACT CARDS -->
+    <div class="contact-cards">
+
+      <!-- WhatsApp / Phone -->
+      <a href="https://wa.me/27768465972" target="_blank" class="contact-card">
+        <div class="contact-card-icon">📱</div>
+        <div class="contact-card-body">
+          <span class="card-label">WhatsApp / Phone</span>
+          <span class="card-value">+27 76 846 5972</span>
+          <span class="card-note">Tap to open in WhatsApp</span>
+        </div>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:mnomzamo83@gmail.com" class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <div class="contact-card-body">
+          <span class="card-label">Email</span>
+          <span class="card-value">mnomzamo83@gmail.com</span>
+          <span class="card-note">Tap to send an email</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- WHAT TO EXPECT -->
+    <div class="expect-section">
+      <span class="section-label">What you can reach out about</span>
+      <h2>All enquiries are welcome</h2>
+      <ul class="expect-list">
+        <li>General questions about the website or the botanical entries</li>
+        <li>The I AM NATURE book — Volume I — and how to get a copy</li>
+        <li>Collaborations, features, or press enquiries</li>
+        <li>Anything else that brought you here — trust that instinct</li>
+      </ul>
+    </div>
+
+    <!-- CLOSING NOTE -->
+    <div class="closing-note">
+      <p>
+        This work began with a single plant on a path to work.<br>
+        It grew because people asked questions and stayed to listen.<br>
+        Your message is part of that same story.
+      </p>
+      <span class="signature">— Nomzamo Mbelebele</span>
+      <br>
+      <a href="index.html" class="back-link">← Return to Botanicals</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">I AM NATURE</div>
+    <p class="footer-tagline">Rooted in truth. Guided by experience.</p>
+    <div class="footer-links">
+      <a href="journal.html">Journal</a>
+      <a href="index.html">Botanicals</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Back to Top ↑</a>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>© 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.</p>
+      <p class="crafted">Crafted with Intention</p>
+    </div>
+  </footer>
+
+</body>
+</html>
