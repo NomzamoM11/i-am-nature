@@ -5,8 +5,98 @@
     <title>I AM NATURE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      nav {
+        background-color: #1b3022;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 50px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-logo {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: #fcf9f0;
+        text-decoration: none;
+      }
+      .nav-links {
+        display: flex;
+        gap: 35px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links a {
+        color: #d7c091;
+        text-decoration: none;
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+      .nav-links a:hover {
+        color: #fcf9f0;
+      }
+      .coming-soon-btn {
+        display: inline-block;
+        padding: 16px 50px;
+        background-color: rgba(132, 155, 132, 0.4);
+        color: #fcf9f0;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        cursor: default;
+        font-family: Georgia, serif;
+        opacity: 0.75;
+      }
+      .coming-soon-sub {
+        display: block;
+        color: #d7c091;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        font-style: italic;
+        opacity: 0.8;
+      }
+      @media (max-width: 600px) {
+        nav {
+          padding: 16px 20px;
+        }
+        .nav-links {
+          gap: 16px;
+        }
+        .nav-links a {
+          font-size: 0.75rem;
+        }
+      }
+    </style>
   </head>
   <body>
+
+    <nav>
+      <a href="index.html" class="nav-logo">I AM NATURE</a>
+      <ul class="nav-links">
+        <li><a href="alchemy.html">Alchemy of Nature</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
     <header class="hero">
       <section class="hero-section">
         <div class="hero-logo">I AM NATURE</div>
@@ -16,7 +106,8 @@
             A journey through 100+ botanicals to restore your physical health
             and spiritual essence
           </p>
-          <a href="#" class="cta-button">Download the Full Guide</a>
+          <span class="coming-soon-btn">The Book — Coming Soon</span>
+          <span class="coming-soon-sub">Volume I is on its way. Explore the free botanical library below while you wait.</span>
         </div>
       </section>
     </header>
@@ -103,8 +194,8 @@
         </div>
 
         <div class="footer-links">
+          <a href="alchemy.html">Alchemy of Nature</a>
           <a href="journal.html">Journal</a>
-          <a href="index.html">Botanicals</a>
           <a href="contact.html">Contact</a>
           <a href="#" class="back-to-top">Back to Top ↑</a>
         </div>
