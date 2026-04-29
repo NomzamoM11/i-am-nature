@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Weight I Let Go — Journal — I AM NATURE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --forest: #1b3022;
+        --clay: #8a5a44;
+        --parchment: #fcf9f0;
+        --moss: #849b84;
+        --umber: #3e2b1e;
+        --gold: #d7c091;
+        --sand: #e5d9b6;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: var(--parchment);
+        color: var(--umber);
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 20px;
+        line-height: 1.9;
+      }
+      nav {
+        background-color: var(--forest);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 50px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-logo {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1rem;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: var(--parchment);
+        text-decoration: none;
+      }
+      .nav-links {
+        display: flex;
+        gap: 35px;
+        list-style: none;
+      }
+      .nav-links a {
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--parchment);
+      }
+      .page-header {
+        background-color: var(--forest);
+        text-align: center;
+        padding: 90px 20px 75px;
+        border-bottom: 1px solid rgba(215, 192, 145, 0.18);
+      }
+      .page-header .eyebrow {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--moss);
+        font-size: 0.72rem;
+        margin-bottom: 18px;
+        animation: fadeUp 1s ease both;
+      }
+      .entry-wrapper {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 80px 30px 60px;
+      }
+      .entry-meta {
+        text-align: center;
+        margin-bottom: 55px;
+        padding-bottom: 36px;
+        border-bottom: 1px solid rgba(138, 90, 68, 0.14);
+        animation: fadeUp 1s ease 0.2s both;
+      }
+      .entry-date {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--moss);
+        margin-bottom: 16px;
+      }
+      .entry-title {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(1.9rem, 5vw, 2.9rem);
+        font-weight: 300;
+        color: var(--forest);
+        line-height: 1.2;
+        margin-bottom: 12px;
+      }
+      .entry-subtitle {
+        font-style: italic;
+        color: var(--clay);
+        font-size: 1.1rem;
+      }
+      .entry-body {
+        animation: fadeUp 1s ease 0.35s both;
+      }
+      .entry-body p {
+        margin-bottom: 1.35em;
+        color: var(--umber);
+      }
+      .chapter {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.35rem;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--clay);
+        margin: 52px 0 20px;
+        padding-top: 44px;
+        border-top: 1px solid rgba(138, 90, 68, 0.14);
+      }
+      .pull-quote {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(1.3rem, 3vw, 1.75rem);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--forest);
+        text-align: center;
+        line-height: 1.5;
+        padding: 36px 24px;
+        margin: 40px 0;
+        border-top: 1px solid var(--gold);
+        border-bottom: 1px solid var(--gold);
+      }
+      .breath {
+        font-style: italic;
+        color: var(--clay);
+        display: block;
+        text-align: center;
+        margin: 0.25em 0;
+      }
+      .plant-reveal {
+        display: block;
+        text-align: center;
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        font-weight: 300;
+        color: var(--forest);
+        letter-spacing: 4px;
+        padding: 34px 0;
+        border-top: 1px solid rgba(138, 90, 68, 0.18);
+        border-bottom: 1px solid rgba(138, 90, 68, 0.18);
+        margin: 40px 0;
+      }
+      .alchemy-callout {
+        background-color: var(--sand);
+        border-left: 5px solid var(--moss);
+        border-radius: 0 12px 12px 0;
+        padding: 24px 28px;
+        margin: 40px 0;
+      }
+      .alchemy-callout p {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        color: var(--umber);
+      }
+      .alchemy-callout a {
+        color: var(--clay);
+        text-decoration: none;
+        font-size: 0.82rem;
+        letter-spacing: 1.5px;
+        font-style: italic;
+        border-bottom: 1px solid rgba(138, 90, 68, 0.3);
+        transition: all 0.3s;
+      }
+      .alchemy-callout a:hover {
+        color: var(--forest);
+        border-color: var(--forest);
+      }
+      .about-writer {
+        margin-top: 70px;
+        padding: 40px 36px;
+        background-color: var(--sand);
+        border-radius: 12px;
+        border-left: 5px solid var(--moss);
+        animation: fadeUp 1s ease 0.5s both;
+      }
+      .about-writer .label {
+        display: block;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--moss);
+        margin-bottom: 8px;
+      }
+      .about-writer strong {
+        display: block;
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: var(--forest);
+        margin-bottom: 8px;
+      }
+      .about-writer p {
+        font-size: 0.92rem;
+        color: var(--umber);
+        line-height: 1.7;
+        font-style: italic;
+      }
+      .divider {
+        text-align: center;
+        color: var(--moss);
+        letter-spacing: 8px;
+        font-size: 0.78rem;
+        margin: 60px 0 36px;
+        opacity: 0.55;
+      }
+      .nav-links-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .back-link {
+        color: var(--clay);
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.3s;
+      }
+      .back-link:hover {
+        border-color: var(--clay);
+      }
+      footer {
+        background-color: var(--forest);
+        color: var(--sand);
+        padding: 52px 20px 26px;
+        text-align: center;
+        font-family: "EB Garamond", Georgia, serif;
+      }
+      .f-logo {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.25rem;
+        letter-spacing: 8px;
+        color: var(--parchment);
+        font-weight: 300;
+        margin-bottom: 6px;
+      }
+      .f-tag {
+        font-style: italic;
+        font-size: 0.86rem;
+        opacity: 0.55;
+        margin-bottom: 26px;
+      }
+      .f-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 26px;
+        flex-wrap: wrap;
+      }
+      .f-links a {
+        color: var(--sand);
+        text-decoration: none;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: color 0.3s;
+      }
+      .f-links a:hover {
+        color: var(--moss);
+      }
+      .f-hr {
+        border: 0;
+        border-top: 1px solid rgba(229, 217, 182, 0.07);
+        margin-bottom: 18px;
+      }
+      .f-copy {
+        font-size: 0.78rem;
+        opacity: 0.6;
+      }
+      .f-crafted {
+        font-style: italic;
+        font-size: 0.76rem;
+        opacity: 0.4;
+        margin-top: 4px;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (max-width: 600px) {
+        nav {
+          padding: 16px 20px;
+        }
+        .nav-links {
+          gap: 18px;
+        }
+        .entry-wrapper {
+          padding: 55px 20px 40px;
+        }
+        .pull-quote {
+          padding: 28px 16px;
+        }
+        .about-writer {
+          padding: 28px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">I AM NATURE</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Botanicals</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-header">
+      <span class="eyebrow">The Journal &nbsp;&middot;&nbsp; Entry 002</span>
+    </div>
+
+    <div class="entry-wrapper">
+      <div class="entry-meta">
+        <span class="entry-date"
+          >April 2026 &nbsp;&middot;&nbsp; Healing &amp; Self</span
+        >
+        <h1 class="entry-title">The Weight I Let Go</h1>
+        <p class="entry-subtitle">
+          On ending a ten-year relationship, choosing myself, and how my body
+          followed what my soul had already decided.
+        </p>
+      </div>
+
+      <div class="entry-body">
+        <p class="chapter">I. The weight I was carrying</p>
+
+        <p>
+          It is possible to carry something for so long that you forget it is
+          heavy. I stayed in a relationship for ten years — not because I was
+          weak, but because I am the kind of person who honours commitment, who
+          believes in working through things, who does not walk away easily from
+          what she has built. Even when what she has built has quietly become
+          something she carries more than inhabits.
+        </p>
+
+        <p>
+          There was no single crisis. No dramatic rupture. There was a knowing —
+          persistent, quiet, patient — that this was no longer where I was
+          supposed to be. And I kept not listening to it. Because listening
+          would mean deciding, and deciding would mean disrupting everything.
+        </p>
+
+        <div class="pull-quote">
+          Some weight doesn't sit on the body. It sits on the soul. And the soul
+          carries it until the body cannot.
+        </div>
+
+        <p>
+          By the end, I was tired in a way that sleep couldn't fix. Foggy in a
+          way that nothing could clear. Disconnected from joy, from myself, from
+          the version of me that used to move through the world with something
+          that felt like lightness. What I was experiencing in my body was not a
+          physical condition. It was the accumulated weight of ten years of
+          choosing everything except myself.
+        </p>
+
+        <p class="chapter">II. The knowing</p>
+
+        <p>
+          In 2022, I had my son. And something happened that I cannot fully
+          explain with language. The moment I held him, something in me became
+          very still and very clear at the same time. Not the clarity of a
+          decision made — the clarity of a truth already known, finally being
+          acknowledged. I looked at this child and understood: I cannot show him
+          what it looks like to disappear. So I ended the relationship. Not
+          dramatically. Not with a long negotiation. With a knowing.
+        </p>
+
+        <span class="breath">And then, almost in the same breath,</span>
+        <span class="breath">another knowing arrived.</span>
+
+        <p>
+          Not a plan. Not a programme someone recommended. Just a clear,
+          internal instruction: begin with the body. I didn't question it or
+          research it first. Something within me simply knew the sequence. End
+          what is draining you. Then cleanse. Then fast. Then eat — one meal,
+          real food, made with intention.
+        </p>
+
+        <div class="pull-quote">
+          "I somehow knew what to do and how to do it. Like something within me
+          was subtly guiding me."
+        </div>
+
+        <p>
+          I began a physical body cleanse. Then I moved into fasting. Then one
+          meal a day — whole food, natural, simple. Not a diet. A conversation
+          between me and my own body. A way of saying: I am listening now. What
+          do you actually need? The fenugreek and fennel tea in the mornings.
+          The chia seed water throughout the day. The single, nourishing plate
+          when the sun was high. None of this came from a book. It came from
+          somewhere inside me that had always known and had simply been waiting
+          for me to be quiet enough to hear it.
+        </p>
+
+        <p class="chapter">III. The journey is the self</p>
+
+        <p>
+          My mind became clearer — not the artificial clarity of caffeine or
+          adrenaline, but a deep, settled clarity. The fog lifted. I started
+          noticing things I had stopped noticing: colour, birdsong, my own
+          thoughts arriving in order instead of all at once. I felt lighter. Not
+          in a way I could measure. In a way I could feel — in my chest, in my
+          shoulders, in the way I moved through a room. And then, without
+          pursuing it, without making it the goal, the weight began to drop.
+        </p>
+
+        <span class="plant-reveal">Size 42 &rarr; Size 36</span>
+
+        <p>
+          In three months. Without starving. Without a gym programme. Without
+          any of the things I had tried before that worked briefly and then
+          stopped, leaving me more depleted than when I started. Because this
+          time, it wasn't about the weight. The weight was just the evidence —
+          evidence that something deeper had shifted, which the body, faithful
+          and honest as it always is, simply reflected back.
+        </p>
+
+        <div class="pull-quote">
+          I didn't lose weight. I lost what was never mine to carry.
+        </div>
+
+        <p>
+          The decisions I made — to end the relationship, to begin the cleanse,
+          to eat one honest meal a day — were not calculated. They were
+          received. Like instructions from a part of myself that had been
+          holding everything patiently, waiting for me to come back to her. The
+          journey of life is about the self. Not the self we perform for others.
+          The self that was there before any of it, whole and unhurried, waiting
+          for us to choose her.
+        </p>
+
+        <p>
+          That is what the body cleanse was. That is what the fasting was. That
+          is what the one meal was. Not a diet. A return.
+        </p>
+
+        <div class="pull-quote">
+          Choose yourself. Your body will follow. It always does.
+        </div>
+
+        <div class="alchemy-callout">
+          <p>
+            The recipes and the eating plan in the Alchemy of Nature collection
+            are not a system I invented. They are what I actually did — written
+            down for those who are ready for their own return.
+          </p>
+          <a href="alchemy.html"
+            >See the recipes and the 30-Day Reset Plan &rarr;</a
+          >
+        </div>
+      </div>
+
+      <div class="divider">— ✦ —</div>
+
+      <div class="about-writer">
+        <span class="label">About the Writer</span>
+        <strong>Nomzamo Mbelebele</strong>
+        <p>
+          Nomzamo is a healer, plant keeper, and the founder of I AM NATURE — a
+          living archive of botanical wisdom rooted in African heritage and
+          personal experience. She writes from the intersection of traditional
+          knowledge, spiritual practice, and lived truth.
+        </p>
+      </div>
+
+      <div class="nav-links-bottom">
+        <a href="alchemy.html" class="back-link">&larr; Back to Alchemy of Nature</a>
+        <a href="journal-entry-001.html" class="back-link"
+          >Entry 001: When Nature Answered &rarr;</a
+        >
+      </div>
+    </div>
+
+    <footer>
+      <div class="f-logo">I AM NATURE</div>
+      <p class="f-tag">Rooted in truth. Guided by experience.</p>
+      <div class="f-links">
+        <a href="index.html">Botanicals</a>
+        <a href="alchemy.html">Alchemy of Nature</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Back to Top &uarr;</a>
+      </div>
+      <hr class="f-hr" />
+      <p class="f-copy">
+        &copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.
+      </p>
+      <p class="f-crafted">Crafted with Intention</p>
+    </footer>
+  </body>
+</html>
