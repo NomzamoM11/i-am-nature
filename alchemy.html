@@ -765,10 +765,22 @@
       }
       @media (max-width: 680px) {
         nav {
-          padding: 15px 20px;
+          padding: 14px 18px;
+        }
+        .nav-site {
+          font-size: 13px;
+          letter-spacing: 4px;
+        }
+        .nav-sub {
+          font-size: 9px;
+          letter-spacing: 2px;
         }
         .nav-links {
-          gap: 14px;
+          gap: 12px;
+        }
+        .nav-links a {
+          font-size: 12px;
+          letter-spacing: 1px;
         }
         .cat-nav {
           gap: 8px;
@@ -787,22 +799,6 @@
         }
         .hero-section {
           padding: 60px 20px;
-        }
-        @keyframes softPulse {
-          0% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-5px);
-          }
-          100% {
-            transform: translateY(0);
-          }
-        }
-
-        .cta-button {
-          /* ... your existing code ... */
-          animation: softPulse 3s infinite ease-in-out;
         }
       }
     </style>
