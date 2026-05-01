@@ -161,9 +161,12 @@
       }
 
       .hero-logo-mark img {
-        max-width: 300px; /* Adjust size here */
+        max-width: 260px;
+        width: clamp(180px, 40vw, 260px);
         height: auto;
         display: block;
+        position: relative;
+        z-index: 3;
       }
 
       .hero-tagline {
@@ -765,22 +768,10 @@
       }
       @media (max-width: 680px) {
         nav {
-          padding: 14px 18px;
-        }
-        .nav-site {
-          font-size: 13px;
-          letter-spacing: 4px;
-        }
-        .nav-sub {
-          font-size: 9px;
-          letter-spacing: 2px;
+          padding: 15px 20px;
         }
         .nav-links {
-          gap: 12px;
-        }
-        .nav-links a {
-          font-size: 12px;
-          letter-spacing: 1px;
+          gap: 14px;
         }
         .cat-nav {
           gap: 8px;
@@ -800,6 +791,86 @@
         .hero-section {
           padding: 60px 20px;
         }
+        @keyframes softPulse {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-5px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        .cta-button {
+          /* ... your existing code ... */
+          animation: softPulse 3s infinite ease-in-out;
+        }
+      }
+
+      /* ── HAMBURGER NAV ── */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+        z-index: 200;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #d7c091;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+      @media (max-width: 700px) {
+        nav {
+          padding: 16px 20px !important;
+          position: relative;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .nav-links {
+          display: none !important;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #1b3022;
+          flex-direction: column !important;
+          gap: 0 !important;
+          padding: 0;
+          border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links.open {
+          display: flex !important;
+        }
+        .nav-links li {
+          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
+        }
+        .nav-links a {
+          display: block;
+          padding: 16px 24px !important;
+          font-size: 0.85rem !important;
+          letter-spacing: 2px !important;
+        }
       }
     </style>
   </head>
@@ -814,6 +885,9 @@
         <li><a href="journal.html">Journal</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
 
     <header>

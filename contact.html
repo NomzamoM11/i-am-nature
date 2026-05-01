@@ -388,18 +388,10 @@
       /* ── RESPONSIVE ── */
       @media (max-width: 600px) {
         nav {
-          padding: 12px 16px;
-        }
-        .nav-logo {
-          font-size: 13px;
-          letter-spacing: 5px;
+          padding: 18px 24px;
         }
         .nav-links {
-          gap: 12px;
-        }
-        .nav-links a {
-          font-size: 12px;
-          letter-spacing: 1px;
+          gap: 18px;
         }
         .contact-wrapper {
           padding: 60px 22px 50px;
@@ -410,6 +402,70 @@
         }
         .expect-section {
           padding: 35px 25px;
+        }
+      }
+
+      /* ── HAMBURGER NAV ── */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+        z-index: 200;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #d7c091;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+      @media (max-width: 700px) {
+        nav {
+          padding: 16px 20px !important;
+          position: relative;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .nav-links {
+          display: none !important;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #1b3022;
+          flex-direction: column !important;
+          gap: 0 !important;
+          padding: 0;
+          border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links.open {
+          display: flex !important;
+        }
+        .nav-links li {
+          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
+        }
+        .nav-links a {
+          display: block;
+          padding: 16px 24px !important;
+          font-size: 0.85rem !important;
+          letter-spacing: 2px !important;
         }
       }
     </style>
@@ -423,6 +479,9 @@
         <li><a href="alchemy.html">Alchemy of Nature</a></li>
         <li><a href="journal.html">Journal</a></li>
       </ul>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
 
     <!-- PAGE HEADER -->
@@ -450,7 +509,7 @@
       <div class="contact-cards">
         <!-- WhatsApp / Phone -->
         <a
-          href="https://wa.me/+27768465972"
+          href="https://wa.me/27768465972"
           target="_blank"
           class="contact-card"
         >
@@ -518,5 +577,24 @@
         <p class="crafted">Crafted with Intention</p>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        var btn = document.querySelector(".hamburger");
+        var menu = document.querySelector(".nav-links");
+        if (btn && menu) {
+          btn.addEventListener("click", function () {
+            btn.classList.toggle("open");
+            menu.classList.toggle("open");
+          });
+          document.addEventListener("click", function (e) {
+            if (!btn.contains(e.target) && !menu.contains(e.target)) {
+              btn.classList.remove("open");
+              menu.classList.remove("open");
+            }
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
