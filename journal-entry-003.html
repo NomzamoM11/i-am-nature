@@ -18,16 +18,8 @@
         --gold: #d7c091;
         --sand: #e5d9b6;
       }
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
       body {
         background-color: var(--parchment);
         color: var(--umber);
@@ -53,11 +45,7 @@
         color: var(--parchment);
         text-decoration: none;
       }
-      .nav-links {
-        display: flex;
-        gap: 35px;
-        list-style: none;
-      }
+      .nav-links { display: flex; gap: 35px; list-style: none; }
       .nav-links a {
         color: var(--gold);
         text-decoration: none;
@@ -66,9 +54,7 @@
         text-transform: uppercase;
         transition: color 0.3s;
       }
-      .nav-links a:hover {
-        color: var(--parchment);
-      }
+      .nav-links a:hover { color: var(--parchment); }
 
       .page-header {
         background-color: var(--forest);
@@ -119,13 +105,8 @@
         color: var(--clay);
         font-size: 1.1rem;
       }
-      .entry-body {
-        animation: fadeUp 1s ease 0.35s both;
-      }
-      .entry-body p {
-        margin-bottom: 1.35em;
-        color: var(--umber);
-      }
+      .entry-body { animation: fadeUp 1s ease 0.35s both; }
+      .entry-body p { margin-bottom: 1.35em; color: var(--umber); }
 
       .chapter {
         font-family: "Cormorant Garamond", Georgia, serif;
@@ -164,11 +145,7 @@
         text-align: center;
         margin: 44px 0;
         padding: 32px 24px;
-        background: linear-gradient(
-          135deg,
-          rgba(229, 217, 182, 0.35) 0%,
-          rgba(252, 249, 240, 0.6) 100%
-        );
+        background: linear-gradient(135deg, rgba(229,217,182,0.35) 0%, rgba(252,249,240,0.6) 100%);
         border-radius: 12px;
         border: 1px solid rgba(138, 90, 68, 0.12);
       }
@@ -238,10 +215,7 @@
         border-bottom: 1px solid rgba(138, 90, 68, 0.3);
         transition: all 0.3s;
       }
-      .journal-callout a:hover {
-        color: var(--forest);
-        border-color: var(--forest);
-      }
+      .journal-callout a:hover { color: var(--forest); border-color: var(--forest); }
 
       .about-writer {
         margin-top: 70px;
@@ -299,9 +273,7 @@
         border-bottom: 1px solid transparent;
         transition: border-color 0.3s;
       }
-      .back-link:hover {
-        border-color: var(--clay);
-      }
+      .back-link:hover { border-color: var(--clay); }
 
       footer {
         background-color: var(--forest);
@@ -318,19 +290,8 @@
         font-weight: 300;
         margin-bottom: 6px;
       }
-      .f-tag {
-        font-style: italic;
-        font-size: 0.86rem;
-        opacity: 0.55;
-        margin-bottom: 26px;
-      }
-      .f-links {
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        margin-bottom: 26px;
-        flex-wrap: wrap;
-      }
+      .f-tag { font-style: italic; font-size: 0.86rem; opacity: 0.55; margin-bottom: 26px; }
+      .f-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 26px; flex-wrap: wrap; }
       .f-links a {
         color: var(--sand);
         text-decoration: none;
@@ -339,118 +300,48 @@
         letter-spacing: 1.5px;
         transition: color 0.3s;
       }
-      .f-links a:hover {
-        color: var(--moss);
-      }
-      .f-hr {
-        border: 0;
-        border-top: 1px solid rgba(229, 217, 182, 0.07);
-        margin-bottom: 18px;
-      }
-      .f-copy {
-        font-size: 0.78rem;
-        opacity: 0.6;
-      }
-      .f-crafted {
-        font-style: italic;
-        font-size: 0.76rem;
-        opacity: 0.4;
-        margin-top: 4px;
-      }
+      .f-links a:hover { color: var(--moss); }
+      .f-hr { border: 0; border-top: 1px solid rgba(229, 217, 182, 0.07); margin-bottom: 18px; }
+      .f-copy { font-size: 0.78rem; opacity: 0.6; }
+      .f-crafted { font-style: italic; font-size: 0.76rem; opacity: 0.4; margin-top: 4px; }
 
       @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(18px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
       }
       @media (max-width: 600px) {
-        nav {
-          padding: 16px 20px;
-        }
-        .nav-links {
-          gap: 18px;
-        }
-        .entry-wrapper {
-          padding: 55px 20px 40px;
-        }
-        .pull-quote {
-          padding: 28px 16px;
-        }
-        .about-writer {
-          padding: 28px 22px;
-        }
-        .philosophy-block {
-          padding: 28px 24px;
-        }
+        nav { padding: 16px 20px; }
+        .nav-links { gap: 18px; }
+        .entry-wrapper { padding: 55px 20px 40px; }
+        .pull-quote { padding: 28px 16px; }
+        .about-writer { padding: 28px 22px; }
+        .philosophy-block { padding: 28px 24px; }
       }
 
       /* HAMBURGER */
       .hamburger {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 4px;
-        z-index: 200;
+        display: none; flex-direction: column; gap: 5px;
+        cursor: pointer; background: none; border: none; padding: 4px; z-index: 200;
       }
       .hamburger span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background-color: #d7c091;
-        border-radius: 2px;
-        transition: all 0.3s ease;
+        display: block; width: 24px; height: 2px;
+        background-color: #d7c091; border-radius: 2px; transition: all 0.3s ease;
       }
-      .hamburger.open span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-      }
-      .hamburger.open span:nth-child(2) {
-        opacity: 0;
-      }
-      .hamburger.open span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-      }
+      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .hamburger.open span:nth-child(2) { opacity: 0; }
+      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
       @media (max-width: 700px) {
-        nav {
-          padding: 16px 20px !important;
-          position: relative;
-        }
-        .hamburger {
-          display: flex;
-        }
+        nav { padding: 16px 20px !important; position: relative; }
+        .hamburger { display: flex; }
         .nav-links {
-          display: none !important;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          background-color: #1b3022;
-          flex-direction: column !important;
-          gap: 0 !important;
-          padding: 0;
-          border-top: 1px solid rgba(215, 192, 145, 0.15);
-          z-index: 150;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          display: none !important; position: absolute; top: 100%; left: 0; right: 0;
+          background-color: #1b3022; flex-direction: column !important; gap: 0 !important;
+          padding: 0; border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150; box-shadow: 0 8px 24px rgba(0,0,0,0.3);
         }
-        .nav-links.open {
-          display: flex !important;
-        }
-        .nav-links li {
-          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
-        }
-        .nav-links a {
-          display: block;
-          padding: 16px 24px !important;
-          font-size: 0.85rem !important;
-          letter-spacing: 2px !important;
-        }
+        .nav-links.open { display: flex !important; }
+        .nav-links li { border-bottom: 1px solid rgba(215, 192, 145, 0.08); }
+        .nav-links a { display: block; padding: 16px 24px !important; font-size: 0.85rem !important; letter-spacing: 2px !important; }
       }
     </style>
   </head>
@@ -460,6 +351,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Botanicals</a></li>
         <li><a href="journal.html">Journal</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <button class="hamburger" aria-label="Menu">
@@ -473,167 +365,154 @@
 
     <div class="entry-wrapper">
       <div class="entry-meta">
-        <span class="entry-date"
-          >May 2026 &nbsp;&middot;&nbsp; Origin &amp; Becoming</span
-        >
+        <span class="entry-date">May 2026 &nbsp;&middot;&nbsp; Origin &amp; Becoming</span>
         <h1 class="entry-title">Before the Plant</h1>
         <p class="entry-subtitle">
-          On a lifetime of searching, Intwaso, the dreams that were taken, and
-          how I AM NATURE was born from the act of coming home to myself.
+          On a lifetime of searching, Intwaso, the dreams that were taken,
+          and how I AM NATURE was born from the act of coming home to myself.
         </p>
       </div>
 
       <div class="entry-body">
+
         <p class="chapter">I. The searching</p>
 
         <p>
-          All my life, I had been searching for something. I didn't know what
-          that something was &mdash; only that it existed, only that I hadn't
-          found it yet, only that the ache of its absence followed me through
-          every room I entered, every faith I tried to inhabit, every name I
-          tried to wear.
+          All my life, I had been searching for something. I didn't know what that something was.
+          Only that it existed, only that I hadn't found it yet, only that the ache of its absence
+          followed me through every room I entered, every faith I tried to inhabit, every name
+          I tried to wear.
         </p>
 
         <p>
-          Looking back now, I understand that what I was really searching for
-          was a sense of belonging. A place in this world where I could exist
-          fully, without questioning who or what I was.
+          Looking back now, I understand that what I was really searching for was a sense of belonging.
+          A place in this world where I could exist fully, without questioning who or what I was.
         </p>
 
-        <p>Because I had always been different.</p>
-
         <p>
-          Even as a child, I was exposed to a world that many people &mdash;
-          grown adults included &mdash; had never experienced. When I slept, I
-          didn't just dream. I travelled. I saw places I had never been, people
-          I had never met &mdash; ancient people, unfamiliar faces who felt
-          strangely known. I was shown things that had already happened, long
-          before I was born. And sometimes, I was shown things that had not yet
-          happened. And they would come to pass.
+          Because I had always been different.
         </p>
 
-        <p>I saw people for who they were. Things for what they were.</p>
+        <p>
+          Even as a child, I was exposed to a world that many people, grown adults included,
+          had never experienced. When I slept, I didn't just dream. I travelled. I saw places I had
+          never been, people I had never met, ancient people, unfamiliar faces who felt
+          strangely known. I was shown things that had already happened, long before I was born.
+          And sometimes, I was shown things that had not yet happened. And they would come to pass.
+        </p>
 
         <p>
-          I didn't understand it then. I only knew that I was not like everyone
-          else. And because of that, I longed to belong.
+          I saw people for who they were. Things for what they were.
+        </p>
+
+        <p>
+          I didn't understand it then. I only knew that I was not like everyone else. And because
+          of that, I longed to belong.
         </p>
 
         <div class="pull-quote">
-          So I searched. The way only someone truly lost &mdash; and truly alive
-          &mdash; knows how to search.
+          So I searched. The way only someone truly lost, and truly alive, knows how to search.
         </div>
 
         <p>
-          I moved from church to church. From Amaroma &mdash; the Roman Church
-          &mdash; to Zion, to Faith Mission, to Esheshi, the Anglican Church.
-          Even to Islam, where I became Khadijah for a time, believing that
-          perhaps this time, in this name, in this structure, I would find what
-          I was looking for.
+          I moved from church to church. From Amaroma (the Roman Church), to Zion, to Faith
+          Mission, to Esheshi (the Anglican Church). Even to Islam, where I became Khadijah for a time,
+          believing that perhaps this time, in this name, in this structure, I would find what I was
+          looking for.
         </p>
 
-        <p>I didn't.</p>
+        <p>
+          I didn't.
+        </p>
 
         <p>
-          The unfortunate truth is that I kept searching outside of myself for
-          something that was never out there to begin with.
+          The unfortunate truth is that I kept searching outside of myself for something that was
+          never out there to begin with.
         </p>
 
         <div class="poem-break">
           <span>Maybe that's why nothing ever fit.</span>
-          <span
-            >Not the churches. Not the names. Not the paths I tried to
-            walk.</span
-          >
-          <span
-            >Maybe I was never meant to belong anywhere outside of myself.</span
-          >
+          <span>Not the churches. Not the names. Not the paths I tried to walk.</span>
+          <span>Maybe I was never meant to belong anywhere outside of myself.</span>
         </div>
 
         <p>
-          Eventually, that search led me to Intwaso &mdash; my sangoma
-          initiation. It felt like it would offer answers, a sense of direction,
-          a way forward. And in many ways, it did. I learned things I could not
-          have learned anywhere else. I was given language for experiences I had
-          carried in silence my whole life.
+          Eventually, that search led me to Intwaso, my sangoma initiation. It felt like
+          it would offer answers, a sense of direction, a way forward. And in many ways, it did.
+          I learned things I could not have learned anywhere else. I was given language for experiences
+          I had carried in silence my whole life.
         </p>
 
         <p>
-          But Intwaso also took something from me. Something precious. Something
-          that had always been mine.
-        </p>
-
-        <p>After my initiation, I could no longer remember my dreams.</p>
-
-        <p class="chapter">
-          II. The gift that was taken &mdash; and the plant that returned it
+          But Intwaso also took something from me. Something precious. Something that had always
+          been mine.
         </p>
 
         <p>
-          To understand what that loss meant, you have to understand what my
-          dreams had always been. They were not ordinary dreams. They were the
-          place where I received guidance. Where my ancestors spoke. Where the
-          future arrived in the language of image and feeling, before it became
-          reality. My dreaming was not a sleep function. It was a lifeline.
+          After my initiation, I could no longer remember my dreams.
         </p>
 
-        <p>And then it went quiet.</p>
+        <p class="chapter">II. The gift that was taken, and the plant that returned it</p>
 
         <p>
-          I don't know if Intwaso took it, or if the intensity of the initiation
-          simply overwhelmed the channel, or if my body needed time to
-          recalibrate. What I know is that I woke up, day after day, to silence
-          where there had always been colour and instruction and presence. That
-          silence was its own kind of grief.
+          To understand what that loss meant, you have to understand what my dreams had always been.
+          They were not ordinary dreams. They were the place where I received guidance. Where my
+          ancestors spoke. Where the future arrived in the language of image and feeling, before
+          it became reality. My dreaming was not a sleep function. It was a lifeline.
         </p>
 
-        <span class="breath"
-          >And then, one morning, there was a plant on my path to work.</span
-        >
+        <p>
+          And then it went quiet.
+        </p>
 
         <p>
-          It pulled me in for three days before I finally listened. On the third
-          day, I stopped. I looked it up. I read everything I could find. And
-          what I found was fennel &mdash; Imboziso &mdash; an ancient herb
-          associated with clarity of vision, with the opening of dreaming, with
+          I don't know if Intwaso took it, or if the intensity of the initiation simply overwhelmed
+          the channel, or if my body needed time to recalibrate. What I know is that I woke up, day
+          after day, to silence where there had always been colour and instruction and presence.
+          That silence was its own kind of grief.
+        </p>
+
+        <span class="breath">And then, one morning, there was a plant on my path to work.</span>
+
+        <p>
+          It pulled me in for three days before I finally listened. On the third day, I stopped.
+          I looked it up. I read everything I could find. And what I found was fennel, Imboziso,
+          an ancient herb associated with clarity of vision, with the opening of dreaming, with
           the courage to receive what the unconscious is trying to show us.
         </p>
 
-        <p>I brewed it that evening. And that night, I dreamed again.</p>
+        <p>
+          I brewed it that evening. And that night, I dreamed again.
+        </p>
 
         <div class="pull-quote">
-          A plant I had never sought found me on a footpath and gave me back
-          something I thought was gone forever. That was the beginning of
-          everything.
+          A plant I had never sought found me on a footpath and gave me back something
+          I thought was gone forever. That was the beginning of everything.
         </div>
 
         <p>
-          What followed was not a project or a plan. It was a recognition. If
-          this plant could restore something so intimate, so specific to me
-          &mdash; then the earth had been holding medicine I hadn't known how to
-          receive. I began to listen differently. To everything.
+          What followed was not a project or a plan. It was a recognition. If this plant could
+          restore something so intimate, so specific to me, then the earth had been holding
+          medicine I hadn't known how to receive. I began to listen differently. To everything.
         </p>
 
-        <p class="chapter">
-          III. The death of my mother. The illness. The return.
+        <p class="chapter">III. The death of my mother. The illness. The return.</p>
+
+        <p>
+          The death of my mother became a subtle trigger. Not the cause of what came after, but
+          the awakening of something that had already been living inside me, waiting. What followed
+          was a series of events that nearly broke me. I came close to losing my mind. Eventually,
+          I surrendered. First to what I thought would save me, and later, to something deeper.
         </p>
 
         <p>
-          The death of my mother became a subtle trigger. Not the cause of what
-          came after, but the awakening of something that had already been
-          living inside me, waiting. What followed was a series of events that
-          nearly broke me. I came close to losing my mind. Eventually, I
-          surrendered &mdash; first to what I thought would save me, and later,
-          to something deeper.
+          My illness was never caused by my mother's passing.
         </p>
 
-        <p>My illness was never caused by my mother's passing.</p>
-
         <p>
-          It was caused by the emotions I had been carrying long before she
-          left. Her death simply brought them to the surface. The grief cracked
-          something open that had been sealed for years &mdash; and what poured
-          out was everything I had never allowed myself to feel.
+          It was caused by the emotions I had been carrying long before she left. Her death simply
+          brought them to the surface. The grief cracked something open that had been sealed for
+          years. What poured out was everything I had never allowed myself to feel.
         </p>
 
         <p>
@@ -643,27 +522,24 @@
         <span class="plant-reveal">I chose myself.</span>
 
         <p>
-          I walked away from a ten-year relationship that had brought me more
-          unhappiness than joy. Eight years of disconnection, two years of
-          happiness &mdash; and even those two were not enough to justify the
-          slow erasure of who I was. Leaving was not easy. But it was necessary.
+          I walked away from a ten-year relationship that had brought me more unhappiness than joy.
+          Eight years of disconnection, two years of happiness. Even those two were not
+          enough to justify the slow erasure of who I was. Leaving was not easy. But it was necessary.
           That was the final shift.
         </p>
 
         <p>
-          From there, everything began to change. I changed my diet. I changed
-          my perspective. I changed what I put into my body &mdash; not to lose
-          weight, not to become something new, but to cleanse and purify. To
-          make room. To return to myself.
+          From there, everything began to change. I changed my diet. I changed my perspective.
+          I changed what I put into my body. Not to lose weight, not to become something new,
+          but to cleanse and purify. To make room. To return to myself.
         </p>
 
         <p>
-          The weight loss was incidental. An accident of choosing myself. I had
-          spent years trying to lose it &mdash; pills, juices, exercise
-          programmes, effort layered on top of effort. Nothing worked. And then,
-          when I wasn't trying at all, when I made a decision about my spiritual
-          self and changed my diet for reasons that had nothing to do with a
-          number on a scale &mdash; it simply fell away.
+          The weight loss was incidental. An accident of choosing myself. I had spent years trying
+          to lose it: pills, juices, exercise programmes, effort layered on top of effort.
+          Nothing worked. And then, when I wasn't trying at all, when I made a decision about my
+          spiritual self and changed my diet for reasons that had nothing to do with a number on
+          a scale, it simply fell away.
         </p>
 
         <div class="pull-quote">
@@ -671,71 +547,64 @@
         </div>
 
         <p>
-          The body does not lie. It reflects exactly what is happening within.
-          When I finally stopped carrying what didn't belong to me &mdash;
-          emotionally, spiritually, relationally &mdash; my body released what
-          didn't belong to it either.
+          The body does not lie. It reflects exactly what is happening within. When I finally
+          stopped carrying what didn't belong to me, emotionally, spiritually, relationally,
+          my body released what didn't belong to it either.
         </p>
 
         <p class="chapter">IV. What I now believe</p>
 
         <p>
-          This journey changed not only my body and my practice. It changed the
-          way I understand time itself.
+          This journey changed not only my body and my practice. It changed the way I understand
+          time itself.
         </p>
 
         <div class="philosophy-block">
           <span class="phil-label">A Philosophy of the Present</span>
           I no longer believe in the past and the future in the way I once did.
-          The past is memory &mdash; nothing more, nothing less. You cannot go
-          there. It lives only in the mind. The future is a fantasy &mdash; a
-          version of yourself you imagine becoming, projected forward from where
-          you stand right now. The only thing that is concrete is the present
-          moment. And the present is created by your mind, your thought
-          patterns, and your actions. Not by what happened. Not by what might
-          happen. By what you are doing &mdash; right now &mdash; with what you
-          have been given.
+          The past is memory, nothing more, nothing less. You cannot go there.
+          It lives only in the mind. The future is a fantasy, a version of yourself
+          you imagine becoming, projected forward from where you stand right now.
+          The only thing that is concrete is the present moment.
+          And the present is created by your mind, your thought patterns, and your actions.
+          Not by what happened. Not by what might happen. By what you are doing
+          right now, with what you have been given.
         </div>
 
         <p>
-          This is not a philosophy I read somewhere. It is one I lived my way
-          into. Through grief, through illness, through the slow work of
-          choosing myself again and again when everything in me wanted to
-          collapse backward into old patterns or forward into fantasies of being
-          saved.
+          This is not a philosophy I read somewhere. It is one I lived my way into. Through
+          grief, through illness, through the slow work of choosing myself again and again when
+          everything in me wanted to collapse backward into old patterns or forward into
+          fantasies of being saved.
         </p>
 
         <p>
-          The present was the only place where healing was actually available.
-          And it still is.
+          The present was the only place where healing was actually available. And it still is.
         </p>
 
         <p>
-          That journey is what gave birth to I AM NATURE. Not a brand. Not a
-          content strategy. A living archive of what the earth offered me when I
-          finally became still enough to receive it. And an invitation to anyone
-          else who has been searching outside of themselves for something that
-          was always here, waiting, rooted in the soil beneath their feet.
+          That journey is what gave birth to I AM NATURE. Not a brand. Not a content strategy.
+          A living archive of what the earth offered me when I finally became still enough to
+          receive it. And an invitation to anyone else who has been searching outside of themselves
+          for something that was always here, waiting, rooted in the soil beneath their feet.
         </p>
 
         <div class="journal-callout">
           <p>
-            The fennel plant that started this journey has its own entry in the
-            botanical library &mdash; including the Dream Return Ritual that
-            first opened my dreaming again.
+            The fennel plant that started this journey has its own entry in the botanical library,
+            including the Dream Return Ritual that first opened my dreaming again.
           </p>
-          <a href="index.html"
-            >Find Fennel (Imboziso) in the botanical library &rarr;</a
-          >
+          <a href="index.html">Find Fennel (Imboziso) in the botanical library &rarr;</a>
         </div>
 
-        <div class="journal-callout" style="margin-top: 16px">
+        <div class="journal-callout" style="margin-top: 16px;">
           <p>
-            The diet that changed everything &mdash; and how the weight came off
-            without trying &mdash; is told in full in Entry 002.
+            The diet that changed everything, and how the weight came off without trying,
+            is told in full in Entry 002.
           </p>
           <a href="journal-entry-002.html">Read: The Weight I Let Go &rarr;</a>
         </div>
+
       </div>
 
       <div class="divider">&#8212; &#10022; &#8212;</div>
@@ -744,18 +613,16 @@
         <span class="label">About the Writer</span>
         <strong>Nomzamo Mbelebele</strong>
         <p>
-          Nomzamo is a healer, plant keeper, and the founder of I AM NATURE
-          &mdash; a living archive of botanical wisdom rooted in African
-          heritage and personal experience. She writes from the intersection of
-          traditional knowledge, spiritual practice, and lived truth.
+          Nomzamo is a healer, plant keeper, and the founder of I AM NATURE, a
+          living archive of botanical wisdom rooted in African heritage and personal experience.
+          She writes from the intersection of traditional knowledge, spiritual practice,
+          and lived truth.
         </p>
       </div>
 
       <div class="nav-links-bottom">
         <a href="journal.html" class="back-link">&larr; All Journal Entries</a>
-        <a href="journal-entry-002.html" class="back-link"
-          >Entry 002: The Weight I Let Go &rarr;</a
-        >
+        <a href="journal-entry-002.html" class="back-link">Entry 002: The Weight I Let Go &rarr;</a>
       </div>
     </div>
 
@@ -766,13 +633,12 @@
         <a href="index.html">Botanicals</a>
         <a href="alchemy.html">Alchemy of Nature</a>
         <a href="journal.html">Journal</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="#">Back to Top &uarr;</a>
       </div>
       <hr class="f-hr" />
-      <p class="f-copy">
-        &copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.
-      </p>
+      <p class="f-copy">&copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.</p>
       <p class="f-crafted">Crafted with Intention</p>
     </footer>
 

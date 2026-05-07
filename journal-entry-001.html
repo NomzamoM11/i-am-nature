@@ -18,16 +18,8 @@
         --gold: #d7c091;
         --sand: #e5d9b6;
       }
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
       body {
         background-color: var(--parchment);
         color: var(--umber);
@@ -53,22 +45,12 @@
         color: var(--parchment);
         text-decoration: none;
       }
-      .nav-links {
-        display: flex;
-        gap: 35px;
-        list-style: none;
-      }
+      .nav-links { display: flex; gap: 35px; list-style: none; }
       .nav-links a {
-        color: var(--gold);
-        text-decoration: none;
-        font-size: 14px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        transition: color 0.3s;
+        color: var(--gold); text-decoration: none; font-size: 14px;
+        letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s;
       }
-      .nav-links a:hover {
-        color: var(--parchment);
-      }
+      .nav-links a:hover { color: var(--parchment); }
 
       .page-header {
         background-color: var(--forest);
@@ -85,11 +67,7 @@
         margin-bottom: 18px;
         animation: fadeUp 1s ease both;
       }
-      .entry-wrapper {
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 80px 30px 60px;
-      }
+      .entry-wrapper { max-width: 700px; margin: 0 auto; padding: 80px 30px 60px; }
       .entry-meta {
         text-align: center;
         margin-bottom: 55px;
@@ -98,71 +76,39 @@
         animation: fadeUp 1s ease 0.2s both;
       }
       .entry-date {
-        display: block;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        color: var(--moss);
-        margin-bottom: 16px;
+        display: block; font-size: 12px; text-transform: uppercase;
+        letter-spacing: 3px; color: var(--moss); margin-bottom: 16px;
       }
       .entry-title {
         font-family: "Cormorant Garamond", Georgia, serif;
         font-size: clamp(1.9rem, 5vw, 2.9rem);
-        font-weight: 300;
-        color: var(--forest);
-        line-height: 1.2;
-        margin-bottom: 12px;
+        font-weight: 300; color: var(--forest); line-height: 1.2; margin-bottom: 12px;
       }
-      .entry-subtitle {
-        font-style: italic;
-        color: var(--clay);
-        font-size: 1.1rem;
-      }
-      .entry-body {
-        animation: fadeUp 1s ease 0.35s both;
-      }
-      .entry-body p {
-        margin-bottom: 1.35em;
-        color: var(--umber);
-      }
+      .entry-subtitle { font-style: italic; color: var(--clay); font-size: 1.1rem; }
+      .entry-body { animation: fadeUp 1s ease 0.35s both; }
+      .entry-body p { margin-bottom: 1.35em; color: var(--umber); }
       .chapter {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 1.35rem;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--clay);
-        margin: 52px 0 20px;
-        padding-top: 44px;
-        border-top: 1px solid rgba(138, 90, 68, 0.14);
+        font-size: 1.35rem; font-weight: 400; font-style: italic; color: var(--clay);
+        margin: 52px 0 20px; padding-top: 44px; border-top: 1px solid rgba(138, 90, 68, 0.14);
       }
       .pull-quote {
         font-family: "Cormorant Garamond", Georgia, serif;
         font-size: clamp(1.3rem, 3vw, 1.75rem);
-        font-weight: 300;
-        font-style: italic;
-        color: var(--forest);
-        text-align: center;
-        line-height: 1.5;
-        padding: 36px 24px;
-        margin: 40px 0;
-        border-top: 1px solid var(--gold);
-        border-bottom: 1px solid var(--gold);
+        font-weight: 300; font-style: italic; color: var(--forest);
+        text-align: center; line-height: 1.5;
+        padding: 36px 24px; margin: 40px 0;
+        border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
       }
       .breath {
-        font-style: italic;
-        color: var(--clay);
-        display: block;
-        text-align: center;
-        margin: 0.25em 0;
+        font-style: italic; color: var(--clay);
+        display: block; text-align: center; margin: 0.25em 0;
       }
       .plant-reveal {
-        display: block;
-        text-align: center;
+        display: block; text-align: center;
         font-family: "Cormorant Garamond", Georgia, serif;
         font-size: clamp(1.8rem, 5vw, 2.8rem);
-        font-weight: 300;
-        color: var(--forest);
-        letter-spacing: 4px;
+        font-weight: 300; color: var(--forest); letter-spacing: 4px;
         padding: 34px 0;
         border-top: 1px solid rgba(138, 90, 68, 0.18);
         border-bottom: 1px solid rgba(138, 90, 68, 0.18);
@@ -176,252 +122,110 @@
         text-align: center;
       }
       .botanical-callout .bc-label {
-        display: block;
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        color: var(--moss);
-        margin-bottom: 12px;
+        display: block; font-size: 0.7rem; text-transform: uppercase;
+        letter-spacing: 4px; color: var(--moss); margin-bottom: 12px;
       }
       .botanical-callout .bc-name {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 1.6rem;
-        font-weight: 300;
-        color: var(--parchment);
+        font-size: 1.6rem; font-weight: 300; color: var(--parchment);
         margin-bottom: 8px;
       }
       .botanical-callout .bc-latin {
-        font-style: italic;
-        color: var(--gold);
-        font-size: 0.9rem;
-        margin-bottom: 18px;
-        display: block;
+        font-style: italic; color: var(--gold); font-size: 0.9rem; margin-bottom: 18px; display: block;
       }
       .botanical-callout p {
-        color: rgba(215, 192, 145, 0.75);
-        font-size: 0.92rem;
-        font-style: italic;
-        line-height: 1.65;
-        margin-bottom: 18px;
+        color: rgba(215, 192, 145, 0.75); font-size: 0.92rem; font-style: italic;
+        line-height: 1.65; margin-bottom: 18px;
       }
       .botanical-callout a {
-        color: var(--moss);
-        text-decoration: none;
-        font-size: 0.8rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        border-bottom: 1px solid rgba(132, 155, 132, 0.4);
-        transition: all 0.3s;
+        color: var(--moss); text-decoration: none; font-size: 0.8rem;
+        letter-spacing: 2px; text-transform: uppercase;
+        border-bottom: 1px solid rgba(132, 155, 132, 0.4); transition: all 0.3s;
       }
-      .botanical-callout a:hover {
-        color: var(--parchment);
-        border-color: var(--parchment);
-      }
+      .botanical-callout a:hover { color: var(--parchment); border-color: var(--parchment); }
       .about-writer {
-        margin-top: 70px;
-        padding: 40px 36px;
-        background-color: var(--sand);
-        border-radius: 12px;
+        margin-top: 70px; padding: 40px 36px;
+        background-color: var(--sand); border-radius: 12px;
         border-left: 5px solid var(--moss);
         animation: fadeUp 1s ease 0.5s both;
       }
       .about-writer .label {
-        display: block;
-        font-size: 0.65rem;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        color: var(--moss);
-        margin-bottom: 8px;
+        display: block; font-size: 0.65rem; text-transform: uppercase;
+        letter-spacing: 3px; color: var(--moss); margin-bottom: 8px;
       }
       .about-writer strong {
-        display: block;
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 1.25rem;
-        font-weight: 400;
-        color: var(--forest);
-        margin-bottom: 8px;
+        display: block; font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.25rem; font-weight: 400; color: var(--forest); margin-bottom: 8px;
       }
-      .about-writer p {
-        font-size: 0.92rem;
-        color: var(--umber);
-        line-height: 1.7;
-        font-style: italic;
-      }
+      .about-writer p { font-size: 0.92rem; color: var(--umber); line-height: 1.7; font-style: italic; }
       .divider {
-        text-align: center;
-        color: var(--moss);
-        letter-spacing: 8px;
-        font-size: 0.78rem;
-        margin: 60px 0 36px;
-        opacity: 0.55;
+        text-align: center; color: var(--moss); letter-spacing: 8px;
+        font-size: 0.78rem; margin: 60px 0 36px; opacity: 0.55;
       }
       .nav-links-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 16px;
-        margin-bottom: 70px;
-        flex-wrap: wrap;
-        gap: 12px;
+        display: flex; justify-content: space-between; align-items: center;
+        margin-top: 16px; margin-bottom: 70px; flex-wrap: wrap; gap: 12px;
       }
       .back-link {
-        color: var(--clay);
-        text-decoration: none;
-        font-size: 0.8rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        border-bottom: 1px solid transparent;
-        transition: border-color 0.3s;
+        color: var(--clay); text-decoration: none; font-size: 0.8rem;
+        letter-spacing: 2px; text-transform: uppercase;
+        border-bottom: 1px solid transparent; transition: border-color 0.3s;
       }
-      .back-link:hover {
-        border-color: var(--clay);
-      }
+      .back-link:hover { border-color: var(--clay); }
       footer {
-        background-color: var(--forest);
-        color: var(--sand);
-        padding: 52px 20px 26px;
-        text-align: center;
-        font-family: "EB Garamond", Georgia, serif;
+        background-color: var(--forest); color: var(--sand);
+        padding: 52px 20px 26px; text-align: center; font-family: "EB Garamond", Georgia, serif;
       }
       .f-logo {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 1.25rem;
-        letter-spacing: 8px;
-        color: var(--parchment);
-        font-weight: 300;
-        margin-bottom: 6px;
+        font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.25rem;
+        letter-spacing: 8px; color: var(--parchment); font-weight: 300; margin-bottom: 6px;
       }
-      .f-tag {
-        font-style: italic;
-        font-size: 0.86rem;
-        opacity: 0.55;
-        margin-bottom: 26px;
-      }
-      .f-links {
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        margin-bottom: 26px;
-        flex-wrap: wrap;
-      }
+      .f-tag { font-style: italic; font-size: 0.86rem; opacity: 0.55; margin-bottom: 26px; }
+      .f-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 26px; flex-wrap: wrap; }
       .f-links a {
-        color: var(--sand);
-        text-decoration: none;
-        font-size: 0.78rem;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        transition: color 0.3s;
+        color: var(--sand); text-decoration: none; font-size: 0.78rem;
+        text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.3s;
       }
-      .f-links a:hover {
-        color: var(--moss);
-      }
-      .f-hr {
-        border: 0;
-        border-top: 1px solid rgba(229, 217, 182, 0.07);
-        margin-bottom: 18px;
-      }
-      .f-copy {
-        font-size: 0.78rem;
-        opacity: 0.6;
-      }
-      .f-crafted {
-        font-style: italic;
-        font-size: 0.76rem;
-        opacity: 0.4;
-        margin-top: 4px;
-      }
+      .f-links a:hover { color: var(--moss); }
+      .f-hr { border: 0; border-top: 1px solid rgba(229, 217, 182, 0.07); margin-bottom: 18px; }
+      .f-copy { font-size: 0.78rem; opacity: 0.6; }
+      .f-crafted { font-style: italic; font-size: 0.76rem; opacity: 0.4; margin-top: 4px; }
 
       @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(18px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
       }
       @media (max-width: 600px) {
-        nav {
-          padding: 16px 20px;
-        }
-        .nav-links {
-          gap: 18px;
-        }
-        .entry-wrapper {
-          padding: 55px 20px 40px;
-        }
-        .pull-quote {
-          padding: 28px 16px;
-        }
-        .about-writer {
-          padding: 28px 22px;
-        }
-        .botanical-callout {
-          padding: 26px 22px;
-        }
+        nav { padding: 16px 20px; }
+        .nav-links { gap: 18px; }
+        .entry-wrapper { padding: 55px 20px 40px; }
+        .pull-quote { padding: 28px 16px; }
+        .about-writer { padding: 28px 22px; }
+        .botanical-callout { padding: 26px 22px; }
       }
       .hamburger {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 4px;
-        z-index: 200;
+        display: none; flex-direction: column; gap: 5px;
+        cursor: pointer; background: none; border: none; padding: 4px; z-index: 200;
       }
       .hamburger span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background-color: #d7c091;
-        border-radius: 2px;
-        transition: all 0.3s ease;
+        display: block; width: 24px; height: 2px;
+        background-color: #d7c091; border-radius: 2px; transition: all 0.3s ease;
       }
-      .hamburger.open span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-      }
-      .hamburger.open span:nth-child(2) {
-        opacity: 0;
-      }
-      .hamburger.open span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-      }
+      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .hamburger.open span:nth-child(2) { opacity: 0; }
+      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
       @media (max-width: 700px) {
-        nav {
-          padding: 16px 20px !important;
-          position: relative;
-        }
-        .hamburger {
-          display: flex;
-        }
+        nav { padding: 16px 20px !important; position: relative; }
+        .hamburger { display: flex; }
         .nav-links {
-          display: none !important;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          background-color: #1b3022;
-          flex-direction: column !important;
-          gap: 0 !important;
-          padding: 0;
-          border-top: 1px solid rgba(215, 192, 145, 0.15);
-          z-index: 150;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          display: none !important; position: absolute; top: 100%; left: 0; right: 0;
+          background-color: #1b3022; flex-direction: column !important; gap: 0 !important;
+          padding: 0; border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150; box-shadow: 0 8px 24px rgba(0,0,0,0.3);
         }
-        .nav-links.open {
-          display: flex !important;
-        }
-        .nav-links li {
-          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
-        }
-        .nav-links a {
-          display: block;
-          padding: 16px 24px !important;
-          font-size: 0.85rem !important;
-          letter-spacing: 2px !important;
-        }
+        .nav-links.open { display: flex !important; }
+        .nav-links li { border-bottom: 1px solid rgba(215, 192, 145, 0.08); }
+        .nav-links a { display: block; padding: 16px 24px !important; font-size: 0.85rem !important; letter-spacing: 2px !important; }
       }
     </style>
   </head>
@@ -431,6 +235,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Botanicals</a></li>
         <li><a href="journal.html">Journal</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <button class="hamburger" aria-label="Menu">
@@ -444,74 +249,72 @@
 
     <div class="entry-wrapper">
       <div class="entry-meta">
-        <span class="entry-date"
-          >April 2026 &nbsp;&middot;&nbsp; Nature &amp; Awakening</span
-        >
+        <span class="entry-date">April 2026 &nbsp;&middot;&nbsp; Nature &amp; Awakening</span>
         <h1 class="entry-title">When Nature Answered</h1>
         <p class="entry-subtitle">
-          On the fennel plant, the silence after Intwaso, and what it means to
-          remember.
+          On the fennel plant, the silence after Intwaso, and what it means
+          to remember.
         </p>
       </div>
 
       <div class="entry-body">
+
         <p class="chapter">I. The silence after initiation</p>
 
         <p>
-          After Intwaso &mdash; my sangoma initiation &mdash; something changed
-          that I hadn't anticipated. I had gone in searching for answers, for
-          direction, for a deeper understanding of who I was and what I had been
-          given. And I received those things. The initiation was profound. It
-          was difficult. It was necessary.
-        </p>
-
-        <p>But it took something from me in return.</p>
-
-        <p>
-          My whole life, I had been a dreamer. Not in the ordinary sense. I
-          travelled in sleep. I received guidance. I saw things before they
-          happened. My ancestors spoke to me in the language of images and
-          feeling, and I had learned, over years, to trust what I was shown.
-          That dreaming was not a gift I had earned. It had simply always been
-          there, the way your own heartbeat is always there &mdash; so familiar
-          you stop noticing it, until the day it goes quiet.
+          After Intwaso, my sangoma initiation, something changed that I hadn't
+          anticipated. I had gone in searching for answers, for direction, for a deeper
+          understanding of who I was and what I had been given. And I received those things.
+          The initiation was profound. It was difficult. It was necessary.
         </p>
 
         <p>
-          After my initiation, I woke up each morning to nothing. No colour. No
-          instruction. No familiar presence waiting at the threshold of waking.
-          Just silence.
+          But it took something from me in return.
+        </p>
+
+        <p>
+          My whole life, I had been a dreamer. Not in the ordinary sense. I travelled in sleep.
+          I received guidance. I saw things before they happened. My ancestors spoke to me in
+          the language of images and feeling, and I had learned, over years, to trust what I was
+          shown. That dreaming was not a gift I had earned. It had simply always been there,
+          the way your own heartbeat is always there, so familiar you stop noticing it,
+          until the day it goes quiet.
+        </p>
+
+        <p>
+          After my initiation, I woke up each morning to nothing. No colour. No instruction.
+          No familiar presence waiting at the threshold of waking. Just silence.
         </p>
 
         <div class="pull-quote">
-          Some losses arrive with ceremony. Others simply appear one morning in
-          the space where something beloved used to be.
+          Some losses arrive with ceremony. Others simply appear one morning in the space
+          where something beloved used to be.
         </div>
 
         <p>
-          I did not know how to ask for it back. I did not know if it could be
-          returned. I continued my work, my days, my walking &mdash; but there
-          was a quality of flatness to everything. As though a frequency had
-          been removed from the signal.
+          I did not know how to ask for it back. I did not know if it could be returned.
+          I continued my work, my days, my walking. But there was a quality of flatness
+          to everything, as though a frequency had been removed from the signal.
         </p>
 
         <p class="chapter">II. Three days on a footpath</p>
 
         <p>
-          I don't remember which morning it was that I first noticed the plant.
-          It was on my path to work &mdash; one of those plants that grow in the
-          spaces between intention and neglect: a crack in the pavement, a strip
-          of ground beside a wall, somewhere no one thought to tend.
+          I don't remember which morning it was that I first noticed the plant. It was on my
+          path to work, one of those plants that grow in the spaces between intention
+          and neglect: a crack in the pavement, a strip of ground beside a wall, somewhere
+          no one thought to tend.
         </p>
 
-        <p>It didn't announce itself. But it insisted.</p>
+        <p>
+          It didn't announce itself. But it insisted.
+        </p>
 
         <p>
-          For three days I passed it. For three days something in me slowed each
-          time I came near it &mdash; a pull I couldn't name, a recognition
-          without context. I had learned enough, by then, to know the difference
-          between idle curiosity and the particular quality of attention that
-          means: this is for you. Pay attention.
+          For three days I passed it. For three days something in me slowed each time I came
+          near it, a pull I couldn't name, a recognition without context. I had learned
+          enough, by then, to know the difference between idle curiosity and the particular
+          quality of attention that means: this is for you. Pay attention.
         </p>
 
         <span class="breath">On the third day, I stopped.</span>
@@ -519,59 +322,59 @@
         <span class="breath">And then I looked it up.</span>
 
         <p>
-          Foeniculum vulgare. Fennel. In isiZulu: Imboziso &mdash; meaning, in
-          the botanical literature, that which clears the path of sight. An herb
-          used across centuries and continents for digestion, for clarity, for
-          the opening of vision. And in the older traditions: associated with
-          dreaming. With the courage to receive what the unconscious is trying
-          to show us.
+          Foeniculum vulgare. Fennel. In isiZulu: Imboziso, meaning, in the botanical
+          literature, that which clears the path of sight. An herb used across centuries and
+          continents for digestion, for clarity, for the opening of vision. And in the older
+          traditions: associated with dreaming. With the courage to receive what the unconscious
+          is trying to show us.
         </p>
 
         <div class="pull-quote">
-          I had not gone looking for it. It had positioned itself in my path and
-          waited until I was ready to see it.
+          I had not gone looking for it. It had positioned itself in my path
+          and waited until I was ready to see it.
         </div>
 
         <p>
-          I brewed it that evening. Lightly crushed seeds. Boiling water. Ten
-          minutes steep. Nothing elaborate. Just the plant and the intention and
-          the act of paying attention to what I had been given.
+          I brewed it that evening. Lightly crushed seeds. Boiling water. Ten minutes steep.
+          Nothing elaborate. Just the plant and the intention and the act of paying attention
+          to what I had been given.
         </p>
 
-        <p>That night, I dreamed.</p>
+        <p>
+          That night, I dreamed.
+        </p>
 
         <p class="chapter">III. What it returned</p>
 
         <p>
-          Not just any dream. The kind I used to have. Rich, specific,
-          inhabited. The ancestors present. The guidance clear. I woke up with
-          the particular feeling of having been somewhere important, of having
-          received something I needed, even if I could not yet translate it into
-          ordinary language.
+          Not just any dream. The kind I used to have. Rich, specific, inhabited. The ancestors
+          present. The guidance clear. I woke up with the particular feeling of having been
+          somewhere important, of having received something I needed, even if I could not yet
+          translate it into ordinary language.
         </p>
 
         <p>
-          I lay still for a long time before getting up. Holding the experience.
-          Trying to understand what had just happened.
+          I lay still for a long time before getting up. Holding the experience. Trying to
+          understand what had just happened.
         </p>
 
-        <span class="plant-reveal">Imboziso &mdash; the path of sight</span>
+        <span class="plant-reveal">Imboziso: the path of sight</span>
 
         <p>
-          A plant I had not searched for. A plant I had not known by name. A
-          plant growing between the cracks of a city footpath, in the least
-          romantic possible setting, had found me at the precise moment I needed
-          it and restored something I thought was gone.
+          A plant I had not searched for. A plant I had not known by name. A plant growing
+          between the cracks of a city footpath, in the least romantic possible setting, had
+          found me at the precise moment I needed it and restored something I thought was gone.
         </p>
 
         <p>
-          That was not coincidence. I do not believe in coincidence the way I
-          once did. What I believe in is attunement &mdash; the quality of
-          openness that allows you to receive what is being offered, rather than
-          walking past it for the fourth day running.
+          That was not coincidence. I do not believe in coincidence the way I once did. What
+          I believe in is attunement, the quality of openness that allows you to receive
+          what is being offered, rather than walking past it for the fourth day running.
         </p>
 
-        <p>I had been quiet enough, finally, to hear.</p>
+        <p>
+          I had been quiet enough, finally, to hear.
+        </p>
 
         <div class="pull-quote">
           The earth speaks constantly. The question is only whether we have
@@ -579,30 +382,28 @@
         </div>
 
         <p>
-          From that morning, everything shifted. I began to pay attention to
-          plants differently. Not as ingredients or remedies or interesting
-          facts &mdash; but as presences. As teachers. As beings with their own
-          intelligence and their own timing, willing to share what they know
-          with anyone who approaches with genuine respect and genuine need.
+          From that morning, everything shifted. I began to pay attention to plants differently.
+          Not as ingredients or remedies or interesting facts, but as presences. As
+          teachers. As beings with their own intelligence and their own timing, willing to share
+          what they know with anyone who approaches with genuine respect and genuine need.
         </p>
 
         <p>
-          I AM NATURE did not begin as a website. It began as a daily practice
-          of listening. The library you are reading now is the record of what I
-          heard.
+          I AM NATURE did not begin as a website. It began as a daily practice of listening.
+          The library you are reading now is the record of what I heard.
         </p>
 
         <div class="botanical-callout">
           <span class="bc-label">The Plant That Started Everything</span>
-          <div class="bc-name">Fennel &mdash; Imboziso</div>
+          <div class="bc-name">Fennel / Imboziso</div>
           <span class="bc-latin">Foeniculum vulgare</span>
           <p>
-            Including the Dream Return Ritual: how to burn dried fennel seeds
-            beside your bed and invite your ancestors to show you what they have
-            been waiting to share.
+            Including the Dream Return Ritual: how to burn dried fennel seeds beside your bed
+            and invite your ancestors to show you what they have been waiting to share.
           </p>
           <a href="index.html">Find Imboziso in the botanical library &rarr;</a>
         </div>
+
       </div>
 
       <div class="divider">&#8212; &#10022; &#8212;</div>
@@ -611,18 +412,16 @@
         <span class="label">About the Writer</span>
         <strong>Nomzamo Mbelebele</strong>
         <p>
-          Nomzamo is a healer, plant keeper, and the founder of I AM NATURE
-          &mdash; a living archive of botanical wisdom rooted in African
-          heritage and personal experience. She writes from the intersection of
-          traditional knowledge, spiritual practice, and lived truth.
+          Nomzamo is a healer, plant keeper, and the founder of I AM NATURE, a
+          living archive of botanical wisdom rooted in African heritage and personal experience.
+          She writes from the intersection of traditional knowledge, spiritual practice,
+          and lived truth.
         </p>
       </div>
 
       <div class="nav-links-bottom">
         <a href="journal.html" class="back-link">&larr; All Journal Entries</a>
-        <a href="journal-entry-002.html" class="back-link"
-          >Entry 002: The Weight I Let Go &rarr;</a
-        >
+        <a href="journal-entry-002.html" class="back-link">Entry 002: The Weight I Let Go &rarr;</a>
       </div>
     </div>
 
@@ -633,13 +432,12 @@
         <a href="index.html">Botanicals</a>
         <a href="alchemy.html">Alchemy of Nature</a>
         <a href="journal.html">Journal</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="#">Back to Top &uarr;</a>
       </div>
       <hr class="f-hr" />
-      <p class="f-copy">
-        &copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.
-      </p>
+      <p class="f-copy">&copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.</p>
       <p class="f-crafted">Crafted with Intention</p>
     </footer>
 
