@@ -198,6 +198,15 @@
         font-weight: 400;
         color: var(--forest);
         letter-spacing: 0.5px;
+        word-break: break-all;
+        overflow-wrap: break-word;
+      }
+
+      @media (max-width: 480px) {
+        .contact-card-body .card-value {
+          font-size: 1.05rem;
+          letter-spacing: 0;
+        }
       }
 
       .contact-card-body .card-note {

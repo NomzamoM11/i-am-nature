@@ -18,8 +18,16 @@
         --gold: #d7c091;
         --sand: #e5d9b6;
       }
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html { scroll-behavior: smooth; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         background-color: var(--parchment);
         color: var(--umber);
@@ -29,20 +37,38 @@
       }
       nav {
         background-color: var(--forest);
-        display: flex; justify-content: space-between; align-items: center;
-        padding: 22px 50px; position: sticky; top: 0; z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 50px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
       }
       .nav-logo {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 1rem; letter-spacing: 10px; text-transform: uppercase;
-        color: var(--parchment); text-decoration: none;
+        font-size: 1rem;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: var(--parchment);
+        text-decoration: none;
       }
-      .nav-links { display: flex; gap: 35px; list-style: none; }
+      .nav-links {
+        display: flex;
+        gap: 35px;
+        list-style: none;
+      }
       .nav-links a {
-        color: var(--gold); text-decoration: none; font-size: 14px;
-        letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s;
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: color 0.3s;
       }
-      .nav-links a:hover { color: var(--parchment); }
+      .nav-links a:hover {
+        color: var(--parchment);
+      }
 
       /* HERO */
       .about-hero {
@@ -55,47 +81,82 @@
       }
       .about-hero::before {
         content: "";
-        position: absolute; inset: 0;
-        background: radial-gradient(ellipse at 50% 60%, rgba(215, 192, 145, 0.05) 0%, transparent 70%);
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 60%,
+          rgba(215, 192, 145, 0.05) 0%,
+          transparent 70%
+        );
         pointer-events: none;
       }
       .about-hero .eyebrow {
-        display: block; text-transform: uppercase; letter-spacing: 5px;
-        color: var(--moss); font-size: 0.72rem; margin-bottom: 20px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--moss);
+        font-size: 0.72rem;
+        margin-bottom: 20px;
         animation: fadeUp 1s ease both;
       }
       .about-hero h1 {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 300; font-style: italic;
-        color: var(--parchment); line-height: 1.15; margin-bottom: 22px;
+        font-size: clamp(2.4rem, 6vw, 4rem);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--parchment);
+        line-height: 1.15;
+        margin-bottom: 22px;
         animation: fadeUp 1s ease 0.15s both;
       }
       .about-hero .hero-sub {
-        color: var(--gold); font-style: italic; font-size: 1.05rem;
-        max-width: 520px; margin: 0 auto;
+        color: var(--gold);
+        font-style: italic;
+        font-size: 1.05rem;
+        max-width: 520px;
+        margin: 0 auto;
         animation: fadeUp 1s ease 0.3s both;
         line-height: 1.7;
       }
 
       /* MAIN WRAPPER */
-      .about-wrapper { max-width: 720px; margin: 0 auto; padding: 80px 30px 60px; }
+      .about-wrapper {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 80px 30px 60px;
+      }
 
       /* SECTION STYLES */
-      .about-section { margin-bottom: 64px; }
+      .about-section {
+        margin-bottom: 64px;
+      }
       .section-label {
-        display: block; font-size: 0.7rem; text-transform: uppercase;
-        letter-spacing: 4px; color: var(--moss); margin-bottom: 16px;
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--moss);
+        margin-bottom: 16px;
       }
       .about-section h2 {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 300;
-        color: var(--forest); line-height: 1.2; margin-bottom: 22px;
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        font-weight: 300;
+        color: var(--forest);
+        line-height: 1.2;
+        margin-bottom: 22px;
       }
-      .about-section p { margin-bottom: 1.2em; color: var(--umber); }
-      .about-section p:last-child { margin-bottom: 0; }
+      .about-section p {
+        margin-bottom: 1.2em;
+        color: var(--umber);
+      }
+      .about-section p:last-child {
+        margin-bottom: 0;
+      }
 
       .section-divider {
-        border: 0; border-top: 1px solid rgba(138, 90, 68, 0.14);
+        border: 0;
+        border-top: 1px solid rgba(138, 90, 68, 0.14);
         margin: 64px 0;
       }
 
@@ -113,16 +174,24 @@
         border-left: 4px solid var(--moss);
       }
       .pillar .pillar-icon {
-        font-size: 1.4rem; margin-bottom: 10px; display: block;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        display: block;
       }
       .pillar .pillar-title {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 1.2rem; font-weight: 400; color: var(--forest);
-        margin-bottom: 6px; display: block;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--forest);
+        margin-bottom: 6px;
+        display: block;
       }
       .pillar p {
-        font-size: 0.92rem; color: var(--umber);
-        font-style: italic; line-height: 1.65; margin-bottom: 0;
+        font-size: 0.92rem;
+        color: var(--umber);
+        font-style: italic;
+        line-height: 1.65;
+        margin-bottom: 0;
       }
 
       /* FOUNDER BLOCK */
@@ -136,29 +205,53 @@
       }
       .founder-block::before {
         content: "";
-        position: absolute; top: -40px; right: -40px;
-        width: 180px; height: 180px; border-radius: 50%;
-        background: radial-gradient(circle, rgba(132,155,132,0.1) 0%, transparent 70%);
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(132, 155, 132, 0.1) 0%,
+          transparent 70%
+        );
         pointer-events: none;
       }
       .founder-block .f-label {
-        display: block; font-size: 0.68rem; text-transform: uppercase;
-        letter-spacing: 4px; color: var(--moss); margin-bottom: 16px;
+        display: block;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--moss);
+        margin-bottom: 16px;
       }
       .founder-block .f-name {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300;
-        color: var(--parchment); margin-bottom: 8px; line-height: 1.1;
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-weight: 300;
+        color: var(--parchment);
+        margin-bottom: 8px;
+        line-height: 1.1;
       }
       .founder-block .f-title {
-        font-style: italic; color: var(--gold); font-size: 1rem;
-        margin-bottom: 28px; display: block; opacity: 0.8;
+        font-style: italic;
+        color: var(--gold);
+        font-size: 1rem;
+        margin-bottom: 28px;
+        display: block;
+        opacity: 0.8;
       }
       .founder-block p {
-        color: rgba(215, 192, 145, 0.8); font-size: 0.97rem;
-        line-height: 1.8; margin-bottom: 1em; font-style: italic;
+        color: rgba(215, 192, 145, 0.8);
+        font-size: 0.97rem;
+        line-height: 1.8;
+        margin-bottom: 1em;
+        font-style: italic;
       }
-      .founder-block p:last-child { margin-bottom: 0; }
+      .founder-block p:last-child {
+        margin-bottom: 0;
+      }
 
       /* PHILOSOPHY QUOTE */
       .philosophy-quote {
@@ -171,92 +264,203 @@
       .philosophy-quote p {
         font-family: "Cormorant Garamond", Georgia, serif;
         font-size: clamp(1.3rem, 2.5vw, 1.7rem);
-        font-weight: 300; font-style: italic;
-        color: var(--forest); line-height: 1.6;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--forest);
+        line-height: 1.6;
         margin-bottom: 0;
       }
 
       /* NAVIGATION LINKS */
       .about-nav {
-        display: grid; grid-template-columns: 1fr 1fr 1fr;
-        gap: 14px; margin-top: 60px; padding-top: 48px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 14px;
+        margin-top: 60px;
+        padding-top: 48px;
         border-top: 1px solid rgba(138, 90, 68, 0.14);
       }
       .about-nav-card {
-        background-color: var(--sand); border-radius: 12px;
-        padding: 22px 20px; text-decoration: none; color: inherit;
+        background-color: var(--sand);
+        border-radius: 12px;
+        padding: 22px 20px;
+        text-decoration: none;
+        color: inherit;
         border: 1px solid rgba(138, 90, 68, 0.1);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        display: flex; flex-direction: column; gap: 6px;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
       }
-      .about-nav-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(62,43,30,0.12); }
+      .about-nav-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(62, 43, 30, 0.12);
+      }
       .about-nav-card .anc-label {
-        font-size: 0.68rem; text-transform: uppercase; letter-spacing: 3px; color: var(--moss);
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--moss);
       }
       .about-nav-card .anc-title {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 1.15rem; font-weight: 300; color: var(--forest);
+        font-size: 1.15rem;
+        font-weight: 300;
+        color: var(--forest);
       }
       .about-nav-card .anc-desc {
-        font-style: italic; font-size: 0.85rem; color: var(--clay); line-height: 1.5;
+        font-style: italic;
+        font-size: 0.85rem;
+        color: var(--clay);
+        line-height: 1.5;
       }
 
       footer {
-        background-color: var(--forest); color: var(--sand);
-        padding: 52px 20px 26px; text-align: center;
+        background-color: var(--forest);
+        color: var(--sand);
+        padding: 52px 20px 26px;
+        text-align: center;
         font-family: "EB Garamond", Georgia, serif;
         border-top: 1px solid rgba(215, 192, 145, 0.07);
       }
       .f-logo {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 1.25rem; letter-spacing: 8px; color: var(--parchment);
-        font-weight: 300; margin-bottom: 6px;
+        font-size: 1.25rem;
+        letter-spacing: 8px;
+        color: var(--parchment);
+        font-weight: 300;
+        margin-bottom: 6px;
       }
-      .f-tag { font-style: italic; font-size: 0.86rem; opacity: 0.55; margin-bottom: 26px; }
-      .f-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 26px; flex-wrap: wrap; }
+      .f-tag {
+        font-style: italic;
+        font-size: 0.86rem;
+        opacity: 0.55;
+        margin-bottom: 26px;
+      }
+      .f-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 26px;
+        flex-wrap: wrap;
+      }
       .f-links a {
-        color: var(--sand); text-decoration: none; font-size: 0.78rem;
-        text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.3s;
+        color: var(--sand);
+        text-decoration: none;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: color 0.3s;
       }
-      .f-links a:hover { color: var(--moss); }
-      .f-hr { border: 0; border-top: 1px solid rgba(229, 217, 182, 0.07); margin-bottom: 18px; }
-      .f-copy { font-size: 0.78rem; opacity: 0.6; }
-      .f-crafted { font-style: italic; font-size: 0.76rem; opacity: 0.4; margin-top: 4px; }
+      .f-links a:hover {
+        color: var(--moss);
+      }
+      .f-hr {
+        border: 0;
+        border-top: 1px solid rgba(229, 217, 182, 0.07);
+        margin-bottom: 18px;
+      }
+      .f-copy {
+        font-size: 0.78rem;
+        opacity: 0.6;
+      }
+      .f-crafted {
+        font-style: italic;
+        font-size: 0.76rem;
+        opacity: 0.4;
+        margin-top: 4px;
+      }
 
       @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(18px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       @media (max-width: 640px) {
-        nav { padding: 16px 20px; }
-        .about-wrapper { padding: 55px 20px 40px; }
-        .pillars { grid-template-columns: 1fr; }
-        .about-nav { grid-template-columns: 1fr; }
-        .founder-block { padding: 36px 26px; }
+        nav {
+          padding: 16px 20px;
+        }
+        .about-wrapper {
+          padding: 55px 20px 40px;
+        }
+        .pillars {
+          grid-template-columns: 1fr;
+        }
+        .about-nav {
+          grid-template-columns: 1fr;
+        }
+        .founder-block {
+          padding: 36px 26px;
+        }
       }
       .hamburger {
-        display: none; flex-direction: column; gap: 5px;
-        cursor: pointer; background: none; border: none; padding: 4px; z-index: 200;
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+        z-index: 200;
       }
       .hamburger span {
-        display: block; width: 24px; height: 2px;
-        background-color: #d7c091; border-radius: 2px; transition: all 0.3s ease;
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #d7c091;
+        border-radius: 2px;
+        transition: all 0.3s ease;
       }
-      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      .hamburger.open span:nth-child(2) { opacity: 0; }
-      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
       @media (max-width: 700px) {
-        nav { padding: 16px 20px !important; position: relative; }
-        .hamburger { display: flex; }
-        .nav-links {
-          display: none !important; position: absolute; top: 100%; left: 0; right: 0;
-          background-color: #1b3022; flex-direction: column !important; gap: 0 !important;
-          padding: 0; border-top: 1px solid rgba(215, 192, 145, 0.15);
-          z-index: 150; box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        nav {
+          padding: 16px 20px !important;
+          position: relative;
         }
-        .nav-links.open { display: flex !important; }
-        .nav-links li { border-bottom: 1px solid rgba(215, 192, 145, 0.08); }
-        .nav-links a { display: block; padding: 16px 24px !important; font-size: 0.85rem !important; letter-spacing: 2px !important; }
+        .hamburger {
+          display: flex;
+        }
+        .nav-links {
+          display: none !important;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #1b3022;
+          flex-direction: column !important;
+          gap: 0 !important;
+          padding: 0;
+          border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links.open {
+          display: flex !important;
+        }
+        .nav-links li {
+          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
+        }
+        .nav-links a {
+          display: block;
+          padding: 16px 24px !important;
+          font-size: 0.85rem !important;
+          letter-spacing: 2px !important;
+        }
       }
     </style>
   </head>
@@ -276,57 +480,67 @@
 
     <div class="about-hero">
       <span class="eyebrow">About</span>
-      <h1>A living archive<br>of what the earth offers</h1>
+      <h1>A living archive<br />of what the earth offers</h1>
       <p class="hero-sub">
-        I AM NATURE is a botanical wellness and spiritual healing project rooted in
-        African heritage. It exists at the intersection of plant medicine, ancestral
-        wisdom, and lived experience.
+        I AM NATURE is a botanical wellness and spiritual healing project rooted
+        in African heritage. It exists at the intersection of plant medicine,
+        ancestral wisdom, and lived experience.
       </p>
     </div>
 
     <div class="about-wrapper">
-
       <!-- WHAT THIS IS -->
       <div class="about-section">
         <span class="section-label">What this is</span>
         <h2>Not a brand. A record of what the earth said.</h2>
         <p>
-          I AM NATURE began on a footpath, with a plant that insisted on being noticed.
-          It grew from there into what you see now: a library of 55 botanical entries,
-          each one a living document of traditional knowledge, spiritual practice, and
-          evidence-based healing rooted in African heritage.
+          I AM NATURE began on a footpath, with a plant that insisted on being
+          noticed. It grew from there into what you see now: a library of 55
+          botanical entries, each one a living document of traditional
+          knowledge, spiritual practice, and evidence-based healing rooted in
+          African heritage.
         </p>
         <p>
-          Every entry is written with care. The physical properties are verified against
-          published research and clinical evidence. The spiritual wisdom and ritual
-          practices are drawn from living tradition: from the Zulu healing lineage,
-          from the Khoikhoi and San, from the Indian Ocean trade routes that brought new
-          plants into our soil, and from the direct experience of the woman who built this.
+          Every entry is written with care. The physical properties are verified
+          against published research and clinical evidence. The spiritual wisdom
+          and ritual practices are drawn from living tradition: from the Zulu
+          healing lineage, from the Khoikhoi and San, from the Indian Ocean
+          trade routes that brought new plants into our soil, and from the
+          direct experience of the woman who built this.
         </p>
-        <p>
-          This is not a wellness trend. It is an act of remembering.
-        </p>
+        <p>This is not a wellness trend. It is an act of remembering.</p>
 
         <div class="pillars">
           <div class="pillar">
             <span class="pillar-icon">🌿</span>
             <span class="pillar-title">The Botanical Library</span>
-            <p>55 free plant entries covering physical healing, preparation, safety, and spiritual practice.</p>
+            <p>
+              55 free plant entries covering physical healing, preparation,
+              safety, and spiritual practice.
+            </p>
           </div>
           <div class="pillar">
             <span class="pillar-icon">📖</span>
             <span class="pillar-title">The Journal</span>
-            <p>Personal essays from the founder on healing, plants, and the philosophy of the present.</p>
+            <p>
+              Personal essays from the founder on healing, plants, and the
+              philosophy of the present.
+            </p>
           </div>
           <div class="pillar">
             <span class="pillar-icon">🧪</span>
             <span class="pillar-title">Alchemy of Nature</span>
-            <p>31 healing recipes and a 30-day whole food reset plan, drawn from lived experience.</p>
+            <p>
+              31 healing recipes and a 30-day whole food reset plan, drawn from
+              lived experience.
+            </p>
           </div>
           <div class="pillar">
             <span class="pillar-icon">📚</span>
             <span class="pillar-title">The Book: Volume I</span>
-            <p>111 botanical entries grouped by healing purpose. Coming soon.</p>
+            <p>
+              111 botanical entries grouped by healing purpose. Coming soon.
+            </p>
           </div>
         </div>
       </div>
@@ -338,28 +552,30 @@
         <span class="section-label">How we approach this work</span>
         <h2>Safety, accuracy, and the wisdom to know the difference.</h2>
         <p>
-          Plant medicine is ancient. But it is not always gentle. Every entry on this site is
-          verified for scientific accuracy, drug interactions, toxicity thresholds, and safe
-          preparation methods. Where the evidence is limited, we say so. Where a plant carries
-          real risk, we name it clearly.
+          Plant medicine is ancient. But it is not always gentle. Every entry on
+          this site is verified for scientific accuracy, drug interactions,
+          toxicity thresholds, and safe preparation methods. Where the evidence
+          is limited, we say so. Where a plant carries real risk, we name it
+          clearly.
         </p>
         <p>
-          The spiritual knowledge is treated with the same respect. These are not decorations
-          added to make a herbal database feel warmer. The ritual practices, the ancestral
-          wisdom, the spiritual teachings embedded in each plant's story: these are
-          primary knowledge, not supplementary content. They are the point.
+          The spiritual knowledge is treated with the same respect. These are
+          not decorations added to make a herbal database feel warmer. The
+          ritual practices, the ancestral wisdom, the spiritual teachings
+          embedded in each plant's story: these are primary knowledge, not
+          supplementary content. They are the point.
         </p>
         <p>
-          We believe both can be true at once: that a plant's chemistry can be documented in
-          a clinical trial, and that the same plant carries intelligence and intention that
-          no trial will ever fully capture.
+          We believe both can be true at once: that a plant's chemistry can be
+          documented in a clinical trial, and that the same plant carries
+          intelligence and intention that no trial will ever fully capture.
         </p>
       </div>
 
       <div class="philosophy-quote">
         <p>
-          &ldquo;The earth speaks constantly.<br>
-          The question is only whether we have become<br>
+          &ldquo;The earth speaks constantly.<br />
+          The question is only whether we have become<br />
           still enough to listen.&rdquo;
         </p>
       </div>
@@ -370,22 +586,23 @@
         <div class="f-name">Nomzamo Mbelebele</div>
         <span class="f-title">Healer, plant keeper, writer</span>
         <p>
-          Nomzamo grew up dreaming differently. From childhood, she travelled in sleep, received
-          guidance, and saw things before they happened. She spent years searching for a place
-          where that gift was understood, moving through churches, through traditions,
-          through Intwaso, her sangoma initiation, before finding that the belonging she
-          sought had been inside her all along.
+          Nomzamo grew up dreaming differently. From childhood, she travelled in
+          sleep, received guidance, and saw things before they happened. She
+          spent years searching for a place where that gift was understood,
+          moving through churches, through traditions, through Intwaso, her
+          sangoma initiation, before finding that the belonging she sought had
+          been inside her all along.
         </p>
         <p>
-          The loss of her mother, the end of a ten-year relationship, and a plant growing
-          through a crack in a city footpath became the sequence of events that changed
-          everything. She changed her diet for spiritual reasons. The weight she had
-          tried to lose for years fell away without effort. Her dreaming returned.
-          The plant library began.
+          The loss of her mother, the end of a ten-year relationship, and a
+          plant growing through a crack in a city footpath became the sequence
+          of events that changed everything. She changed her diet for spiritual
+          reasons. The weight she had tried to lose for years fell away without
+          effort. Her dreaming returned. The plant library began.
         </p>
         <p>
-          I AM NATURE is the record of that journey, and an invitation to anyone who
-          recognises themselves in it.
+          I AM NATURE is the record of that journey, and an invitation to anyone
+          who recognises themselves in it.
         </p>
       </div>
 
@@ -394,33 +611,43 @@
       <!-- EXPLORE -->
       <div class="about-section">
         <span class="section-label">Where to go from here</span>
-        <h2>Everything on this site is free to read.</h2>
+        <h2>Most of this site is free to read.</h2>
         <p>
-          The full botanical library, the journal entries, the Alchemy of Nature recipes:
-          all of it is available without cost or registration. The principle is simple: give
-          generously. The work that goes deeper, the book, the full recipe collection,
-          the 30-day plan, is available for those who want to go further.
+          The full botanical library, the journal entries, and three recipes
+          from each category in the Alchemy of Nature collection are all
+          available without cost or registration. The principle is simple: give
+          generously. The work that goes deeper, the book, the full recipe
+          collection, and the 30-day meal plan, is available to purchase for
+          those who want to go further.
         </p>
 
         <div class="about-nav">
           <a href="index.html" class="about-nav-card">
             <span class="anc-label">Explore</span>
             <span class="anc-title">The Botanical Library</span>
-            <span class="anc-desc">55 plants. Physical healing, preparation, safety, and spiritual wisdom.</span>
+            <span class="anc-desc"
+              >55 plants. Physical healing, preparation, safety, and spiritual
+              wisdom.</span
+            >
           </a>
           <a href="journal.html" class="about-nav-card">
             <span class="anc-label">Read</span>
             <span class="anc-title">The Journal</span>
-            <span class="anc-desc">Three essays on plants, healing, and the act of choosing yourself.</span>
+            <span class="anc-desc"
+              >Three essays on plants, healing, and the act of choosing
+              yourself.</span
+            >
           </a>
           <a href="contact.html" class="about-nav-card">
             <span class="anc-label">Connect</span>
             <span class="anc-title">Get in Touch</span>
-            <span class="anc-desc">Questions, collaborations, or anything the site stirred in you.</span>
+            <span class="anc-desc"
+              >Questions, collaborations, or anything the site stirred in
+              you.</span
+            >
           </a>
         </div>
       </div>
-
     </div>
 
     <footer>
@@ -434,7 +661,9 @@
         <a href="#">Back to Top &uarr;</a>
       </div>
       <hr class="f-hr" />
-      <p class="f-copy">&copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.</p>
+      <p class="f-copy">
+        &copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.
+      </p>
       <p class="f-crafted">Crafted with Intention</p>
     </footer>
 
