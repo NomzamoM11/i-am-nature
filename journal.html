@@ -5,6 +5,18 @@
     <title>Journal &#8212; I AM NATURE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16.png"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
       rel="stylesheet"
     />
@@ -18,8 +30,16 @@
         --gold: #d7c091;
         --sand: #e5d9b6;
       }
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html { scroll-behavior: smooth; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         background-color: var(--parchment);
         color: var(--umber);
@@ -29,174 +49,387 @@
       }
       nav {
         background-color: var(--forest);
-        display: flex; justify-content: space-between; align-items: center;
-        padding: 22px 50px; position: sticky; top: 0; z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 50px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
       }
       .nav-logo {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 17px; letter-spacing: 10px; text-transform: uppercase;
-        color: var(--parchment); text-decoration: none;
+        font-size: 17px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: var(--parchment);
+        text-decoration: none;
       }
-      .nav-links { display: flex; gap: 35px; list-style: none; }
+      .nav-links {
+        display: flex;
+        gap: 35px;
+        list-style: none;
+      }
       .nav-links a {
-        color: var(--gold); text-decoration: none; font-size: 15px;
-        letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s;
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: color 0.3s;
       }
-      .nav-links a:hover { color: var(--parchment); }
+      .nav-links a:hover {
+        color: var(--parchment);
+      }
 
       .page-header {
         background-color: var(--forest);
-        text-align: center; padding: 90px 20px 75px;
+        text-align: center;
+        padding: 90px 20px 75px;
         border-bottom: 1px solid rgba(215, 192, 145, 0.18);
       }
       .page-header .eyebrow {
-        display: block; text-transform: uppercase; letter-spacing: 5px;
-        color: var(--moss); font-size: 13px; margin-bottom: 18px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--moss);
+        font-size: 13px;
+        margin-bottom: 18px;
         animation: fadeUp 1s ease both;
       }
       .page-header h1 {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(38px, 6vw, 62px); font-weight: 300; font-style: italic;
-        color: var(--parchment); line-height: 1.2; margin-bottom: 18px;
+        font-size: clamp(38px, 6vw, 62px);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--parchment);
+        line-height: 1.2;
+        margin-bottom: 18px;
         animation: fadeUp 1s ease 0.15s both;
       }
       .page-header p {
-        color: var(--gold); font-style: italic; font-size: 18px;
-        max-width: 460px; margin: 0 auto;
+        color: var(--gold);
+        font-style: italic;
+        font-size: 18px;
+        max-width: 460px;
+        margin: 0 auto;
         animation: fadeUp 1s ease 0.3s both;
       }
 
-      .entries-wrapper { max-width: 820px; margin: 0 auto; padding: 70px 30px 80px; }
-      .entries-label {
-        display: block; font-size: 12px; text-transform: uppercase;
-        letter-spacing: 4px; color: var(--moss); margin-bottom: 40px; text-align: center;
+      .entries-wrapper {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 70px 30px 80px;
       }
-      .entry-cards { display: flex; flex-direction: column; gap: 24px; }
+      .entries-label {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--moss);
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .entry-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
 
       .entry-card {
-        display: grid; grid-template-columns: 90px 1fr;
-        background-color: var(--sand); border-radius: 14px;
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        background-color: var(--sand);
+        border-radius: 14px;
         border: 1px solid rgba(138, 90, 68, 0.12);
-        overflow: hidden; text-decoration: none; color: inherit;
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
       }
-      .entry-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(62, 43, 30, 0.13); }
-      .entry-card:hover .entry-read { color: var(--forest); border-color: var(--forest); }
+      .entry-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 36px rgba(62, 43, 30, 0.13);
+      }
+      .entry-card:hover .entry-read {
+        color: var(--forest);
+        border-color: var(--forest);
+      }
 
       .entry-num-col {
         background-color: var(--forest);
-        display: flex; align-items: center; justify-content: center; padding: 24px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 16px;
       }
       .entry-num {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 2.6rem; font-weight: 300;
-        color: rgba(215, 192, 145, 0.55); line-height: 1;
+        font-size: 2.6rem;
+        font-weight: 300;
+        color: rgba(215, 192, 145, 0.55);
+        line-height: 1;
       }
-      .entry-body-col { padding: 28px 30px; }
-      .entry-meta-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-      .entry-date-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 3px; color: var(--moss); }
-      .entry-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--moss); opacity: 0.5; flex-shrink: 0; }
-      .entry-category { font-size: 11px; text-transform: uppercase; letter-spacing: 3px; color: var(--clay); }
+      .entry-body-col {
+        padding: 28px 30px;
+      }
+      .entry-meta-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+      .entry-date-tag {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--moss);
+      }
+      .entry-dot {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: var(--moss);
+        opacity: 0.5;
+        flex-shrink: 0;
+      }
+      .entry-category {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--clay);
+      }
       .entry-title-card {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(26px, 3.5vw, 34px); font-weight: 300;
-        color: var(--forest); line-height: 1.2; margin-bottom: 6px;
+        font-size: clamp(26px, 3.5vw, 34px);
+        font-weight: 300;
+        color: var(--forest);
+        line-height: 1.2;
+        margin-bottom: 6px;
       }
       .entry-subtitle-card {
-        font-style: italic; color: var(--clay); font-size: 0.98rem;
-        margin-bottom: 12px; display: block;
+        font-style: italic;
+        color: var(--clay);
+        font-size: 0.98rem;
+        margin-bottom: 12px;
+        display: block;
       }
       .entry-pull {
-        font-style: italic; color: var(--umber); font-size: 0.98rem;
-        line-height: 1.65; margin-bottom: 18px;
+        font-style: italic;
+        color: var(--umber);
+        font-size: 0.98rem;
+        line-height: 1.65;
+        margin-bottom: 18px;
       }
       .entry-read {
-        display: inline-block; color: var(--clay); text-decoration: none;
-        font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
+        display: inline-block;
+        color: var(--clay);
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
         border-bottom: 1px solid rgba(138, 90, 68, 0.3);
-        transition: all 0.3s; padding-bottom: 2px;
+        transition: all 0.3s;
+        padding-bottom: 2px;
       }
 
       /* NEW ENTRY badge */
       .entry-new {
-        display: inline-block; font-size: 10px; text-transform: uppercase;
-        letter-spacing: 2px; background-color: var(--moss); color: var(--forest);
-        padding: 2px 10px; border-radius: 20px; margin-bottom: 10px;
+        display: inline-block;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: var(--moss);
+        color: var(--forest);
+        padding: 2px 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
       }
 
-      .about-strip { background-color: var(--forest); padding: 50px 30px; }
-      .about-strip-inner { max-width: 680px; margin: 0 auto; }
+      .about-strip {
+        background-color: var(--forest);
+        padding: 50px 30px;
+      }
+      .about-strip-inner {
+        max-width: 680px;
+        margin: 0 auto;
+      }
       .about-text .label {
-        display: block; font-size: 11px; text-transform: uppercase;
-        letter-spacing: 3px; color: var(--moss); margin-bottom: 8px;
+        display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--moss);
+        margin-bottom: 8px;
       }
       .about-text strong {
-        display: block; font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 1.3rem; font-weight: 400; color: var(--parchment); margin-bottom: 10px;
+        display: block;
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: var(--parchment);
+        margin-bottom: 10px;
       }
       .about-text p {
-        font-size: 17px; color: var(--gold); line-height: 1.72;
-        font-style: italic; opacity: 0.85;
+        font-size: 17px;
+        color: var(--gold);
+        line-height: 1.72;
+        font-style: italic;
+        opacity: 0.85;
       }
 
       footer {
-        background-color: var(--forest); color: var(--sand);
-        padding: 52px 20px 26px; text-align: center;
+        background-color: var(--forest);
+        color: var(--sand);
+        padding: 52px 20px 26px;
+        text-align: center;
         font-family: "EB Garamond", Georgia, serif;
         border-top: 1px solid rgba(215, 192, 145, 0.07);
       }
       .f-logo {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 22px; letter-spacing: 8px; color: var(--parchment);
-        font-weight: 300; margin-bottom: 6px;
+        font-size: 22px;
+        letter-spacing: 8px;
+        color: var(--parchment);
+        font-weight: 300;
+        margin-bottom: 6px;
       }
-      .f-tag { font-style: italic; font-size: 16px; opacity: 0.55; margin-bottom: 26px; }
-      .f-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 26px; flex-wrap: wrap; }
+      .f-tag {
+        font-style: italic;
+        font-size: 16px;
+        opacity: 0.55;
+        margin-bottom: 26px;
+      }
+      .f-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 26px;
+        flex-wrap: wrap;
+      }
       .f-links a {
-        color: var(--sand); text-decoration: none; font-size: 15px;
-        text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.3s;
+        color: var(--sand);
+        text-decoration: none;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: color 0.3s;
       }
-      .f-links a:hover { color: var(--moss); }
-      .f-hr { border: 0; border-top: 1px solid rgba(229, 217, 182, 0.07); margin-bottom: 18px; }
-      .f-copy { font-size: 15px; opacity: 0.62; }
-      .f-crafted { font-style: italic; font-size: 14px; opacity: 0.42; margin-top: 4px; }
+      .f-links a:hover {
+        color: var(--moss);
+      }
+      .f-hr {
+        border: 0;
+        border-top: 1px solid rgba(229, 217, 182, 0.07);
+        margin-bottom: 18px;
+      }
+      .f-copy {
+        font-size: 15px;
+        opacity: 0.62;
+      }
+      .f-crafted {
+        font-style: italic;
+        font-size: 14px;
+        opacity: 0.42;
+        margin-top: 4px;
+      }
 
       @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(18px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       @media (max-width: 600px) {
-        nav { padding: 16px 20px; }
-        .nav-links { gap: 18px; }
-        .entries-wrapper { padding: 50px 18px 60px; }
-        .entry-card { grid-template-columns: 60px 1fr; }
-        .entry-num { font-size: 1.8rem; }
-        .entry-body-col { padding: 22px 20px; }
-        .about-strip { padding: 40px 20px; }
+        nav {
+          padding: 16px 20px;
+        }
+        .nav-links {
+          gap: 18px;
+        }
+        .entries-wrapper {
+          padding: 50px 18px 60px;
+        }
+        .entry-card {
+          grid-template-columns: 60px 1fr;
+        }
+        .entry-num {
+          font-size: 1.8rem;
+        }
+        .entry-body-col {
+          padding: 22px 20px;
+        }
+        .about-strip {
+          padding: 40px 20px;
+        }
       }
       .hamburger {
-        display: none; flex-direction: column; gap: 5px;
-        cursor: pointer; background: none; border: none; padding: 4px; z-index: 200;
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+        z-index: 200;
       }
       .hamburger span {
-        display: block; width: 24px; height: 2px;
-        background-color: #d7c091; border-radius: 2px; transition: all 0.3s ease;
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #d7c091;
+        border-radius: 2px;
+        transition: all 0.3s ease;
       }
-      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      .hamburger.open span:nth-child(2) { opacity: 0; }
-      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
       @media (max-width: 700px) {
-        nav { padding: 16px 20px !important; position: relative; }
-        .hamburger { display: flex; }
-        .nav-links {
-          display: none !important; position: absolute; top: 100%; left: 0; right: 0;
-          background-color: #1b3022; flex-direction: column !important; gap: 0 !important;
-          padding: 0; border-top: 1px solid rgba(215, 192, 145, 0.15);
-          z-index: 150; box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        nav {
+          padding: 16px 20px !important;
+          position: relative;
         }
-        .nav-links.open { display: flex !important; }
-        .nav-links li { border-bottom: 1px solid rgba(215, 192, 145, 0.08); }
-        .nav-links a { display: block; padding: 16px 24px !important; font-size: 0.85rem !important; letter-spacing: 2px !important; }
+        .hamburger {
+          display: flex;
+        }
+        .nav-links {
+          display: none !important;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #1b3022;
+          flex-direction: column !important;
+          gap: 0 !important;
+          padding: 0;
+          border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links.open {
+          display: flex !important;
+        }
+        .nav-links li {
+          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
+        }
+        .nav-links a {
+          display: block;
+          padding: 16px 24px !important;
+          font-size: 0.85rem !important;
+          letter-spacing: 2px !important;
+        }
       }
     </style>
   </head>
@@ -217,13 +450,14 @@
     <div class="page-header">
       <span class="eyebrow">The Journal</span>
       <h1>Writings from the path</h1>
-      <p>Personal reflections on nature, healing, and the language of plants.</p>
+      <p>
+        Personal reflections on nature, healing, and the language of plants.
+      </p>
     </div>
 
     <div class="entries-wrapper">
       <span class="entries-label">All Entries</span>
       <div class="entry-cards">
-
         <!-- ENTRY 003 — newest -->
         <a href="journal-entry-003.html" class="entry-card">
           <div class="entry-num-col"><span class="entry-num">03</span></div>
@@ -235,9 +469,16 @@
               <span class="entry-category">Origin &amp; Becoming</span>
             </div>
             <h2 class="entry-title-card">Before the Plant</h2>
-            <span class="entry-subtitle-card">On a lifetime of searching, Intwaso, the dreams that were taken, and how I AM NATURE was born from the act of coming home to myself.</span>
+            <span class="entry-subtitle-card"
+              >On a lifetime of searching, Intwaso, the dreams that were taken,
+              and how I AM NATURE was born from the act of coming home to
+              myself.</span
+            >
             <p class="entry-pull">
-              &ldquo;All my life, I had been searching for something. Looking back now, I understand that what I was really searching for was a sense of belonging, a place in this world where I could exist fully, without questioning who or what I was.&rdquo;
+              &ldquo;All my life, I had been searching for something. Looking
+              back now, I understand that what I was really searching for was a
+              sense of belonging, a place in this world where I could exist
+              fully, without questioning who or what I was.&rdquo;
             </p>
             <span class="entry-read">Read this entry &rarr;</span>
           </div>
@@ -253,9 +494,14 @@
               <span class="entry-category">Healing &amp; Self</span>
             </div>
             <h2 class="entry-title-card">The Weight I Let Go</h2>
-            <span class="entry-subtitle-card">On ending a ten-year relationship, choosing myself, and how my body followed what my soul had already decided.</span>
+            <span class="entry-subtitle-card"
+              >On ending a ten-year relationship, choosing myself, and how my
+              body followed what my soul had already decided.</span
+            >
             <p class="entry-pull">
-              &ldquo;I didn&rsquo;t set out to lose weight. I set out to come back to myself. My body followed, quietly, completely, on its own terms.&rdquo;
+              &ldquo;I didn&rsquo;t set out to lose weight. I set out to come
+              back to myself. My body followed, quietly, completely, on its own
+              terms.&rdquo;
             </p>
             <span class="entry-read">Read this entry &rarr;</span>
           </div>
@@ -271,14 +517,18 @@
               <span class="entry-category">Nature &amp; Awakening</span>
             </div>
             <h2 class="entry-title-card">When Nature Answered</h2>
-            <span class="entry-subtitle-card">On the fennel plant, the silence after Intwaso, and what it means to remember.</span>
+            <span class="entry-subtitle-card"
+              >On the fennel plant, the silence after Intwaso, and what it means
+              to remember.</span
+            >
             <p class="entry-pull">
-              &ldquo;A plant appeared on my path to work. It pulled me in for three days before I finally listened. That was the beginning of everything.&rdquo;
+              &ldquo;A plant appeared on my path to work. It pulled me in for
+              three days before I finally listened. That was the beginning of
+              everything.&rdquo;
             </p>
             <span class="entry-read">Read this entry &rarr;</span>
           </div>
         </a>
-
       </div>
     </div>
 
@@ -288,9 +538,10 @@
           <span class="label">About the Writer</span>
           <strong>Nomzamo Mbelebele</strong>
           <p>
-            Nomzamo is a healer, plant keeper, and the founder of I AM NATURE,
-            a living archive of botanical wisdom rooted in African heritage and personal experience.
-            She writes from the intersection of traditional knowledge, spiritual practice, and lived truth.
+            Nomzamo is a healer, plant keeper, and the founder of I AM NATURE, a
+            living archive of botanical wisdom rooted in African heritage and
+            personal experience. She writes from the intersection of traditional
+            knowledge, spiritual practice, and lived truth.
           </p>
         </div>
       </div>
@@ -307,7 +558,9 @@
         <a href="#">Back to Top &uarr;</a>
       </div>
       <hr class="f-hr" />
-      <p class="f-copy">&copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.</p>
+      <p class="f-copy">
+        &copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.
+      </p>
       <p class="f-crafted">Crafted with Intention</p>
     </footer>
 
