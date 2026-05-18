@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shop — I AM NATURE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --forest: #1b3022;
+        --clay: #8a5a44;
+        --parchment: #fcf9f0;
+        --moss: #849b84;
+        --umber: #3e2b1e;
+        --gold: #d7c091;
+        --sand: #e5d9b6;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: var(--parchment);
+        color: var(--umber);
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 20px;
+        line-height: 1.88;
+      }
+
+      /* NAV */
+      nav {
+        background-color: var(--forest);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 50px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-logo {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1rem;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: var(--parchment);
+        text-decoration: none;
+      }
+      .nav-links {
+        display: flex;
+        gap: 35px;
+        list-style: none;
+      }
+      .nav-links a {
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--parchment);
+      }
+
+      /* HERO */
+      .shop-hero {
+        background-color: var(--forest);
+        text-align: center;
+        padding: 100px 20px 90px;
+        border-bottom: 1px solid rgba(215, 192, 145, 0.18);
+        position: relative;
+        overflow: hidden;
+      }
+      .shop-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 60%,
+          rgba(215, 192, 145, 0.06) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .shop-hero .eyebrow {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--moss);
+        font-size: 0.72rem;
+        margin-bottom: 20px;
+        animation: fadeUp 1s ease both;
+      }
+      .shop-hero h1 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(2.4rem, 6vw, 4rem);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--parchment);
+        line-height: 1.15;
+        margin-bottom: 22px;
+        animation: fadeUp 1s ease 0.15s both;
+      }
+      .shop-hero .hero-sub {
+        color: var(--gold);
+        font-style: italic;
+        font-size: 1.05rem;
+        max-width: 520px;
+        margin: 0 auto;
+        animation: fadeUp 1s ease 0.3s both;
+        line-height: 1.7;
+      }
+
+      /* SAVINGS BANNER */
+      .savings-banner {
+        background-color: var(--moss);
+        text-align: center;
+        padding: 16px 20px;
+      }
+      .savings-banner p {
+        color: var(--forest);
+        font-size: 0.88rem;
+        letter-spacing: 1px;
+        font-style: italic;
+      }
+      .savings-banner strong {
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      /* SHOP WRAPPER */
+      .shop-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 80px 30px 100px;
+      }
+
+      /* SECTION LABEL */
+      .section-label {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--moss);
+        text-align: center;
+        margin-bottom: 14px;
+      }
+      .section-title {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--forest);
+        text-align: center;
+        margin-bottom: 50px;
+        line-height: 1.2;
+      }
+
+      /* BUNDLE GRID */
+      .bundle-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin-bottom: 80px;
+      }
+
+      /* BUNDLE CARD */
+      .bundle-card {
+        background-color: var(--sand);
+        border-radius: 16px;
+        padding: 34px 30px;
+        border: 1px solid rgba(138, 90, 68, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .bundle-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 40px rgba(62, 43, 30, 0.14);
+      }
+      .bundle-card .card-eyebrow {
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--moss);
+      }
+      .bundle-card h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: var(--forest);
+        line-height: 1.2;
+      }
+      .bundle-card .card-desc {
+        font-style: italic;
+        font-size: 0.92rem;
+        color: var(--umber);
+        line-height: 1.65;
+        flex-grow: 1;
+      }
+      .bundle-card .card-includes {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--moss);
+        margin-bottom: 2px;
+      }
+      .bundle-card .card-recipe-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .bundle-card .card-recipe-list li {
+        font-size: 0.88rem;
+        color: var(--umber);
+        font-style: italic;
+        padding-left: 14px;
+        position: relative;
+        line-height: 1.5;
+      }
+      .bundle-card .card-recipe-list li::before {
+        content: "✦";
+        position: absolute;
+        left: 0;
+        color: var(--moss);
+        font-size: 0.5rem;
+        top: 6px;
+      }
+      .bundle-card .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 16px;
+        border-top: 1px solid rgba(138, 90, 68, 0.14);
+        margin-top: 4px;
+      }
+      .bundle-card .card-price {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: var(--forest);
+      }
+      .bundle-card .card-price span {
+        font-size: 0.9rem;
+        color: var(--clay);
+        font-style: italic;
+        display: block;
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 0.78rem;
+        letter-spacing: 1px;
+        margin-top: 2px;
+      }
+      .buy-btn {
+        display: inline-block;
+        padding: 11px 28px;
+        background-color: var(--forest);
+        color: var(--parchment);
+        text-decoration: none;
+        border-radius: 50px;
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        white-space: nowrap;
+      }
+      .buy-btn:hover {
+        background-color: var(--parchment);
+        color: var(--forest);
+        border-color: var(--forest);
+        transform: translateY(-2px);
+      }
+
+      /* DIVIDER */
+      .section-divider {
+        border: 0;
+        border-top: 1px solid rgba(138, 90, 68, 0.14);
+        margin: 0 0 80px;
+      }
+
+      /* FEATURED CARDS — Full Collection & Meal Plan */
+      .featured-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 80px;
+      }
+
+      .featured-card {
+        border-radius: 16px;
+        padding: 44px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: relative;
+        overflow: hidden;
+      }
+      .featured-card.dark {
+        background-color: var(--forest);
+      }
+      .featured-card.light {
+        background-color: var(--sand);
+        border: 1px solid rgba(138, 90, 68, 0.12);
+      }
+      .featured-card::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(132, 155, 132, 0.12) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .featured-card .feat-eyebrow {
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--moss);
+      }
+      .featured-card h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-weight: 300;
+        line-height: 1.2;
+      }
+      .dark h3 {
+        color: var(--parchment);
+      }
+      .light h3 {
+        color: var(--forest);
+      }
+
+      .featured-card .feat-desc {
+        font-style: italic;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        flex-grow: 1;
+      }
+      .dark .feat-desc {
+        color: rgba(215, 192, 145, 0.8);
+      }
+      .light .feat-desc {
+        color: var(--umber);
+      }
+
+      .featured-card .feat-saving {
+        display: inline-block;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: var(--moss);
+        color: var(--forest);
+        padding: 4px 12px;
+        border-radius: 20px;
+        width: fit-content;
+      }
+      .featured-card .feat-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        border-top: 1px solid rgba(215, 192, 145, 0.18);
+        margin-top: 4px;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .dark .feat-footer {
+        border-color: rgba(215, 192, 145, 0.15);
+      }
+      .light .feat-footer {
+        border-color: rgba(138, 90, 68, 0.14);
+      }
+
+      .featured-card .feat-price {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 2rem;
+        font-weight: 300;
+      }
+      .dark .feat-price {
+        color: var(--parchment);
+      }
+      .light .feat-price {
+        color: var(--forest);
+      }
+
+      .featured-card .feat-price-sub {
+        font-style: italic;
+        font-size: 0.78rem;
+        letter-spacing: 1px;
+        display: block;
+        margin-top: 2px;
+      }
+      .dark .feat-price-sub {
+        color: var(--gold);
+      }
+      .light .feat-price-sub {
+        color: var(--clay);
+      }
+
+      .buy-btn-light {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: var(--moss);
+        color: var(--parchment);
+        text-decoration: none;
+        border-radius: 50px;
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+      }
+      .buy-btn-light:hover {
+        background-color: var(--parchment);
+        color: var(--forest);
+        transform: translateY(-2px);
+      }
+      .buy-btn-forest {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: var(--forest);
+        color: var(--parchment);
+        text-decoration: none;
+        border-radius: 50px;
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+      }
+      .buy-btn-forest:hover {
+        background-color: var(--umber);
+        color: var(--parchment);
+        transform: translateY(-2px);
+      }
+
+      /* GUARANTEE STRIP */
+      .guarantee-strip {
+        background-color: var(--forest);
+        border-radius: 16px;
+        padding: 44px 48px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 80px;
+        text-align: center;
+      }
+      .guarantee-item .g-icon {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .guarantee-item .g-title {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: var(--parchment);
+        margin-bottom: 6px;
+        display: block;
+      }
+      .guarantee-item p {
+        font-style: italic;
+        font-size: 0.85rem;
+        color: rgba(215, 192, 145, 0.72);
+        line-height: 1.6;
+      }
+
+      /* FAQ */
+      .faq-section {
+        margin-bottom: 80px;
+      }
+      .faq-item {
+        border-bottom: 1px solid rgba(138, 90, 68, 0.14);
+        padding: 22px 0;
+      }
+      .faq-item:first-child {
+        border-top: 1px solid rgba(138, 90, 68, 0.14);
+      }
+      .faq-q {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.15rem;
+        font-weight: 400;
+        color: var(--forest);
+        margin-bottom: 8px;
+      }
+      .faq-a {
+        font-style: italic;
+        font-size: 0.92rem;
+        color: var(--umber);
+        line-height: 1.7;
+      }
+
+      /* FOOTER */
+      footer {
+        background-color: var(--forest);
+        color: var(--sand);
+        padding: 52px 20px 26px;
+        text-align: center;
+        font-family: "EB Garamond", Georgia, serif;
+      }
+      .f-logo {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.25rem;
+        letter-spacing: 8px;
+        color: var(--parchment);
+        font-weight: 300;
+        margin-bottom: 6px;
+      }
+      .f-tag {
+        font-style: italic;
+        font-size: 0.86rem;
+        opacity: 0.55;
+        margin-bottom: 26px;
+      }
+      .f-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 26px;
+        flex-wrap: wrap;
+      }
+      .f-links a {
+        color: var(--sand);
+        text-decoration: none;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: color 0.3s;
+      }
+      .f-links a:hover {
+        color: var(--moss);
+      }
+      .f-hr {
+        border: 0;
+        border-top: 1px solid rgba(229, 217, 182, 0.07);
+        margin-bottom: 18px;
+      }
+      .f-copy {
+        font-size: 0.78rem;
+        opacity: 0.6;
+      }
+      .f-crafted {
+        font-style: italic;
+        font-size: 0.76rem;
+        opacity: 0.4;
+        margin-top: 4px;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* HAMBURGER */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+        z-index: 200;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #d7c091;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      @media (max-width: 700px) {
+        nav {
+          padding: 16px 20px !important;
+          position: relative;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .nav-links {
+          display: none !important;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #1b3022;
+          flex-direction: column !important;
+          gap: 0 !important;
+          padding: 0;
+          border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links.open {
+          display: flex !important;
+        }
+        .nav-links li {
+          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
+        }
+        .nav-links a {
+          display: block;
+          padding: 16px 24px !important;
+          font-size: 0.85rem !important;
+          letter-spacing: 2px !important;
+        }
+        .shop-wrapper {
+          padding: 55px 20px 60px;
+        }
+        .bundle-grid {
+          grid-template-columns: 1fr;
+        }
+        .featured-grid {
+          grid-template-columns: 1fr;
+        }
+        .guarantee-strip {
+          grid-template-columns: 1fr;
+          padding: 36px 28px;
+        }
+        .featured-card {
+          padding: 32px 26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">I AM NATURE</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Botanicals</a></li>
+        <li><a href="alchemy.html">Alchemy of Nature</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <div class="shop-hero">
+      <span class="eyebrow">The Shop</span>
+      <h1>Healing, delivered<br />to your inbox</h1>
+      <p class="hero-sub">
+        Instant PDF downloads. Plant-based recipes rooted in African botanical
+        tradition, drawn from lived experience.
+      </p>
+    </div>
+
+    <div class="savings-banner">
+      <p>
+        Buy all 7 bundles separately for R553 — or get the
+        <strong>Full Collection for R449</strong> and save R104.
+      </p>
+    </div>
+
+    <div class="shop-wrapper">
+      <!-- BUNDLES -->
+      <span class="section-label">The Recipe Bundles</span>
+      <h2 class="section-title">
+        Seven focused guides.<br />One healing need at a time.
+      </h2>
+
+      <div class="bundle-grid">
+        <!-- Cleanse & Detox -->
+        <div class="bundle-card">
+          <span class="card-eyebrow">Bundle 01</span>
+          <h3>Cleanse &amp; Detox</h3>
+          <p class="card-desc">
+            Clear the liver, gut, and blood. The beginning of every healing
+            journey.
+          </p>
+          <span class="card-includes">5 recipes including</span>
+          <ul class="card-recipe-list">
+            <li>The Morning Reset — Fennel &amp; Fenugreek Brew</li>
+            <li>Blood Awakening Cleanser</li>
+            <li>Deep Liver Cleanse Tea</li>
+            <li>Gut Reset Drink</li>
+            <li>Living Water Elixir</li>
+          </ul>
+          <div class="card-footer">
+            <div class="card-price">R79 <span>Instant PDF download</span></div>
+            <a
+              href="https://iamnature.lemonsqueezy.com/checkout/buy/20d4bb61-ad44-439e-b802-ca03d5edd2a2"
+              class="buy-btn"
+              target="_blank"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <!-- Energy & Mind -->
+        <div class="bundle-card">
+          <span class="card-eyebrow">Bundle 02</span>
+          <h3>Energy &amp; Mind</h3>
+          <p class="card-desc">
+            Sustained energy, mental clarity, and stress relief. For the days
+            your body is asking for more.
+          </p>
+          <span class="card-includes">5 recipes including</span>
+          <ul class="card-recipe-list">
+            <li>The Blood Builder — Iron &amp; Energy Smoothie</li>
+            <li>Brain Boost Tonic</li>
+            <li>Stress &amp; Cortisol Drink</li>
+            <li>Anti-Inflammatory Tonic</li>
+            <li>Hydration Infusion</li>
+          </ul>
+          <div class="card-footer">
+            <div class="card-price">R79 <span>Instant PDF download</span></div>
+            <a
+              href="https://iamnature.lemonsqueezy.com/checkout/buy/28103dbb-fc0d-4eaa-9c32-e67454f0548f"
+              class="buy-btn"
+              target="_blank"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <!-- Immunity & Healing -->
+        <div class="bundle-card">
+          <span class="card-eyebrow">Bundle 03</span>
+          <h3>Immunity &amp; Healing</h3>
+          <p class="card-desc">
+            Activate your body's own defence. At the first sign of illness and
+            through every season.
+          </p>
+          <span class="card-includes">5 recipes including</span>
+          <ul class="card-recipe-list">
+            <li>Immune Defence Shot</li>
+            <li>Golden Immune Tea</li>
+            <li>Hormone Balance Smoothie</li>
+            <li>Hydration Infusion</li>
+            <li>Green Detox Smoothie</li>
+          </ul>
+          <div class="card-footer">
+            <div class="card-price">R79 <span>Instant PDF download</span></div>
+            <a
+              href="https://iamnature.lemonsqueezy.com/checkout/buy/0fca0b36-affd-46d0-9157-fa6bb686c0b5"
+              class="buy-btn"
+              target="_blank"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <!-- Skin -->
+        <div class="bundle-card">
+          <span class="card-eyebrow">Bundle 04</span>
+          <h3>Skin</h3>
+          <p class="card-desc">
+            From within and without. Clear, brighten, and restore what stress
+            and time have taken.
+          </p>
+          <span class="card-includes">5 recipes including</span>
+          <ul class="card-recipe-list">
+            <li>Acne Clearing Smoothie</li>
+            <li>Turmeric Brightening Mask</li>
+            <li>Sun Glow Body Oil</li>
+            <li>Aloe Vera &amp; Honey Skin Mask</li>
+            <li>Frankincense Healing Oil</li>
+          </ul>
+          <div class="card-footer">
+            <div class="card-price">R79 <span>Instant PDF download</span></div>
+            <a
+              href="https://iamnature.lemonsqueezy.com/checkout/buy/101f03e5-b84f-4233-8a97-71d678b55ca6"
+              class="buy-btn"
+              target="_blank"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <!-- Hair -->
+        <div class="bundle-card">
+          <span class="card-eyebrow">Bundle 05</span>
+          <h3>Hair</h3>
+          <p class="card-desc">
+            Growth, scalp health, and strength. Traditional African and natural
+            medicine for your hair.
+          </p>
+          <span class="card-includes">5 recipes including</span>
+          <ul class="card-recipe-list">
+            <li>Onion Hair Growth Rinse</li>
+            <li>Castor &amp; Coconut Hair Oil</li>
+            <li>ACV Hair Shine Rinse</li>
+            <li>Fenugreek Scalp Mask</li>
+            <li>Rosemary Growth Oil</li>
+          </ul>
+          <div class="card-footer">
+            <div class="card-price">R79 <span>Instant PDF download</span></div>
+            <a
+              href="https://iamnature.lemonsqueezy.com/checkout/buy/955993ac-2756-4303-91f1-3bbc09096e83"
+              class="buy-btn"
+              target="_blank"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <!-- Gut & Digestion -->
+        <div class="bundle-card">
+          <span class="card-eyebrow">Bundle 06</span>
+          <h3>Gut &amp; Digestion</h3>
+          <p class="card-desc">
+            When the gut settles, everything else follows. Calm, coat, and
+            restore.
+          </p>
+          <span class="card-includes">5 recipes including</span>
+          <ul class="card-recipe-list">
+            <li>Green Detox Smoothie</li>
+            <li>Bloating Relief Tea</li>
+            <li>Oil Pulling Protocol</li>
+            <li>Charcoal Tooth Cleanser</li>
+            <li>Fresh Breath Salt Rinse</li>
+          </ul>
+          <div class="card-footer">
+            <div class="card-price">R79 <span>Instant PDF download</span></div>
+            <a
+              href="https://iamnature.lemonsqueezy.com/checkout/buy/70d4171b-03e8-49e5-bed1-fa649251ee69"
+              class="buy-btn"
+              target="_blank"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <!-- Rest & Nervous System -->
+        <div class="bundle-card">
+          <span class="card-eyebrow">Bundle 07</span>
+          <h3>Rest &amp; Nervous System</h3>
+          <p class="card-desc">
+            The body heals in stillness. Deep rest, nervous system calm,
+            restorative sleep.
+          </p>
+          <span class="card-includes">5 recipes including</span>
+          <ul class="card-recipe-list">
+            <li>The Evening Surrender — Chamomile &amp; Mint Tea</li>
+            <li>Sleep &amp; Dream Tea</li>
+            <li>Detox Mineral Bath</li>
+            <li>Lavender Sleep Sachet</li>
+            <li>Ashwagandha Night Tonic</li>
+          </ul>
+          <div class="card-footer">
+            <div class="card-price">R79 <span>Instant PDF download</span></div>
+            <a
+              href="https://iamnature.lemonsqueezy.com/checkout/buy/c8de1f86-985d-4826-bb02-02858af22d70"
+              class="buy-btn"
+              target="_blank"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- FEATURED: FULL COLLECTION + MEAL PLAN -->
+      <span class="section-label">Go Deeper</span>
+      <h2 class="section-title">
+        The complete collection.<br />The full reset.
+      </h2>
+
+      <div class="featured-grid">
+        <!-- Full Collection -->
+        <div class="featured-card dark">
+          <span class="feat-eyebrow">The Complete Collection</span>
+          <h3>All 35 Recipes —<br />One PDF</h3>
+          <p class="feat-desc">
+            Every recipe across all seven categories in a single, beautifully
+            formatted guide. Cleanse, energy, immunity, skin, hair, gut, and
+            rest — all in one place.
+          </p>
+          <span class="feat-saving">Save R104 vs buying separately</span>
+          <div class="feat-footer">
+            <div>
+              <div class="feat-price">R449</div>
+              <span class="feat-price-sub">Instant PDF download</span>
+            </div>
+            <a
+              href="https://iamnature.lemonsqueezy.com/checkout/buy/552a7c8a-f28e-423d-84e1-96950a34fd96"
+              class="buy-btn-light"
+              target="_blank"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <!-- Meal Plan -->
+        <div class="featured-card light">
+          <span class="feat-eyebrow">The Reset Programme</span>
+          <h3>The 30-Day Whole<br />Food Reset</h3>
+          <p class="feat-desc">
+            The eating plan behind Nomzamo's personal transformation from size
+            42 to 36. Four weeks of structured whole food meals, daily herbal
+            protocols, and the full story.
+          </p>
+          <div class="feat-footer">
+            <div>
+              <div class="feat-price">R189</div>
+              <span class="feat-price-sub">Instant PDF download</span>
+            </div>
+            <a
+              href="https://iamnature.lemonsqueezy.com/checkout/buy/56dd6b02-861a-4ffa-89a9-c90231b3f50b"
+              class="buy-btn-forest"
+              target="_blank"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- GUARANTEE -->
+      <div class="guarantee-strip">
+        <div class="guarantee-item">
+          <span class="g-icon">⚡</span>
+          <span class="g-title">Instant Delivery</span>
+          <p>
+            Your PDF is delivered immediately after payment. No waiting, no
+            shipping.
+          </p>
+        </div>
+        <div class="guarantee-item">
+          <span class="g-icon">🌿</span>
+          <span class="g-title">Rooted in Truth</span>
+          <p>
+            Every recipe is drawn from lived experience and verified botanical
+            knowledge.
+          </p>
+        </div>
+        <div class="guarantee-item">
+          <span class="g-icon">✉️</span>
+          <span class="g-title">Questions Welcome</span>
+          <p>
+            Reach out at nomzamo@iamnature.co.za — every message is read
+            personally.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <span class="section-label">Questions</span>
+      <h2 class="section-title">Before you buy</h2>
+
+      <div class="faq-section">
+        <div class="faq-item">
+          <p class="faq-q">How do I receive my purchase?</p>
+          <p class="faq-a">
+            Immediately after payment, you will receive an email with a download
+            link. The PDF will also be available on the confirmation screen.
+            Check your spam folder if you don't see it within a few minutes.
+          </p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">What format are the guides?</p>
+          <p class="faq-a">
+            All guides are PDF files, readable on any phone, tablet, or
+            computer. No special app required.
+          </p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Can I pay in South African Rand?</p>
+          <p class="faq-a">
+            Yes — all prices are in ZAR and your card will be charged in Rand.
+            International cards are also accepted.
+          </p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">
+            Is there a difference between buying a bundle and the full
+            collection?
+          </p>
+          <p class="faq-a">
+            The bundles give you 5 focused recipes in one category. The full
+            collection gives you all 35 recipes across all 7 categories in a
+            single PDF — at R104 less than buying all bundles separately.
+          </p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">I have a question not answered here.</p>
+          <p class="faq-a">
+            Reach out directly at nomzamo@iamnature.co.za or via WhatsApp on +27
+            76 846 5972. All enquiries are welcome.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="f-logo">I AM NATURE</div>
+      <p class="f-tag">Rooted in truth. Guided by experience.</p>
+      <div class="f-links">
+        <a href="index.html">Botanicals</a>
+        <a href="alchemy.html">Alchemy of Nature</a>
+        <a href="journal.html">Journal</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Back to Top ↑</a>
+      </div>
+      <hr class="f-hr" />
+      <p class="f-copy">
+        &copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.
+      </p>
+      <p class="f-crafted">Crafted with Intention</p>
+    </footer>
+
+    <script>
+      (function () {
+        var btn = document.querySelector(".hamburger");
+        var menu = document.querySelector(".nav-links");
+        if (btn && menu) {
+          btn.addEventListener("click", function () {
+            btn.classList.toggle("open");
+            menu.classList.toggle("open");
+          });
+          document.addEventListener("click", function (e) {
+            if (!btn.contains(e.target) && !menu.contains(e.target)) {
+              btn.classList.remove("open");
+              menu.classList.remove("open");
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
