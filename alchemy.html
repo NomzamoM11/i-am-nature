@@ -4,8 +4,18 @@
     <meta charset="UTF-8" />
     <title>Alchemy of Nature — Healing Recipes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16.png"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
       rel="stylesheet"
@@ -20,8 +30,16 @@
         --gold: #d7c091;
         --sand: #e5d9b6;
       }
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html { scroll-behavior: smooth; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         background-color: var(--parchment);
         color: var(--umber);
@@ -41,145 +59,292 @@
         top: 0;
         z-index: 100;
       }
-      .nav-brand { text-decoration: none; display: flex; flex-direction: column; gap: 2px; }
+      .nav-brand {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
       .nav-site {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 17px; letter-spacing: 8px; text-transform: uppercase; color: var(--parchment);
+        font-size: 17px;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        color: var(--parchment);
       }
-      .nav-sub { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--moss); }
-      .nav-links { display: flex; gap: 30px; list-style: none; }
+      .nav-sub {
+        font-size: 11px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--moss);
+      }
+      .nav-links {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+      }
       .nav-links a {
-        color: var(--gold); text-decoration: none; font-size: 15px;
-        letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s;
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: color 0.3s;
       }
-      .nav-links a:hover { color: var(--parchment); }
+      .nav-links a:hover {
+        color: var(--parchment);
+      }
 
       /* ── HERO ── */
       .hero-section {
         background-color: var(--forest);
         min-height: 100vh;
-        display: flex; flex-direction: column; align-items: center; justify-content: center;
-        position: relative; overflow: hidden; padding: 80px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding: 80px 20px;
       }
       .hero-section::before {
         content: "";
-        position: absolute; inset: 0;
-        background: radial-gradient(ellipse at 50% 30%, rgba(215,192,145,0.07) 0%, transparent 65%);
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 30%,
+          rgba(215, 192, 145, 0.07) 0%,
+          transparent 65%
+        );
         pointer-events: none;
       }
       .hero-section::after {
-        content: ""; position: absolute; inset: 0;
+        content: "";
+        position: absolute;
+        inset: 0;
         background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre-big.png");
-        opacity: 0.1; pointer-events: none; z-index: 1;
+        opacity: 0.1;
+        pointer-events: none;
+        z-index: 1;
       }
       .hero-ring {
         position: absolute;
-        width: clamp(320px, 55vw, 620px); height: clamp(320px, 55vw, 620px);
-        border-radius: 50%; border: 1px solid rgba(215,192,145,0.12);
-        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: clamp(320px, 55vw, 620px);
+        height: clamp(320px, 55vw, 620px);
+        border-radius: 50%;
+        border: 1px solid rgba(215, 192, 145, 0.12);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
       .hero-ring-2 {
         position: absolute;
-        width: clamp(240px, 42vw, 480px); height: clamp(240px, 42vw, 480px);
-        border-radius: 50%; border: 1px solid rgba(215,192,145,0.07);
-        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: clamp(240px, 42vw, 480px);
+        height: clamp(240px, 42vw, 480px);
+        border-radius: 50%;
+        border: 1px solid rgba(215, 192, 145, 0.07);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
       .hero-content {
-        position: relative; z-index: 2;
-        display: flex; flex-direction: column; align-items: center; text-align: center;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         animation: fadeUp 1s ease both;
       }
       .hero-logo-mark {
-        display: flex; flex-direction: column; align-items: center; gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
         margin-bottom: 60px;
       }
       .hero-logo-mark img {
-        max-width: 260px; width: clamp(180px, 40vw, 260px);
-        height: auto; display: block; position: relative; z-index: 3;
+        max-width: 260px;
+        width: clamp(180px, 40vw, 260px);
+        height: auto;
+        display: block;
+        position: relative;
+        z-index: 3;
       }
       .hero-tagline {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; font-style: italic;
-        color: var(--gold); line-height: 1.55; margin-bottom: 14px; max-width: 520px;
+        font-size: clamp(18px, 2.5vw, 26px);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--gold);
+        line-height: 1.55;
+        margin-bottom: 14px;
+        max-width: 520px;
       }
       .hero-desc {
-        color: rgba(215,192,145,0.65); font-style: italic; font-size: 0.98rem;
-        margin-bottom: 34px; max-width: 440px; line-height: 1.7;
+        color: rgba(215, 192, 145, 0.65);
+        font-style: italic;
+        font-size: 0.98rem;
+        margin-bottom: 34px;
+        max-width: 440px;
+        line-height: 1.7;
       }
       .cta-button {
-        display: inline-block; padding: 14px 44px;
-        background-color: var(--moss); color: var(--parchment);
-        text-decoration: none; border-radius: 50px; font-size: 15px;
-        letter-spacing: 2.5px; text-transform: uppercase;
-        transition: all 0.35s ease; font-family: "EB Garamond", Georgia, serif;
-        border: none; cursor: pointer;
+        display: inline-block;
+        padding: 14px 44px;
+        background-color: var(--moss);
+        color: var(--parchment);
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 15px;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        transition: all 0.35s ease;
+        font-family: "EB Garamond", Georgia, serif;
+        border: none;
+        cursor: pointer;
       }
       .cta-button:hover {
-        background-color: var(--parchment); color: var(--forest);
-        transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        background-color: var(--parchment);
+        color: var(--forest);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
       }
 
       /* ── CATEGORY NAV ── */
       .cat-nav {
         background-color: var(--clay);
-        display: flex; justify-content: center; gap: 11px;
-        padding: 26px 20px; flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        gap: 11px;
+        padding: 26px 20px;
+        flex-wrap: wrap;
       }
       .cat-btn {
-        background: none; border: 1px solid rgba(252,249,240,0.3);
-        color: var(--parchment); font-family: "EB Garamond", Georgia, serif;
-        font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
-        padding: 9px 20px; border-radius: 50px; cursor: pointer;
-        text-decoration: none; transition: all 0.3s ease;
+        background: none;
+        border: 1px solid rgba(252, 249, 240, 0.3);
+        color: var(--parchment);
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 9px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
       }
-      .cat-btn:hover { background-color: var(--parchment); color: var(--clay); border-color: var(--parchment); }
+      .cat-btn:hover {
+        background-color: var(--parchment);
+        color: var(--clay);
+        border-color: var(--parchment);
+      }
 
       /* ── STORY STRIP ── */
       .story-strip {
-        background-color: var(--sand); padding: 38px 20px;
-        border-top: 1px solid rgba(138,90,68,0.12);
-        border-bottom: 1px solid rgba(138,90,68,0.12);
+        background-color: var(--sand);
+        padding: 38px 20px;
+        border-top: 1px solid rgba(138, 90, 68, 0.12);
+        border-bottom: 1px solid rgba(138, 90, 68, 0.12);
       }
-      .story-strip-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+      .story-strip-inner {
+        max-width: 680px;
+        margin: 0 auto;
+        text-align: center;
+      }
       .story-eyebrow {
-        display: block; font-size: 12px; text-transform: uppercase;
-        letter-spacing: 4px; color: var(--moss); margin-bottom: 12px;
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--moss);
+        margin-bottom: 12px;
       }
       .story-pull {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(20px, 2.2vw, 26px); font-weight: 300; font-style: italic;
-        color: var(--umber); line-height: 1.55; margin-bottom: 14px;
+        font-size: clamp(20px, 2.2vw, 26px);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--umber);
+        line-height: 1.55;
+        margin-bottom: 14px;
       }
       .story-link {
-        color: var(--clay); text-decoration: none; font-size: 15px;
-        letter-spacing: 1.5px; font-style: italic;
-        border-bottom: 1px solid rgba(138,90,68,0.35); transition: all 0.3s;
+        color: var(--clay);
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        font-style: italic;
+        border-bottom: 1px solid rgba(138, 90, 68, 0.35);
+        transition: all 0.3s;
       }
-      .story-link:hover { color: var(--forest); border-color: var(--forest); }
+      .story-link:hover {
+        color: var(--forest);
+        border-color: var(--forest);
+      }
 
       /* ── CATEGORY SECTIONS ── */
-      .cat-section { padding: 62px 20px 52px; }
-      .cat-section.dark { background-color: var(--forest); }
-      .cat-section.light { background-color: var(--parchment); }
-      .cat-inner { max-width: 1000px; margin: 0 auto; }
-      .cat-head { margin-bottom: 36px; }
+      .cat-section {
+        padding: 62px 20px 52px;
+      }
+      .cat-section.dark {
+        background-color: var(--forest);
+      }
+      .cat-section.light {
+        background-color: var(--parchment);
+      }
+      .cat-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .cat-head {
+        margin-bottom: 36px;
+      }
       .cat-eyebrow-label {
-        display: block; font-size: 12px; text-transform: uppercase;
-        letter-spacing: 5px; color: var(--moss); margin-bottom: 8px;
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--moss);
+        margin-bottom: 8px;
       }
       .cat-title {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(30px, 3vw, 40px); font-weight: 300; font-style: italic;
-        line-height: 1.2; margin-bottom: 6px;
+        font-size: clamp(30px, 3vw, 40px);
+        font-weight: 300;
+        font-style: italic;
+        line-height: 1.2;
+        margin-bottom: 6px;
       }
-      .dark .cat-title { color: var(--parchment); }
-      .light .cat-title { color: var(--forest); }
-      .cat-desc { font-style: italic; font-size: 17px; line-height: 1.62; }
-      .dark .cat-desc { color: rgba(215,192,145,0.72); }
-      .light .cat-desc { color: var(--clay); }
-      .cat-rule { width: 36px; height: 1px; margin: 12px 0; opacity: 0.35; }
-      .dark .cat-rule { background: var(--gold); }
-      .light .cat-rule { background: var(--clay); }
+      .dark .cat-title {
+        color: var(--parchment);
+      }
+      .light .cat-title {
+        color: var(--forest);
+      }
+      .cat-desc {
+        font-style: italic;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      .dark .cat-desc {
+        color: rgba(215, 192, 145, 0.72);
+      }
+      .light .cat-desc {
+        color: var(--clay);
+      }
+      .cat-rule {
+        width: 36px;
+        height: 1px;
+        margin: 12px 0;
+        opacity: 0.35;
+      }
+      .dark .cat-rule {
+        background: var(--gold);
+      }
+      .light .cat-rule {
+        background: var(--clay);
+      }
 
       /* ── RECIPE GRID ── */
       .recipe-grid {
@@ -189,118 +354,239 @@
       }
 
       /* ── FREE CARD ── */
-      .r-card { border-radius: 14px; padding: 28px 26px; }
+      .r-card {
+        border-radius: 14px;
+        padding: 28px 26px;
+      }
       .dark .r-card {
-        background: rgba(252,249,240,0.06);
-        border: 1px solid rgba(215,192,145,0.15);
+        background: rgba(252, 249, 240, 0.06);
+        border: 1px solid rgba(215, 192, 145, 0.15);
       }
       .light .r-card {
         background: var(--sand);
-        border: 1px solid rgba(138,90,68,0.1);
+        border: 1px solid rgba(138, 90, 68, 0.1);
       }
       .r-badge {
-        display: inline-block; font-size: 11px; text-transform: uppercase;
-        letter-spacing: 2px; background-color: var(--moss); color: var(--forest);
-        padding: 3px 11px; border-radius: 20px; margin-bottom: 12px;
+        display: inline-block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: var(--moss);
+        color: var(--forest);
+        padding: 3px 11px;
+        border-radius: 20px;
+        margin-bottom: 12px;
       }
       .r-name {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 28px; font-weight: 300; line-height: 1.15; margin-bottom: 3px;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1.15;
+        margin-bottom: 3px;
       }
-      .dark .r-name { color: var(--parchment); }
-      .light .r-name { color: var(--forest); }
-      .r-sub { font-style: italic; font-size: 16px; margin-bottom: 12px; display: block; }
-      .dark .r-sub { color: var(--gold); }
-      .light .r-sub { color: var(--clay); }
-      .r-intro { font-style: italic; font-size: 17px; margin-bottom: 16px; line-height: 1.62; }
-      .dark .r-intro { color: rgba(215,192,145,0.78); }
-      .light .r-intro { color: var(--umber); }
+      .dark .r-name {
+        color: var(--parchment);
+      }
+      .light .r-name {
+        color: var(--forest);
+      }
+      .r-sub {
+        font-style: italic;
+        font-size: 16px;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .dark .r-sub {
+        color: var(--gold);
+      }
+      .light .r-sub {
+        color: var(--clay);
+      }
+      .r-intro {
+        font-style: italic;
+        font-size: 17px;
+        margin-bottom: 16px;
+        line-height: 1.62;
+      }
+      .dark .r-intro {
+        color: rgba(215, 192, 145, 0.78);
+      }
+      .light .r-intro {
+        color: var(--umber);
+      }
       .r-lbl {
-        font-size: 11px; text-transform: uppercase; letter-spacing: 3px;
-        color: var(--moss); margin-bottom: 6px; display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--moss);
+        margin-bottom: 6px;
+        display: block;
       }
-      .r-ings { list-style: none; margin-bottom: 0; }
+      .r-ings {
+        list-style: none;
+        margin-bottom: 0;
+      }
       .r-ings li {
-        font-size: 17px; padding: 4px 0;
-        border-bottom: 1px solid rgba(132,155,132,0.1); line-height: 1.42;
+        font-size: 17px;
+        padding: 4px 0;
+        border-bottom: 1px solid rgba(132, 155, 132, 0.1);
+        line-height: 1.42;
       }
-      .dark .r-ings li { color: var(--sand); }
-      .light .r-ings li { color: var(--umber); }
+      .dark .r-ings li {
+        color: var(--sand);
+      }
+      .light .r-ings li {
+        color: var(--umber);
+      }
       .r-expand-btn {
-        margin-top: 16px; background: none; border: 1px solid var(--moss);
-        color: var(--moss); font-family: "EB Garamond", Georgia, serif;
-        font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
-        padding: 9px 20px; border-radius: 50px; cursor: pointer; transition: all 0.3s;
+        margin-top: 16px;
+        background: none;
+        border: 1px solid var(--moss);
+        color: var(--moss);
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 9px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s;
       }
-      .r-expand-btn:hover { background: var(--moss); color: var(--parchment); }
-      .r-expandable { overflow: hidden; max-height: 0; transition: max-height 0.45s ease; }
-      .r-expandable.open { max-height: 1200px; }
-      .r-steps { list-style: none; counter-reset: s; margin-top: 16px; }
+      .r-expand-btn:hover {
+        background: var(--moss);
+        color: var(--parchment);
+      }
+      .r-expandable {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.45s ease;
+      }
+      .r-expandable.open {
+        max-height: 1200px;
+      }
+      .r-steps {
+        list-style: none;
+        counter-reset: s;
+        margin-top: 16px;
+      }
       .r-steps li {
-        counter-increment: s; font-size: 17px; margin-bottom: 7px;
-        padding-left: 22px; position: relative; line-height: 1.52;
+        counter-increment: s;
+        font-size: 17px;
+        margin-bottom: 7px;
+        padding-left: 22px;
+        position: relative;
+        line-height: 1.52;
       }
-      .dark .r-steps li { color: rgba(252,249,240,0.78); }
-      .light .r-steps li { color: var(--umber); }
+      .dark .r-steps li {
+        color: rgba(252, 249, 240, 0.78);
+      }
+      .light .r-steps li {
+        color: var(--umber);
+      }
       .r-steps li::before {
-        content: counter(s); position: absolute; left: 0; color: var(--clay);
-        font-family: "Cormorant Garamond", serif; font-size: 0.88rem; font-weight: 600;
+        content: counter(s);
+        position: absolute;
+        left: 0;
+        color: var(--clay);
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.88rem;
+        font-weight: 600;
       }
       .r-wisdom {
-        margin-top: 14px; padding: 13px 15px;
-        background: rgba(132,155,132,0.1);
-        border-left: 3px solid var(--moss); border-radius: 0 8px 8px 0;
-        font-style: italic; font-size: 16px; line-height: 1.6;
+        margin-top: 14px;
+        padding: 13px 15px;
+        background: rgba(132, 155, 132, 0.1);
+        border-left: 3px solid var(--moss);
+        border-radius: 0 8px 8px 0;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 1.6;
       }
-      .dark .r-wisdom { color: var(--gold); }
-      .light .r-wisdom { color: var(--clay); }
+      .dark .r-wisdom {
+        color: var(--gold);
+      }
+      .light .r-wisdom {
+        color: var(--clay);
+      }
 
       /* ── LOCKED CARD ── */
-      .l-card { border-radius: 14px; padding: 22px 24px; }
+      .l-card {
+        border-radius: 14px;
+        padding: 22px 24px;
+      }
       .dark .l-card {
-        background: rgba(252,249,240,0.04);
-        border: 1px solid rgba(215,192,145,0.1);
+        background: rgba(252, 249, 240, 0.04);
+        border: 1px solid rgba(215, 192, 145, 0.1);
       }
       .light .l-card {
         background: var(--sand);
-        border: 1px solid rgba(138,90,68,0.08);
+        border: 1px solid rgba(138, 90, 68, 0.08);
       }
       .l-name {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 22px; font-weight: 300; line-height: 1.2; margin-bottom: 4px;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: 4px;
       }
-      .dark .l-name { color: var(--parchment); }
-      .light .l-name { color: var(--forest); }
+      .dark .l-name {
+        color: var(--parchment);
+      }
+      .light .l-name {
+        color: var(--forest);
+      }
       .l-desc {
-        font-style: italic; font-size: 16px; line-height: 1.58; margin-bottom: 14px;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 1.58;
+        margin-bottom: 14px;
       }
-      .dark .l-desc { color: rgba(215,192,145,0.75); }
-      .light .l-desc { color: var(--umber); }
+      .dark .l-desc {
+        color: rgba(215, 192, 145, 0.75);
+      }
+      .light .l-desc {
+        color: var(--umber);
+      }
       .l-locked-bar {
-        display: flex; align-items: center; gap: 8px;
-        padding-top: 10px; border-top: 1px solid rgba(132,155,132,0.12);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(132, 155, 132, 0.12);
       }
-      .l-lock-icon { font-size: 0.88rem; opacity: 0.5; }
+      .l-lock-icon {
+        font-size: 0.88rem;
+        opacity: 0.5;
+      }
       .l-lock-text {
-        font-size: 12px; text-transform: uppercase;
-        letter-spacing: 2px; color: var(--moss); opacity: 0.75;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--moss);
+        opacity: 0.75;
       }
 
       /* ── VIEW BUNDLE CTA ── */
       .bundle-cta {
         margin-top: 36px;
         padding-top: 28px;
-        border-top: 1px solid rgba(132,155,132,0.15);
+        border-top: 1px solid rgba(132, 155, 132, 0.15);
         display: flex;
         align-items: center;
         gap: 20px;
         flex-wrap: wrap;
       }
       .bundle-cta-text {
-        font-style: italic; font-size: 16px; line-height: 1.55;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 1.55;
       }
-      .dark .bundle-cta-text { color: rgba(215,192,145,0.7); }
-      .light .bundle-cta-text { color: var(--clay); }
+      .dark .bundle-cta-text {
+        color: rgba(215, 192, 145, 0.7);
+      }
+      .light .bundle-cta-text {
+        color: var(--clay);
+      }
       .bundle-btn {
         display: inline-block;
         padding: 12px 32px;
@@ -337,160 +623,344 @@
       .moringa-section {
         background-color: var(--sand);
         padding: 60px 20px;
-        border-top: 1px solid rgba(138,90,68,0.12);
-        border-bottom: 1px solid rgba(138,90,68,0.12);
+        border-top: 1px solid rgba(138, 90, 68, 0.12);
+        border-bottom: 1px solid rgba(138, 90, 68, 0.12);
       }
-      .moringa-inner { max-width: 700px; margin: 0 auto; }
+      .moringa-inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
       .moringa-eyebrow {
-        display: block; font-size: 12px; text-transform: uppercase;
-        letter-spacing: 4px; color: var(--moss); margin-bottom: 16px;
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--moss);
+        margin-bottom: 16px;
       }
       .moringa-title {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(24px, 3vw, 32px); font-weight: 300; font-style: italic;
-        color: var(--forest); line-height: 1.2; margin-bottom: 20px;
+        font-size: clamp(24px, 3vw, 32px);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--forest);
+        line-height: 1.2;
+        margin-bottom: 20px;
       }
       .moringa-body p {
-        font-size: 18px; color: var(--umber); line-height: 1.8;
-        margin-bottom: 1.2em; font-style: italic;
+        font-size: 18px;
+        color: var(--umber);
+        line-height: 1.8;
+        margin-bottom: 1.2em;
+        font-style: italic;
       }
       .moringa-method {
-        background: rgba(27,48,34,0.06);
+        background: rgba(27, 48, 34, 0.06);
         border-left: 4px solid var(--moss);
         border-radius: 0 10px 10px 0;
         padding: 22px 26px;
         margin: 24px 0;
       }
       .moringa-method .m-lbl {
-        font-size: 11px; text-transform: uppercase; letter-spacing: 3px;
-        color: var(--moss); margin-bottom: 10px; display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--moss);
+        margin-bottom: 10px;
+        display: block;
       }
       .moringa-method ol {
-        padding-left: 20px; color: var(--umber); font-size: 17px; line-height: 1.7;
+        padding-left: 20px;
+        color: var(--umber);
+        font-size: 17px;
+        line-height: 1.7;
       }
-      .moringa-method ol li { margin-bottom: 6px; }
+      .moringa-method ol li {
+        margin-bottom: 6px;
+      }
       .moringa-warning {
-        background: rgba(138,90,68,0.07);
+        background: rgba(138, 90, 68, 0.07);
         border-left: 4px solid var(--clay);
         border-radius: 0 10px 10px 0;
-        padding: 18px 22px; margin-top: 20px;
+        padding: 18px 22px;
+        margin-top: 20px;
       }
       .moringa-warning p {
-        font-size: 16px; color: var(--clay); line-height: 1.65;
-        margin-bottom: 0.5em; font-style: italic;
+        font-size: 16px;
+        color: var(--clay);
+        line-height: 1.65;
+        margin-bottom: 0.5em;
+        font-style: italic;
       }
-      .moringa-warning p:last-child { margin-bottom: 0; }
+      .moringa-warning p:last-child {
+        margin-bottom: 0;
+      }
       .moringa-close {
-        margin-top: 28px; padding-top: 24px;
-        border-top: 1px solid rgba(138,90,68,0.15);
+        margin-top: 28px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(138, 90, 68, 0.15);
       }
       .moringa-close p {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(18px, 2vw, 22px); font-weight: 300; font-style: italic;
-        color: var(--forest); line-height: 1.6; margin-bottom: 0;
+        font-size: clamp(18px, 2vw, 22px);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--forest);
+        line-height: 1.6;
+        margin-bottom: 0;
       }
 
       /* ── PLAN SECTION ── */
-      .plan-section { background-color: var(--sand); padding: 70px 20px 80px; }
-      .plan-inner { max-width: 700px; margin: 0 auto; }
+      .plan-section {
+        background-color: var(--sand);
+        padding: 70px 20px 80px;
+      }
+      .plan-inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
       .plan-eyebrow {
-        display: block; text-transform: uppercase; letter-spacing: 5px;
-        color: var(--moss); font-size: 12px; margin-bottom: 12px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--moss);
+        font-size: 12px;
+        margin-bottom: 12px;
       }
       .plan-title {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(32px, 3.5vw, 46px); font-weight: 300; font-style: italic;
-        color: var(--forest); line-height: 1.2; margin-bottom: 18px;
+        font-size: clamp(32px, 3.5vw, 46px);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--forest);
+        line-height: 1.2;
+        margin-bottom: 18px;
       }
       .plan-quote {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(18px, 2vw, 24px); font-weight: 300; font-style: italic;
-        color: var(--clay); line-height: 1.58;
+        font-size: clamp(18px, 2vw, 24px);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--clay);
+        line-height: 1.58;
         padding: 24px 0;
-        border-top: 1px solid rgba(138,90,68,0.22);
-        border-bottom: 1px solid rgba(138,90,68,0.22);
+        border-top: 1px solid rgba(138, 90, 68, 0.22);
+        border-bottom: 1px solid rgba(138, 90, 68, 0.22);
         margin-bottom: 24px;
       }
-      .plan-desc { color: var(--umber); font-style: italic; font-size: 17px; line-height: 1.75; margin-bottom: 28px; }
-      .plan-feats { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 36px; }
+      .plan-desc {
+        color: var(--umber);
+        font-style: italic;
+        font-size: 17px;
+        line-height: 1.75;
+        margin-bottom: 28px;
+      }
+      .plan-feats {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 36px;
+      }
       .plan-feats li {
-        color: var(--umber); font-size: 17px; font-style: italic;
-        padding-left: 20px; position: relative; line-height: 1.58;
+        color: var(--umber);
+        font-size: 17px;
+        font-style: italic;
+        padding-left: 20px;
+        position: relative;
+        line-height: 1.58;
       }
-      .plan-feats li::before { content: "✦"; position: absolute; left: 0; color: var(--moss); font-size: 0.55rem; top: 8px; }
-      .plan-actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+      .plan-feats li::before {
+        content: "✦";
+        position: absolute;
+        left: 0;
+        color: var(--moss);
+        font-size: 0.55rem;
+        top: 8px;
+      }
+      .plan-actions {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        flex-wrap: wrap;
+      }
       .plan-link {
-        color: var(--clay); text-decoration: none; font-size: 15px;
-        letter-spacing: 1.5px; font-style: italic;
-        border-bottom: 1px solid rgba(138,90,68,0.35); transition: all 0.3s;
+        color: var(--clay);
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        font-style: italic;
+        border-bottom: 1px solid rgba(138, 90, 68, 0.35);
+        transition: all 0.3s;
       }
-      .plan-link:hover { color: var(--forest); border-color: var(--forest); }
-      .btn-forest { background-color: var(--forest); }
-      .btn-forest:hover { background-color: var(--umber); color: var(--parchment); }
+      .plan-link:hover {
+        color: var(--forest);
+        border-color: var(--forest);
+      }
+      .btn-forest {
+        background-color: var(--forest);
+      }
+      .btn-forest:hover {
+        background-color: var(--umber);
+        color: var(--parchment);
+      }
 
       /* ── FOOTER ── */
       footer {
-        background-color: var(--forest); color: var(--sand);
-        padding: 52px 20px 26px; text-align: center;
+        background-color: var(--forest);
+        color: var(--sand);
+        padding: 52px 20px 26px;
+        text-align: center;
         font-family: "EB Garamond", Georgia, serif;
       }
       .f-logo {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 22px; letter-spacing: 8px; color: var(--parchment);
-        font-weight: 300; margin-bottom: 6px;
+        font-size: 22px;
+        letter-spacing: 8px;
+        color: var(--parchment);
+        font-weight: 300;
+        margin-bottom: 6px;
       }
-      .f-tag { font-style: italic; font-size: 16px; opacity: 0.58; margin-bottom: 26px; }
-      .f-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 26px; flex-wrap: wrap; }
+      .f-tag {
+        font-style: italic;
+        font-size: 16px;
+        opacity: 0.58;
+        margin-bottom: 26px;
+      }
+      .f-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 26px;
+        flex-wrap: wrap;
+      }
       .f-links a {
-        color: var(--sand); text-decoration: none; font-size: 15px;
-        text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.3s;
+        color: var(--sand);
+        text-decoration: none;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: color 0.3s;
       }
-      .f-links a:hover { color: var(--moss); }
-      .f-hr { border: 0; border-top: 1px solid rgba(229,217,182,0.07); margin-bottom: 18px; }
-      .f-copy { font-size: 15px; opacity: 0.62; }
-      .f-crafted { font-style: italic; font-size: 14px; opacity: 0.42; margin-top: 4px; }
+      .f-links a:hover {
+        color: var(--moss);
+      }
+      .f-hr {
+        border: 0;
+        border-top: 1px solid rgba(229, 217, 182, 0.07);
+        margin-bottom: 18px;
+      }
+      .f-copy {
+        font-size: 15px;
+        opacity: 0.62;
+      }
+      .f-crafted {
+        font-style: italic;
+        font-size: 14px;
+        opacity: 0.42;
+        margin-top: 4px;
+      }
 
       @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(18px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       /* ── HAMBURGER ── */
       .hamburger {
-        display: none; flex-direction: column; gap: 5px;
-        cursor: pointer; background: none; border: none; padding: 4px; z-index: 200;
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+        z-index: 200;
       }
       .hamburger span {
-        display: block; width: 24px; height: 2px;
-        background-color: #d7c091; border-radius: 2px; transition: all 0.3s ease;
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #d7c091;
+        border-radius: 2px;
+        transition: all 0.3s ease;
       }
-      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      .hamburger.open span:nth-child(2) { opacity: 0; }
-      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
 
       @media (max-width: 700px) {
-        nav { padding: 16px 20px !important; position: relative; }
-        .hamburger { display: flex; }
-        .nav-links {
-          display: none !important; position: absolute; top: 100%; left: 0; right: 0;
-          background-color: #1b3022; flex-direction: column !important; gap: 0 !important;
-          padding: 0; border-top: 1px solid rgba(215,192,145,0.15);
-          z-index: 150; box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        nav {
+          padding: 16px 20px !important;
+          position: relative;
         }
-        .nav-links.open { display: flex !important; }
-        .nav-links li { border-bottom: 1px solid rgba(215,192,145,0.08); }
-        .nav-links a { display: block; padding: 16px 24px !important; font-size: 0.85rem !important; letter-spacing: 2px !important; }
-        .cat-nav { gap: 8px; padding: 20px 14px; }
-        .cat-btn { font-size: 0.74rem; padding: 7px 14px; }
-        .cat-section { padding: 48px 16px 40px; }
-        .r-card, .l-card { padding: 22px 18px; }
-        .hero-section { padding: 60px 20px; }
-        .bundle-cta { flex-direction: column; align-items: flex-start; }
+        .hamburger {
+          display: flex;
+        }
+        .nav-links {
+          display: none !important;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #1b3022;
+          flex-direction: column !important;
+          gap: 0 !important;
+          padding: 0;
+          border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links.open {
+          display: flex !important;
+        }
+        .nav-links li {
+          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
+        }
+        .nav-links a {
+          display: block;
+          padding: 16px 24px !important;
+          font-size: 0.85rem !important;
+          letter-spacing: 2px !important;
+        }
+        .cat-nav {
+          gap: 8px;
+          padding: 20px 14px;
+        }
+        .cat-btn {
+          font-size: 0.74rem;
+          padding: 7px 14px;
+        }
+        .cat-section {
+          padding: 48px 16px 40px;
+        }
+        .r-card,
+        .l-card {
+          padding: 22px 18px;
+        }
+        .hero-section {
+          padding: 60px 20px;
+        }
+        .bundle-cta {
+          flex-direction: column;
+          align-items: flex-start;
+        }
       }
     </style>
   </head>
   <body>
-
     <!-- NAV -->
     <nav>
       <a href="index.html" class="nav-brand">
@@ -516,10 +986,15 @@
         <div class="hero-ring-2"></div>
         <div class="hero-content">
           <div class="hero-logo-mark">
-            <img src="images/alchemy-logo.png" alt="Alchemy of Nature"
-              style="max-width:500px; width:100%; height:auto;" />
+            <img
+              src="images/alchemy-logo.png"
+              alt="Alchemy of Nature"
+              style="max-width: 500px; width: 100%; height: auto"
+            />
           </div>
-          <p class="hero-tagline">35 healing recipes, grouped by what your body needs.</p>
+          <p class="hero-tagline">
+            35 healing recipes, grouped by what your body needs.
+          </p>
           <p class="hero-desc">
             One free recipe per category. The full guides available in the shop.
             A 30-day reset plan for those who want the complete journey.
@@ -547,10 +1022,13 @@
       <div class="story-strip-inner">
         <span class="story-eyebrow">The story behind the recipes</span>
         <p class="story-pull">
-          &ldquo;In 2022, I ended a ten-year relationship and began a healing journey in the same breath.
-          I didn&rsquo;t set out to lose weight. I set out to come back to myself. My body simply followed.&rdquo;
+          &ldquo;In 2022, I ended a ten-year relationship and began a healing
+          journey in the same breath. I didn&rsquo;t set out to lose weight. I
+          set out to come back to myself. My body simply followed.&rdquo;
         </p>
-        <a href="journal-entry-002.html" class="story-link">Read the full story &rarr;</a>
+        <a href="journal-entry-002.html" class="story-link"
+          >Read the full story &rarr;</a
+        >
       </div>
     </div>
 
@@ -564,20 +1042,19 @@
           <h2 class="cat-title">Cleanse &amp; Detox</h2>
           <div class="cat-rule"></div>
           <p class="cat-desc">
-            The beginning of every healing journey. Preparations that clear the liver, gut, blood,
-            and lymph so the body can do its own work.
+            The beginning of every healing journey. Preparations that clear the
+            liver, gut, blood, and lymph so the body can do its own work.
           </p>
         </div>
         <div class="recipe-grid">
-
           <!-- FREE -->
           <div class="r-card">
             <span class="r-badge">Free Recipe</span>
             <h3 class="r-name">Gentle Morning Flush</h3>
             <span class="r-sub">Warm Water, Lemon, Cayenne &amp; Honey</span>
             <p class="r-intro">
-              A softer entry into cleansing. Supports digestion, wakes the liver gently,
-              and prepares the body to receive the day.
+              A softer entry into cleansing. Supports digestion, wakes the liver
+              gently, and prepares the body to receive the day.
             </p>
             <span class="r-lbl">Ingredients</span>
             <ul class="r-ings">
@@ -586,9 +1063,11 @@
               <li>1 pinch cayenne pepper</li>
               <li>1 tsp raw honey</li>
             </ul>
-            <button class="r-expand-btn" onclick="toggleExpand(this)">How to make it &darr;</button>
+            <button class="r-expand-btn" onclick="toggleExpand(this)">
+              How to make it &darr;
+            </button>
             <div class="r-expandable">
-              <span class="r-lbl" style="margin-top:14px;">Method</span>
+              <span class="r-lbl" style="margin-top: 14px">Method</span>
               <ol class="r-steps">
                 <li>Warm the water — not boiling.</li>
                 <li>Add lemon juice and cayenne. Stir.</li>
@@ -596,7 +1075,8 @@
                 <li>Drink slowly on an empty stomach before eating.</li>
               </ol>
               <div class="r-wisdom">
-                Let the first thing you put into your body each morning be intentional.
+                Let the first thing you put into your body each morning be
+                intentional.
               </div>
             </div>
           </div>
@@ -604,34 +1084,68 @@
           <!-- LOCKED x5 -->
           <div class="l-card">
             <h3 class="l-name">The Morning Reset</h3>
-            <p class="l-desc">The tea that began everything. A daily ritual of gentle beginning before the world asks anything of you.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              The tea that began everything. A daily ritual of gentle beginning
+              before the world asks anything of you.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Blood Awakening Cleanser</h3>
-            <p class="l-desc">Your blood has been carrying more than it should. This is how you lighten the load — one glass, every morning.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Your blood has been carrying more than it should. This is how you
+              lighten the load — one glass, every morning.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Deep Liver Cleanse Tea</h3>
-            <p class="l-desc">The liver holds everything we haven&rsquo;t processed yet. This tea asks it to let go.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              The liver holds everything we haven&rsquo;t processed yet. This
+              tea asks it to let go.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Gut Reset Drink</h3>
-            <p class="l-desc">The one thing most people skip that would change how their entire digestive system functions.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              The one thing most people skip that would change how their entire
+              digestive system functions.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Living Water Elixir</h3>
-            <p class="l-desc">Cellular hydration — not just surface-level. The water Nomzamo drank every single day for three months.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Cellular hydration — not just surface-level. The water Nomzamo
+              drank every single day for three months.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
-
         </div>
         <div class="bundle-cta">
-          <p class="bundle-cta-text">Get all 5 preparations in the full Cleanse &amp; Detox guide &mdash; R79.</p>
-          <a href="shop.html#cleanse" class="bundle-btn">Get the full guide &rarr;</a>
+          <p class="bundle-cta-text">
+            Get all 5 preparations in the full Cleanse &amp; Detox guide &mdash;
+            R79.
+          </p>
+          <a href="shop.html#cleanse" class="bundle-btn"
+            >Get the full guide &rarr;</a
+          >
         </div>
       </div>
     </div>
@@ -651,7 +1165,6 @@
           </p>
         </div>
         <div class="recipe-grid">
-
           <!-- FREE -->
           <div class="r-card">
             <span class="r-badge">Free Recipe</span>
@@ -668,9 +1181,11 @@
               <li>1 slice fresh ginger</li>
               <li>Juice of &frac12; lemon</li>
             </ul>
-            <button class="r-expand-btn" onclick="toggleExpand(this)">How to make it &darr;</button>
+            <button class="r-expand-btn" onclick="toggleExpand(this)">
+              How to make it &darr;
+            </button>
             <div class="r-expandable">
-              <span class="r-lbl" style="margin-top:14px;">Method</span>
+              <span class="r-lbl" style="margin-top: 14px">Method</span>
               <ol class="r-steps">
                 <li>Add all ingredients to a jug or bottle of water.</li>
                 <li>Leave to infuse for at least 30 minutes.</li>
@@ -685,34 +1200,71 @@
           <!-- LOCKED x5 -->
           <div class="l-card">
             <h3 class="l-name">The Blood Builder</h3>
-            <p class="l-desc">Rich in plant iron and minerals that rebuild what depletion has taken. For the days your body is asking for more, not less.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Rich in plant iron and minerals that rebuild what depletion has
+              taken. For the days your body is asking for more, not less.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Brain Boost Tonic</h3>
-            <p class="l-desc">Used for centuries across India and Africa for mental clarity. If your thoughts feel scattered and your memory feels slow, this is where you start.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Used for centuries across India and Africa for mental clarity. If
+              your thoughts feel scattered and your memory feels slow, this is
+              where you start.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Stress &amp; Cortisol Drink</h3>
-            <p class="l-desc">Your nervous system is not broken — it is overwhelmed. This drink talks it down from the ledge, every single evening.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Your nervous system is not broken — it is overwhelmed. This drink
+              talks it down from the ledge, every single evening.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Anti-Inflammatory Tonic</h3>
-            <p class="l-desc">Chronic inflammation is silent. It lives underneath fatigue, joint pain, brain fog, and skin flares. This tonic addresses it at the root.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Chronic inflammation is silent. It lives underneath fatigue, joint
+              pain, brain fog, and skin flares. This tonic addresses it at the
+              root.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Green Detox Smoothie</h3>
-            <p class="l-desc">Alkalising, anti-inflammatory, and genuinely delicious when made correctly. Everything your body has been quietly asking for in one glass.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Alkalising, anti-inflammatory, and genuinely delicious when made
+              correctly. Everything your body has been quietly asking for in one
+              glass.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
-
         </div>
         <div class="bundle-cta">
-          <p class="bundle-cta-text">Get all 5 preparations in the full Energy &amp; Mind guide &mdash; R79.</p>
-          <a href="shop.html#energy" class="bundle-btn">Get the full guide &rarr;</a>
+          <p class="bundle-cta-text">
+            Get all 5 preparations in the full Energy &amp; Mind guide &mdash;
+            R79.
+          </p>
+          <a href="shop.html#energy" class="bundle-btn"
+            >Get the full guide &rarr;</a
+          >
         </div>
       </div>
     </div>
@@ -727,37 +1279,42 @@
           <h2 class="cat-title">Immunity &amp; Healing</h2>
           <div class="cat-rule"></div>
           <p class="cat-desc">
-            Preparations that activate the body&rsquo;s own defence.
-            At the first sign of illness and through every season.
+            Preparations that activate the body&rsquo;s own defence. At the
+            first sign of illness and through every season.
           </p>
         </div>
         <div class="recipe-grid">
-
           <!-- FREE -->
           <div class="r-card">
             <span class="r-badge">Free Recipe</span>
             <h3 class="r-name">Garlic &amp; Honey Defender</h3>
             <span class="r-sub">Raw Garlic &amp; Raw Honey</span>
             <p class="r-intro">
-              Simple. Potent. Ancient. Take daily for immune support,
-              or at the very first sign of illness.
+              Simple. Potent. Ancient. Take daily for immune support, or at the
+              very first sign of illness.
             </p>
             <span class="r-lbl">Ingredients</span>
             <ul class="r-ings">
               <li>3 cloves raw garlic</li>
               <li>3 tbsp raw honey</li>
             </ul>
-            <button class="r-expand-btn" onclick="toggleExpand(this)">How to make it &darr;</button>
+            <button class="r-expand-btn" onclick="toggleExpand(this)">
+              How to make it &darr;
+            </button>
             <div class="r-expandable">
-              <span class="r-lbl" style="margin-top:14px;">Method</span>
+              <span class="r-lbl" style="margin-top: 14px">Method</span>
               <ol class="r-steps">
-                <li>Crush the garlic and allow it to rest for 10 minutes. This activates allicin — the compound that does the work.</li>
+                <li>
+                  Crush the garlic and allow it to rest for 10 minutes. This
+                  activates allicin — the compound that does the work.
+                </li>
                 <li>Mix thoroughly with raw honey.</li>
                 <li>Store in a sealed glass jar in the fridge.</li>
                 <li>Take 1 teaspoon daily, or at the first sign of illness.</li>
               </ol>
               <div class="r-wisdom">
-                The 10-minute rest after crushing is not optional — it is the medicine activating.
+                The 10-minute rest after crushing is not optional — it is the
+                medicine activating.
               </div>
             </div>
           </div>
@@ -765,34 +1322,69 @@
           <!-- LOCKED x5 -->
           <div class="l-card">
             <h3 class="l-name">Immune Defence Shot</h3>
-            <p class="l-desc">One shot at the very first sign of illness. The people who keep this in their fridge don&rsquo;t get sick the way they used to.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              One shot at the very first sign of illness. The people who keep
+              this in their fridge don&rsquo;t get sick the way they used to.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Golden Immune Tea</h3>
-            <p class="l-desc">The daily ritual that shifts the body from reactive to resilient. Not a remedy for when you&rsquo;re sick — a practice for not getting there.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              The daily ritual that shifts the body from reactive to resilient.
+              Not a remedy for when you&rsquo;re sick — a practice for not
+              getting there.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Hormone Balance Smoothie</h3>
-            <p class="l-desc">Hormonal imbalance shows up as mood, weight, hair, skin and sleep. This smoothie speaks to all of it — from the inside.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Hormonal imbalance shows up as mood, weight, hair, skin and sleep.
+              This smoothie speaks to all of it — from the inside.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Hydration Infusion</h3>
-            <p class="l-desc">Most people are chronically dehydrated and don&rsquo;t know it. This is structured hydration your cells can actually use.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Most people are chronically dehydrated and don&rsquo;t know it.
+              This is structured hydration your cells can actually use.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Elderberry &amp; Ginger Syrup</h3>
-            <p class="l-desc">A winter staple for immune protection. One tablespoon daily through the cold season — made once, used for weeks.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              A winter staple for immune protection. One tablespoon daily
+              through the cold season — made once, used for weeks.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
-
         </div>
         <div class="bundle-cta">
-          <p class="bundle-cta-text">Get all 5 preparations in the full Immunity &amp; Healing guide &mdash; R79.</p>
-          <a href="shop.html#immune" class="bundle-btn">Get the full guide &rarr;</a>
+          <p class="bundle-cta-text">
+            Get all 5 preparations in the full Immunity &amp; Healing guide
+            &mdash; R79.
+          </p>
+          <a href="shop.html#immune" class="bundle-btn"
+            >Get the full guide &rarr;</a
+          >
         </div>
       </div>
     </div>
@@ -807,12 +1399,11 @@
           <h2 class="cat-title">Skin</h2>
           <div class="cat-rule"></div>
           <p class="cat-desc">
-            From within and without. Preparations that clear, brighten, and restore
-            what stress, diet, and time have taken from the skin.
+            From within and without. Preparations that clear, brighten, and
+            restore what stress, diet, and time have taken from the skin.
           </p>
         </div>
         <div class="recipe-grid">
-
           <!-- FREE -->
           <div class="r-card">
             <span class="r-badge">Free Recipe</span>
@@ -828,17 +1419,22 @@
               <li>A handful of fresh rosemary or mint</li>
               <li>Clean towel</li>
             </ul>
-            <button class="r-expand-btn" onclick="toggleExpand(this)">How to make it &darr;</button>
+            <button class="r-expand-btn" onclick="toggleExpand(this)">
+              How to make it &darr;
+            </button>
             <div class="r-expandable">
-              <span class="r-lbl" style="margin-top:14px;">Method</span>
+              <span class="r-lbl" style="margin-top: 14px">Method</span>
               <ol class="r-steps">
                 <li>Add herbs to the hot water.</li>
-                <li>Lean carefully over the bowl and cover your head with a towel.</li>
+                <li>
+                  Lean carefully over the bowl and cover your head with a towel.
+                </li>
                 <li>Allow the steam to surround your face for 5–10 minutes.</li>
                 <li>Rinse with cool water and pat dry gently.</li>
               </ol>
               <div class="r-wisdom">
-                The skin releases what the body has been holding. Give it space to do so.
+                The skin releases what the body has been holding. Give it space
+                to do so.
               </div>
             </div>
           </div>
@@ -846,34 +1442,67 @@
           <!-- LOCKED x5 -->
           <div class="l-card">
             <h3 class="l-name">Acne Clearing Smoothie</h3>
-            <p class="l-desc">Acne is an internal signal, not just a skin problem. This smoothie addresses what the skin is actually trying to say.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Acne is an internal signal, not just a skin problem. This smoothie
+              addresses what the skin is actually trying to say.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Turmeric Brightening Mask</h3>
-            <p class="l-desc">Three ingredients. Ten minutes. The glow people keep asking you about — used across India and West Africa for generations.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Three ingredients. Ten minutes. The glow people keep asking you
+              about — used across India and West Africa for generations.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Sun Glow Body Oil</h3>
-            <p class="l-desc">The oil you make once and use for months. Skin that looks like it has been somewhere warm, even in winter.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              The oil you make once and use for months. Skin that looks like it
+              has been somewhere warm, even in winter.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Aloe Vera &amp; Honey Skin Mask</h3>
-            <p class="l-desc">Two ingredients that do what most expensive serums spend years trying to do — sourced from the garden and the kitchen.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Two ingredients that do what most expensive serums spend years
+              trying to do — sourced from the garden and the kitchen.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Frankincense Healing Oil</h3>
-            <p class="l-desc">One of the most ancient healing preparations on earth. For scars, stretch marks, and uneven tone — used for thousands of years.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              One of the most ancient healing preparations on earth. For scars,
+              stretch marks, and uneven tone — used for thousands of years.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
-
         </div>
         <div class="bundle-cta">
-          <p class="bundle-cta-text">Get all 5 preparations in the full Skin guide &mdash; R79.</p>
-          <a href="shop.html#skin" class="bundle-btn">Get the full guide &rarr;</a>
+          <p class="bundle-cta-text">
+            Get all 5 preparations in the full Skin guide &mdash; R79.
+          </p>
+          <a href="shop.html#skin" class="bundle-btn"
+            >Get the full guide &rarr;</a
+          >
         </div>
       </div>
     </div>
@@ -888,38 +1517,46 @@
           <h2 class="cat-title">Hair</h2>
           <div class="cat-rule"></div>
           <p class="cat-desc">
-            Rinses, oils, and treatments rooted in traditional African and natural medicine &mdash;
-            for growth, strength, and scalp health.
+            Rinses, oils, and treatments rooted in traditional African and
+            natural medicine &mdash; for growth, strength, and scalp health.
           </p>
         </div>
         <div class="recipe-grid">
-
           <!-- FREE -->
           <div class="r-card">
             <span class="r-badge">Free Recipe</span>
             <h3 class="r-name">Rice Water Strength Rinse</h3>
             <span class="r-sub">Uncooked Rice &amp; Water</span>
             <p class="r-intro">
-              Traditionally used across Asia and West Africa to support stronger,
-              softer, and shinier hair. Simple. Free. Effective.
+              Traditionally used across Asia and West Africa to support
+              stronger, softer, and shinier hair. Simple. Free. Effective.
             </p>
             <span class="r-lbl">Ingredients</span>
             <ul class="r-ings">
               <li>&frac12; cup uncooked rice</li>
               <li>2 cups water</li>
             </ul>
-            <button class="r-expand-btn" onclick="toggleExpand(this)">How to make it &darr;</button>
+            <button class="r-expand-btn" onclick="toggleExpand(this)">
+              How to make it &darr;
+            </button>
             <div class="r-expandable">
-              <span class="r-lbl" style="margin-top:14px;">Method</span>
+              <span class="r-lbl" style="margin-top: 14px">Method</span>
               <ol class="r-steps">
                 <li>Rinse rice briefly to remove dirt or residue.</li>
-                <li>Place rice into a bowl with the water and soak for 30 minutes.</li>
-                <li>Strain the water into a clean container — this is your rinse.</li>
-                <li>After shampooing, pour rice water over the hair and scalp.</li>
+                <li>
+                  Place rice into a bowl with the water and soak for 30 minutes.
+                </li>
+                <li>
+                  Strain the water into a clean container — this is your rinse.
+                </li>
+                <li>
+                  After shampooing, pour rice water over the hair and scalp.
+                </li>
                 <li>Leave for 10–15 minutes before rinsing thoroughly.</li>
               </ol>
               <div class="r-wisdom">
-                Hair carries energy. What you put on it matters as much as what you put into your body.
+                Hair carries energy. What you put on it matters as much as what
+                you put into your body.
               </div>
             </div>
           </div>
@@ -927,34 +1564,68 @@
           <!-- LOCKED x5 -->
           <div class="l-card">
             <h3 class="l-name">Onion Hair Growth Rinse</h3>
-            <p class="l-desc">Clinically confirmed to stimulate dormant follicles. The smell fades. The regrowth stays.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Clinically confirmed to stimulate dormant follicles. The smell
+              fades. The regrowth stays.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Castor &amp; Coconut Hair Oil</h3>
-            <p class="l-desc">The simplest, most effective traditional hair oil there is. Not complicated. Not expensive. Just consistent — and the results speak for themselves.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              The simplest, most effective traditional hair oil there is. Not
+              complicated. Not expensive. Just consistent — and the results
+              speak for themselves.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">ACV Hair Shine Rinse</h3>
-            <p class="l-desc">One rinse, every wash day. Immediate improvement in shine, softness, and frizz — and cumulative results over time.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              One rinse, every wash day. Immediate improvement in shine,
+              softness, and frizz — and cumulative results over time.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Fenugreek Scalp &amp; Growth Mask</h3>
-            <p class="l-desc">A traditional remedy for dandruff, breakage, and scalp health used across India and East Africa for centuries.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              A traditional remedy for dandruff, breakage, and scalp health used
+              across India and East Africa for centuries.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Flaxseed Curl &amp; Moisture Gel</h3>
-            <p class="l-desc">A natural styling gel that defines curls, reduces frizz, and deeply moisturises — especially effective on 4C and coily hair.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              A natural styling gel that defines curls, reduces frizz, and
+              deeply moisturises — especially effective on 4C and coily hair.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
-
         </div>
         <div class="bundle-cta">
-          <p class="bundle-cta-text">Get all 5 preparations in the full Hair guide &mdash; R79.</p>
-          <a href="shop.html#hair" class="bundle-btn">Get the full guide &rarr;</a>
+          <p class="bundle-cta-text">
+            Get all 5 preparations in the full Hair guide &mdash; R79.
+          </p>
+          <a href="shop.html#hair" class="bundle-btn"
+            >Get the full guide &rarr;</a
+          >
         </div>
       </div>
     </div>
@@ -969,20 +1640,21 @@
           <h2 class="cat-title">Gut &amp; Digestion</h2>
           <div class="cat-rule"></div>
           <p class="cat-desc">
-            When the gut settles, everything else follows. Simple preparations that calm,
-            coat, and restore the body&rsquo;s most underestimated system.
+            When the gut settles, everything else follows. Simple preparations
+            that calm, coat, and restore the body&rsquo;s most underestimated
+            system.
           </p>
         </div>
         <div class="recipe-grid">
-
           <!-- FREE -->
           <div class="r-card">
             <span class="r-badge">Free Recipe</span>
             <h3 class="r-name">Sauerkraut</h3>
             <span class="r-sub">Fermented Cabbage &amp; Carrot</span>
             <p class="r-intro">
-              One of the oldest gut medicines on earth. Made from two ingredients,
-              no heat, no equipment — just salt, time, and patience.
+              One of the oldest gut medicines on earth. Made from two
+              ingredients, no heat, no equipment — just salt, time, and
+              patience.
             </p>
             <span class="r-lbl">Ingredients</span>
             <ul class="r-ings">
@@ -990,20 +1662,37 @@
               <li>1–2 carrots, grated</li>
               <li>1–2 tbsp natural salt (sea, Celtic, or Himalayan)</li>
             </ul>
-            <button class="r-expand-btn" onclick="toggleExpand(this)">How to make it &darr;</button>
+            <button class="r-expand-btn" onclick="toggleExpand(this)">
+              How to make it &darr;
+            </button>
             <div class="r-expandable">
-              <span class="r-lbl" style="margin-top:14px;">Method</span>
+              <span class="r-lbl" style="margin-top: 14px">Method</span>
               <ol class="r-steps">
                 <li>Place cabbage and carrots into a large bowl.</li>
-                <li>Add salt and massage thoroughly with clean hands until the vegetables begin releasing liquid.</li>
-                <li>Continue massaging until enough natural brine forms at the bottom of the bowl.</li>
-                <li>Pack tightly into a clean glass jar, pressing firmly so the vegetables remain submerged beneath the liquid.</li>
-                <li>Leave a small space at the top of the jar for expansion.</li>
-                <li>Cover loosely and leave at room temperature for 3–7 days, depending on temperature and desired sourness.</li>
+                <li>
+                  Add salt and massage thoroughly with clean hands until the
+                  vegetables begin releasing liquid.
+                </li>
+                <li>
+                  Continue massaging until enough natural brine forms at the
+                  bottom of the bowl.
+                </li>
+                <li>
+                  Pack tightly into a clean glass jar, pressing firmly so the
+                  vegetables remain submerged beneath the liquid.
+                </li>
+                <li>
+                  Leave a small space at the top of the jar for expansion.
+                </li>
+                <li>
+                  Cover loosely and leave at room temperature for 3–7 days,
+                  depending on temperature and desired sourness.
+                </li>
                 <li>Once ready, store in the fridge.</li>
               </ol>
               <div class="r-wisdom">
-                Start with 1 tablespoon daily and increase gradually as the body adjusts. The gut knows what it needs — follow its lead.
+                Start with 1 tablespoon daily and increase gradually as the body
+                adjusts. The gut knows what it needs — follow its lead.
               </div>
             </div>
           </div>
@@ -1011,34 +1700,68 @@
           <!-- LOCKED x5 -->
           <div class="l-card">
             <h3 class="l-name">Bloating Relief Tea</h3>
-            <p class="l-desc">Bloating is your gut asking for help. This tea answers it — most people feel the difference within 20 minutes.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Bloating is your gut asking for help. This tea answers it — most
+              people feel the difference within 20 minutes.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Oil Pulling Protocol</h3>
-            <p class="l-desc">An ancient practice that removes bacteria from the mouth and supports the gut. One tablespoon. Twenty minutes. Every morning.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              An ancient practice that removes bacteria from the mouth and
+              supports the gut. One tablespoon. Twenty minutes. Every morning.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Charcoal Tooth Cleanser</h3>
-            <p class="l-desc">Natural tooth whitening that also removes the bacteria responsible for bad breath and decay. Black goes on. White comes off.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Natural tooth whitening that also removes the bacteria responsible
+              for bad breath and decay. Black goes on. White comes off.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Fresh Breath Salt Rinse</h3>
-            <p class="l-desc">Bad breath comes from the gut, not just the mouth. This rinse addresses both — in under two minutes, twice a day.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Bad breath comes from the gut, not just the mouth. This rinse
+              addresses both — in under two minutes, twice a day.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Fennel Digestive Tea</h3>
-            <p class="l-desc">The most direct remedy for bloating, cramps, and digestive discomfort after meals. Simple, immediate, and deeply effective.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              The most direct remedy for bloating, cramps, and digestive
+              discomfort after meals. Simple, immediate, and deeply effective.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
-
         </div>
         <div class="bundle-cta">
-          <p class="bundle-cta-text">Get all 5 preparations in the full Gut &amp; Digestion guide &mdash; R79.</p>
-          <a href="shop.html#gut" class="bundle-btn">Get the full guide &rarr;</a>
+          <p class="bundle-cta-text">
+            Get all 5 preparations in the full Gut &amp; Digestion guide &mdash;
+            R79.
+          </p>
+          <a href="shop.html#gut" class="bundle-btn"
+            >Get the full guide &rarr;</a
+          >
         </div>
       </div>
     </div>
@@ -1053,20 +1776,20 @@
           <h2 class="cat-title">Rest &amp; Nervous System</h2>
           <div class="cat-rule"></div>
           <p class="cat-desc">
-            The body heals in stillness. These preparations create the conditions for deep,
-            restorative rest and a nervous system that is no longer running on alert.
+            The body heals in stillness. These preparations create the
+            conditions for deep, restorative rest and a nervous system that is
+            no longer running on alert.
           </p>
         </div>
         <div class="recipe-grid">
-
           <!-- FREE -->
           <div class="r-card">
             <span class="r-badge">Free Recipe</span>
             <h3 class="r-name">The Evening Surrender</h3>
             <span class="r-sub">Chamomile, Mint &amp; Honey Tea</span>
             <p class="r-intro">
-              The day asks everything of us. This tea asks nothing. It simply holds
-              the space between what has been and what will come.
+              The day asks everything of us. This tea asks nothing. It simply
+              holds the space between what has been and what will come.
             </p>
             <span class="r-lbl">Ingredients</span>
             <ul class="r-ings">
@@ -1076,18 +1799,25 @@
               <li>1 tsp raw honey</li>
               <li>Thin slice of fresh ginger (optional)</li>
             </ul>
-            <button class="r-expand-btn" onclick="toggleExpand(this)">How to make it &darr;</button>
+            <button class="r-expand-btn" onclick="toggleExpand(this)">
+              How to make it &darr;
+            </button>
             <div class="r-expandable">
-              <span class="r-lbl" style="margin-top:14px;">Method</span>
+              <span class="r-lbl" style="margin-top: 14px">Method</span>
               <ol class="r-steps">
                 <li>Place chamomile, mint, and ginger in a cup.</li>
-                <li>Pour water just off the boil — not at a full rolling boil.</li>
+                <li>
+                  Pour water just off the boil — not at a full rolling boil.
+                </li>
                 <li>Cover and steep for 7 minutes to keep volatile oils in.</li>
                 <li>Strain. Add honey only after straining.</li>
-                <li>Hold the cup with both hands. Drink 30 minutes before bed.</li>
+                <li>
+                  Hold the cup with both hands. Drink 30 minutes before bed.
+                </li>
               </ol>
               <div class="r-wisdom">
-                Chamomile doesn&rsquo;t force sleep. It simply creates the conditions for it &mdash; and that is enough.
+                Chamomile doesn&rsquo;t force sleep. It simply creates the
+                conditions for it &mdash; and that is enough.
               </div>
             </div>
           </div>
@@ -1095,29 +1825,58 @@
           <!-- LOCKED x4 -->
           <div class="l-card">
             <h3 class="l-name">Sleep &amp; Dream Tea</h3>
-            <p class="l-desc">For when you fall asleep easily but wake up unrestored. This tea targets the depth of sleep, not just the onset.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              For when you fall asleep easily but wake up unrestored. This tea
+              targets the depth of sleep, not just the onset.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Detox Mineral Bath</h3>
-            <p class="l-desc">The body absorbs magnesium through the skin — and most people are severely deficient. One bath, once a week. The sleep improvement alone is worth it.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              The body absorbs magnesium through the skin — and most people are
+              severely deficient. One bath, once a week. The sleep improvement
+              alone is worth it.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Ashwagandha Bedtime Tonic</h3>
-            <p class="l-desc">For those who have given everything and have nothing left. This tonic rebuilds at the root — not the surface.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              For those who have given everything and have nothing left. This
+              tonic rebuilds at the root — not the surface.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
           <div class="l-card">
             <h3 class="l-name">Magnesium Night Smoothie</h3>
-            <p class="l-desc">Naturally high in magnesium — supports deep, restorative sleep without supplements or medication.</p>
-            <div class="l-locked-bar"><span class="l-lock-icon">&#128274;</span><span class="l-lock-text">Full recipe in the guide</span></div>
+            <p class="l-desc">
+              Naturally high in magnesium — supports deep, restorative sleep
+              without supplements or medication.
+            </p>
+            <div class="l-locked-bar">
+              <span class="l-lock-icon">&#128274;</span
+              ><span class="l-lock-text">Full recipe in the guide</span>
+            </div>
           </div>
-
         </div>
         <div class="bundle-cta">
-          <p class="bundle-cta-text">Get all 5 preparations in the full Rest &amp; Nervous System guide &mdash; R79.</p>
-          <a href="shop.html#rest" class="bundle-btn">Get the full guide &rarr;</a>
+          <p class="bundle-cta-text">
+            Get all 5 preparations in the full Rest &amp; Nervous System guide
+            &mdash; R79.
+          </p>
+          <a href="shop.html#rest" class="bundle-btn"
+            >Get the full guide &rarr;</a
+          >
         </div>
       </div>
     </div>
@@ -1131,24 +1890,35 @@
         <h2 class="moringa-title">A Note on Water</h2>
         <div class="moringa-body">
           <p>
-            Not everyone has access to filtered or bottled water. And even when water is available,
-            it doesn&rsquo;t always feel or taste clean.
+            Not everyone has access to filtered or bottled water. And even when
+            water is available, it doesn&rsquo;t always feel or taste clean.
           </p>
           <p>
-            If filtered water is not accessible to you, do what you can. Boiling water is one of the
-            simplest and most effective ways to make it safer. Let it cool before use.
+            If filtered water is not accessible to you, do what you can. Boiling
+            water is one of the simplest and most effective ways to make it
+            safer. Let it cool before use.
           </p>
           <p>
-            There are also traditional methods that have been used for generations.
-            One of them uses Moringa seeds.
+            There are also traditional methods that have been used for
+            generations. One of them uses Moringa seeds.
           </p>
         </div>
 
         <div class="moringa-method">
           <span class="m-lbl">Natural Water Support — Moringa Seeds</span>
-          <p style="font-style:italic; font-size:17px; color:var(--umber); margin-bottom:14px; line-height:1.7;">
-            The seeds of the Moringa tree have been used in different parts of the world to help clarify water.
-            When crushed and added to water, they bind to particles, helping dirt and impurities settle at the bottom.
+          <p
+            style="
+              font-style: italic;
+              font-size: 17px;
+              color: var(--umber);
+              margin-bottom: 14px;
+              line-height: 1.7;
+            "
+          >
+            The seeds of the Moringa tree have been used in different parts of
+            the world to help clarify water. When crushed and added to water,
+            they bind to particles, helping dirt and impurities settle at the
+            bottom.
           </p>
           <ol>
             <li>Crush 1–2 dried Moringa seeds into a fine powder.</li>
@@ -1160,14 +1930,21 @@
         </div>
 
         <div class="moringa-warning">
-          <p><strong>⚠ Important:</strong> This method does not fully purify water on its own.</p>
-          <p>Whenever possible, boil the water after this process, or use it alongside other purification methods.</p>
+          <p>
+            <strong>⚠ Important:</strong> This method does not fully purify
+            water on its own.
+          </p>
+          <p>
+            Whenever possible, boil the water after this process, or use it
+            alongside other purification methods.
+          </p>
         </div>
 
         <div class="moringa-close">
           <p>
             You do not need perfect conditions to begin.<br />
-            You start where you are, with what you have — and you move from there.
+            You start where you are, with what you have — and you move from
+            there.
           </p>
         </div>
       </div>
@@ -1181,23 +1958,37 @@
         <span class="plan-eyebrow">The full protocol</span>
         <h2 class="plan-title">The 30-Day Whole Food Reset</h2>
         <div class="plan-quote">
-          &ldquo;I didn&rsquo;t set out to lose weight. I set out to come back to myself.
-          The eating plan was how I did it &mdash; one honest meal, every day. My body followed.&rdquo;
+          &ldquo;I didn&rsquo;t set out to lose weight. I set out to come back
+          to myself. The eating plan was how I did it &mdash; one honest meal,
+          every day. My body followed.&rdquo;
         </div>
         <p class="plan-desc">
-          Size 42 to 36 in three months. Not through restriction &mdash; through returning to simplicity.
-          The 30-Day Reset is that protocol, written down for those who are ready for their own return.
+          Size 42 to 36 in three months. Not through restriction &mdash; through
+          returning to simplicity. The 30-Day Reset is that protocol, written
+          down for those who are ready for their own return.
         </p>
         <ul class="plan-feats">
-          <li>Four weeks of structured whole-food meals &mdash; morning, midday, and evening</li>
-          <li>Four phases: Adaptation, Balancing, Acceleration, and Consistency</li>
+          <li>
+            Four weeks of structured whole-food meals &mdash; morning, midday,
+            and evening
+          </li>
+          <li>
+            Four phases: Adaptation, Balancing, Acceleration, and Consistency
+          </li>
           <li>Complete recipes with full ingredients and preparation steps</li>
           <li>Daily herbal teas and hydration protocols included</li>
-          <li>Affordable, accessible ingredients rooted in South African whole food tradition</li>
+          <li>
+            Affordable, accessible ingredients rooted in South African whole
+            food tradition
+          </li>
         </ul>
         <div class="plan-actions">
-          <a href="shop.html#plan" class="cta-button btn-forest">Get the 30-Day Plan &rarr;</a>
-          <a href="journal-entry-002.html" class="plan-link">Read the story behind it &rarr;</a>
+          <a href="shop.html#plan" class="cta-button btn-forest"
+            >Get the 30-Day Plan &rarr;</a
+          >
+          <a href="journal-entry-002.html" class="plan-link"
+            >Read the story behind it &rarr;</a
+          >
         </div>
       </div>
     </div>
@@ -1215,7 +2006,9 @@
         <a href="#">Back to Top &uarr;</a>
       </div>
       <hr class="f-hr" />
-      <p class="f-copy">&copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.</p>
+      <p class="f-copy">
+        &copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.
+      </p>
       <p class="f-crafted">Crafted with Intention</p>
     </footer>
 
