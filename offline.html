@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>You Are Offline — I AM NATURE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --forest: #1b3022;
+        --clay: #8a5a44;
+        --parchment: #fcf9f0;
+        --moss: #849b84;
+        --umber: #3e2b1e;
+        --gold: #d7c091;
+        --sand: #e5d9b6;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--forest);
+        color: var(--parchment);
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 20px;
+        line-height: 1.9;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* NAV */
+      nav {
+        background-color: rgba(27, 48, 34, 0.85);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 50px;
+        border-bottom: 1px solid rgba(215, 192, 145, 0.1);
+        backdrop-filter: blur(8px);
+      }
+      .nav-logo {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1rem;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: var(--parchment);
+        text-decoration: none;
+      }
+      .nav-links {
+        display: flex;
+        gap: 35px;
+        list-style: none;
+      }
+      .nav-links a {
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--parchment);
+      }
+
+      /* MAIN */
+      .offline-main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Decorative rings */
+      .ring {
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        animation: breathe 6s ease-in-out infinite;
+      }
+      .ring-1 {
+        width: clamp(360px, 60vw, 680px);
+        height: clamp(360px, 60vw, 680px);
+        border: 1px solid rgba(215, 192, 145, 0.07);
+        animation-delay: 0s;
+      }
+      .ring-2 {
+        width: clamp(260px, 44vw, 500px);
+        height: clamp(260px, 44vw, 500px);
+        border: 1px solid rgba(132, 155, 132, 0.08);
+        animation-delay: 2s;
+      }
+      .ring-3 {
+        width: clamp(160px, 28vw, 320px);
+        height: clamp(160px, 28vw, 320px);
+        border: 1px solid rgba(215, 192, 145, 0.05);
+        animation-delay: 4s;
+      }
+
+      @keyframes breathe {
+        0%,
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.03);
+          opacity: 0.7;
+        }
+      }
+
+      .offline-main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 50%,
+          rgba(132, 155, 132, 0.07) 0%,
+          transparent 65%
+        );
+        pointer-events: none;
+      }
+
+      .offline-content {
+        position: relative;
+        z-index: 2;
+        max-width: 560px;
+        animation: fadeUp 1s ease both;
+      }
+
+      .offline-eyebrow {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        color: var(--moss);
+        font-size: 0.72rem;
+        margin-bottom: 28px;
+      }
+
+      /* Leaf icon — CSS only, no image needed */
+      .offline-icon {
+        display: block;
+        font-size: 2.8rem;
+        margin-bottom: 24px;
+        opacity: 0.6;
+        animation: sway 4s ease-in-out infinite;
+      }
+
+      @keyframes sway {
+        0%,
+        100% {
+          transform: rotate(-4deg);
+        }
+        50% {
+          transform: rotate(4deg);
+        }
+      }
+
+      .offline-title {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--parchment);
+        line-height: 1.2;
+        margin-bottom: 20px;
+        animation: fadeUp 1s ease 0.15s both;
+      }
+
+      .offline-sub {
+        font-style: italic;
+        color: rgba(215, 192, 145, 0.72);
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 44px;
+        animation: fadeUp 1s ease 0.3s both;
+      }
+
+      /* STATUS INDICATOR */
+      .status-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 40px;
+        animation: fadeUp 1s ease 0.4s both;
+      }
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--clay);
+        animation: pulse-dot 2s ease-in-out infinite;
+      }
+      @keyframes pulse-dot {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.4;
+          transform: scale(0.8);
+        }
+      }
+      .status-text {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: rgba(215, 192, 145, 0.5);
+      }
+
+      /* RETRY BUTTON */
+      .retry-btn {
+        display: inline-block;
+        padding: 14px 44px;
+        background-color: var(--moss);
+        color: var(--parchment);
+        text-decoration: none;
+        border-radius: 50px;
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 0.82rem;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        transition: all 0.35s ease;
+        animation: fadeUp 1s ease 0.5s both;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+      .retry-btn:hover {
+        background-color: var(--parchment);
+        color: var(--forest);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      .retry-note {
+        display: block;
+        font-style: italic;
+        font-size: 0.82rem;
+        color: rgba(215, 192, 145, 0.45);
+        animation: fadeUp 1s ease 0.6s both;
+      }
+
+      /* WISDOM STRIP */
+      .wisdom-strip {
+        margin-top: 60px;
+        padding: 28px 36px;
+        border-top: 1px solid rgba(215, 192, 145, 0.1);
+        border-bottom: 1px solid rgba(215, 192, 145, 0.1);
+        max-width: 460px;
+        animation: fadeUp 1s ease 0.7s both;
+      }
+      .wisdom-strip p {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(1.1rem, 2vw, 1.35rem);
+        font-weight: 300;
+        font-style: italic;
+        color: rgba(215, 192, 145, 0.55);
+        line-height: 1.65;
+      }
+
+      /* FOOTER */
+      footer {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: var(--sand);
+        padding: 30px 20px;
+        text-align: center;
+        font-family: "EB Garamond", Georgia, serif;
+        border-top: 1px solid rgba(215, 192, 145, 0.07);
+      }
+      .f-copy {
+        font-size: 0.75rem;
+        opacity: 0.4;
+        font-style: italic;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* HAMBURGER */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+        z-index: 200;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #d7c091;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      @media (max-width: 700px) {
+        nav {
+          padding: 16px 20px !important;
+          position: relative;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .nav-links {
+          display: none !important;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #1b3022;
+          flex-direction: column !important;
+          gap: 0 !important;
+          padding: 0;
+          border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links.open {
+          display: flex !important;
+        }
+        .nav-links li {
+          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
+        }
+        .nav-links a {
+          display: block;
+          padding: 16px 24px !important;
+          font-size: 0.85rem !important;
+          letter-spacing: 2px !important;
+        }
+        .wisdom-strip {
+          padding: 24px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">I AM NATURE</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Botanicals</a></li>
+        <li><a href="alchemy.html">Alchemy of Nature</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <main class="offline-main">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+
+      <div class="offline-content">
+        <span class="offline-eyebrow">No Connection</span>
+        <span class="offline-icon">🌿</span>
+        <h1 class="offline-title">You are offline</h1>
+        <p class="offline-sub">
+          The earth does not require a signal.<br />
+          But this page does. Check your connection<br />
+          and try again when you are ready.
+        </p>
+
+        <div class="status-indicator">
+          <span class="status-dot"></span>
+          <span class="status-text">Waiting for connection</span>
+        </div>
+
+        <button class="retry-btn" onclick="window.location.reload()">
+          Try Again &rarr;
+        </button>
+        <span class="retry-note">or check your network settings</span>
+
+        <div class="wisdom-strip">
+          <p>
+            &ldquo;Even in stillness, the root holds.<br />You will return when
+            the time is right.&rdquo;
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p class="f-copy">&copy; 2026 Nomzamo Mbelebele &mdash; I AM NATURE</p>
+    </footer>
+
+    <script>
+      // Hamburger
+      (function () {
+        var btn = document.querySelector(".hamburger");
+        var menu = document.querySelector(".nav-links");
+        if (btn && menu) {
+          btn.addEventListener("click", function () {
+            btn.classList.toggle("open");
+            menu.classList.toggle("open");
+          });
+          document.addEventListener("click", function (e) {
+            if (!btn.contains(e.target) && !menu.contains(e.target)) {
+              btn.classList.remove("open");
+              menu.classList.remove("open");
+            }
+          });
+        }
+      })();
+
+      // Auto-reload when connection returns
+      window.addEventListener("online", function () {
+        window.location.reload();
+      });
+
+      // Update status dot to green when online
+      window.addEventListener("online", function () {
+        var dot = document.querySelector(".status-dot");
+        var text = document.querySelector(".status-text");
+        if (dot) dot.style.backgroundColor = "#849b84";
+        if (text) text.textContent = "Connection restored — reloading...";
+      });
+    </script>
+  </body>
+</html>

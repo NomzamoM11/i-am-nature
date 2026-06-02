@@ -559,6 +559,7 @@
         <a href="shop.html">Shop</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <a href="policies.html">Policies</a>
         <a href="#">Back to Top &uarr;</a>
       </div>
       <hr class="f-hr" />
@@ -582,6 +583,85 @@
               btn.classList.remove("open");
               menu.classList.remove("open");
             }
+          });
+        }
+      })();
+    </script>
+
+    <!-- Loading bar + Service Worker -->
+    <style>
+      #ian-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #849b84, #d7c091);
+        z-index: 9999;
+        transition:
+          width 0.25s ease,
+          opacity 0.4s ease;
+        opacity: 0;
+        pointer-events: none;
+      }
+      #ian-loader.active {
+        opacity: 1;
+      }
+    </style>
+    <div id="ian-loader"></div>
+    <script>
+      (function () {
+        var loader = document.getElementById("ian-loader");
+        var timer,
+          width = 0;
+        function startLoader() {
+          if (!loader) return;
+          width = 0;
+          loader.style.width = "0%";
+          loader.classList.add("active");
+          timer = setInterval(function () {
+            if (width < 85) {
+              width += (85 - width) * 0.08;
+              loader.style.width = width + "%";
+            }
+          }, 80);
+        }
+        function finishLoader() {
+          if (!loader) return;
+          clearInterval(timer);
+          loader.style.width = "100%";
+          setTimeout(function () {
+            loader.classList.remove("active");
+            loader.style.width = "0%";
+          }, 400);
+        }
+        var slowTimer = setTimeout(function () {
+          if (document.readyState !== "complete") startLoader();
+        }, 300);
+        window.addEventListener("load", function () {
+          clearTimeout(slowTimer);
+          if (loader && loader.classList.contains("active")) finishLoader();
+        });
+        document.addEventListener("click", function (e) {
+          var a = e.target.closest("a");
+          if (!a) return;
+          var href = a.getAttribute("href");
+          if (!href) return;
+          if (
+            href.startsWith("#") ||
+            href.startsWith("mailto:") ||
+            href.startsWith("tel:") ||
+            href.startsWith("https://") ||
+            href.startsWith("http://")
+          )
+            return;
+          startLoader();
+        });
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker.register("/sw.js").catch(function (err) {
+              console.log("SW registration failed:", err);
+            });
           });
         }
       })();

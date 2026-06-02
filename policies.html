@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Policies — I AM NATURE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --forest: #1b3022;
+        --clay: #8a5a44;
+        --parchment: #fcf9f0;
+        --moss: #849b84;
+        --umber: #3e2b1e;
+        --gold: #d7c091;
+        --sand: #e5d9b6;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: var(--parchment);
+        color: var(--umber);
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 20px;
+        line-height: 1.9;
+      }
+
+      /* NAV */
+      nav {
+        background-color: var(--forest);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 50px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-logo {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1rem;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: var(--parchment);
+        text-decoration: none;
+      }
+      .nav-links {
+        display: flex;
+        gap: 35px;
+        list-style: none;
+      }
+      .nav-links a {
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--parchment);
+      }
+
+      /* HERO */
+      .page-header {
+        background-color: var(--forest);
+        text-align: center;
+        padding: 100px 20px 90px;
+        border-bottom: 1px solid rgba(215, 192, 145, 0.18);
+        position: relative;
+        overflow: hidden;
+      }
+      .page-header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 60%,
+          rgba(215, 192, 145, 0.05) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .page-header .eyebrow {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--moss);
+        font-size: 0.72rem;
+        margin-bottom: 20px;
+        animation: fadeUp 1s ease both;
+      }
+      .page-header h1 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(2.4rem, 6vw, 4rem);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--parchment);
+        line-height: 1.15;
+        margin-bottom: 22px;
+        animation: fadeUp 1s ease 0.15s both;
+      }
+      .page-header .hero-sub {
+        color: var(--gold);
+        font-style: italic;
+        font-size: 1.05rem;
+        max-width: 520px;
+        margin: 0 auto;
+        animation: fadeUp 1s ease 0.3s both;
+        line-height: 1.7;
+      }
+
+      /* QUICK NAV */
+      .quick-nav {
+        background-color: var(--sand);
+        border-bottom: 1px solid rgba(138, 90, 68, 0.12);
+        padding: 18px 20px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      .quick-nav a {
+        color: var(--clay);
+        text-decoration: none;
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 1px solid transparent;
+        transition: all 0.3s;
+        padding-bottom: 2px;
+      }
+      .quick-nav a:hover {
+        color: var(--forest);
+        border-color: var(--forest);
+      }
+
+      /* MAIN WRAPPER */
+      .policies-wrapper {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 80px 30px 100px;
+      }
+
+      /* POLICY SECTION */
+      .policy-section {
+        margin-bottom: 72px;
+      }
+      .policy-section:last-of-type {
+        margin-bottom: 0;
+      }
+      .section-label {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--moss);
+        margin-bottom: 12px;
+      }
+      .policy-section h2 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        font-weight: 300;
+        color: var(--forest);
+        line-height: 1.2;
+        margin-bottom: 28px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(138, 90, 68, 0.14);
+      }
+      .policy-section p {
+        margin-bottom: 1.2em;
+        color: var(--umber);
+      }
+      .policy-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* HIGHLIGHT BOX */
+      .policy-highlight {
+        background-color: var(--sand);
+        border-left: 5px solid var(--moss);
+        border-radius: 0 12px 12px 0;
+        padding: 24px 28px;
+        margin: 28px 0;
+      }
+      .policy-highlight p {
+        margin-bottom: 0.6em;
+        font-size: 0.95rem;
+        color: var(--umber);
+      }
+      .policy-highlight p:last-child {
+        margin-bottom: 0;
+      }
+      .policy-highlight strong {
+        color: var(--forest);
+      }
+
+      /* NOTICE BOX */
+      .policy-notice {
+        background-color: var(--forest);
+        border-radius: 14px;
+        padding: 30px 34px;
+        margin: 28px 0;
+        text-align: center;
+      }
+      .policy-notice p {
+        color: rgba(215, 192, 145, 0.85);
+        font-style: italic;
+        font-size: 0.95rem;
+        line-height: 1.75;
+        margin-bottom: 0;
+      }
+      .policy-notice strong {
+        color: var(--parchment);
+        font-style: normal;
+      }
+
+      /* DIVIDER */
+      .section-divider {
+        border: 0;
+        border-top: 1px solid rgba(138, 90, 68, 0.14);
+        margin: 72px 0;
+      }
+
+      /* CONTACT STRIP */
+      .contact-strip {
+        background-color: var(--sand);
+        border-radius: 14px;
+        padding: 36px 40px;
+        margin-top: 72px;
+        border: 1px solid rgba(138, 90, 68, 0.1);
+      }
+      .contact-strip .cs-label {
+        display: block;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--moss);
+        margin-bottom: 10px;
+      }
+      .contact-strip h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--forest);
+        margin-bottom: 12px;
+      }
+      .contact-strip p {
+        font-style: italic;
+        font-size: 0.95rem;
+        color: var(--umber);
+        line-height: 1.7;
+        margin-bottom: 18px;
+      }
+      .contact-strip .contact-links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .contact-strip .contact-links a {
+        color: var(--clay);
+        text-decoration: none;
+        font-size: 0.82rem;
+        letter-spacing: 1.5px;
+        font-style: italic;
+        border-bottom: 1px solid rgba(138, 90, 68, 0.3);
+        transition: all 0.3s;
+      }
+      .contact-strip .contact-links a:hover {
+        color: var(--forest);
+        border-color: var(--forest);
+      }
+
+      /* LAST UPDATED */
+      .last-updated {
+        text-align: center;
+        margin-top: 60px;
+        padding-top: 40px;
+        border-top: 1px solid rgba(138, 90, 68, 0.1);
+      }
+      .last-updated p {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--moss);
+        opacity: 0.7;
+      }
+
+      /* FOOTER */
+      footer {
+        background-color: var(--forest);
+        color: var(--sand);
+        padding: 52px 20px 26px;
+        text-align: center;
+        font-family: "EB Garamond", Georgia, serif;
+        border-top: 1px solid rgba(215, 192, 145, 0.07);
+      }
+      .f-logo {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.25rem;
+        letter-spacing: 8px;
+        color: var(--parchment);
+        font-weight: 300;
+        margin-bottom: 6px;
+      }
+      .f-tag {
+        font-style: italic;
+        font-size: 0.86rem;
+        opacity: 0.55;
+        margin-bottom: 26px;
+      }
+      .f-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 26px;
+        flex-wrap: wrap;
+      }
+      .f-links a {
+        color: var(--sand);
+        text-decoration: none;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: color 0.3s;
+      }
+      .f-links a:hover {
+        color: var(--moss);
+      }
+      .f-hr {
+        border: 0;
+        border-top: 1px solid rgba(229, 217, 182, 0.07);
+        margin-bottom: 18px;
+      }
+      .f-copy {
+        font-size: 0.78rem;
+        opacity: 0.6;
+      }
+      .f-crafted {
+        font-style: italic;
+        font-size: 0.76rem;
+        opacity: 0.4;
+        margin-top: 4px;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* HAMBURGER */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+        z-index: 200;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #d7c091;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      @media (max-width: 700px) {
+        nav {
+          padding: 16px 20px !important;
+          position: relative;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .nav-links {
+          display: none !important;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #1b3022;
+          flex-direction: column !important;
+          gap: 0 !important;
+          padding: 0;
+          border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links.open {
+          display: flex !important;
+        }
+        .nav-links li {
+          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
+        }
+        .nav-links a {
+          display: block;
+          padding: 16px 24px !important;
+          font-size: 0.85rem !important;
+          letter-spacing: 2px !important;
+        }
+        .policies-wrapper {
+          padding: 55px 20px 60px;
+        }
+        .contact-strip {
+          padding: 28px 22px;
+        }
+        .quick-nav {
+          gap: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">I AM NATURE</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Botanicals</a></li>
+        <li><a href="alchemy.html">Alchemy of Nature</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="page-header">
+      <span class="eyebrow">Legal &amp; Policies</span>
+      <h1>Terms, Refunds<br />&amp; Cancellations</h1>
+      <p class="hero-sub">
+        Clear, honest policies for every purchase made through this site.
+      </p>
+    </div>
+
+    <div class="quick-nav">
+      <a href="#terms">Terms of Use</a>
+      <a href="#refunds">Refund Policy</a>
+      <a href="#cancellations">Cancellations</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact-us">Contact</a>
+    </div>
+
+    <div class="policies-wrapper">
+      <!-- TERMS OF USE -->
+      <div class="policy-section" id="terms">
+        <span class="section-label">Section 01</span>
+        <h2>Terms of Use</h2>
+
+        <p>
+          By accessing and using the I AM NATURE website (iamnature.co.za), you
+          agree to the following terms. Please read them carefully before making
+          a purchase or using any content on this site.
+        </p>
+
+        <div class="policy-highlight">
+          <p>
+            <strong>Who we are:</strong> I AM NATURE is a botanical wellness and
+            spiritual healing platform founded and operated by Nomzamo
+            Mbelebele, based in KwaZulu-Natal, South Africa.
+          </p>
+          <p>
+            <strong>What we offer:</strong> Free botanical educational content,
+            journal entries, healing recipes, and digital PDF products available
+            for purchase.
+          </p>
+        </div>
+
+        <p>
+          All content on this site, including plant entries, recipes, journal
+          writing, spiritual teachings, and digital products, is the
+          intellectual property of Nomzamo Mbelebele and I AM NATURE. It may not
+          be copied, reproduced, or distributed without written permission.
+        </p>
+
+        <p>
+          The information provided on this site is for educational and
+          informational purposes only. It is not intended to replace
+          professional medical advice, diagnosis, or treatment. Always consult a
+          qualified healthcare provider before using any plant remedy,
+          especially if you are pregnant, breastfeeding, taking medication, or
+          managing a medical condition.
+        </p>
+
+        <p>
+          By purchasing a digital product from this site, you agree to use it
+          for personal use only. Redistribution, resale, or sharing of purchased
+          PDFs is not permitted.
+        </p>
+
+        <p>
+          We reserve the right to update these terms at any time. Continued use
+          of the site constitutes acceptance of any changes.
+        </p>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- REFUND POLICY -->
+      <div class="policy-section" id="refunds">
+        <span class="section-label">Section 02</span>
+        <h2>Refund Policy</h2>
+
+        <p>
+          All products sold through the I AM NATURE shop are digital downloads,
+          delivered instantly upon payment. Because of the immediate nature of
+          digital delivery, we do not offer refunds once a purchase has been
+          completed and the download link has been issued.
+        </p>
+
+        <div class="policy-notice">
+          <p>
+            <strong>No refunds on digital products.</strong><br />All sales are
+            final. Please review the product description carefully before
+            purchasing.
+          </p>
+        </div>
+
+        <p>
+          We stand behind the quality and integrity of every product in this
+          shop. Each guide is rooted in verified botanical knowledge and lived
+          experience. If you are unsure whether a product is right for you, you
+          are welcome to reach out before purchasing and we will help you
+          decide.
+        </p>
+
+        <div class="policy-highlight">
+          <p>
+            <strong>Technical delivery failure:</strong> If you do not receive
+            your download link, if the file is corrupted, or if there is a
+            verified technical problem with your order, we will resolve it
+            promptly. Please contact us at
+            <a href="mailto:nomzamo@iamnature.co.za" style="color: var(--clay)"
+              >nomzamo@iamnature.co.za</a
+            >
+            with your order details and we will resend your file or assist you
+            within 24 hours.
+          </p>
+        </div>
+
+        <p>
+          This exception applies only to technical failures on our end, not to
+          change of mind, accidental purchases made after the download has been
+          accessed, or dissatisfaction based on personal preference.
+        </p>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- CANCELLATION POLICY -->
+      <div class="policy-section" id="cancellations">
+        <span class="section-label">Section 03</span>
+        <h2>Cancellation Policy</h2>
+
+        <p>
+          Because all products are digital and delivered instantly, orders
+          cannot be cancelled once payment has been processed and the download
+          link has been issued.
+        </p>
+
+        <p>
+          If you placed an order in error and have not yet accessed or
+          downloaded the file, please contact us immediately at
+          <a href="mailto:nomzamo@iamnature.co.za" style="color: var(--clay)"
+            >nomzamo@iamnature.co.za</a
+          >
+          or via WhatsApp on
+          <a
+            href="https://wa.me/27768465972"
+            style="color: var(--clay)"
+            target="_blank"
+            >+27 76 846 5972</a
+          >. We will review each case individually and do our best to assist
+          where possible.
+        </p>
+
+        <div class="policy-highlight">
+          <p>
+            <strong>Important:</strong> I AM NATURE does not currently offer any
+            subscription services or recurring billing. All purchases are
+            once-off transactions. There is nothing to cancel on an ongoing
+            basis.
+          </p>
+        </div>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- PRIVACY -->
+      <div class="policy-section" id="privacy">
+        <span class="section-label">Section 04</span>
+        <h2>Privacy &amp; Data</h2>
+
+        <p>
+          When you make a purchase through the I AM NATURE shop, your payment is
+          processed securely by our payment providers, LemonSqueezy and PayFast.
+          We do not store your card details or sensitive financial information.
+        </p>
+
+        <p>
+          Your email address, provided at checkout, is used solely to deliver
+          your purchase. We do not sell, share, or distribute your personal
+          information to any third parties.
+        </p>
+
+        <p>
+          This site does not currently use tracking cookies or advertising
+          tools. Your visit to iamnature.co.za is your own.
+        </p>
+
+        <p>
+          If you contact us directly via email or WhatsApp, your contact details
+          are kept confidential and used only to respond to your enquiry.
+        </p>
+      </div>
+
+      <!-- CONTACT STRIP -->
+      <div class="contact-strip" id="contact-us">
+        <span class="cs-label">Questions</span>
+        <h3>We are here</h3>
+        <p>
+          If you have any questions about these policies, or about a specific
+          order, please reach out directly. Every message is read personally.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:nomzamo@iamnature.co.za">nomzamo@iamnature.co.za</a>
+          <a href="https://wa.me/27768465972" target="_blank"
+            >WhatsApp: +27 76 846 5972</a
+          >
+        </div>
+      </div>
+
+      <div class="last-updated">
+        <p>Last updated &mdash; June 2026</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="f-logo">I AM NATURE</div>
+      <p class="f-tag">Rooted in truth. Guided by experience.</p>
+      <div class="f-links">
+        <a href="index.html">Botanicals</a>
+        <a href="alchemy.html">Alchemy of Nature</a>
+        <a href="journal.html">Journal</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="policies.html">Policies</a>
+        <a href="#">Back to Top &uarr;</a>
+      </div>
+      <hr class="f-hr" />
+      <p class="f-copy">
+        &copy; 2026 <strong>Nomzamo Mbelebele</strong>. All rights reserved.
+      </p>
+      <p class="f-crafted">Crafted with Intention</p>
+    </footer>
+
+    <script>
+      (function () {
+        var btn = document.querySelector(".hamburger");
+        var menu = document.querySelector(".nav-links");
+        if (btn && menu) {
+          btn.addEventListener("click", function () {
+            btn.classList.toggle("open");
+            menu.classList.toggle("open");
+          });
+          document.addEventListener("click", function (e) {
+            if (!btn.contains(e.target) && !menu.contains(e.target)) {
+              btn.classList.remove("open");
+              menu.classList.remove("open");
+            }
+          });
+        }
+      })();
+    </script>
+
+    <!-- Loading bar + Service Worker -->
+    <style>
+      #ian-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #849b84, #d7c091);
+        z-index: 9999;
+        transition:
+          width 0.25s ease,
+          opacity 0.4s ease;
+        opacity: 0;
+        pointer-events: none;
+      }
+      #ian-loader.active {
+        opacity: 1;
+      }
+    </style>
+    <div id="ian-loader"></div>
+    <script>
+      (function () {
+        var loader = document.getElementById("ian-loader");
+        var timer,
+          width = 0;
+        function startLoader() {
+          if (!loader) return;
+          width = 0;
+          loader.style.width = "0%";
+          loader.classList.add("active");
+          timer = setInterval(function () {
+            if (width < 85) {
+              width += (85 - width) * 0.08;
+              loader.style.width = width + "%";
+            }
+          }, 80);
+        }
+        function finishLoader() {
+          if (!loader) return;
+          clearInterval(timer);
+          loader.style.width = "100%";
+          setTimeout(function () {
+            loader.classList.remove("active");
+            loader.style.width = "0%";
+          }, 400);
+        }
+        var slowTimer = setTimeout(function () {
+          if (document.readyState !== "complete") startLoader();
+        }, 300);
+        window.addEventListener("load", function () {
+          clearTimeout(slowTimer);
+          if (loader && loader.classList.contains("active")) finishLoader();
+        });
+        document.addEventListener("click", function (e) {
+          var a = e.target.closest("a");
+          if (!a) return;
+          var href = a.getAttribute("href");
+          if (!href) return;
+          if (
+            href.startsWith("#") ||
+            href.startsWith("mailto:") ||
+            href.startsWith("tel:") ||
+            href.startsWith("https://") ||
+            href.startsWith("http://")
+          )
+            return;
+          startLoader();
+        });
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker.register("/sw.js").catch(function (err) {
+              console.log("SW registration failed:", err);
+            });
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
