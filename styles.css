@@ -83,7 +83,7 @@ body {
 .cta-button {
   display: inline-block;
   padding: 16px 50px;
-  background-color: #849b84;
+  background-color: #5c7a5c; /* darkened from #849b84 for WCAG AA contrast */
   color: #fcf9f0;
   text-decoration: none;
   border-radius: 50px;
@@ -182,7 +182,7 @@ body {
   display: block;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: #849b84;
+  color: #3d5c3d; /* darkened from #849b84 for WCAG AA contrast on #fcf9f0 */
   font-size: 0.8rem;
   margin-bottom: 20px;
   font-weight: bold;
@@ -268,15 +268,13 @@ body {
   letter-spacing: 1px;
   margin-top: 15px;
   display: block;
-  opacity: 0.8;
   transition: color 0.3s ease;
-  color: rgba(62, 43, 30, 0.6);
+  color: #4a3520; /* darkened from rgba(62,43,30,0.6) for WCAG AA on #e5d9b6 */
 }
 
 .plant-card:hover small {
-  opacity: 1;
   text-decoration: underline;
-  color: #849b84;
+  color: #3d5c3d; /* darkened from #849b84 for WCAG AA on #e5d9b6 */
   letter-spacing: 2px;
 }
 
@@ -559,4 +557,24 @@ footer {
   .zulu-note {
     font-size: 0.74rem;
   }
+}
+
+/* ── LOADER: composited animation fix (Lighthouse audit) ── */
+#ian-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* full width — scaleX controls visual width */
+  height: 3px;
+  background: linear-gradient(90deg, #849b84, #d7c091);
+  z-index: 9999;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.25s ease, opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+#ian-loader.active {
+  opacity: 1;
 }

@@ -155,8 +155,8 @@ function displayPlants(plantList, resetPage) {
     const displayCategory = plant.category || plant.benefit || "Botanical";
 
     card.innerHTML = `
-      <h3>${plant.name}</h3>
-      <img src="${plant.image}" alt="${plant.name}" class="plant-image" onerror="this.src='images/Hero.png'">
+      <h2>${plant.name}</h2>
+      <img src="${plant.image}" alt="${plant.name}" class="plant-image" onerror="this.src='images/Hero.webp'">
       <p><strong>Category:</strong> ${displayCategory}</p>
       <p>${plant.description.substring(0, 60)}...</p>
       <small style="color:#849B84; font-weight:bold;">CLICK TO READ MORE WISDOM</small>`;

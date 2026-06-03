@@ -11,7 +11,7 @@ const plants = [
     category: "Skin & Detox",
     origin: "East Africa & India",
     habitat: "Disturbed soils, roadsides, and sunny backyards",
-    image: "images/castor-plant.jpg",
+    image: "images/castor-plant.webp",
     description:
       "Umhlakuva is a natural stimulant laxative that supports bowel movement and elimination. Traditionally, it is also used as a ‘detoxifying’ oil, believed to draw out impurities from the body both internally and through the skin.",
     physical: [
@@ -58,7 +58,7 @@ const plants = [
     category: "Digestive & Vision",
     origin: "The Mediterranean shores",
     habitat: "Dry soils near riverbanks; easily grown in home gardens",
-    image: "images/fennel.jpg",
+    image: "images/fennel.webp",
     description:
       "Imboziso is a gentle digestive herb known for easing bloating and discomfort. Traditionally, it is also associated with clarity of vision — both physical and intuitive.",
     physical: [
@@ -103,7 +103,7 @@ const plants = [
     category: "Respiratory",
     origin: "Southern Africa",
     habitat: "Damp areas, forest edges, and rocky hillsides",
-    image: "images/wormwood.jpg",
+    image: "images/wormwood.webp",
     description:
       "Umhlonyane is a powerful bitter herb traditionally used to support respiratory health and reduce fever. It is widely respected in African healing systems.",
     physical: [
@@ -150,7 +150,7 @@ const plants = [
     category: "Immune",
     origin: "Mexico and Central America",
     habitat: "Subtropical gardens and orchards",
-    image: "images/avocado.jpg",
+    image: "images/avocado.webp",
     description:
       "Ukwatapheya is widely known for its nourishing fruit, rich in healthy fats that support heart health. Traditionally, the leaves and seed are also used in herbal practices, though internal use should be approached with caution.",
     physical: [
@@ -191,7 +191,7 @@ const plants = [
     category: "Digestive",
     origin: "The Mediterranean and Western Asia",
     habitat: "Easily grown in garden pots or sunny herb beds",
-    image: "images/fenugreek.jpg",
+    image: "images/fenugreek.webp",
     description:
       "A golden seed known for its maple-like scent, fenugreek is widely used to support digestion and help regulate blood sugar levels.",
     physical: [
@@ -231,7 +231,7 @@ const plants = [
     category: "Immune",
     origin: "North India",
     habitat: "Dry, sandy soils; thrives in tropical climates",
-    image: "images/moringa.jpg",
+    image: "images/moringa.webp",
     description:
       "Known as the 'Miracle Tree,' Moringa is rich in essential nutrients and supports overall vitality and immune function.",
     physical: [
@@ -273,7 +273,7 @@ const plants = [
     category: "Immune & Cardiovascular",
     origin: "West Africa & Tropical Asia",
     habitat: "Common in tropical gardens; loves full sun",
-    image: "images/hibiscus.jpg",
+    image: "images/hibiscus.webp",
     description:
       "A vibrant, cooling flower used to support blood pressure, heart health, and overall cellular protection. The medicinal variety is Hibiscus sabdariffa (Roselle) — distinct from the common ornamental garden hibiscus.",
     physical: [
@@ -313,7 +313,7 @@ const plants = [
     category: "Environmental",
     origin: "Southern Africa",
     habitat: "Dry, rocky areas and coastal thickets",
-    image: "images/snake-plant.jpg",
+    image: "images/snake-plant.webp",
     description:
       "Isikholokotho is a resilient indoor plant known for improving air quality and creating a calm, protected environment.",
     physical: [
@@ -356,7 +356,7 @@ const plants = [
     category: "Respiratory",
     origin: "The Mediterranean",
     habitat: "Well-drained sunny spots; common in home gardens",
-    image: "images/rosemary.jpg",
+    image: "images/rosemary.webp",
     description:
       "i-Rozmeri is a fragrant herb known to support memory, mental clarity, and respiratory health.",
     physical: [
@@ -403,7 +403,7 @@ const plants = [
     origin: "Central America (Naturalised across tropical Africa)",
     habitat:
       "Common in home gardens across KwaZulu-Natal; loves full sun and warm, moist soil",
-    image: "images/pawpaw.jpg",
+    image: "images/pawpaw.webp",
     description:
       "Uphopho is the 'Digestive Tree.' Every part of this plant holds medicine — the fruit softens and digests, the seeds expel parasites, and the leaves support liver health. It is one of the most complete healing trees in the KZN garden.",
     physical: [
@@ -455,7 +455,7 @@ const plants = [
     category: "Digestive",
     origin: "Sri Lanka",
     habitat: "Tropical forests; harvested from the inner bark of trees",
-    image: "images/cinnamon.jpg",
+    image: "images/cinnamon.webp",
     description:
       "Isinamoni is a warming spice that supports circulation and metabolic function. For medicinal use, always choose Ceylon cinnamon (Cinnamomum verum) — most commercially available cinnamon is Cassia, which contains higher coumarin levels that can be harmful to the liver in large daily amounts.",
     physical: [
@@ -506,7 +506,7 @@ const plants = [
     category: "Digestive",
     origin: "Egypt & the Middle East",
     habitat: "Cooler climates; grown for seeds and fiber",
-    image: "images/flax-seeds.jpg",
+    image: "images/flax-seeds.webp",
     description:
       "Flax seeds are rich in fiber and essential fatty acids, supporting digestion, heart health, and hormonal balance.",
     physical: [
@@ -552,7 +552,7 @@ const plants = [
     category: "Digestive",
     origin: "West Africa & Ethiopia",
     habitat: "Hot, humid climates",
-    image: "images/okra.jpg",
+    image: "images/okra.webp",
     description:
       "Okra is a mucilage-rich vegetable that soothes and protects the digestive tract.",
     physical: [
@@ -594,7 +594,7 @@ const plants = [
     category: "Immune",
     origin: "Central and South America",
     habitat: "Full sun, well-drained soil",
-    image: "images/cayenne-pepper.jpg",
+    image: "images/cayenne-pepper.webp",
     description:
       "Upelepele is a powerful circulatory stimulant that activates blood flow and metabolism.",
     physical: [
@@ -639,7 +639,7 @@ const plants = [
     category: "Immune",
     origin: "South Asia",
     habitat: "Subtropical regions",
-    image: "images/mango-tree.jpg",
+    image: "images/mango-tree.webp",
     description:
       "Mango leaves contain bioactive compounds that support blood sugar balance and respiratory health.",
     physical: [
@@ -679,7 +679,7 @@ const plants = [
     category: "Respiratory",
     origin: "Tropical Americas (Naturalised in SA)",
     habitat: "Often found as a 'weed' in lawns or between paving stones",
-    image: "images/asthma-plant.jpg",
+    image: "images/asthma-plant.webp",
     description:
       "Isisushlungu is a specialised respiratory ally. It is a primary remedy for opening the bronchial tubes during distress. Approach with respect — this plant is powerful and must always be used in small, controlled amounts.",
     physical: [
@@ -720,7 +720,7 @@ const plants = [
     category: "Digestive & Immune",
     origin: "Central and South America",
     habitat: "Creeping vines in warm climates",
-    image: "images/sweet-potato-leaves.jpg",
+    image: "images/sweet-potato-leaves.webp",
     description:
       "Highly nutritious leafy greens rich in antioxidants and vitamins.",
     physical: [
@@ -758,7 +758,7 @@ const plants = [
     category: "Digestive",
     origin: "Indonesia",
     habitat: "Tropical rainforests",
-    image: "images/nutmeg.jpg",
+    image: "images/nutmeg.webp",
     description:
       "A warming spice used in very small amounts to support digestion and relaxation.",
     physical: [
@@ -796,7 +796,7 @@ const plants = [
     category: "Immune",
     origin: "Caribbean & Central America",
     habitat: "Tropical climates",
-    image: "images/soursop.jpg",
+    image: "images/soursop.webp",
     description:
       "Traditionally used for relaxation and immune support, with compounds studied for cellular effects.",
     physical: [
@@ -835,7 +835,7 @@ const plants = [
     category: "Digestive",
     origin: "Southeast Asia & South Pacific",
     habitat: "Moist, tropical regions; common in KZN gardens",
-    image: "images/banana-tree.jpg",
+    image: "images/banana-tree.webp",
     description:
       "Ubhanana is the 'Cooling Protector.' Every part gives something: the fruit nourishes and restores, the leaves soothe and shelter, the flower rebuilds the blood. Nothing is wasted. Nothing is withheld.",
     physical: [
@@ -885,7 +885,7 @@ const plants = [
     category: "Spiritual",
     origin: "Europe & Eastern Asia",
     habitat: "Commonly found in nitrogen-rich soils and waste places",
-    image: "images/mugwort.jpg",
+    image: "images/mugwort.webp",
     description:
       "Umhlonyane-omncane is the 'Dreamer's Herb.' A close relative of African Wormwood, a traditional dream and digestive herb that influences the nervous system, menstrual cycle, and bile flow.",
     physical: [
@@ -930,7 +930,7 @@ const plants = [
     category: "Respiratory",
     origin: "Europe, Africa & Asia",
     habitat: "Sunny, disturbed soils and rocky roadsides",
-    image: "images/mullein.jpg",
+    image: "images/mullein.webp",
     description:
       "Imulini is the 'Soft Lung.' Its velvet-soft leaves mirror the soft tissues of our respiratory system, offering deep, moistening relief.",
     physical: [
@@ -974,7 +974,7 @@ const plants = [
     category: "Digestive",
     origin: "The Mediterranean",
     habitat: "Cool, moist garden beds; thrives in partial sun",
-    image: "images/parsley.jpg",
+    image: "images/parsley.webp",
     description:
       "Iparsley is the 'Internal Cleanser.' It is a mineral-rich herb that flushes the kidneys, and freshens the body internally.",
     physical: [
@@ -1019,7 +1019,7 @@ const plants = [
     category: "Skin",
     origin: "The Arabian Peninsula (Naturalised in Africa)",
     habitat: "Dry, sandy soils; common in coastal and garden landscapes",
-    image: "images/aloe.jpg",
+    image: "images/aloe.webp",
     description:
       "Ikhala is the 'First Aid Plant.' Its cooling gel is a direct gift from nature for soothing the heat of the skin and the gut.",
     physical: [
@@ -1063,7 +1063,7 @@ const plants = [
     category: "Digestive",
     origin: "Mediterranean region",
     habitat: "Found in rocky soils and open fields",
-    image: "images/milk-thistle.jpg",
+    image: "images/milk-thistle.webp",
     description:
       "Ithistle is the 'Liver's Shield.' Its seeds contain silymarin, a powerful compound that protects and rebuilds the liver's cells.",
     physical: [
@@ -1103,7 +1103,7 @@ const plants = [
     category: "Skin",
     origin: "Europe & Northern Asia",
     habitat: "Damp, marshy grounds and riverbanks",
-    image: "images/horsetail.jpg",
+    image: "images/horsetail.webp",
     description:
       "Ishobalehashi is an ancient plant rich in silica. It is the 'binder' of the body, strengthening the structures that hold us together.",
     physical: [
@@ -1144,7 +1144,7 @@ const plants = [
     category: "Immune",
     origin: "North America",
     habitat: "Peat bogs and acidic, sandy soils",
-    image: "images/cranberry.jpg",
+    image: "images/cranberry.webp",
     description:
       "Ikreberi is the 'Filter Protector.' It is a sharp, tart fruit that prevents unwanted bacteria from clinging to the body's internal walls.",
     physical: [
@@ -1183,7 +1183,7 @@ const plants = [
     category: "Respiratory",
     origin: "Europe and the Middle East",
     habitat: "Moist, shaded garden beds; spreads quickly",
-    image: "images/peppermint.jpg",
+    image: "images/peppermint.webp",
     description:
       "Ipeppermint is the 'Awakener.' Its high menthol content provides an immediate cooling sensation that opens the airways and settles the stomach.",
     physical: [
@@ -1229,7 +1229,7 @@ const plants = [
     category: "Immune",
     origin: "Central Asia",
     habitat: "Well-drained, sunny soil; grown from individual cloves",
-    image: "images/garlic.jpg",
+    image: "images/garlic.webp",
     description:
       "Ugalikhi is the 'Earth’s Antibiotic.' It is a potent, pungent warrior that aggressively defends the blood against invaders. Also a powerful natural antimicrobial that supports the immune and cardiovascular systems",
     physical: [
@@ -1274,7 +1274,7 @@ const plants = [
     category: "Digestive",
     origin: "Southeast Asia",
     habitat: "Warm, humid climates with filtered sunlight",
-    image: "images/ginger.jpg",
+    image: "images/ginger.webp",
     description:
       "Ujinja is the 'Warming Root.' It brings fire to the belly, moving energy and digestion promoting immune response.",
     physical: [
@@ -1318,7 +1318,7 @@ const plants = [
     category: "Skin",
     origin: "India & Myanmar (Naturalised in KZN)",
     habitat: "Hot, dry areas; often planted for shade in coastal regions",
-    image: "images/neem.jpg",
+    image: "images/neem.webp",
     description:
       "Umsilinga is the 'Village Pharmacy.' Its intensely bitter leaves are a primary tool for clearing the skin, treating scalp conditions, and purifying the blood.",
     physical: [
@@ -1363,7 +1363,7 @@ const plants = [
     category: "Spiritual",
     origin: "Mediterranean and North Africa",
     habitat: "Sunny, dry garden beds with well-drained soil",
-    image: "images/lavender.jpg",
+    image: "images/lavender.webp",
     description:
       "Ilavenda is the 'Gentle Comforter.' Its scent acts directly on the nervous system to soothe anxiety and bring the spirit into balance.",
     physical: [
@@ -1408,7 +1408,7 @@ const plants = [
     category: "Digestive",
     origin: "Europe & Western Asia",
     habitat: "Lawns, roadsides, and open fields — often dismissed as a weed",
-    image: "images/dandelion.jpg",
+    image: "images/dandelion.webp",
     description:
       "Idandiliyoni is the 'Bitter Cleanser.' Every part of this plant — root, leaf, and flower — is medicinal, working to flush toxins from the liver and nourish the blood.",
     physical: [
@@ -1454,7 +1454,7 @@ const plants = [
     category: "Respiratory",
     origin: "The Mediterranean",
     habitat: "Dry, rocky soils in full sun; thrives in garden pots",
-    image: "images/thyme.jpg",
+    image: "images/thyme.webp",
     description:
       "Ithayimi is the 'Lung Keeper.' A small but powerfully aromatic herb, it has been used for centuries to clear the chest and fight infection in the respiratory tract.",
     physical: [
@@ -1500,7 +1500,7 @@ const plants = [
     category: "Spiritual",
     origin: "The Mediterranean",
     habitat: "Well-drained, sunny garden beds; drought tolerant",
-    image: "images/sage.jpg",
+    image: "images/sage.webp",
     description:
       "Isheyidji is the 'Elder's Herb.' Revered across cultures for thousands of years, its name comes from the Latin word 'salvare' — to heal or to save.",
     physical: [
@@ -1546,7 +1546,7 @@ const plants = [
     category: "Digestive",
     origin: "Tropical Asia & Central Africa",
     habitat: "Warm, sheltered spots in the garden or on a sunny windowsill",
-    image: "images/basil.jpg",
+    image: "images/basil.webp",
     description:
       "Ibhazili is the 'Sacred Leaf.' Known as the 'King of Herbs' in many traditions, it is both a digestive soother and a spiritual protector of the home.",
     physical: [
@@ -1591,7 +1591,7 @@ const plants = [
     category: "Immune",
     origin: "South Asia",
     habitat: "Tropical climates with rich, moist soil and partial shade",
-    image: "images/turmeric.jpg",
+    image: "images/turmeric.webp",
     description:
       "Ithumheriki is the 'Golden Healer.' Its deep orange root contains curcumin, one of the most studied natural anti-inflammatory compounds on earth.",
     physical: [
@@ -1637,7 +1637,7 @@ const plants = [
     category: "Digestive",
     origin: "Europe & Western Asia",
     habitat: "Open fields and dry meadows; easily grown from seed",
-    image: "images/chamomile.jpg",
+    image: "images/chamomile.webp",
     description:
       "Ikhamomayili is the 'Mother's Herb.' Its soft, apple-scented flowers are one of the gentlest yet most effective remedies for calming the nervous system and the digestive tract.",
     physical: [
@@ -1682,7 +1682,7 @@ const plants = [
     origin: "South Asia & Southeast Asia",
     habitat:
       "Tropical climates; grows in dense clumps and thrives in KZN gardens",
-    image: "images/lemongrass.jpg",
+    image: "images/lemongrass.webp",
     description:
       "Utshani belamula is the 'Refreshing Cleanser.' Its bright, citrus scent cuts through heaviness in both the body and the spirit, making it a beloved remedy across Africa and Asia.",
     physical: [
@@ -1728,7 +1728,7 @@ const plants = [
     origin: "The Maluku Islands, Indonesia",
     habitat:
       "Tropical coastal areas; harvested from flower buds before they open",
-    image: "images/cloves.jpg",
+    image: "images/cloves.webp",
     description:
       "Ikhilove is the 'Pain Extinguisher.' One of the most powerful natural analgesics on earth, its main compound eugenol is still used in modern dentistry today.",
     physical: [
@@ -1770,7 +1770,7 @@ const plants = [
     origin: "The Mediterranean",
     habitat:
       "Warm, sheltered gardens; can grow into a large shrub or small tree",
-    image: "images/bay-leaf.jpg",
+    image: "images/bay-leaf.webp",
     description:
       "I-Bay Leaf is the 'Herb of Victory.' Worn by ancient champions and healers alike, it is a deeply aromatic leaf that steadies digestion and fortifies the nervous system.",
     physical: [
@@ -1812,7 +1812,7 @@ const plants = [
     category: "Immune",
     origin: "The Mediterranean & Western Asia",
     habitat: "Dry, rocky soils in full sun; very hardy and easy to grow",
-    image: "images/oregano.jpg",
+    image: "images/oregano.webp",
     description:
       "I-Oregano is the 'Mountain Guardian.' Far more than a cooking herb, its oil is one of the most potent natural antimicrobials available, used to fight infections from the inside out.",
     physical: [
@@ -1853,7 +1853,7 @@ const plants = [
     category: "Immune",
     origin: "China & Eastern Asia",
     habitat: "Cool, misty highlands with acidic, well-drained soils",
-    image: "images/green-tea.jpg",
+    image: "images/green-tea.webp",
     description:
       "Itiye eliluhlaza is the 'Mindful Brew.' One of the most studied plants on earth, its leaves offer a calm, sustained energy that sharpens the mind without agitation.",
     physical: [
@@ -1895,7 +1895,7 @@ const plants = [
     origin: "The Cederberg Mountains, South Africa",
     habitat:
       "Found only in the fynbos biome of the Western Cape; sandy, acidic soils",
-    image: "images/rooibos.jpg",
+    image: "images/rooibos.webp",
     description:
       "Ithiye elibomvu is the 'Red Earth Tea.' Born from the most unique ecosystem on the planet, it is a completely caffeine-free gift of the South African soil that nourishes every age group.",
     physical: [
@@ -1934,7 +1934,7 @@ const plants = [
     category: "Digestive",
     origin: "The Western Cape, South Africa",
     habitat: "Rocky mountain fynbos; endemic to the Cape Fold Mountains",
-    image: "images/buchu.jpg",
+    image: "images/buchu.webp",
     description:
       "Ibhukhu is the 'Cape Healer.' One of South Africa's most treasured indigenous medicines, used by the Khoikhoi and San peoples for centuries to treat the gut, the kidneys, and wounds.",
     physical: [
@@ -1975,7 +1975,7 @@ const plants = [
     category: "Immune",
     origin: "The Kalahari Desert, Southern Africa",
     habitat: "Sandy, arid soils of the Kalahari and Namib regions",
-    image: "images/devils-claw.jpg",
+    image: "images/devils-claw.webp",
     description:
       "Uzzipho lukadeveli is the 'Desert Warrior.' Named for its fierce, hook-covered fruit, this root from the Kalahari is one of Africa's most powerful natural pain relievers.",
     physical: [
@@ -2016,7 +2016,7 @@ const plants = [
     origin: "Southern Europe & the Mediterranean",
     habitat:
       "Cool, sunny garden beds; one of the easiest flowers to grow from seed",
-    image: "images/calendula.jpg",
+    image: "images/calendula.webp",
     description:
       "Ikalenda is the 'Sun Flower of Healing.' Its warm, golden petals mirror the sun's energy and are used to bring light to the skin and soothe the body's most sensitive tissues.",
     physical: [
@@ -2056,7 +2056,7 @@ const plants = [
     category: "Respiratory",
     origin: "Europe & Western Asia",
     habitat: "Hedgerows, woodland edges, and damp, nutrient-rich soils",
-    image: "images/elderflower.jpg",
+    image: "images/elderflower.webp",
     description:
       "Ielda is the 'Elder of the Medicine Chest.' For centuries across Europe and Africa, almost every part of this tree has served as medicine — from fever to flu to deep grief.",
     physical: [
@@ -2098,7 +2098,7 @@ const plants = [
     origin: "Europe, Asia & North Africa",
     habitat:
       "Nitrogen-rich soils near water, compost heaps, and disturbed ground",
-    image: "images/nettle.jpg",
+    image: "images/nettle.webp",
     description:
       "Uhlaba is the 'Fierce Nourisher.' Despite its sting, few plants on earth are as densely packed with minerals. Once cooked or dried, the sting disappears and leaves behind pure medicine.",
     physical: [
@@ -2145,7 +2145,7 @@ const plants = [
     category: "Spiritual",
     origin: "India, North Africa & the Mediterranean",
     habitat: "Dry, stony soils in warm climates; related to the wild tomatillo",
-    image: "images/ashwagandha.jpg",
+    image: "images/ashwagandha.webp",
     description:
       "I-Ashwagandha is the 'Strength of the Horse.' Its name in Sanskrit means exactly that — and it delivers, rebuilding depleted energy, calming the overwhelmed mind, and restoring vitality at the root level.",
     physical: [
@@ -2192,7 +2192,7 @@ const plants = [
     category: "Immune",
     origin: "North America",
     habitat: "Open woodlands and prairies; grows well in sunny garden beds",
-    image: "images/echinacea.jpg",
+    image: "images/echinacea.webp",
     description:
       "I-Echinacea is the 'Immune Sentinel.' Used for centuries by Native American peoples, it is one of the most widely researched herbs for activating the body's own defence systems at the first sign of illness.",
     physical: [
@@ -2240,7 +2240,7 @@ const plants = [
     category: "Skin",
     origin: "Europe & Northern Asia (Naturalised globally)",
     habitat: "Compacted soils, footpaths, and lawns — grows wherever feet walk",
-    image: "images/plantain-leaf.jpg",
+    image: "images/plantain-leaf.webp",
     description:
       "Umfuka is the 'Footpath Healer.' One of the most overlooked medicines on earth, it grows exactly where it is needed most — underfoot, in the places where people gather and move.",
     physical: [
@@ -2286,7 +2286,7 @@ const plants = [
     origin: "Southern Europe & Central Asia",
     habitat:
       "Moist, partially shaded garden beds; spreads easily once established",
-    image: "images/lemon-balm.jpg",
+    image: "images/lemon-balm.webp",
     description:
       "Ibhalsamu leli-lemon is the 'Heart Herb.' Its gentle lemon scent works directly on the nervous system and the heart, easing anxiety, lifting grief, and restoring a sense of lightness to the spirit.",
     physical: [
@@ -2332,7 +2332,7 @@ const plants = [
     category: "Immune",
     origin: "Southwest Asia & the Mediterranean",
     habitat: "Dry, well-drained soils; harvested from delicate blue flowers",
-    image: "images/black-seed.jpg",
+    image: "images/black-seed.webp",
     description:
       "Imbewu emnyama is the 'Blessed Seed.' Revered across Islamic, African, and Ayurvedic traditions for over 3,000 years. In Islamic tradition, the Prophet Muhammad (peace be upon him) said it is a cure for every disease except death — a hadith (sacred teaching) that has inspired centuries of healing practice and scientific curiosity.",
     physical: [
@@ -2378,7 +2378,7 @@ const plants = [
     category: "Skin",
     origin: "Europe, Asia & North America",
     habitat: "Open meadows, roadsides, and dry grasslands; extremely hardy",
-    image: "images/yarrow.jpg",
+    image: "images/yarrow.webp",
     description:
       "Iyaro is the 'Warrior's Wound Herb.' Named after the Greek hero Achilles who used it to stop the bleeding of his soldiers' wounds, it has been a battlefield and household remedy across every continent for thousands of years.",
     physical: [

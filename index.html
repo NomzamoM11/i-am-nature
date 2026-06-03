@@ -6,20 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
-      type="image/png"
+      type="image/webp"
       sizes="32x32"
-      href="images/favicon-32.png"
+      href="images/favicon-32.webp"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="images/favicon-16.png"
+      href="images/favicon-16.webp"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond..."
-      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap"
+    />
+    <!-- Hero image preload for LCP -->
+    <link
+      rel="preload"
+      as="image"
+      href="images/Hero2.webp"
+      fetchpriority="high"
     />
     <link rel="stylesheet" href="styles.css" />
     <style>
@@ -178,92 +186,103 @@
       </button>
     </nav>
 
-    <header class="hero">
-      <section class="hero-section">
-        <div class="hero-logo">I AM NATURE</div>
-        <div class="hero-text-wrapper">
-          <h1>The Earth speaks. Are you Listening?</h1>
+    <main id="main-content">
+      <header class="hero">
+        <section class="hero-section">
+          <div class="hero-logo">I AM NATURE</div>
+          <div class="hero-text-wrapper">
+            <h1>The Earth speaks. Are you Listening?</h1>
+            <p>
+              A journey through 100+ botanicals to restore your physical health
+              and spiritual essence
+            </p>
+            <span class="coming-soon-btn">The Book — Coming Soon</span>
+            <span class="coming-soon-sub"
+              >Volume I is on its way. Explore the free botanical library below
+              while you wait.</span
+            >
+          </div>
+        </section>
+      </header>
+
+      <section class="controls">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by name..."
+          aria-label="Search plants by name"
+        />
+
+        <select id="typeFilter" aria-label="Filter by plant type">
+          <option value="All">All Types</option>
+          <option value="Trees">Trees</option>
+          <option value="Herbs">Herbs</option>
+          <option value="Plants/Flowers">Plants/Flowers</option>
+          <option value="Seeds">Seeds</option>
+        </select>
+
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="All">All Categories</option>
+          <option value="Respiratory">Respiratory</option>
+          <option value="Digestive">Digestive</option>
+          <option value="Immune">Immune</option>
+          <option value="Skin">Skin</option>
+          <option value="Spiritual">Spiritual</option>
+          <option value="Environmental">Environmental</option>
+        </select>
+
+        <button id="resetBtn">Clear Filters</button>
+      </section>
+
+      <section class="origin-story" id="originStory">
+        <div class="story-content">
+          <span class="story-label">What this is</span>
           <p>
-            A journey through 100+ botanicals to restore your physical health
-            and spiritual essence
+            I AM NATURE is a living archive of botanical wisdom rooted in
+            African heritage, built by Nomzamo Mbelebele — healer, plant keeper,
+            and founder. Every entry is verified for safety and grounded in
+            traditional knowledge. This is not a wellness trend. It is an act of
+            remembering.
           </p>
-          <span class="coming-soon-btn">The Book — Coming Soon</span>
-          <span class="coming-soon-sub"
-            >Volume I is on its way. Explore the free botanical library below
-            while you wait.</span
-          >
+          <a href="about.html" class="story-read-more">Read the full story →</a>
         </div>
       </section>
-    </header>
 
-    <section class="controls">
-      <input type="text" id="searchInput" placeholder="Search by name..." />
+      <section id="plants">
+        <div id="plantContainer"></div>
 
-      <select id="typeFilter">
-        <option value="All">All Types</option>
-        <option value="Trees">Trees</option>
-        <option value="Herbs">Herbs</option>
-        <option value="Plants/Flowers">Plants/Flowers</option>
-        <option value="Seeds">Seeds</option>
-      </select>
-
-      <select id="categoryFilter">
-        <option value="All">All Categories</option>
-        <option value="Respiratory">Respiratory</option>
-        <option value="Digestive">Digestive</option>
-        <option value="Immune">Immune</option>
-        <option value="Skin">Skin</option>
-        <option value="Spiritual">Spiritual</option>
-        <option value="Environmental">Environmental</option>
-      </select>
-
-      <button id="resetBtn">Clear Filters</button>
-    </section>
-
-    <section class="origin-story" id="originStory">
-      <div class="story-content">
-        <span class="story-label">What this is</span>
-        <p>
-          I AM NATURE is a living archive of botanical wisdom rooted in African
-          heritage, built by Nomzamo Mbelebele — healer, plant keeper, and
-          founder. Every entry is verified for safety and grounded in
-          traditional knowledge. This is not a wellness trend. It is an act of
-          remembering.
-        </p>
-        <a href="about.html" class="story-read-more">Read the full story →</a>
-      </div>
-    </section>
-
-    <section id="plants">
-      <div id="plantContainer"></div>
-
-      <div id="paginationControls" style="text-align: center; padding: 60px 0">
-        <button
-          id="prevBtn"
-          class="cta-button"
-          style="display: none; margin-right: 15px"
+        <div
+          id="paginationControls"
+          style="text-align: center; padding: 60px 0"
         >
-          ← Previous
-        </button>
-        <span
-          id="pageIndicator"
-          style="
-            color: #fcf9f0;
-            font-family: Georgia, serif;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            vertical-align: middle;
-          "
-        ></span>
-        <button
-          id="nextBtn"
-          class="cta-button"
-          style="display: none; margin-left: 15px"
-        >
-          Next →
-        </button>
-      </div>
-    </section>
+          <button
+            id="prevBtn"
+            class="cta-button"
+            style="display: none; margin-right: 15px"
+          >
+            ← Previous
+          </button>
+          <span
+            id="pageIndicator"
+            style="
+              color: #fcf9f0;
+              font-family: Georgia, serif;
+              font-size: 0.9rem;
+              letter-spacing: 2px;
+              vertical-align: middle;
+            "
+          ></span>
+          <button
+            id="nextBtn"
+            class="cta-button"
+            style="display: none; margin-left: 15px"
+          >
+            Next →
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- end #main-content -->
 
     <div id="plantModal" class="modal">
       <div class="modal-content">
@@ -275,7 +294,7 @@
     <footer>
       <div class="footer-container">
         <div class="footer-top">
-          <h2 class="footer-logo">I AM NATURE</h2>
+          <p class="footer-logo" aria-hidden="true">I AM NATURE</p>
           <p class="footer-tagline">Rooted in truth. Guided by experience.</p>
         </div>
 
@@ -298,8 +317,8 @@
       </div>
     </footer>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
 
     <script>
       (function () {
@@ -322,19 +341,23 @@
 
     <!-- Loading bar + Service Worker -->
     <style>
+      /* Loader uses transform:scaleX for composited animation (no layout jitter) */
       #ian-loader {
         position: fixed;
         top: 0;
         left: 0;
-        width: 0%;
+        width: 100%;
         height: 3px;
         background: linear-gradient(90deg, #849b84, #d7c091);
         z-index: 9999;
+        transform: scaleX(0);
+        transform-origin: left center;
         transition:
-          width 0.25s ease,
+          transform 0.25s ease,
           opacity 0.4s ease;
         opacity: 0;
         pointer-events: none;
+        will-change: transform, opacity;
       }
       #ian-loader.active {
         opacity: 1;
@@ -345,26 +368,26 @@
       (function () {
         var loader = document.getElementById("ian-loader");
         var timer,
-          width = 0;
+          progress = 0;
         function startLoader() {
           if (!loader) return;
-          width = 0;
-          loader.style.width = "0%";
+          progress = 0;
+          loader.style.transform = "scaleX(0)";
           loader.classList.add("active");
           timer = setInterval(function () {
-            if (width < 85) {
-              width += (85 - width) * 0.08;
-              loader.style.width = width + "%";
+            if (progress < 0.85) {
+              progress += (0.85 - progress) * 0.08;
+              loader.style.transform = "scaleX(" + progress + ")";
             }
           }, 80);
         }
         function finishLoader() {
           if (!loader) return;
           clearInterval(timer);
-          loader.style.width = "100%";
+          loader.style.transform = "scaleX(1)";
           setTimeout(function () {
             loader.classList.remove("active");
-            loader.style.width = "0%";
+            loader.style.transform = "scaleX(0)";
           }, 400);
         }
         var slowTimer = setTimeout(function () {
