@@ -578,3 +578,74 @@ footer {
 #ian-loader.active {
   opacity: 1;
 }
+
+/* ── SEARCH WRAPPER & BUTTON ── */
+.search-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  min-width: 220px;
+}
+
+.search-wrapper input {
+  min-width: 0;
+  flex: 1;
+  border-radius: 8px 0 0 8px;
+  border-right: none;
+  margin: 0;
+}
+
+#searchBtn {
+  padding: 12px 20px;
+  background-color: #1b3022;
+  color: #d7c091;
+  border: 1px solid #d7c091;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+#searchBtn:hover {
+  background-color: #d7c091;
+  color: #1b3022;
+}
+
+/* ── SHOW ALL PLANTS BUTTON ── */
+#resetBtn {
+  background-color: transparent;
+  color: #fcf9f0;
+  border: 1px solid #fcf9f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 16px;
+  padding: 12px 24px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+#resetBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #d7c091;
+  border-color: #d7c091;
+}
+
+@media (max-width: 600px) {
+  .search-wrapper {
+    width: 100%;
+  }
+  .search-wrapper input {
+    min-width: 0;
+    width: 100%;
+  }
+  #searchBtn {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+}

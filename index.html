@@ -206,12 +206,15 @@
       </header>
 
       <section class="controls">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search by name..."
-          aria-label="Search plants by name"
-        />
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name..."
+            aria-label="Search plants by name"
+          />
+          <button id="searchBtn" aria-label="Search">Search &rarr;</button>
+        </div>
 
         <select id="typeFilter" aria-label="Filter by plant type">
           <option value="All">All Types</option>
@@ -231,7 +234,7 @@
           <option value="Environmental">Environmental</option>
         </select>
 
-        <button id="resetBtn">Clear Filters</button>
+        <button id="resetBtn">&larr; Show All Plants</button>
       </section>
 
       <section class="origin-story" id="originStory">

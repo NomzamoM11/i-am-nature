@@ -260,6 +260,16 @@ if (document.getElementById("categoryFilter"))
 if (document.getElementById("resetBtn"))
   document.getElementById("resetBtn").addEventListener("click", resetFilters);
 
+// Search button — triggers same filterPlants as typing
+if (document.getElementById("searchBtn"))
+  document.getElementById("searchBtn").addEventListener("click", filterPlants);
+
+// Also allow pressing Enter in the search box
+if (document.getElementById("searchInput"))
+  document.getElementById("searchInput").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") filterPlants();
+  });
+
 // ── Modal close logic ────────────────────────────────────────────────────────
 
 document.querySelector(".close-button").onclick = () => {
