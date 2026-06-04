@@ -183,6 +183,7 @@ function displayPlants(plantList, resetPage) {
 // ── Filter ───────────────────────────────────────────────────────────────────
 
 function filterPlants() {
+  hideOriginStory();
   const searchTerm = document.getElementById("searchInput").value.toLowerCase();
   const selectedType = document.getElementById("typeFilter").value;
   const selectedCategory = document.getElementById("categoryFilter").value;
@@ -208,6 +209,7 @@ function resetFilters() {
   document.getElementById("searchInput").value = "";
   document.getElementById("typeFilter").value = "All";
   document.getElementById("categoryFilter").value = "All";
+  hideOriginStory();
   displayPlants(plants, true);
 }
 
