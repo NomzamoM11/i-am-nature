@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>You Are Offline — I AM NATURE</title>
+    <title>Page Not Found — I AM NATURE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
@@ -17,7 +17,7 @@
       href="images/favicon-16.png"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -59,6 +59,9 @@
         justify-content: space-between;
         align-items: center;
         padding: 22px 50px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
         border-bottom: 1px solid rgba(215, 192, 145, 0.1);
         backdrop-filter: blur(8px);
       }
@@ -87,8 +90,8 @@
         color: var(--parchment);
       }
 
-      /* MAIN */
-      .offline-main {
+      /* MAIN CONTENT */
+      .error-main {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -100,95 +103,73 @@
         overflow: hidden;
       }
 
-      /* Decorative rings */
+      /* Decorative rings — matching the alchemy hero */
       .ring {
         position: absolute;
         border-radius: 50%;
+        border: 1px solid rgba(215, 192, 145, 0.08);
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         pointer-events: none;
-        animation: breathe 6s ease-in-out infinite;
       }
       .ring-1 {
         width: clamp(360px, 60vw, 680px);
         height: clamp(360px, 60vw, 680px);
-        border: 1px solid rgba(215, 192, 145, 0.07);
-        animation-delay: 0s;
       }
       .ring-2 {
         width: clamp(260px, 44vw, 500px);
         height: clamp(260px, 44vw, 500px);
-        border: 1px solid rgba(132, 155, 132, 0.08);
-        animation-delay: 2s;
+        border-color: rgba(215, 192, 145, 0.05);
       }
       .ring-3 {
         width: clamp(160px, 28vw, 320px);
         height: clamp(160px, 28vw, 320px);
-        border: 1px solid rgba(215, 192, 145, 0.05);
-        animation-delay: 4s;
+        border-color: rgba(132, 155, 132, 0.1);
       }
 
-      @keyframes breathe {
-        0%,
-        100% {
-          transform: translate(-50%, -50%) scale(1);
-          opacity: 1;
-        }
-        50% {
-          transform: translate(-50%, -50%) scale(1.03);
-          opacity: 0.7;
-        }
-      }
-
-      .offline-main::before {
+      /* Radial glow */
+      .error-main::before {
         content: "";
         position: absolute;
         inset: 0;
         background: radial-gradient(
           ellipse at 50% 50%,
-          rgba(132, 155, 132, 0.07) 0%,
+          rgba(215, 192, 145, 0.06) 0%,
           transparent 65%
         );
         pointer-events: none;
       }
 
-      .offline-content {
+      .error-content {
         position: relative;
         z-index: 2;
-        max-width: 560px;
+        max-width: 600px;
         animation: fadeUp 1s ease both;
       }
 
-      .offline-eyebrow {
+      .error-eyebrow {
         display: block;
         text-transform: uppercase;
         letter-spacing: 6px;
         color: var(--moss);
         font-size: 0.72rem;
-        margin-bottom: 28px;
-      }
-
-      /* Leaf icon — CSS only, no image needed */
-      .offline-icon {
-        display: block;
-        font-size: 2.8rem;
         margin-bottom: 24px;
-        opacity: 0.6;
-        animation: sway 4s ease-in-out infinite;
       }
 
-      @keyframes sway {
-        0%,
-        100% {
-          transform: rotate(-4deg);
-        }
-        50% {
-          transform: rotate(4deg);
-        }
+      .error-number {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(6rem, 18vw, 12rem);
+        font-weight: 300;
+        color: rgba(215, 192, 145, 0.18);
+        line-height: 1;
+        margin-bottom: 0;
+        letter-spacing: -4px;
+        display: block;
+        animation: fadeUp 1s ease 0.1s both;
       }
 
-      .offline-title {
+      .error-title {
         font-family: "Cormorant Garamond", Georgia, serif;
         font-size: clamp(1.8rem, 4vw, 3rem);
         font-weight: 300;
@@ -196,54 +177,61 @@
         color: var(--parchment);
         line-height: 1.2;
         margin-bottom: 20px;
-        animation: fadeUp 1s ease 0.15s both;
+        margin-top: -10px;
+        animation: fadeUp 1s ease 0.2s both;
       }
 
-      .offline-sub {
+      .error-sub {
         font-style: italic;
-        color: rgba(215, 192, 145, 0.72);
+        color: rgba(215, 192, 145, 0.7);
         font-size: 1rem;
-        line-height: 1.8;
-        margin-bottom: 44px;
+        line-height: 1.75;
+        max-width: 440px;
+        margin: 0 auto 40px;
         animation: fadeUp 1s ease 0.3s both;
       }
 
-      /* STATUS INDICATOR */
-      .status-indicator {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 40px;
+      /* NAVIGATION CARDS */
+      .error-nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 44px;
         animation: fadeUp 1s ease 0.4s both;
       }
-      .status-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: var(--clay);
-        animation: pulse-dot 2s ease-in-out infinite;
+
+      .error-nav-card {
+        background: rgba(252, 249, 240, 0.05);
+        border: 1px solid rgba(215, 192, 145, 0.12);
+        border-radius: 12px;
+        padding: 20px 18px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
       }
-      @keyframes pulse-dot {
-        0%,
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-        50% {
-          opacity: 0.4;
-          transform: scale(0.8);
-        }
+      .error-nav-card:hover {
+        background: rgba(252, 249, 240, 0.1);
+        border-color: rgba(215, 192, 145, 0.3);
+        transform: translateY(-4px);
       }
-      .status-text {
-        font-size: 0.78rem;
+      .enc-label {
+        font-size: 0.65rem;
         text-transform: uppercase;
         letter-spacing: 3px;
-        color: rgba(215, 192, 145, 0.5);
+        color: var(--moss);
+      }
+      .enc-title {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: var(--parchment);
       }
 
-      /* RETRY BUTTON */
-      .retry-btn {
+      /* HOME BUTTON */
+      .home-btn {
         display: inline-block;
         padding: 14px 44px;
         background-color: var(--moss);
@@ -257,40 +245,12 @@
         transition: all 0.35s ease;
         animation: fadeUp 1s ease 0.5s both;
         border: none;
-        cursor: pointer;
-        margin-bottom: 20px;
       }
-      .retry-btn:hover {
+      .home-btn:hover {
         background-color: var(--parchment);
         color: var(--forest);
         transform: translateY(-3px);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      }
-
-      .retry-note {
-        display: block;
-        font-style: italic;
-        font-size: 0.82rem;
-        color: rgba(215, 192, 145, 0.45);
-        animation: fadeUp 1s ease 0.6s both;
-      }
-
-      /* WISDOM STRIP */
-      .wisdom-strip {
-        margin-top: 60px;
-        padding: 28px 36px;
-        border-top: 1px solid rgba(215, 192, 145, 0.1);
-        border-bottom: 1px solid rgba(215, 192, 145, 0.1);
-        max-width: 460px;
-        animation: fadeUp 1s ease 0.7s both;
-      }
-      .wisdom-strip p {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(1.1rem, 2vw, 1.35rem);
-        font-weight: 300;
-        font-style: italic;
-        color: rgba(215, 192, 145, 0.55);
-        line-height: 1.65;
       }
 
       /* FOOTER */
@@ -301,6 +261,24 @@
         text-align: center;
         font-family: "EB Garamond", Georgia, serif;
         border-top: 1px solid rgba(215, 192, 145, 0.07);
+      }
+      .f-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+      }
+      .f-links a {
+        color: rgba(229, 217, 182, 0.6);
+        text-decoration: none;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: color 0.3s;
+      }
+      .f-links a:hover {
+        color: var(--moss);
       }
       .f-copy {
         font-size: 0.75rem;
@@ -382,8 +360,14 @@
           font-size: 0.85rem !important;
           letter-spacing: 2px !important;
         }
-        .wisdom-strip {
-          padding: 24px 20px;
+        .error-nav {
+          grid-template-columns: 1fr;
+          max-width: 280px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .error-number {
+          letter-spacing: -2px;
         }
       }
     </style>
@@ -403,134 +387,54 @@
       </button>
     </nav>
 
-    <main class="offline-main">
+    <main class="error-main">
       <div class="ring ring-1"></div>
       <div class="ring ring-2"></div>
       <div class="ring ring-3"></div>
 
-      <div class="offline-content">
-        <span class="offline-eyebrow">No Connection</span>
-        <span class="offline-icon">🌿</span>
-        <h1 class="offline-title">You are offline</h1>
-        <p class="offline-sub">
-          The earth does not require a signal.<br />
-          But this page does. Check your connection<br />
-          and try again when you are ready.
+      <div class="error-content">
+        <span class="error-eyebrow">Error 404</span>
+        <span class="error-number">404</span>
+        <h1 class="error-title">This path leads nowhere</h1>
+        <p class="error-sub">
+          The page you are looking for does not exist, has been moved, or the
+          link you followed has changed. The earth still holds everything you
+          need — it may simply be elsewhere.
         </p>
 
-        <div class="status-indicator">
-          <span class="status-dot"></span>
-          <span class="status-text">Waiting for connection</span>
+        <div class="error-nav">
+          <a href="index.html" class="error-nav-card">
+            <span class="enc-label">Explore</span>
+            <span class="enc-title">The Botanical Library</span>
+          </a>
+          <a href="alchemy.html" class="error-nav-card">
+            <span class="enc-label">Recipes</span>
+            <span class="enc-title">Alchemy of Nature</span>
+          </a>
+          <a href="shop.html" class="error-nav-card">
+            <span class="enc-label">Purchase</span>
+            <span class="enc-title">The Shop</span>
+          </a>
         </div>
 
-        <button class="retry-btn" onclick="window.location.reload()">
-          Try Again &rarr;
-        </button>
-        <span class="retry-note">or check your network settings</span>
-
-        <div class="wisdom-strip">
-          <p>
-            &ldquo;Even in stillness, the root holds.<br />You will return when
-            the time is right.&rdquo;
-          </p>
-        </div>
+        <a href="index.html" class="home-btn">Return Home &rarr;</a>
       </div>
     </main>
 
     <footer>
-      <div
-        class="f-links"
-        style="
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-          flex-wrap: wrap;
-          margin-bottom: 14px;
-        "
-      >
-        <a
-          href="index.html"
-          style="
-            color: rgba(229, 217, 182, 0.6);
-            text-decoration: none;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-          "
-          >Botanicals</a
-        >
-        <a
-          href="alchemy.html"
-          style="
-            color: rgba(229, 217, 182, 0.6);
-            text-decoration: none;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-          "
-          >Alchemy of Nature</a
-        >
-        <a
-          href="journal.html"
-          style="
-            color: rgba(229, 217, 182, 0.6);
-            text-decoration: none;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-          "
-          >Journal</a
-        >
-        <a
-          href="shop.html"
-          style="
-            color: rgba(229, 217, 182, 0.6);
-            text-decoration: none;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-          "
-          >Shop</a
-        >
-        <a
-          href="about.html"
-          style="
-            color: rgba(229, 217, 182, 0.6);
-            text-decoration: none;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-          "
-          >About</a
-        >
-        <a
-          href="contact.html"
-          style="
-            color: rgba(229, 217, 182, 0.6);
-            text-decoration: none;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-          "
-          >Contact</a
-        >
-        <a
-          href="policies.html"
-          style="
-            color: rgba(229, 217, 182, 0.6);
-            text-decoration: none;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-          "
-          >Policies</a
-        >
+      <div class="f-links">
+        <a href="index.html">Botanicals</a>
+        <a href="alchemy.html">Alchemy of Nature</a>
+        <a href="journal.html">Journal</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="policies.html">Policies</a>
       </div>
-      <p class="f-copy">&copy; 2026 Nomzamo Mbelebele &mdash; I AM NATURE</p>
+      <p class="f-copy">&copy; 2026 Nomzamo Mbelebele. All rights reserved.</p>
     </footer>
 
     <script>
-      // Hamburger
       (function () {
         var btn = document.querySelector(".hamburger");
         var menu = document.querySelector(".nav-links");
@@ -547,19 +451,6 @@
           });
         }
       })();
-
-      // Auto-reload when connection returns
-      window.addEventListener("online", function () {
-        window.location.reload();
-      });
-
-      // Update status dot to green when online
-      window.addEventListener("online", function () {
-        var dot = document.querySelector(".status-dot");
-        var text = document.querySelector(".status-text");
-        if (dot) dot.style.backgroundColor = "#849b84";
-        if (text) text.textContent = "Connection restored — reloading...";
-      });
     </script>
   </body>
 </html>

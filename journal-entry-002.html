@@ -417,6 +417,7 @@
       <a href="index.html" class="nav-logo">I AM NATURE</a>
       <ul class="nav-links">
         <li><a href="index.html">Botanicals</a></li>
+        <li><a href="alchemy.html">Alchemy of Nature</a></li>
         <li><a href="journal.html">Journal</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="about.html">About</a></li>
@@ -634,71 +635,84 @@
         }
       })();
     </script>
-  
-  <!-- Loading bar + Service Worker -->
-  <style>
-    #ian-loader {
-      position: fixed;
-      top: 0; left: 0;
-      width: 0%;
-      height: 3px;
-      background: linear-gradient(90deg, #849b84, #d7c091);
-      z-index: 9999;
-      transition: width 0.25s ease, opacity 0.4s ease;
-      opacity: 0;
-      pointer-events: none;
-    }
-    #ian-loader.active { opacity: 1; }
-  </style>
-  <div id="ian-loader"></div>
-  <script>
-    (function () {
-      var loader = document.getElementById("ian-loader");
-      var timer, width = 0;
-      function startLoader() {
-        if (!loader) return;
-        width = 0;
-        loader.style.width = "0%";
-        loader.classList.add("active");
-        timer = setInterval(function () {
-          if (width < 85) {
-            width += (85 - width) * 0.08;
-            loader.style.width = width + "%";
-          }
-        }, 80);
+
+    <!-- Loading bar + Service Worker -->
+    <style>
+      #ian-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #849b84, #d7c091);
+        z-index: 9999;
+        transition:
+          width 0.25s ease,
+          opacity 0.4s ease;
+        opacity: 0;
+        pointer-events: none;
       }
-      function finishLoader() {
-        if (!loader) return;
-        clearInterval(timer);
-        loader.style.width = "100%";
-        setTimeout(function () {
-          loader.classList.remove("active");
+      #ian-loader.active {
+        opacity: 1;
+      }
+    </style>
+    <div id="ian-loader"></div>
+    <script>
+      (function () {
+        var loader = document.getElementById("ian-loader");
+        var timer,
+          width = 0;
+        function startLoader() {
+          if (!loader) return;
+          width = 0;
           loader.style.width = "0%";
-        }, 400);
-      }
-      var slowTimer = setTimeout(function () {
-        if (document.readyState !== "complete") startLoader();
-      }, 300);
-      window.addEventListener("load", function () {
-        clearTimeout(slowTimer);
-        if (loader && loader.classList.contains("active")) finishLoader();
-      });
-      document.addEventListener("click", function (e) {
-        var a = e.target.closest("a");
-        if (!a) return;
-        var href = a.getAttribute("href");
-        if (!href) return;
-        if (href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("https://") || href.startsWith("http://")) return;
-        startLoader();
-      });
-      if ("serviceWorker" in navigator) {
+          loader.classList.add("active");
+          timer = setInterval(function () {
+            if (width < 85) {
+              width += (85 - width) * 0.08;
+              loader.style.width = width + "%";
+            }
+          }, 80);
+        }
+        function finishLoader() {
+          if (!loader) return;
+          clearInterval(timer);
+          loader.style.width = "100%";
+          setTimeout(function () {
+            loader.classList.remove("active");
+            loader.style.width = "0%";
+          }, 400);
+        }
+        var slowTimer = setTimeout(function () {
+          if (document.readyState !== "complete") startLoader();
+        }, 300);
         window.addEventListener("load", function () {
-          navigator.serviceWorker.register("/sw.js").catch(function (err) {
-            console.log("SW registration failed:", err);
-          });
+          clearTimeout(slowTimer);
+          if (loader && loader.classList.contains("active")) finishLoader();
         });
-      }
-    })();
-  </script>
-</body>
+        document.addEventListener("click", function (e) {
+          var a = e.target.closest("a");
+          if (!a) return;
+          var href = a.getAttribute("href");
+          if (!href) return;
+          if (
+            href.startsWith("#") ||
+            href.startsWith("mailto:") ||
+            href.startsWith("tel:") ||
+            href.startsWith("https://") ||
+            href.startsWith("http://")
+          )
+            return;
+          startLoader();
+        });
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker.register("/sw.js").catch(function (err) {
+              console.log("SW registration failed:", err);
+            });
+          });
+        }
+      })();
+    </script>
+  </body>
 </html>
