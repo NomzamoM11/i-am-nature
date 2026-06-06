@@ -84,7 +84,7 @@
         color: var(--parchment);
       }
 
-      /* HERO — forest background, textured & layered with vector rings */
+      /* HERO — forest background, elegant logo mark centred */
       .hero-section {
         background-color: var(--forest);
         min-height: 100vh;
@@ -95,69 +95,78 @@
         position: relative;
         overflow: hidden;
         padding: 80px 20px;
-
-        /* Custom Micro-Texture Layer */
-        background-image:
-          radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 0),
-          radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 0);
-        background-size: 14px 14px;
-        background-position:
-          0 0,
-          7px 7px;
       }
       .hero-section::before {
         content: "";
         position: absolute;
         inset: 0;
         background: radial-gradient(
-          ellipse at 50% 50%,
-          rgba(215, 192, 145, 0.06) 0%,
-          transparent 70%
+          ellipse at 50% 30%,
+          rgba(215, 192, 145, 0.07) 0%,
+          transparent 65%
         );
         pointer-events: none;
+      }
+      .hero-section::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        background-size: 200px 200px;
+        opacity: 0.06;
+        pointer-events: none;
         z-index: 1;
+        mix-blend-mode: overlay;
       }
 
-      /* Concentric Vector Background Rings */
-      .background-rings {
+      /* Decorative ring */
+      .hero-ring {
         position: absolute;
+        width: clamp(320px, 55vw, 620px);
+        height: clamp(320px, 55vw, 620px);
+        border-radius: 50%;
+        border: 1px solid rgba(215, 192, 145, 0.12);
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 550px;
-        height: 550px;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 1;
-        border: 1px solid rgba(255, 255, 255, 0.04);
-        box-shadow:
-          0 0 0 60px rgba(255, 255, 255, 0.015),
-          0 0 0 140px rgba(255, 255, 255, 0.01),
-          0 0 0 240px rgba(255, 255, 255, 0.005);
       }
-
+      .hero-ring-2 {
+        position: absolute;
+        width: clamp(240px, 42vw, 480px);
+        height: clamp(240px, 42vw, 480px);
+        border-radius: 50%;
+        border: 1px solid rgba(215, 192, 145, 0.07);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
       .hero-content {
         position: relative;
-        z-index: 5;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 0;
         animation: fadeUp 1s ease both;
+        .hero-content {
+          position: relative;
+          z-index: 5; /* This ensures the logo stays above the texture */
+          /* ... keep your existing display and animation code here ... */
+        }
       }
-
+      /* Logo mark — elegant text treatment replacing the black PNG */
       .hero-logo-mark {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        margin-bottom: 60px;
+        margin-bottom: 60px; /* Keeps the gap between logo and tagline */
       }
 
       .hero-logo-mark img {
-        max-width: 500px;
-        width: 100%;
+        max-width: 300px; /* Adjust size here */
         height: auto;
         display: block;
       }
@@ -599,7 +608,7 @@
         opacity: 0.75;
       }
 
-      /* PLAN SECTION */
+      /* PLAN SECTION — sand/light so it never stacks dark on dark */
       .plan-section {
         background-color: var(--sand);
         padding: 70px 20px 80px;
@@ -797,11 +806,12 @@
         }
 
         .cta-button {
+          /* ... your existing code ... */
           animation: softPulse 3s infinite ease-in-out;
         }
       }
 
-      /* HAMBURGER */
+      /* ── HAMBURGER NAV ── */
       .hamburger {
         display: none;
         flex-direction: column;
@@ -886,8 +896,8 @@
 
     <header>
       <section class="hero-section">
-        <div class="background-rings"></div>
-
+        <div class="hero-ring"></div>
+        <div class="hero-ring-2"></div>
         <div class="hero-content">
           <div class="hero-logo-mark">
             <img
@@ -933,6 +943,7 @@
       </div>
     </div>
 
+    <!-- 1 CLEANSE dark -->
     <div class="cat-section dark" id="cleanse">
       <div class="cat-inner">
         <div class="cat-head">
@@ -953,7 +964,6 @@
               The tea that began everything. Drunk slowly before the world asks
               anything of you &mdash; a daily ritual of gentle beginning.
             </p>
-            <span class="r-lbl">Ingredients</span>
             <ul class="r-ings">
               <li>1 tsp fennel seeds, lightly crushed</li>
               <li>&frac12; tsp fenugreek seeds</li>
@@ -986,19 +996,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Blood Awakening Cleanser</h3>
-            <span class="l-sub">Beetroot, Carrot, Apple &amp; Ginger</span>
             <p class="l-teaser">
               Your blood has been carrying more than it should. This is how you
               lighten the load &mdash; one glass, every morning, until you feel
               the difference.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>2 medium beetroots, peeled</li>
-              <li>3 carrots, scrubbed</li>
-              <li class="blurred">1 green apple, cored and quartered</li>
-              <li class="blurred">Fresh ginger, lemon, and the rest...</li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1006,20 +1008,10 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Deep Liver Cleanse Tea</h3>
-            <span class="l-sub">Lemon, Ginger &amp; Turmeric</span>
             <p class="l-teaser">
               The liver holds everything we haven&rsquo;t processed yet. This
               tea is how you ask it to let go.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>Juice of 1 large lemon</li>
-              <li>1 inch fresh ginger root, grated</li>
-              <li class="blurred">Turmeric, black pepper, warm water...</li>
-              <li class="blurred">
-                And one ingredient that changes everything.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1027,20 +1019,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Gut Reset Drink</h3>
-            <span class="l-sub">Apple Cider Vinegar, Lemon &amp; Honey</span>
             <p class="l-teaser">
               Three ingredients. Three minutes to make. The one thing most
               people skip that would change how their entire digestive system
               functions.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>2 tbsp raw apple cider vinegar</li>
-              <li>Juice of half a lemon</li>
-              <li class="blurred">
-                Raw honey, warm water, and the ratio that matters.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1048,20 +1031,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Living Water Elixir</h3>
-            <span class="l-sub">Cucumber, Lemon, Chia &amp; Sea Salt</span>
             <p class="l-teaser">
               This is the water Nomzamo drank every single day for three months.
               It hydrates differently &mdash; at a cellular level, not just a
               surface one.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>Half a cucumber, thinly sliced</li>
-              <li>Juice of 1 lemon</li>
-              <li class="blurred">
-                Chia seeds, sea salt, and the soaking method.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1071,6 +1045,7 @@
       </div>
     </div>
 
+    <!-- 2 ENERGY light -->
     <div class="cat-section light" id="energy">
       <div class="cat-inner">
         <div class="cat-head">
@@ -1091,7 +1066,6 @@
               For the days your body is asking for more, not less. Rich in plant
               iron and minerals that rebuild what depletion has taken.
             </p>
-            <span class="r-lbl">Ingredients</span>
             <ul class="r-ings">
               <li>1 medium beetroot, peeled and chopped</li>
               <li>1 ripe banana</li>
@@ -1130,21 +1104,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Brain Boost Tonic</h3>
-            <span class="l-sub">Gotu Kola, Ginger &amp; Lemon</span>
             <p class="l-teaser">
               Used for centuries across India and Africa for mental clarity. If
               your thoughts feel scattered and your memory feels slow, this is
               where you start.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>1 tsp dried gotu kola leaf</li>
-              <li>1 inch fresh ginger, sliced</li>
-              <li class="blurred">
-                Lemon, honey, and the steeping method that preserves the active
-                compounds.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1152,20 +1116,10 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Stress &amp; Cortisol Drink</h3>
-            <span class="l-sub">Warm Milk, Honey &amp; Cinnamon</span>
             <p class="l-teaser">
               Your nervous system is not broken. It is overwhelmed. This drink
               talks it down from the ledge &mdash; every single evening.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>250ml warm milk (dairy or oat)</li>
-              <li>1 tsp raw honey</li>
-              <li class="blurred">
-                Ceylon cinnamon and the one addition that makes it work on
-                cortisol specifically.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1173,20 +1127,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Anti-Inflammatory Tonic</h3>
-            <span class="l-sub">Turmeric, Black Pepper &amp; Water</span>
             <p class="l-teaser">
               Chronic inflammation is silent. It lives underneath fatigue, joint
               pain, brain fog, and skin flares. This tonic addresses it at the
               root.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>1 tsp turmeric powder</li>
-              <li>Pinch of black pepper (increases absorption by 2000%)</li>
-              <li class="blurred">
-                Warm water and the carrier that makes it bioavailable.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1196,6 +1141,7 @@
       </div>
     </div>
 
+    <!-- 3 IMMUNE dark -->
     <div class="cat-section dark" id="immune">
       <div class="cat-inner">
         <div class="cat-head">
@@ -1210,20 +1156,10 @@
         <div class="recipe-grid">
           <div class="l-card">
             <h3 class="l-name">Immune Defence Shot</h3>
-            <span class="l-sub">Ginger, Lemon, Honey &amp; Garlic</span>
             <p class="l-teaser">
               One shot at the very first sign of illness. The people who keep
               this in their fridge don&rsquo;t get sick the way they used to.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>2 inches fresh ginger root</li>
-              <li>Juice of 1 lemon</li>
-              <li class="blurred">
-                Raw garlic, honey, and the ratio that makes it potent without
-                the burn.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1231,20 +1167,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Golden Immune Tea</h3>
-            <span class="l-sub">Ginger, Turmeric &amp; Lemon</span>
             <p class="l-teaser">
               The daily ritual that shifts the body from reactive to resilient.
               Not a remedy for when you&rsquo;re sick &mdash; a practice for not
               getting there.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>Fresh ginger, sliced thin</li>
-              <li>&frac12; tsp turmeric powder</li>
-              <li class="blurred">
-                Lemon, honey, black pepper, and the simmering time that matters.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1252,20 +1179,10 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Hormone Balance Smoothie</h3>
-            <span class="l-sub">Banana, Flax Seeds &amp; Cinnamon</span>
             <p class="l-teaser">
               Hormonal imbalance shows up as mood, weight, hair, skin, and
               sleep. This smoothie speaks to all of it &mdash; from the inside.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>1 ripe banana</li>
-              <li>1 tbsp ground flax seeds</li>
-              <li class="blurred">
-                Ceylon cinnamon and the liquid base that enhances the
-                flax&rsquo;s hormonal action.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1273,21 +1190,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Hydration Infusion</h3>
-            <span class="l-sub">Cucumber, Lemon, Mint &amp; Chia</span>
             <p class="l-teaser">
               Most people are chronically dehydrated and don&rsquo;t know it.
               This isn&rsquo;t flavoured water &mdash; it&rsquo;s structured
               hydration your cells can actually use.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>Half a cucumber, sliced</li>
-              <li>Fresh mint leaves</li>
-              <li class="blurred">
-                Lemon, chia seeds, and the infusion time that changes how it
-                works.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1297,6 +1204,7 @@
       </div>
     </div>
 
+    <!-- 4 SKIN light -->
     <div class="cat-section light" id="skin">
       <div class="cat-inner">
         <div class="cat-head">
@@ -1311,19 +1219,10 @@
         <div class="recipe-grid">
           <div class="l-card">
             <h3 class="l-name">Acne Clearing Smoothie</h3>
-            <span class="l-sub">Pineapple, Ginger, Mint &amp; Lemon</span>
             <p class="l-teaser">
               Acne is not a skin problem. It&rsquo;s an internal signal. This
               smoothie addresses what your skin is actually trying to say.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>1 cup fresh pineapple chunks</li>
-              <li>1 inch fresh ginger</li>
-              <li class="blurred">
-                Mint, lemon, and the liquid that gives it its clearing action.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1331,20 +1230,10 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Turmeric Brightening Mask</h3>
-            <span class="l-sub">Turmeric, Honey &amp; Yoghurt</span>
             <p class="l-teaser">
               Used across India and West Africa for generations. Three
               ingredients. Ten minutes. The glow people keep asking you about.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>&frac12; tsp turmeric powder</li>
-              <li>1 tsp raw honey</li>
-              <li class="blurred">
-                Plain yoghurt and the application method that prevents the
-                staining.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1352,20 +1241,10 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Sun Glow Body Oil</h3>
-            <span class="l-sub">Orange Peel, Coconut &amp; Olive Oil</span>
             <p class="l-teaser">
               The oil you make once and use for months. Skin that looks like it
               has been somewhere warm, even in winter.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>Peel of 2 large oranges, dried</li>
-              <li>200ml coconut oil</li>
-              <li class="blurred">
-                Olive oil and the infusion method that gives it its colour and
-                scent.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1373,20 +1252,10 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Aloe Vera &amp; Honey Skin Mask</h3>
-            <span class="l-sub">Aloe Vera &amp; Raw Honey</span>
             <p class="l-teaser">
               Two ingredients from your garden and your kitchen. Together, they
               do what most expensive serums spend years trying to do.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>3 tbsp fresh aloe vera gel</li>
-              <li>1 tsp raw honey</li>
-              <li class="blurred">
-                The optional third ingredient and the method that doubles its
-                effectiveness.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1394,23 +1263,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Frankincense Healing Oil</h3>
-            <span class="l-sub"
-              >Frankincense, Almond, Coconut &amp; Castor Oil</span
-            >
             <p class="l-teaser">
               One of the most ancient healing preparations on earth. Scars,
               stretch marks, uneven tone &mdash; this oil has been used on all
               of it for thousands of years.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>Frankincense resin tears</li>
-              <li>100ml sweet almond oil</li>
-              <li class="blurred">
-                Coconut oil, castor oil, and the heat method that draws the
-                resin out correctly.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1420,6 +1277,7 @@
       </div>
     </div>
 
+    <!-- 5 HAIR dark -->
     <div class="cat-section dark" id="hair">
       <div class="cat-inner">
         <div class="cat-head">
@@ -1434,20 +1292,10 @@
         <div class="recipe-grid">
           <div class="l-card">
             <h3 class="l-name">Onion Hair Growth Rinse</h3>
-            <span class="l-sub">Onion Water</span>
             <p class="l-teaser">
               The remedy that went viral for a reason. Clinically confirmed to
               stimulate dormant follicles. The smell fades. The regrowth stays.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>3 medium onions, peeled</li>
-              <li>Filtered water</li>
-              <li class="blurred">
-                The preparation method and the application routine that makes it
-                work.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1455,21 +1303,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Castor &amp; Coconut Hair Oil</h3>
-            <span class="l-sub">Castor Oil &amp; Coconut Oil</span>
             <p class="l-teaser">
               The simplest, most effective traditional hair oil there is. Not
               complicated. Not expensive. Just consistent &mdash; and the
               results speak for themselves.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>Jamaican black castor oil</li>
-              <li>Virgin coconut oil</li>
-              <li class="blurred">
-                The ratio and the optional additions that turn it into a
-                targeted treatment.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1477,19 +1315,10 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">ACV Hair Shine Rinse</h3>
-            <span class="l-sub">Apple Cider Vinegar &amp; Water</span>
             <p class="l-teaser">
               One rinse. Every wash day. The difference in shine, softness, and
               frizz reduction is immediate &mdash; and cumulative over time.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>Raw apple cider vinegar (with the mother)</li>
-              <li>Filtered water</li>
-              <li class="blurred">
-                The dilution ratio and the optional herbs that take it further.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1499,6 +1328,7 @@
       </div>
     </div>
 
+    <!-- 6 GUT light -->
     <div class="cat-section light" id="gut">
       <div class="cat-inner">
         <div class="cat-head">
@@ -1514,21 +1344,11 @@
         <div class="recipe-grid">
           <div class="l-card">
             <h3 class="l-name">Green Detox Smoothie</h3>
-            <span class="l-sub">Spinach, Cucumber, Apple &amp; Ginger</span>
             <p class="l-teaser">
               Everything your gut has been asking for &mdash; in one glass.
               Alkalising, anti-inflammatory, and genuinely delicious when made
               correctly.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>2 large handfuls baby spinach</li>
-              <li>Half a cucumber</li>
-              <li class="blurred">
-                Green apple, ginger, lemon, and the liquid base that makes it
-                drinkable.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1536,20 +1356,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Bloating Relief Tea</h3>
-            <span class="l-sub">Ginger, Mint &amp; Lemon</span>
             <p class="l-teaser">
               Bloating is your gut asking for help. This tea answers quickly
               &mdash; relief within 20 minutes for most people who drink it
               correctly.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>1 inch fresh ginger, sliced</li>
-              <li>6 fresh mint leaves</li>
-              <li class="blurred">
-                Lemon, honey, and the timing method that activates the relief.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1557,20 +1368,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Oil Pulling Protocol</h3>
-            <span class="l-sub">Coconut Oil</span>
             <p class="l-teaser">
               An ancient Ayurvedic practice that removes bacteria from the mouth
               and supports the gut. One tablespoon. Twenty minutes. Every
               morning.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>1 tbsp virgin coconut oil</li>
-              <li class="blurred">
-                The technique, the timing, and what to do immediately after that
-                most people get wrong.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1578,23 +1380,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Charcoal Tooth Cleanser</h3>
-            <span class="l-sub"
-              >Activated Charcoal, Clove, Coconut Oil &amp; Mint</span
-            >
             <p class="l-teaser">
               Black goes on. White comes off. The most effective natural tooth
               whitening method that also removes the bacteria responsible for
               bad breath and decay.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>1 tsp food-grade activated charcoal</li>
-              <li>Ground clove</li>
-              <li class="blurred">
-                Coconut oil, mint, and the application method that doesn&rsquo;t
-                damage enamel.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1602,19 +1392,10 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Fresh Breath Salt Rinse</h3>
-            <span class="l-sub">Salt Water &amp; Mint</span>
             <p class="l-teaser">
               Bad breath comes from the gut, not just the mouth. This rinse
               addresses both &mdash; in under two minutes, twice a day.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>1 tsp sea salt or Himalayan salt</li>
-              <li>Fresh mint leaves, bruised</li>
-              <li class="blurred">
-                Warm water and the one addition that makes it antibacterial.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1624,6 +1405,7 @@
       </div>
     </div>
 
+    <!-- 7 REST dark -->
     <div class="cat-section dark" id="rest">
       <div class="cat-inner">
         <div class="cat-head">
@@ -1645,7 +1427,6 @@
               The day asks everything of us. This tea asks nothing. It simply
               holds the space between what has been and what will come.
             </p>
-            <span class="r-lbl">Ingredients</span>
             <ul class="r-ings">
               <li>2 tsp dried chamomile flowers (or 1 tea bag)</li>
               <li>4&ndash;5 fresh peppermint leaves (or &frac12; tsp dried)</li>
@@ -1678,21 +1459,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Sleep &amp; Dream Tea</h3>
-            <span class="l-sub">Chamomile &amp; Lavender</span>
             <p class="l-teaser">
               For when you fall asleep easily but wake up unrestored. This tea
               targets the depth of sleep &mdash; so you wake up as if you
               actually rested.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>1 tsp dried chamomile flowers</li>
-              <li>1 tsp dried lavender buds</li>
-              <li class="blurred">
-                The ratio, the steep time, and the before-bed ritual that
-                completes the effect.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1700,21 +1471,11 @@
           </div>
           <div class="l-card">
             <h3 class="l-name">Detox Mineral Bath</h3>
-            <span class="l-sub">Epsom Salt &amp; Baking Soda</span>
             <p class="l-teaser">
               The body absorbs magnesium through the skin &mdash; and most
               people are severely deficient. One bath, once a week. The sleep
               improvement alone is worth it.
             </p>
-            <span class="r-lbl">Ingredients</span>
-            <ul class="l-ings-preview">
-              <li>2 cups Epsom salt</li>
-              <li>1 cup baking soda</li>
-              <li class="blurred">
-                The optional additions and the soaking duration that delivers
-                the full mineral effect.
-              </li>
-            </ul>
             <div class="l-locked-bar">
               <span class="l-lock-icon">&#128274;</span
               ><span class="l-lock-text">Full recipe in the collection</span>
@@ -1724,6 +1485,7 @@
       </div>
     </div>
 
+    <!-- PLAN sand/light — never stacks with dark footer -->
     <div class="plan-section" id="plan">
       <div class="plan-inner">
         <span class="plan-eyebrow">The full protocol</span>
@@ -1813,6 +1575,7 @@
       })();
     </script>
 
+    <!-- Loading bar + Service Worker -->
     <style>
       #ian-loader {
         position: fixed;
