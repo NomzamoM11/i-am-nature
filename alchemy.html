@@ -2,26 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>About &#8212; I AM NATURE</title>
+    <title>Alchemy of Nature — Healing Recipes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon-32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon-16.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond..."
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
     <style>
       :root {
         --forest: #1b3022;
@@ -447,7 +435,7 @@
         color: var(--umber);
       }
       .r-ings li::before {
-        content: "&#10022; ";
+        content: "\2726  ";
         color: var(--moss);
         font-size: 0.55rem;
       }
@@ -588,7 +576,7 @@
         color: var(--umber);
       }
       .l-ings-preview li::before {
-        content: "&#10022; ";
+        content: "\2726  ";
         color: var(--moss);
         font-size: 0.55rem;
       }
@@ -678,7 +666,7 @@
         line-height: 1.58;
       }
       .plan-feats li::before {
-        content: "&#10022;";
+        content: "\2726 ";
         position: absolute;
         left: 0;
         color: var(--moss);
@@ -819,15 +807,83 @@
           animation: softPulse 3s infinite ease-in-out;
         }
       }
+
+      /* HAMBURGER */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+        z-index: 200;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #d7c091;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+      @media (max-width: 700px) {
+        nav {
+          padding: 15px 20px !important;
+          position: relative;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .nav-links {
+          display: none !important;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #1b3022;
+          flex-direction: column !important;
+          gap: 0 !important;
+          padding: 0;
+          border-top: 1px solid rgba(215, 192, 145, 0.15);
+          z-index: 150;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links.open {
+          display: flex !important;
+        }
+        .nav-links li {
+          border-bottom: 1px solid rgba(215, 192, 145, 0.08);
+        }
+        .nav-links a {
+          display: block;
+          padding: 16px 24px !important;
+          font-size: 0.85rem !important;
+          letter-spacing: 2px !important;
+        }
+      }
     </style>
   </head>
   <body>
     <nav>
-      <a href="index.html" class="nav-logo">I AM NATURE</a>
+      <a href="index.html" class="nav-brand">
+        <span class="nav-site">I AM NATURE</span>
+        <span class="nav-sub">Alchemy of Nature</span>
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Botanicals</a></li>
         <li><a href="journal.html">Journal</a></li>
         <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <button class="hamburger" aria-label="Menu">
@@ -1728,11 +1784,13 @@
       <p class="f-tag">Rooted in truth. Guided by experience.</p>
       <div class="f-links">
         <a href="index.html">Botanicals</a>
+        <a href="alchemy.html">Alchemy of Nature</a>
         <a href="journal.html">Journal</a>
+        <a href="shop.html">Shop</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="policies.html">Policies</a>
-        <a href="#" class="back-to-top">Back to Top ↑</a>
+        <a href="#">Back to Top &uarr;</a>
       </div>
       <hr class="f-hr" />
       <p class="f-copy">
@@ -1749,6 +1807,107 @@
         exp.classList.toggle("open", !open);
         btn.textContent = open ? "How to make it \u2193" : "Close \u2191";
       }
+    </script>
+
+    <script>
+      (function () {
+        var btn = document.querySelector(".hamburger");
+        var menu = document.querySelector(".nav-links");
+        if (btn && menu) {
+          btn.addEventListener("click", function () {
+            btn.classList.toggle("open");
+            menu.classList.toggle("open");
+          });
+          document.addEventListener("click", function (e) {
+            if (!btn.contains(e.target) && !menu.contains(e.target)) {
+              btn.classList.remove("open");
+              menu.classList.remove("open");
+            }
+          });
+        }
+      })();
+    </script>
+
+    <!-- Loading bar + Service Worker -->
+    <style>
+      #ian-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, #849b84, #d7c091);
+        z-index: 9999;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition:
+          transform 0.25s ease,
+          opacity 0.4s ease;
+        opacity: 0;
+        pointer-events: none;
+        will-change: transform, opacity;
+      }
+      #ian-loader.active {
+        opacity: 1;
+      }
+    </style>
+    <div id="ian-loader"></div>
+    <script>
+      (function () {
+        var loader = document.getElementById("ian-loader");
+        var timer,
+          progress = 0;
+        function startLoader() {
+          if (!loader) return;
+          progress = 0;
+          loader.style.transform = "scaleX(0)";
+          loader.classList.add("active");
+          timer = setInterval(function () {
+            if (progress < 0.85) {
+              progress += (0.85 - progress) * 0.08;
+              loader.style.transform = "scaleX(" + progress + ")";
+            }
+          }, 80);
+        }
+        function finishLoader() {
+          if (!loader) return;
+          clearInterval(timer);
+          loader.style.transform = "scaleX(1)";
+          setTimeout(function () {
+            loader.classList.remove("active");
+            loader.style.transform = "scaleX(0)";
+          }, 400);
+        }
+        var slowTimer = setTimeout(function () {
+          if (document.readyState !== "complete") startLoader();
+        }, 300);
+        window.addEventListener("load", function () {
+          clearTimeout(slowTimer);
+          if (loader && loader.classList.contains("active")) finishLoader();
+        });
+        document.addEventListener("click", function (e) {
+          var a = e.target.closest("a");
+          if (!a) return;
+          var href = a.getAttribute("href");
+          if (!href) return;
+          if (
+            href.startsWith("#") ||
+            href.startsWith("mailto:") ||
+            href.startsWith("tel:") ||
+            href.startsWith("https://") ||
+            href.startsWith("http://")
+          )
+            return;
+          startLoader();
+        });
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker.register("/sw.js").catch(function (err) {
+              console.log("SW registration failed:", err);
+            });
+          });
+        }
+      })();
     </script>
   </body>
 </html>
