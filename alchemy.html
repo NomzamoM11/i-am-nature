@@ -19,7 +19,6 @@
         --umber: #3e2b1e;
         --gold: #d7c091;
         --sand: #e5d9b6;
-        --ivory-bright: #fffefb; /* Added for crisper text contrast on dark backgrounds */
       }
       *,
       *::before,
@@ -44,11 +43,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 24px 60px; /* Enhanced vertical/horizontal padding for better breathing room */
+        padding: 18px 50px;
         position: sticky;
         top: 0;
         z-index: 100;
-        border-bottom: 1px solid rgba(215, 192, 145, 0.08); /* Crisp separator line */
       }
       .nav-brand {
         text-decoration: none;
@@ -58,7 +56,7 @@
       }
       .nav-site {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 18px;
+        font-size: 17px;
         letter-spacing: 8px;
         text-transform: uppercase;
         color: var(--parchment);
@@ -71,15 +69,14 @@
       }
       .nav-links {
         display: flex;
-        gap: 36px; /* Slightly increased gap for wider layout tracking alignment */
+        gap: 30px;
         list-style: none;
-        align-items: center; /* Ensures absolute horizontal grid alignment with the logo */
       }
       .nav-links a {
         color: var(--gold);
         text-decoration: none;
-        font-size: 14px; /* Slightly refined text scale */
-        letter-spacing: 3px; /* Increased tracking for high-end elegance */
+        font-size: 15px;
+        letter-spacing: 2px;
         text-transform: uppercase;
         transition: color 0.3s;
       }
@@ -87,204 +84,122 @@
         color: var(--parchment);
       }
 
-      /* HERO — forest background, elegant logo mark centred */
+      /* HERO — forest background, textured & layered with vector rings */
       .hero-section {
         background-color: var(--forest);
-        min-height: calc(100vh - 80px); /* Adjusts for the sticky navigation space */
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         position: relative;
         overflow: hidden;
-        padding: 100px 20px 120px;
+        padding: 80px 20px;
+
+        /* Custom Micro-Texture Layer */
+        background-image:
+          radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 0),
+          radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 0);
+        background-size: 14px 14px;
+        background-position:
+          0 0,
+          7px 7px;
       }
-      
-      /* 1. Enhanced Radial Vignette for Central Focus */
       .hero-section::before {
         content: "";
         position: absolute;
         inset: 0;
         background: radial-gradient(
-          circle at 50% 45%,
-          rgba(132, 155, 132, 0.15) 0%, /* Softly pools lighter moss-green behind logo mark */
-          rgba(27, 48, 34, 0.4) 50%,
-          rgba(15, 26, 19, 0.9) 100% /* Deepens into a rich vignette toward outer screen edges */
+          ellipse at 50% 50%,
+          rgba(215, 192, 145, 0.06) 0%,
+          transparent 70%
         );
         pointer-events: none;
         z-index: 1;
       }
-      
-      /* 1. Premium Organic Textured Overlay */
-      .hero-section::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3联%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        opacity: 0.04; /* Exceedingly fine premium paper grain */
-        pointer-events: none;
-        z-index: 2;
-      }
 
-      /* 1. Layered Faint Botanical Silhouettes */
-      .botanical-silhouette-left {
+      /* Concentric Vector Background Rings */
+      .background-rings {
         position: absolute;
-        left: -5%;
-        bottom: -5%;
-        width: 35vw;
-        max-width: 450px;
-        opacity: 0.06;
-        pointer-events: none;
-        z-index: 1;
-        transform: rotate(15deg);
-        filter: blur(2px);
-      }
-      .botanical-silhouette-right {
-        position: absolute;
-        right: -5%;
-        top: -5%;
-        width: 30vw;
-        max-width: 400px;
-        opacity: 0.05;
-        pointer-events: none;
-        z-index: 1;
-        transform: rotate(-45deg) scaleY(-1);
-        filter: blur(3px);
-      }
-
-      /* Decorative rings */
-      .hero-ring {
-        position: absolute;
-        width: clamp(320px, 55vw, 620px);
-        height: clamp(320px, 55vw, 620px);
-        border-radius: 50%;
-        border: 1px solid rgba(215, 192, 145, 0.12);
-        top: 45%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 1;
-      }
-      .hero-ring-2 {
-        position: absolute;
-        width: clamp(240px, 42vw, 480px);
-        height: clamp(240px, 42vw, 480px);
+        width: 550px;
+        height: 550px;
         border-radius: 50%;
-        border: 1px solid rgba(215, 192, 145, 0.07);
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        pointer-events: none;
         z-index: 1;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        box-shadow:
+          0 0 0 60px rgba(255, 255, 255, 0.015),
+          0 0 0 140px rgba(255, 255, 255, 0.01),
+          0 0 0 240px rgba(255, 255, 255, 0.005);
       }
-      
+
       .hero-content {
         position: relative;
-        z-index: 5; /* Confirms logo markup floats safely above backgrounds & silhouettes */
+        z-index: 5;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 0;
-        animation: fadeUp 1s cubic-bezier(0.25, 1, 0.5, 1) both;
+        animation: fadeUp 1s ease both;
       }
-      
-      /* 2. Crisp Image Contrast Filter */
+
       .hero-logo-mark {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        margin-bottom: 45px;
-        filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.35)) drop-shadow(0 0 1px rgba(215, 192, 145, 0.2)); 
-        /* Drops an exquisite protective shadow layer and subtle edge glow directly to the PNG contours */
+        margin-bottom: 60px;
       }
 
       .hero-logo-mark img {
-        max-width: 420px; /* Uniform optimal sizing balancing scale footprint */
+        max-width: 500px;
         width: 100%;
         height: auto;
         display: block;
       }
 
-      /* 2. Crisp, Balanced Typography Overhaul */
       .hero-tagline {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(22px, 2.8vw, 28px); /* Gently shifted upward for immediate readability */
-        font-weight: 400; /* Added slight structural presence */
+        font-size: clamp(18px, 2.5vw, 26px);
+        font-weight: 300;
         font-style: italic;
-        color: var(--ivory-bright); /* Replaced with bright ivory tone to perfectly break dark screen muddying */
-        line-height: 1.5;
-        margin-bottom: 18px;
-        max-width: 580px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        color: var(--gold);
+        line-height: 1.55;
+        margin-bottom: 14px;
+        max-width: 520px;
       }
       .hero-desc {
-        color: var(--gold); /* Swapped to clean gold with light layout opacity control below */
-        opacity: 0.85; 
+        color: rgba(215, 192, 145, 0.65);
         font-style: italic;
-        font-size: 1.05rem;
-        letter-spacing: 0.5px; /* Added minor breathing track */
-        margin-bottom: 44px;
-        max-width: 480px;
-        line-height: 1.75;
+        font-size: 0.98rem;
+        margin-bottom: 34px;
+        max-width: 440px;
+        line-height: 1.7;
       }
       .cta-button {
         display: inline-block;
-        padding: 16px 48px;
+        padding: 14px 44px;
         background-color: var(--moss);
         color: var(--parchment);
         text-decoration: none;
         border-radius: 50px;
-        font-size: 14px;
+        font-size: 15px;
         letter-spacing: 2.5px;
         text-transform: uppercase;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: all 0.35s ease;
         font-family: "EB Garamond", Georgia, serif;
         border: none;
         cursor: pointer;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
       }
       .cta-button:hover {
         background-color: var(--parchment);
         color: var(--forest);
-        transform: translateY(-4px);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
-      }
-
-      /* 3. Elegant, Minimalist Animated Scroll Indicator */
-      .scroll-indicator {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        color: var(--gold);
-        opacity: 0.45;
-        font-size: 11px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        z-index: 5;
-        pointer-events: none;
-        animation: pulseFade 3s infinite ease-in-out;
-      }
-      .scroll-line {
-        width: 1px;
-        height: 40px;
-        background: linear-gradient(to bottom, var(--gold), transparent);
-        position: relative;
-        overflow: hidden;
-      }
-      .scroll-line::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--parchment);
-        animation: scrollDrop 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
       }
 
       /* CATEGORY NAV */
@@ -596,7 +511,7 @@
       }
       .dark .l-card {
         background: rgba(252, 249, 240, 0.04);
-        border: 1px solid rgba(215, 192, 145, 0.1;
+        border: 1px solid rgba(215, 192, 145, 0.1);
       }
       .light .l-card {
         background: var(--sand);
@@ -684,7 +599,7 @@
         opacity: 0.75;
       }
 
-      /* PLAN SECTION — sand/light so it never stacks dark on dark */
+      /* PLAN SECTION */
       .plan-section {
         background-color: var(--sand);
         padding: 70px 20px 80px;
@@ -834,26 +749,86 @@
         margin-top: 4px;
       }
 
-      /* KEYFRAMES FOR ADDED ANIMATIONS */
       @keyframes fadeUp {
         from {
           opacity: 0;
-          transform: translateY(24px);
+          transform: translateY(18px);
         }
         to {
           opacity: 1;
           transform: translateY(0);
         }
       }
-      @keyframes scrollDrop {
-        0% { transform: translateY(-100%); }
-        70%, 100% { transform: translateY(100%); }
-      }
-      @keyframes pulseFade {
-        0%, 100% { opacity: 0.35; }
-        50% { opacity: 0.7; }
+      @media (max-width: 680px) {
+        nav {
+          padding: 15px 20px;
+        }
+        .nav-links {
+          gap: 14px;
+        }
+        .cat-nav {
+          gap: 8px;
+          padding: 20px 14px;
+        }
+        .cat-btn {
+          font-size: 0.74rem;
+          padding: 7px 14px;
+        }
+        .cat-section {
+          padding: 48px 16px 40px;
+        }
+        .r-card,
+        .l-card {
+          padding: 22px 18px;
+        }
+        .hero-section {
+          padding: 60px 20px;
+        }
+        @keyframes softPulse {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-5px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        .cta-button {
+          animation: softPulse 3s infinite ease-in-out;
+        }
       }
 
+      /* HAMBURGER */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+        z-index: 200;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #d7c091;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
       @media (max-width: 700px) {
         nav {
           padding: 15px 20px !important;
@@ -888,41 +863,6 @@
           font-size: 0.85rem !important;
           letter-spacing: 2px !important;
         }
-        .hero-section {
-          padding: 80px 20px 100px;
-        }
-        .botanical-silhouette-left, .botanical-silhouette-right {
-          display: none; /* Keep layouts simple and high contrast on tight mobile displays */
-        }
-      }
-
-      /* HAMBURGER */
-      .hamburger {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 4px;
-        z-index: 200;
-      }
-      .hamburger span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background-color: #d7c091;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-      }
-      .hamburger.open span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-      }
-      .hamburger.open span:nth-child(2) {
-        opacity: 0;
-      }
-      .hamburger.open span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
       }
     </style>
   </head>
@@ -946,19 +886,8 @@
 
     <header>
       <section class="hero-section">
-        <svg class="botanical-silhouette-left" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10,90 Q30,60 20,20 Q40,50 50,90" stroke="#849b84" stroke-width="0.5"/>
-          <path d="M5,95 Q40,70 65,30 Q60,65 35,95" stroke="#849b84" stroke-width="0.5"/>
-          <path d="M25,100 Q55,55 80,10 Q70,60 45,100" stroke="#849b84" stroke-width="0.5"/>
-        </svg>
-        <svg class="botanical-silhouette-right" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10,90 Q30,60 20,20 Q40,50 50,90" stroke="#849b84" stroke-width="0.5"/>
-          <path d="M5,95 Q40,70 65,30 Q60,65 35,95" stroke="#849b84" stroke-width="0.5"/>
-        </svg>
+        <div class="background-rings"></div>
 
-        <div class="hero-ring"></div>
-        <div class="hero-ring-2"></div>
-        
         <div class="hero-content">
           <div class="hero-logo-mark">
             <img
@@ -975,11 +904,6 @@
             30-day reset plan for those who want the full journey.
           </p>
           <a href="#cleanse" class="cta-button">Explore the Recipes &darr;</a>
-        </div>
-
-        <div class="scroll-indicator">
-          <span>Scroll</span>
-          <div class="scroll-line"></div>
         </div>
       </section>
     </header>
