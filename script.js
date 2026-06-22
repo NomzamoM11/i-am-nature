@@ -180,18 +180,99 @@ function displayPlants(plantList, resetPage) {
   }
 }
 
-// ── Filter ───────────────────────────────────────────────────────────────────
+// ── Recipe cross-sell (search results) ───────────────────────────────────────
+
+function getRecipeSearchText(recipe) {
+  return [
+    recipe.name,
+    recipe.sub,
+    recipe.teaser,
+    recipe.category,
+    ...(Array.isArray(recipe.keywords) ? recipe.keywords : []),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+}
+
+function renderRecipeCrossSell(term, plantMatchCount) {
+  const wrap = document.getElementById("recipeCrossSell");
+  if (!wrap) return;
+
+  if (!term) {
+    wrap.innerHTML = "";
+    return;
+  }
+
+  const matches =
+    typeof recipes !== "undefined"
+      ? recipes.filter((r) => getRecipeSearchText(r).includes(term))
+      : [];
+
+  if (matches.length === 0) {
+    wrap.innerHTML = "";
+    return;
+  }
+
+  const cardsHTML = matches
+    .slice(0, 4)
+    .map((r) => {
+      const statusHTML = r.free
+        ? `<span class="rc-status">&#10003; Free recipe &mdash; view ingredients</span>`
+        : `<span class="rc-status">&#128274; Full recipe in the collection</span>`;
+      const subHTML = r.sub
+        ? `<p style="font-style:normal; font-size:0.8rem; color:#8a5a44; margin-bottom:4px;">${r.sub}</p>`
+        : "";
+      return `
+        <div class="rc-card">
+          <h4>${r.name}</h4>
+          ${subHTML}
+          <p>${r.teaser}</p>
+          ${statusHTML}
+        </div>`;
+    })
+    .join("");
+
+  const noteHTML =
+    plantMatchCount === 0
+      ? `<p class="rc-note">No matches in the free Botanical Library for &ldquo;${term}&rdquo; &mdash; but it appears in recipes below.</p>`
+      : "";
+
+  wrap.innerHTML = `
+    ${noteHTML}
+    <div class="recipe-crosssell">
+      <span class="rc-eyebrow">&#10022; Recipes for this, from Alchemy of Nature</span>
+      ${cardsHTML}
+      <a href="alchemy.html${matches[0].anchor || ""}" class="rc-link-btn">See ${matches.length > 1 ? "these" : "it"} on Alchemy of Nature &rarr;</a>
+    </div>`;
+}
+
+// ── Filter (now also drives the recipe cross-sell) ────────────────────────────
 
 function filterPlants() {
   hideOriginStory();
-  const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+  const searchTerm = document
+    .getElementById("searchInput")
+    .value.toLowerCase()
+    .trim();
   const selectedType = document.getElementById("typeFilter").value;
   const selectedCategory = document.getElementById("categoryFilter").value;
 
   const filtered = plants.filter((plant) => {
+    const searchableText = [
+      plant.name,
+      plant.heritageName,
+      plant.description,
+      plant.category,
+      plant.tips,
+      ...(Array.isArray(plant.physical) ? plant.physical : []),
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+
     const matchesSearch =
-      plant.name.toLowerCase().includes(searchTerm) ||
-      plant.heritageName.toLowerCase().includes(searchTerm);
+      searchTerm === "" || searchableText.includes(searchTerm);
     const matchesType = selectedType === "All" || plant.type === selectedType;
     const plantCat = (plant.category || plant.benefit || "").toLowerCase();
     const matchesCategory =
@@ -200,6 +281,7 @@ function filterPlants() {
     return matchesSearch && matchesType && matchesCategory;
   });
 
+  renderRecipeCrossSell(searchTerm, filtered.length);
   displayPlants(filtered, true);
 }
 
@@ -210,6 +292,7 @@ function resetFilters() {
   document.getElementById("typeFilter").value = "All";
   document.getElementById("categoryFilter").value = "All";
   hideOriginStory();
+  renderRecipeCrossSell("", plants.length);
   displayPlants(plants, true);
 }
 
@@ -268,9 +351,11 @@ if (document.getElementById("searchBtn"))
 
 // Also allow pressing Enter in the search box
 if (document.getElementById("searchInput"))
-  document.getElementById("searchInput").addEventListener("keydown", function (e) {
-    if (e.key === "Enter") filterPlants();
-  });
+  document
+    .getElementById("searchInput")
+    .addEventListener("keydown", function (e) {
+      if (e.key === "Enter") filterPlants();
+    });
 
 // ── Modal close logic ────────────────────────────────────────────────────────
 

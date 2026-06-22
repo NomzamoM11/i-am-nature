@@ -2414,3 +2414,330 @@ const plants = [
     ],
   },
 ];
+
+const recipes = [
+  {
+    id: 1,
+    name: "The Morning Reset",
+    sub: "Fennel Seed & Fenugreek Brew",
+    category: "Cleanse & Detox",
+    anchor: "#cleanse",
+    free: true,
+    teaser:
+      "The tea that began everything. Drunk slowly before the world asks anything of you.",
+    keywords: ["fennel", "fenugreek", "digestion", "morning ritual"],
+  },
+  {
+    id: 2,
+    name: "Blood Awakening Cleanser",
+    category: "Cleanse & Detox",
+    anchor: "#cleanse",
+    free: false,
+    teaser:
+      "Your blood has been carrying more than it should. This is how you lighten the load.",
+    keywords: [
+      "beetroot",
+      "carrot",
+      "apple",
+      "ginger",
+      "lemon",
+      "blood",
+      "iron",
+      "anaemia",
+    ],
+  },
+  {
+    id: 3,
+    name: "Deep Liver Cleanse Tea",
+    category: "Cleanse & Detox",
+    anchor: "#cleanse",
+    free: false,
+    teaser:
+      "The liver holds everything we haven't processed yet. This tea is how you ask it to let go.",
+    keywords: ["lemon", "ginger", "turmeric", "liver"],
+  },
+  {
+    id: 4,
+    name: "Gut Reset Drink",
+    category: "Cleanse & Detox",
+    anchor: "#cleanse",
+    free: false,
+    teaser:
+      "Three ingredients. Three minutes to make. The one thing most people skip that would change how their entire digestive system functions.",
+    keywords: ["apple cider vinegar", "honey", "gut", "digestion"],
+  },
+  {
+    id: 5,
+    name: "Living Water Elixir",
+    category: "Cleanse & Detox",
+    anchor: "#cleanse",
+    free: false,
+    teaser:
+      "This is the water Nomzamo drank every single day for three months. It hydrates differently, at a cellular level, not just a surface one.",
+    keywords: ["cucumber", "lemon", "chia seeds", "salt", "hydration"],
+  },
+  {
+    id: 6,
+    name: "The Blood Builder",
+    sub: "Iron & Energy Smoothie",
+    category: "Energy & Mind",
+    anchor: "#energy",
+    free: true,
+    teaser:
+      "For the days your body is asking for more, not less. Rich in plant iron and minerals that rebuild what depletion has taken.",
+    keywords: [
+      "beetroot",
+      "banana",
+      "dates",
+      "spinach",
+      "cinnamon",
+      "iron",
+      "energy",
+      "anaemia",
+    ],
+  },
+  {
+    id: 7,
+    name: "Brain Boost Tonic",
+    category: "Energy & Mind",
+    anchor: "#energy",
+    free: false,
+    teaser:
+      "Used for centuries across India and Africa for mental clarity. If your thoughts feel scattered and your memory feels slow, this is where you start.",
+    keywords: ["gotu kola", "ginger", "lemon", "brain", "memory", "focus"],
+  },
+  {
+    id: 8,
+    name: "Stress & Cortisol Drink",
+    category: "Energy & Mind",
+    anchor: "#energy",
+    free: false,
+    teaser:
+      "Your nervous system is not broken. It is overwhelmed. This drink talks it down from the ledge, every single evening.",
+    keywords: ["milk", "honey", "cinnamon", "stress", "cortisol", "anxiety"],
+  },
+  {
+    id: 9,
+    name: "Anti-Inflammatory Tonic",
+    category: "Energy & Mind",
+    anchor: "#energy",
+    free: false,
+    teaser:
+      "Chronic inflammation is silent. It lives underneath fatigue, joint pain, brain fog, and skin flares. This tonic addresses it at the root.",
+    keywords: ["turmeric", "black pepper", "inflammation", "joint pain"],
+  },
+  {
+    id: 10,
+    name: "Immune Defence Shot",
+    category: "Immunity & Healing",
+    anchor: "#immune",
+    free: false,
+    teaser:
+      "One shot at the very first sign of illness. The people who keep this in their fridge don't get sick the way they used to.",
+    keywords: ["ginger", "lemon", "honey", "garlic", "immune", "cold", "flu"],
+  },
+  {
+    id: 11,
+    name: "Golden Immune Tea",
+    category: "Immunity & Healing",
+    anchor: "#immune",
+    free: false,
+    teaser:
+      "The daily ritual that shifts the body from reactive to resilient. Not a remedy for when you're sick, a practice for not getting there.",
+    keywords: ["ginger", "turmeric", "lemon", "immune"],
+  },
+  {
+    id: 12,
+    name: "Hormone Balance Smoothie",
+    category: "Immunity & Healing",
+    anchor: "#immune",
+    free: false,
+    teaser:
+      "Hormonal imbalance shows up as mood, weight, hair, skin, and sleep. This smoothie speaks to all of it, from the inside.",
+    keywords: ["banana", "flax seeds", "cinnamon", "hormone", "mood"],
+  },
+  {
+    id: 13,
+    name: "Hydration Infusion",
+    category: "Immunity & Healing",
+    anchor: "#immune",
+    free: false,
+    teaser:
+      "Most people are chronically dehydrated and don't know it. This isn't flavoured water, it's structured hydration your cells can actually use.",
+    keywords: ["cucumber", "lemon", "mint", "hydration"],
+  },
+  {
+    id: 14,
+    name: "Acne Clearing Smoothie",
+    category: "Skin",
+    anchor: "#skin",
+    free: false,
+    teaser:
+      "Acne is not a skin problem. It's an internal signal. This smoothie addresses what your skin is actually trying to say.",
+    keywords: ["pineapple", "ginger", "mint", "lemon", "acne", "skin"],
+  },
+  {
+    id: 15,
+    name: "Turmeric Brightening Mask",
+    category: "Skin",
+    anchor: "#skin",
+    free: false,
+    teaser:
+      "Used across India and West Africa for generations. Three ingredients. Ten minutes. The glow people keep asking you about.",
+    keywords: ["turmeric", "honey", "yogurt", "skin", "brightening"],
+  },
+  {
+    id: 16,
+    name: "Sun Glow Body Oil",
+    category: "Skin",
+    anchor: "#skin",
+    free: false,
+    teaser:
+      "The oil you make once and use for months. Skin that looks like it has been somewhere warm, even in winter.",
+    keywords: ["orange peel", "coconut oil", "olive oil", "skin", "glow"],
+  },
+  {
+    id: 17,
+    name: "Aloe Vera & Honey Skin Mask",
+    category: "Skin",
+    anchor: "#skin",
+    free: false,
+    teaser:
+      "Two ingredients from your garden and your kitchen. Together, they do what most expensive serums spend years trying to do.",
+    keywords: ["aloe vera", "honey", "skin"],
+  },
+  {
+    id: 18,
+    name: "Frankincense Healing Oil",
+    category: "Skin",
+    anchor: "#skin",
+    free: false,
+    teaser:
+      "One of the most ancient healing preparations on earth. Scars, stretch marks, uneven tone, this oil has been used on all of it for thousands of years.",
+    keywords: [
+      "frankincense",
+      "almond oil",
+      "coconut oil",
+      "castor oil",
+      "scars",
+      "stretch marks",
+    ],
+  },
+  {
+    id: 19,
+    name: "Onion Hair Growth Rinse",
+    category: "Hair",
+    anchor: "#hair",
+    free: false,
+    teaser:
+      "The remedy that went viral for a reason. Clinically confirmed to stimulate dormant follicles. The smell fades. The regrowth stays.",
+    keywords: ["onion", "hair growth", "follicles"],
+  },
+  {
+    id: 20,
+    name: "Castor & Coconut Hair Oil",
+    category: "Hair",
+    anchor: "#hair",
+    free: false,
+    teaser:
+      "The simplest, most effective traditional hair oil there is. Not complicated. Not expensive. Just consistent, and the results speak for themselves.",
+    keywords: ["castor oil", "coconut oil", "hair"],
+  },
+  {
+    id: 21,
+    name: "ACV Hair Shine Rinse",
+    category: "Hair",
+    anchor: "#hair",
+    free: false,
+    teaser:
+      "One rinse. Every wash day. The difference in shine, softness, and frizz reduction is immediate, and cumulative over time.",
+    keywords: ["apple cider vinegar", "hair shine", "frizz"],
+  },
+  {
+    id: 22,
+    name: "Green Detox Smoothie",
+    category: "Gut & Digestion",
+    anchor: "#gut",
+    free: false,
+    teaser:
+      "Everything your gut has been asking for, in one glass. Alkalising, anti-inflammatory, and genuinely delicious when made correctly.",
+    keywords: ["spinach", "cucumber", "apple", "ginger", "gut", "alkalising"],
+  },
+  {
+    id: 23,
+    name: "Bloating Relief Tea",
+    category: "Gut & Digestion",
+    anchor: "#gut",
+    free: false,
+    teaser:
+      "Bloating is your gut asking for help. This tea answers quickly, relief within 20 minutes for most people who drink it correctly.",
+    keywords: ["ginger", "mint", "lemon", "bloating"],
+  },
+  {
+    id: 24,
+    name: "Oil Pulling Protocol",
+    category: "Gut & Digestion",
+    anchor: "#gut",
+    free: false,
+    teaser:
+      "An ancient Ayurvedic practice that removes bacteria from the mouth and supports the gut. One tablespoon. Twenty minutes. Every morning.",
+    keywords: ["coconut oil", "oil pulling", "teeth", "gums"],
+  },
+  {
+    id: 25,
+    name: "Charcoal Tooth Cleanser",
+    category: "Gut & Digestion",
+    anchor: "#gut",
+    free: false,
+    teaser:
+      "Black goes on. White comes off. The most effective natural tooth whitening method that also removes the bacteria responsible for bad breath and decay.",
+    keywords: [
+      "activated charcoal",
+      "clove",
+      "coconut oil",
+      "mint",
+      "teeth whitening",
+    ],
+  },
+  {
+    id: 26,
+    name: "Fresh Breath Salt Rinse",
+    category: "Gut & Digestion",
+    anchor: "#gut",
+    free: false,
+    teaser:
+      "Bad breath comes from the gut, not just the mouth. This rinse addresses both, in under two minutes, twice a day.",
+    keywords: ["salt", "mint", "bad breath"],
+  },
+  {
+    id: 27,
+    name: "The Evening Surrender",
+    sub: "Chamomile, Mint & Honey Tea",
+    category: "Rest & Nervous System",
+    anchor: "#rest",
+    free: true,
+    teaser:
+      "The day asks everything of us. This tea asks nothing. It simply holds the space between what has been and what will come.",
+    keywords: ["chamomile", "peppermint", "honey", "sleep"],
+  },
+  {
+    id: 28,
+    name: "Sleep & Dream Tea",
+    category: "Rest & Nervous System",
+    anchor: "#rest",
+    free: false,
+    teaser:
+      "For when you fall asleep easily but wake up unrestored. This tea targets the depth of sleep, so you wake up as if you actually rested.",
+    keywords: ["chamomile", "lavender", "sleep", "dreams"],
+  },
+  {
+    id: 29,
+    name: "Detox Mineral Bath",
+    category: "Rest & Nervous System",
+    anchor: "#rest",
+    free: false,
+    teaser:
+      "The body absorbs magnesium through the skin, and most people are severely deficient. One bath, once a week. The sleep improvement alone is worth it.",
+    keywords: ["epsom salt", "baking soda", "magnesium", "bath", "sleep"],
+  },
+];
