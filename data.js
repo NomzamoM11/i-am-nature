@@ -394,9 +394,9 @@ const plants = [
   {
     id: 10,
     name: "Pawpaw (Papaya)",
-    heritageName: "Uphopho",
+    heritageName: "Upopo",
     zuluNote:
-      "'Uphopho' is the widely accepted Zulu name for pawpaw/papaya, used across KZN in both everyday and traditional healing contexts.",
+      "'Upopo' is the widely accepted Zulu name for pawpaw/papaya, used across KZN in both everyday and traditional healing contexts.",
     scientific: "Carica papaya",
     type: "Trees",
     category: "Digestive",
@@ -405,7 +405,7 @@ const plants = [
       "Common in home gardens across KwaZulu-Natal; loves full sun and warm, moist soil",
     image: "images/pawpaw.webp",
     description:
-      "Uphopho is the 'Digestive Tree.' Every part of this plant holds medicine — the fruit softens and digests, the seeds expel parasites, and the leaves support liver health. It is one of the most complete healing trees in the KZN garden.",
+      "Upopo is the 'Digestive Tree.' Every part of this plant holds medicine — the fruit softens and digests, the seeds expel parasites, and the leaves support liver health. It is one of the most complete healing trees in the KZN garden.",
     physical: [
       "Digestive Enzyme Support: The fruit contains papain, a powerful enzyme that breaks down proteins and aids digestion after meals.",
       "Antiparasitic (Seeds): Pawpaw seeds contain benzyl isothiocyanate and papain — compounds with documented antihelminthic activity. A clinical study found air-dried seeds mixed with honey cleared intestinal parasites in 76.7% of children treated.",
@@ -671,7 +671,7 @@ const plants = [
   {
     id: 16,
     name: "Asthma Plant/ Weed",
-    heritageName: "Isisushlungu",
+    heritageName: "uMziwa / uMziwaziwa or Do As I Say",
     zuluNote:
       "Official isiZulu name used in KZN ethnobotanical records for Euphorbia hirta — meaning 'that which relieves pain and opens the chest.' Also known among traditional practitioners by its commanding spiritual name — see rituals below.",
     scientific: "Euphorbia hirta",
@@ -681,7 +681,7 @@ const plants = [
     habitat: "Often found as a 'weed' in lawns or between paving stones",
     image: "images/asthma-plant.webp",
     description:
-      "Isisushlungu is a specialised respiratory ally. It is a primary remedy for opening the bronchial tubes during distress. Approach with respect — this plant is powerful and must always be used in small, controlled amounts.",
+      "uMziwa is a specialised respiratory ally. It is a primary remedy for opening the bronchial tubes during distress. Approach with respect — this plant is powerful and must always be used in small, controlled amounts.",
     physical: [
       "Bronchial Relaxant: Relaxes the smooth muscles of the lungs to ease breathing.",
       "Cough Relief: Helps expel stubborn mucus from the chest.",
@@ -1136,17 +1136,17 @@ const plants = [
   {
     id: 27,
     name: "Cranberry",
-    heritageName: "Ikrenberi",
+    heritageName: "i-Cranberry",
     scientific: "Vaccinium macrocarpon",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'Ikranberi' (from 'cranberry'). A North American fruit with no indigenous Zulu equivalent.",
+      "No pre-colonial isiZulu name — Zululised as 'i-Cranberry' (from 'cranberry'). A North American fruit with no indigenous Zulu equivalent.",
     type: "tree/Fruits",
     category: "Immune",
     origin: "North America",
     habitat: "Peat bogs and acidic, sandy soils",
     image: "images/cranberry.webp",
     description:
-      "Ikreberi is the 'Filter Protector.' It is a sharp, tart fruit that prevents unwanted bacteria from clinging to the body's internal walls.",
+      "i-Cranberry is the 'Filter Protector.' It is a sharp, tart fruit that prevents unwanted bacteria from clinging to the body's internal walls.",
     physical: [
       "Urinary Health: Prevents bacteria from sticking to the bladder lining.",
       "Anti-Adhesion: Protects the stomach and mouth from harmful bacterial growth.",
@@ -1967,9 +1967,9 @@ const plants = [
   {
     id: 46,
     name: "Devil's Claw",
-    heritageName: "Uzzipho lukadeveli",
+    heritageName: "Uzipho luka-develi",
     zuluNote:
-      "Descriptive isiZulu name — 'Uzzipho lukadeveli' is a direct translation of 'Devil's Claw.' No pre-colonial Zulu name is widely documented as this is primarily a Kalahari plant.",
+      "Descriptive isiZulu name — 'Uzipho luka-develi' is a direct translation of 'Devil's Claw.' No pre-colonial Zulu name is widely documented as this is primarily a Kalahari plant.",
     scientific: "Harpagophytum procumbens",
     type: "Herbs",
     category: "Immune",
@@ -1977,7 +1977,7 @@ const plants = [
     habitat: "Sandy, arid soils of the Kalahari and Namib regions",
     image: "images/devils-claw.webp",
     description:
-      "Uzzipho lukadeveli is the 'Desert Warrior.' Named for its fierce, hook-covered fruit, this root from the Kalahari is one of Africa's most powerful natural pain relievers.",
+      "Uzipho luka-develi is the 'Desert Warrior.' Named for its fierce, hook-covered fruit, this root from the Kalahari is one of Africa's most powerful natural pain relievers.",
     physical: [
       "Joint Pain Relief: Contains harpagoside, a compound clinically shown to reduce arthritis and back pain.",
       "Anti-Inflammatory: Comparable to some pharmaceutical anti-inflammatories without the side effects.",
