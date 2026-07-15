@@ -3,7 +3,7 @@ const plants = [
   {
     id: 1,
     name: "Castor Oil Plant",
-    heritageName: "uMhlakuva",
+    heritageName: "Umhlakuva",
     zuluNote:
       "Official isiZulu name, documented in South African ethnobotanical records (KZN traditional medicine).",
     scientific: "Ricinus communis",
@@ -13,12 +13,11 @@ const plants = [
     habitat: "Disturbed soils, roadsides, and sunny backyards",
     image: "images/castor-plant.webp",
     description:
-      "uMhlakuva is a natural stimulant laxative that supports bowel movement and elimination. Traditionally, it is also used as a ‘detoxifying’ oil, believed to draw out impurities from the body both internally and through the skin.",
+      "Umhlakuva is a natural stimulant laxative that supports bowel movement and elimination. Traditionally, it is also used as a ‘detoxifying’ oil, believed to draw out impurities from the body both internally and through the skin.",
     physical: [
       "Colon Cleanse: Stimulates intestinal contractions to support waste elimination.",
       "Toxin Extraction (Traditional): Massaged into the skin to draw out impurities.",
       "Hair & Scalp Vitality: Rich in ricinoleic acid, castor oil deeply moisturises and conditions the scalp, improves hair lustre, and reduces breakage. Note: castor oil improves scalp moisture and hair condition — it has not been clinically proven to stimulate new hair growth on its own.",
-      "Joint & Muscle Relief (Topical): Ricinoleic acid has documented anti-inflammatory effects when massaged onto sore joints and muscles, distinct from the unproven internal 'liver detox' belief.",
     ],
     preparation: [
       "The Internal Cleanse: For adults, a small dose of castor oil is used occasionally. Do not use continuously for more than 3–7 days.",
@@ -28,7 +27,7 @@ const plants = [
       "⚠ Overuse may cause dehydration, cramping, and dependency.",
       "⛔ CRITICAL: Only the processed oil is safe. Raw seeds contain RICIN — a highly toxic compound that can be lethal. Never consume or handle crushed seeds.",
     ],
-    tips: "Spiritual Wisdom: Just as uMhlakuva draws out physical toxins, it helps us release emotional weight. It acts as a protective shield for your energy.",
+    tips: "Spiritual Wisdom: Just as Umhlakuva draws out physical toxins, it helps us release emotional weight. It acts as a protective shield for your energy.",
     rituals: [
       {
         name: "The Purification Bath",
@@ -51,9 +50,9 @@ const plants = [
   {
     id: 2,
     name: "Fennel plant",
-    heritageName: "iMboziso",
+    heritageName: "Imboziso",
     zuluNote:
-      "Official isiZulu name. 'iMboziso' is documented in South African herbal literature — meaning 'that which clears the path of sight.'",
+      "Official isiZulu name. 'Imboziso' is documented in South African herbal literature — meaning 'that which clears the path of sight.'",
     scientific: "Foeniculum vulgare",
     type: "Herbs",
     category: "Digestive & Vision",
@@ -61,7 +60,7 @@ const plants = [
     habitat: "Dry soils near riverbanks; easily grown in home gardens",
     image: "images/fennel.webp",
     description:
-      "iMboziso is a gentle digestive herb known for easing bloating and discomfort. Traditionally, it is also associated with clarity of vision — both physical and intuitive.",
+      "Imboziso is a gentle digestive herb known for easing bloating and discomfort. Traditionally, it is also associated with clarity of vision — both physical and intuitive.",
     physical: [
       "Digestive Calm: Relaxes the gastrointestinal tract and reduces bloating.",
       "Gas Relief: Helps relieve flatulence and stomach discomfort.",
@@ -96,7 +95,7 @@ const plants = [
   {
     id: 3,
     name: "African Wormwood",
-    heritageName: "uMhlonyane",
+    heritageName: "Umhlonyane",
     zuluNote:
       "Official isiZulu name, confirmed by SANBI and widely used across KZN traditional medicine. One of the most sacred indigenous herbs in the Zulu healing tradition.",
     scientific: "Artemisia afra",
@@ -106,27 +105,29 @@ const plants = [
     habitat: "Damp areas, forest edges, and rocky hillsides",
     image: "images/wormwood.webp",
     description:
-      "uMhlonyane is a powerful bitter herb traditionally used to support respiratory health and reduce fever. It is widely respected in African healing systems.",
+      "Umhlonyane is a powerful bitter herb traditionally used to support respiratory health and reduce fever. It is widely respected in African healing systems.",
     physical: [
       "Respiratory Support: Used for coughs, colds, and bronchial discomfort.",
       "Fever Support: Helps the body regulate temperature during illness.",
       "Topical Anti-inflammatory: Crushed fresh leaves applied as a warm poultice to swollen joints, muscle pain, and skin inflammation — a traditional KZN practice.",
       "Natural Insect Repellent: The strong aromatic oils repel mosquitoes and other insects when the plant is crushed or burned nearby.",
-      "Digestive Bitter: Traditionally taken before meals to stimulate appetite and ease dyspepsia, part of the same bitter-tonic tradition found across African and European herbalism.",
     ],
     preparation: [
-      "The Infusion: Steep fresh leaves in boiling water for 5 minutes.",
+      "The Infusion: Steep fresh leaves in boiling water for 5 minutes. Add a spoon of honey and a slice of lemon to soften the bitterness.",
+      "The Flu Bomb: Add grated ginger and a slice of lemon to the water while it boils; a stronger blend for the days it hits hardest.",
+      "The Steam Inhalation: Boil the leaves, remove from the heat, and breathe in the steam with a towel draped over your head. A drop of eucalyptus or peppermint oil helps clear a blocked nose.",
       "The Topical Poultice: Crush fresh leaves and apply warm directly to aching joints or inflamed skin. Cover with a cloth. Leave for 20–30 minutes.",
       "⚠ Duration Limit: Do not use continuously for more than 7–10 days. The plant contains thujone, which can cause headaches and neurological effects at high doses. Maximum recommended: 3g dried herb per day.",
       "⚠ Safety: Avoid during pregnancy.",
+      "⚠ Best taken after a meal rather than on an empty stomach. If you live with seizures, epilepsy, or liver concerns, speak with a doctor before use.",
       "⚠ For children, use very weak infusions only and consult a traditional healer or healthcare provider.",
     ],
-    tips: "Spiritual Wisdom: uMhlonyane clears the path between the heart and the voice.",
+    tips: "Spiritual Wisdom: Umhlonyane clears the path between the heart and the voice.",
     rituals: [
       {
         name: "The Ancestral Steam",
         method:
-          "Boil a large pot of uMhlonyane and allow the steam to fill the room. Sit within the steam, breathing slowly. This is a traditional cleansing used before important ceremonies, before consulting a traditional healer, or when the spirit feels heavy or burdened.",
+          "Boil a large pot of Umhlonyane and allow the steam to fill the room. Sit within the steam, breathing slowly. This is a traditional cleansing used before important ceremonies, before consulting a traditional healer, or when the spirit feels heavy or burdened.",
       },
       {
         name: "The Threshold Wash",
@@ -136,7 +137,7 @@ const plants = [
       {
         name: "The Voice Opening",
         method:
-          "Drink a weak uMhlonyane infusion before speaking your truth in a difficult situation. The plant is known to clear the path between the heart and the throat — helping you say what is true without fear.",
+          "Drink a weak Umhlonyane infusion before speaking your truth in a difficult situation. The plant is known to clear the path between the heart and the throat — helping you say what is true without fear.",
       },
     ],
   },
@@ -144,7 +145,7 @@ const plants = [
   {
     id: 4,
     name: "Avocado Tree",
-    heritageName: "Isihlahla sikaKwatapheya",
+    heritageName: "Isihlahla sika kwatapheya",
     zuluNote:
       "No pre-colonial isiZulu name — Zululised as 'Ukwatapheya' (from 'avocado pear'). Widely understood in KZN.",
     scientific: "Persea americana",
@@ -158,14 +159,14 @@ const plants = [
     physical: [
       "Heart Health: Healthy monounsaturated fats support cardiovascular function.",
       "Nutrient Support: Rich in potassium, fiber, and vitamins.",
-      "Blood Pressure Support (Leaf): Multiple human studies in hypertensive patients found avocado leaf tea lowers blood pressure, a well-documented traditional use across Africa and Latin America.",
+      "Traditional Leaf Use: Sometimes used in teas for general wellness (limited scientific evidence).",
     ],
     preparation: [
       "Fruit Consumption: Eat fresh as part of a balanced diet.",
       "Leaf Infusion (Traditional): Boil dried leaves for 10 minutes; use occasionally.",
       "The Hot Oil Scalp Treatment: Warm 2 tablespoons of avocado oil and massage into the scalp and hair lengths. Cover with a warm towel and leave for 30–45 minutes before washing. Avocado oil is rich in oleic acid and penetrates the hair shaft — one of the few oils that genuinely conditions from within.",
       "The Deep Conditioning Mask: Mash half a ripe avocado and apply to damp hair from roots to ends. Leave for 20–30 minutes and rinse thoroughly. The natural oils and vitamins nourish dry, brittle, or damaged hair.",
-      "⚠ Safety: If you take blood pressure medication, monitor closely, combined effects may lower blood pressure too much.",
+      "⚠ Safety: Internal use of leaves and seeds is not well supported scientifically — use cautiously.",
       "⚠ Some parts of the plant may be toxic to animals — keep away from pets.",
     ],
     tips: "Spiritual Wisdom: Avocado teaches us about 'soft strength'—a soft heart protected by a strong boundary.",
@@ -240,7 +241,6 @@ const plants = [
       "Nutrient Powerhouse: High in Vitamin C, potassium, calcium, and iron.",
       "Energy Support: Naturally supports energy levels.",
       "Anti-inflammatory: Contains compounds that reduce inflammation.",
-      "Blood Sugar Support: Human clinical trials show Moringa leaf can help lower blood sugar in people with type 2 diabetes, alongside its long traditional use for this purpose across Africa and India.",
     ],
     preparation: [
       "Powdered Leaves: Add 1 tsp to porridge, smoothies, or tea.",
@@ -250,7 +250,6 @@ const plants = [
       "⚠ Safety: Only leaves are recommended for regular use.",
       "⚠ Roots and bark may be toxic and should not be consumed.",
       "⚠ May lower blood pressure — use caution if already managing low blood pressure or taking antihypertensive medication.",
-      "⚠ May also lower blood sugar; monitor closely and consult your healthcare provider if you take diabetes medication.",
     ],
     tips: "Spiritual Wisdom: Moringa is a symbol of 'Resilience'—flourishing even in difficult conditions.",
     rituals: [
@@ -269,9 +268,9 @@ const plants = [
   {
     id: 7,
     name: "Roselle/ Hibiscus Flower",
-    heritageName: "iHibhiskasi",
+    heritageName: "Ihibhiskasi",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'iHibhiskasi'. The healing variety (Roselle) was introduced through trade.",
+      "No pre-colonial isiZulu name — Zululised as 'Ihibhiskasi'. The healing variety (Roselle) was introduced through trade.",
     scientific: "Hibiscus sabdariffa",
     type: "Plants/Flowers",
     category: "Immune & Cardiovascular",
@@ -284,8 +283,6 @@ const plants = [
       "Blood Pressure Support: Clinically shown to help reduce high blood pressure — multiple randomised controlled trials confirm systolic blood pressure reduction.",
       "Cooling Effect: Helps reduce body heat and fever.",
       "Antioxidant Rich: Protects cells from oxidative stress.",
-      "Cholesterol Support: A meta-analysis of 26 clinical trials found hibiscus tea reduces total cholesterol and LDL ('bad' cholesterol) while raising HDL ('good' cholesterol), with modest improvements in blood sugar too.",
-      "Kidney Stone Prevention: Long used traditionally to help prevent kidney and bladder stones; research is still early but supports this folk use.",
     ],
     preparation: [
       "Cold Brew: Steep dried calyces in cold water for 6 hours.",
@@ -312,7 +309,7 @@ const plants = [
   {
     id: 8,
     name: "Snake Plant",
-    heritageName: "isiKholokotho",
+    heritageName: "Isikholokotho",
     zuluNote: "Official isiZulu name, confirmed by SANBI.",
     scientific: "Sansevieria hyacinthoides",
     type: "Plants/Flowers",
@@ -321,7 +318,7 @@ const plants = [
     habitat: "Dry, rocky areas and coastal thickets",
     image: "images/snake-plant.webp",
     description:
-      "isiKholokotho is a resilient indoor plant known for improving air quality and creating a calm, protected environment.",
+      "Isikholokotho is a resilient indoor plant known for improving air quality and creating a calm, protected environment.",
     physical: [
       "Air Quality Support: Helps filter some indoor air pollutants — contributes to a fresher sleep environment, though the effect in a typical room is modest.",
       "Oxygen Production: Continues minimal CO2-to-oxygen conversion at night — one of few plants to do so, making it a thoughtful bedroom companion.",
@@ -333,12 +330,12 @@ const plants = [
       "⚠ Internal or medicinal use is not scientifically supported.",
       "⚠ Sap may cause mild skin irritation — wash hands after handling.",
     ],
-    tips: "Spiritual Wisdom: Just as its leaves stand firm, isiKholokotho teaches us to maintain strong boundaries and protect our inner peace.",
+    tips: "Spiritual Wisdom: Just as its leaves stand firm, Isikholokotho teaches us to maintain strong boundaries and protect our inner peace.",
     rituals: [
       {
         name: "The Guardian at the Gate",
         method:
-          "Place isiKholokotho at the entrance of your home — just inside or just outside the front door. Its upright, sword-like leaves are traditionally understood to stand guard, absorbing and deflecting negative energy before it can enter the living space.",
+          "Place Isikholokotho at the entrance of your home — just inside or just outside the front door. Its upright, sword-like leaves are traditionally understood to stand guard, absorbing and deflecting negative energy before it can enter the living space.",
       },
       {
         name: "The Bedroom Protector",
@@ -400,9 +397,9 @@ const plants = [
   {
     id: 10,
     name: "Pawpaw (Papaya)",
-    heritageName: "uPopo",
+    heritageName: "Upopo",
     zuluNote:
-      "'uPopo' is the widely accepted Zulu name for pawpaw/papaya, used across KZN in both everyday and traditional healing contexts.",
+      "'Upopo' is the widely accepted Zulu name for pawpaw/papaya, used across KZN in both everyday and traditional healing contexts.",
     scientific: "Carica papaya",
     type: "Trees",
     category: "Digestive",
@@ -411,7 +408,7 @@ const plants = [
       "Common in home gardens across KwaZulu-Natal; loves full sun and warm, moist soil",
     image: "images/pawpaw.webp",
     description:
-      "uPopo is the 'Digestive Tree.' Every part of this plant holds medicine — the fruit softens and digests, the seeds expel parasites, and the leaves support liver health. It is one of the most complete healing trees in the KZN garden.",
+      "Upopo is the 'Digestive Tree.' Every part of this plant holds medicine — the fruit softens and digests, the seeds expel parasites, and the leaves support liver health. It is one of the most complete healing trees in the KZN garden.",
     physical: [
       "Digestive Enzyme Support: The fruit contains papain, a powerful enzyme that breaks down proteins and aids digestion after meals.",
       "Antiparasitic (Seeds): Pawpaw seeds contain benzyl isothiocyanate and papain — compounds with documented antihelminthic activity. A clinical study found air-dried seeds mixed with honey cleared intestinal parasites in 76.7% of children treated.",
@@ -453,9 +450,9 @@ const plants = [
   {
     id: 11,
     name: "Cinnamon",
-    heritageName: "isiNamoni",
+    heritageName: "Isinamoni",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'isiNamoni' (from 'cinnamon'). Widely understood across KZN as a loanword.",
+      "No pre-colonial isiZulu name — Zululised as 'Isinamoni' (from 'cinnamon'). Widely understood across KZN as a loanword.",
     scientific: "Cinnamomum verum",
     type: "Bark/Spice",
     category: "Digestive",
@@ -463,12 +460,11 @@ const plants = [
     habitat: "Tropical forests; harvested from the inner bark of trees",
     image: "images/cinnamon.webp",
     description:
-      "isiNamoni is a warming spice that supports circulation and metabolic function. For medicinal use, always choose Ceylon cinnamon (Cinnamomum verum) — most commercially available cinnamon is Cassia, which contains higher coumarin levels that can be harmful to the liver in large daily amounts.",
+      "Isinamoni is a warming spice that supports circulation and metabolic function. For medicinal use, always choose Ceylon cinnamon (Cinnamomum verum) — most commercially available cinnamon is Cassia, which contains higher coumarin levels that can be harmful to the liver in large daily amounts.",
     physical: [
       "Blood Sugar Support: Helps improve insulin sensitivity — evidence is strongest for Ceylon cinnamon in multiple clinical trials.",
       "Circulation: Promotes warmth and blood flow.",
       "Antimicrobial: Cinnamaldehyde helps reduce bacteria in the mouth and gut.",
-      "Cholesterol Support: Multiple meta-analyses show cinnamon can lower triglycerides and LDL ('bad') cholesterol, particularly in people with type 2 diabetes, though results are mixed across studies.",
     ],
     preparation: [
       "Morning Brew: Add ½ teaspoon Ceylon cinnamon to warm water with honey.",
@@ -505,7 +501,7 @@ const plants = [
   {
     id: 12,
     name: "Flax Seeds",
-    heritageName: "ama-Flax Seeds",
+    heritageName: "ama Flax seeds",
     zuluNote:
       "No pre-colonial isiZulu name — described as 'Imbewu Lefilakisi'.",
     scientific: "Linum usitatissimum",
@@ -594,7 +590,7 @@ const plants = [
   {
     id: 14,
     name: "Cayenne Pepper/ Rooipeper",
-    heritageName: "uPelepele",
+    heritageName: "Upelepele",
     zuluNote: "Official isiZulu name widely used across KZN.",
     scientific: "Capsicum annuum",
     type: "Spices",
@@ -603,12 +599,11 @@ const plants = [
     habitat: "Full sun, well-drained soil",
     image: "images/cayenne-pepper.webp",
     description:
-      "uPelepele is a powerful circulatory stimulant that activates blood flow and metabolism.",
+      "Upelepele is a powerful circulatory stimulant that activates blood flow and metabolism.",
     physical: [
       "Circulation Boost: Improves blood flow.",
       "Pain Relief: Capsaicin reduces pain signals.",
       "Metabolic Activation: Increases thermogenesis.",
-      "Cardiovascular Support: A clinical trial found daily capsaicin raised HDL ('good' cholesterol) and lowered triglycerides and inflammation markers linked to heart disease.",
     ],
     preparation: [
       "Tonic: Use a very small pinch in warm water with lemon.",
@@ -640,7 +635,7 @@ const plants = [
   {
     id: 15,
     name: "Mango Tree/ Leaves",
-    heritageName: "Amahlamvu kaMango",
+    heritageName: "Amahlamvu kamango",
     zuluNote: "Descriptive isiZulu phrase meaning 'leaves of the mango tree'.",
     scientific: "Mangifera indica",
     type: "Trees",
@@ -708,7 +703,7 @@ const plants = [
       {
         name: "⚑ The 'Do As I Say' Working",
         method:
-          "Among certain South African traditional healers, this plant carries the name 'Do As I Say' — reflecting its reputation as a plant of command and spoken authority. This is a working for those who need their voice to be final: in a meeting, in a courtroom, in a moment where your word must land with weight. Perform this at first light; rise in silence and speak to no one before you reach the plant, the silence itself is part of the working. Before you need to use your voice, go to the plant barefoot — bare feet on the earth, standing with intention. Place alligator pepper in your mouth. Speak your command aloud to the plant — name what you want to happen, what outcome you are calling in. Then pluck and chew seven leaves of the plant slowly. Do not drink or eat anything immediately afterward — let the medicine settle with your words. The plant does not grant empty wishes. It amplifies the authority of a clear, focused, and purposeful intention.",
+          "Among certain South African traditional healers, this plant carries the name 'Do As I Say' — reflecting its reputation as a plant of command and spoken authority. This is a working for those who need their voice to be final: in a meeting, in a courtroom, in a moment where your word must land with weight. Before you need to use your voice, go to the plant barefoot — bare feet on the earth, standing with intention. Place alligator pepper in your mouth. Speak your command aloud to the plant — name what you want to happen, what outcome you are calling in. Then pluck and chew seven leaves of the plant slowly. Do not drink or eat anything immediately afterward — let the medicine settle with your words. The plant does not grant empty wishes. It amplifies the authority of a clear, focused, and purposeful intention.",
       },
       {
         name: "The Breath Reclamation",
@@ -721,7 +716,7 @@ const plants = [
   {
     id: 17,
     name: "Sweet Potato Leaves",
-    heritageName: "Amakhasi kaBhatata",
+    heritageName: "Amakhasi kabhatata",
     zuluNote: "Descriptive phrase meaning 'leaves of sweet potato'.",
     scientific: "Ipomoea batatas",
     type: "Vegetables",
@@ -735,13 +730,11 @@ const plants = [
       "Immune Support: High in vitamins A, C, and K.",
       "Eye Health: Contains lutein.",
       "Anti-inflammatory: Supports overall wellness.",
-      "Blood Sugar Support: Studied in both animal and human trials for lowering blood glucose and improving cholesterol levels, a traditional use across parts of Africa and Asia.",
     ],
     preparation: [
       "Cooking: Lightly sauté or steam — do not overcook to preserve vitamins.",
       "Topical Poultice: Crush fresh leaves and apply to minor skin irritation or insect bites for soothing relief.",
       "The Antioxidant Face Mask: Steam a small handful of sweet potato leaves until soft. Mash and allow to cool. Apply to the face for 15 minutes and rinse with cool water. The high Vitamin A and anthocyanin content supports skin renewal and helps even skin tone — a simple, effective treat from the garden.",
-      "⚠ If you take medication for diabetes, monitor your blood sugar closely with regular use.",
     ],
     tips: "Spiritual Wisdom: Represents grounding and community.",
     rituals: [
@@ -812,7 +805,6 @@ const plants = [
     physical: [
       "Anti-inflammatory: Supports joint and body health — documented in multiple studies.",
       "Calming: May help reduce stress and support sleep.",
-      "Blood Pressure Support: Studies, including one in hypertensive patients, show soursop leaf tea can help lower blood pressure, consistent with its traditional calming use.",
       "Research Interest: Contains acetogenins currently being studied in laboratory research for their effects on abnormal cells. This is NOT a cancer treatment — there is no approved clinical evidence that soursop leaves treat or prevent cancer in humans. Do not use as a substitute for medical cancer treatment.",
     ],
     preparation: [
@@ -820,7 +812,6 @@ const plants = [
       "⚠ Safety: Not a replacement for medical treatment under any circumstances.",
       "⛔ NEUROTOXICITY WARNING: Chronic, long-term heavy consumption of soursop is linked to atypical Parkinson's disease in populations where it is consumed daily. The acetogenins (particularly annonacin) are neurotoxic with prolonged use. Use occasionally — not as a daily staple. Seeds are toxic and must never be consumed.",
       "⚠ Avoid continuous daily use for extended periods.",
-      "⚠ If you take blood pressure medication, monitor closely, combined effects may lower blood pressure too much.",
     ],
     tips: "Spiritual Wisdom: Soursop teaches discernment.",
     rituals: [
@@ -839,9 +830,9 @@ const plants = [
   {
     id: 20,
     name: "Banana Tree",
-    heritageName: "uBhanana",
+    heritageName: "Ubhanana",
     zuluNote:
-      "Official isiZulu name. 'uBhanana' is the widely accepted Zulu word for the banana tree, used across KZN. The leaves are also known as 'Amahlamvu kaBhanana' — each part of this tree holds its own medicine.",
+      "Official isiZulu name. 'Ubhanana' is the widely accepted Zulu word for the banana tree, used across KZN. The leaves are also known as 'Amahlamvu kaBhanana' — each part of this tree holds its own medicine.",
     scientific: "Musa acuminata",
     type: "Trees",
     category: "Digestive",
@@ -849,7 +840,7 @@ const plants = [
     habitat: "Moist, tropical regions; common in KZN gardens",
     image: "images/banana-tree.webp",
     description:
-      "uBhanana is the 'Cooling Protector.' Every part gives something: the fruit nourishes and restores, the leaves soothe and shelter, the flower rebuilds the blood. Nothing is wasted. Nothing is withheld.",
+      "Ubhanana is the 'Cooling Protector.' Every part gives something: the fruit nourishes and restores, the leaves soothe and shelter, the flower rebuilds the blood. Nothing is wasted. Nothing is withheld.",
     physical: [
       "Gut Coating & Antacid: The ripe fruit acts as a natural antacid, neutralising excess stomach acid and soothing heartburn.",
       "Digestive Regularity: High fibre content in the pulp prevents constipation and supports healthy bowel function.",
@@ -889,9 +880,9 @@ const plants = [
   {
     id: 21,
     name: "Mugwort",
-    heritageName: "uMhlonyane-omncane",
+    heritageName: "Umhlonyane-omncane",
     zuluNote:
-      "No separate pre-colonial isiZulu name — grouped with Artemisia afra under 'uMhlonyane.' Referred to as 'uMhlonyane-omncane' meaning the smaller or lesser uMhlonyane, distinguishing it from the indigenous African Wormwood.",
+      "No separate pre-colonial isiZulu name — grouped with Artemisia afra under 'Umhlonyane.' Referred to as 'Umhlonyane-omncane' meaning the smaller or lesser Umhlonyane, distinguishing it from the indigenous African Wormwood.",
     scientific: "Artemisia vulgaris",
     type: "Herbs",
     category: "Spiritual",
@@ -899,7 +890,7 @@ const plants = [
     habitat: "Commonly found in nitrogen-rich soils and waste places",
     image: "images/mugwort.webp",
     description:
-      "uMhlonyane-omncane is the 'Dreamer's Herb.' A close relative of African Wormwood, a traditional dream and digestive herb that influences the nervous system, menstrual cycle, and bile flow.",
+      "Umhlonyane-omncane is the 'Dreamer's Herb.' A close relative of African Wormwood, a traditional dream and digestive herb that influences the nervous system, menstrual cycle, and bile flow.",
     physical: [
       "Cycle Support: May stimulate delayed menstruation and ease cramps.",
       "Digestive Bitter: Supports bile production and fat digestion.",
@@ -934,9 +925,9 @@ const plants = [
   {
     id: 22,
     name: "Mullein Leaf",
-    heritageName: "iMulini",
+    heritageName: "Imulini",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'iMulini' (from 'mullein'). An introduced plant with no indigenous Zulu name.",
+      "No pre-colonial isiZulu name — Zululised as 'Imulini' (from 'mullein'). An introduced plant with no indigenous Zulu name.",
     scientific: "Verbascum thapsus",
     type: "Herbs",
     category: "Respiratory",
@@ -944,7 +935,7 @@ const plants = [
     habitat: "Sunny, disturbed soils and rocky roadsides",
     image: "images/mullein.webp",
     description:
-      "iMulini is the 'Soft Lung.' Its velvet-soft leaves mirror the soft tissues of our respiratory system, offering deep, moistening relief.",
+      "Imulini is the 'Soft Lung.' Its velvet-soft leaves mirror the soft tissues of our respiratory system, offering deep, moistening relief.",
     physical: [
       "Expectorant: Helps remove mucus from lungs.",
       "Soothing Effect: Calms irritated airways.",
@@ -978,7 +969,7 @@ const plants = [
   {
     id: 23,
     name: "Parsley",
-    heritageName: "i-Parsley",
+    heritageName: "Iparsley",
     zuluNote:
       "No pre-colonial isiZulu name — used by its English name 'parsley.' A Mediterranean herb introduced through colonial trade with no indigenous Zulu equivalent.",
     scientific: "Petroselinum crispum",
@@ -988,7 +979,7 @@ const plants = [
     habitat: "Cool, moist garden beds; thrives in partial sun",
     image: "images/parsley.webp",
     description:
-      "i-Parsley is the 'Internal Cleanser.' It is a mineral-rich herb that flushes the kidneys, and freshens the body internally.",
+      "Iparsley is the 'Internal Cleanser.' It is a mineral-rich herb that flushes the kidneys, and freshens the body internally.",
     physical: [
       "Kidney Flush: Acts as a natural diuretic to help the body release excess salt and water.",
       "Breath Freshener: High chlorophyll content neutralizes odors from the stomach.",
@@ -1023,9 +1014,9 @@ const plants = [
   {
     id: 24,
     name: "Aloe Vera",
-    heritageName: "iKhala",
+    heritageName: "Ikhala",
     zuluNote:
-      "Widely used isiZulu name. Important note: the native South African healing aloe is Aloe ferox, known as 'Inhlaba' in Zulu — the original indigenous healer with even more concentrated medicinal compounds. Aloe vera (the Arabian variety) is referred to as 'iKhala' in modern use across KZN. If you have access to Aloe ferox in your garden, its gel can be used in the same way.",
+      "Widely used isiZulu name. Important note: the native South African healing aloe is Aloe ferox, known as 'Inhlaba' in Zulu — the original indigenous healer with even more concentrated medicinal compounds. Aloe vera (the Arabian variety) is referred to as 'Ikhala' in modern use across KZN. If you have access to Aloe ferox in your garden, its gel can be used in the same way.",
     scientific: "Aloe vera",
     type: "Plants/Flowers",
     category: "Skin",
@@ -1033,21 +1024,19 @@ const plants = [
     habitat: "Dry, sandy soils; common in coastal and garden landscapes",
     image: "images/aloe.webp",
     description:
-      "iKhala is the 'First Aid Plant.' Its cooling gel is a direct gift from nature for soothing the heat of the skin and the gut.",
+      "Ikhala is the 'First Aid Plant.' Its cooling gel is a direct gift from nature for soothing the heat of the skin and the gut.",
     physical: [
       "Skin Repair: Instantly cools burns, stings, and rashes while speeding up cell regeneration.",
       "Digestive Liner: The juice helps soothe stomach ulcers and irritable bowels.",
       "Scalp Care: Relieves itching and dandruff when applied directly to the scalp.",
-      "Blood Sugar Support: Human trials show aloe vera gel can lower fasting blood sugar in type 2 diabetes, though research results are mixed and it should only ever complement, not replace, prescribed treatment.",
     ],
     preparation: [
       "The Gel: Slice a leaf open and apply the clear inner jelly directly to the skin.",
       "The Juice: Scrape 1 tsp of clear gel into a glass of water or juice.",
       "The Scalp & Hair Mask: Apply fresh aloe gel directly to the scalp and hair lengths. Leave for 30 minutes before washing. The natural enzymes reduce dandruff, the gel seals moisture into each strand, and the salicylic acid unclogs follicles. Add 2–3 drops of rosemary or peppermint essential oil for extra scalp stimulation.",
       "⛔ Avoid the yellow latex layer directly beneath the green skin — this is aloin, a powerful laxative and irritant. Use only the clear inner gel. Internal use of aloin or yellow sap is not safe.",
-      "⚠ If you take medication for diabetes, monitor your blood sugar closely if drinking aloe juice regularly.",
     ],
-    tips: "Spiritual Wisdom: iKhala represents 'Protection'—it guards our boundaries and heals our deepest wounds.",
+    tips: "Spiritual Wisdom: Ikhala represents 'Protection'—it guards our boundaries and heals our deepest wounds.",
     rituals: [
       {
         name: "The Wound Healing Intention",
@@ -1062,16 +1051,16 @@ const plants = [
       {
         name: "The Inner Fire Cooling",
         method:
-          "When anger, overwhelm, or grief is burning through you, apply cool aloe gel to the back of your neck, your temples, and the soles of your feet. Breathe slowly. This is not just physical — it is a deliberate act of cooling the internal fire before it causes damage. iKhala teaches that not all heat needs to be expressed; some must simply be soothed.",
+          "When anger, overwhelm, or grief is burning through you, apply cool aloe gel to the back of your neck, your temples, and the soles of your feet. Breathe slowly. This is not just physical — it is a deliberate act of cooling the internal fire before it causes damage. Ikhala teaches that not all heat needs to be expressed; some must simply be soothed.",
       },
     ],
   },
   {
     id: 25,
     name: "Milk Thistle",
-    heritageName: "i-Thistle",
+    heritageName: "Ithistle",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'i-Thistle' (from 'thistle'). Introduced plant from the Mediterranean with no indigenous Zulu equivalent.",
+      "No pre-colonial isiZulu name — Zululised as 'Ithistle' (from 'thistle'). Introduced plant from the Mediterranean with no indigenous Zulu equivalent.",
     scientific: "Silybum marianum",
     type: "Herbs",
     category: "Digestive",
@@ -1079,7 +1068,7 @@ const plants = [
     habitat: "Found in rocky soils and open fields",
     image: "images/milk-thistle.webp",
     description:
-      "i-Thistle is the 'Liver's Shield.' Its seeds contain silymarin, a powerful compound that protects and rebuilds the liver's cells.",
+      "Ithistle is the 'Liver's Shield.' Its seeds contain silymarin, a powerful compound that protects and rebuilds the liver's cells.",
     physical: [
       "Liver Support: Silymarin is one of the most clinically studied hepatoprotective compounds in herbal medicine — evidence supports liver cell protection, though human clinical evidence for liver disease treatment is mixed and more research is needed.",
       "Cholesterol Balance: Supports the body in managing healthy fat levels.",
@@ -1109,9 +1098,9 @@ const plants = [
   {
     id: 26,
     name: "Horsetail",
-    heritageName: "iShobalehashi",
+    heritageName: "Ishobalehashi",
     zuluNote:
-      "No pre-colonial isiZulu name — descriptively translated as 'iShobalehashi' meaning 'horse's tail' in Zulu. Confirmed in ethnopharmacological records as an adapted descriptive name.",
+      "No pre-colonial isiZulu name — descriptively translated as 'Ishobalehashi' meaning 'horse's tail' in Zulu. Confirmed in ethnopharmacological records as an adapted descriptive name.",
     scientific: "Equisetum arvense",
     type: "Herbs",
     category: "Skin",
@@ -1119,7 +1108,7 @@ const plants = [
     habitat: "Damp, marshy grounds and riverbanks",
     image: "images/horsetail.webp",
     description:
-      "iShobalehashi is an ancient plant rich in silica. It is the 'binder' of the body, strengthening the structures that hold us together.",
+      "Ishobalehashi is an ancient plant rich in silica. It is the 'binder' of the body, strengthening the structures that hold us together.",
     physical: [
       "Structural Strength: High silica content supports the growth of hair, nails, and bone density.",
       "Wound Healing: Applied topically to stop bleeding and speed up the repair of skin tissue.",
@@ -1133,7 +1122,7 @@ const plants = [
       "⚠ Avoid if you have kidney disease.",
       "⚠ Not recommended during pregnancy.",
     ],
-    tips: "Spiritual Wisdom: iShobalehashi helps us find our 'backbone,' giving us the structural integrity to carry our purpose.",
+    tips: "Spiritual Wisdom: Ishobalehashi helps us find our 'backbone,' giving us the structural integrity to carry our purpose.",
     rituals: [
       {
         name: "The Backbone Meditation",
@@ -1189,9 +1178,9 @@ const plants = [
   {
     id: 28,
     name: "Peppermint",
-    heritageName: "i-Peppermint",
+    heritageName: "Ipeppermint",
     zuluNote:
-      "No pre-colonial isiZulu name — used by its English name and Zululised as 'i-Peppermint.' A hybrid herb of European origin with no indigenous Zulu equivalent.",
+      "No pre-colonial isiZulu name — used by its English name and Zululised as 'Ipeppermint.' A hybrid herb of European origin with no indigenous Zulu equivalent.",
     scientific: "Mentha piperita",
     type: "Herbs",
     category: "Respiratory",
@@ -1199,7 +1188,7 @@ const plants = [
     habitat: "Moist, shaded garden beds; spreads quickly",
     image: "images/peppermint.webp",
     description:
-      "i-Peppermint is the 'Awakener.' Its high menthol content provides an immediate cooling sensation that opens the airways and settles the stomach.",
+      "Ipeppermint is the 'Awakener.' Its high menthol content provides an immediate cooling sensation that opens the airways and settles the stomach.",
     physical: [
       "Digestive Relief: Relaxes the muscles of the digestive tract to ease gas and IBS symptoms.",
       "Clear Breathing: Acts as a natural decongestant to break up mucus in the lungs, Use steam inhalation for congestion.",
@@ -1235,9 +1224,9 @@ const plants = [
   {
     id: 29,
     name: "Garlic",
-    heritageName: "uGalikhi",
+    heritageName: "Ugalikhi",
     zuluNote:
-      "Widely used phonetic adaptation in KZN. 'uGalikhi' is the standard Zulu adaptation of 'garlic.' No pre-colonial Zulu name exists as garlic is not indigenous to southern Africa.",
+      "Widely used phonetic adaptation in KZN. 'Ugalikhi' is the standard Zulu adaptation of 'garlic.' No pre-colonial Zulu name exists as garlic is not indigenous to southern Africa.",
     scientific: "Allium sativum",
     type: "Vegetables",
     category: "Immune",
@@ -1245,12 +1234,11 @@ const plants = [
     habitat: "Well-drained, sunny soil; grown from individual cloves",
     image: "images/garlic.webp",
     description:
-      "uGalikhi is the 'Earth’s Antibiotic.' It is a potent, pungent warrior that aggressively defends the blood against invaders. Also a powerful natural antimicrobial that supports the immune and cardiovascular systems",
+      "Ugalikhi is the 'Earth’s Antibiotic.' It is a potent, pungent warrior that aggressively defends the blood against invaders. Also a powerful natural antimicrobial that supports the immune and cardiovascular systems",
     physical: [
-      "Natural Defense: Contains allicin, which has strong antibacterial, antifungal, and antiviral properties.",
+      "Natural Defense: Contains allicin, which has strong antibacterial and antiviral properties.",
       "Heart Support: Helps lower high blood pressure and reduces 'bad' cholesterol.",
       "Blood Purifier: Cleanses the blood and improves circulation.",
-      "Blood Sugar Support: Traditionally used and studied for lowering blood sugar, most evidence comes from animal studies and smaller human trials, alongside its long history in treating diabetes.",
     ],
     preparation: [
       "The Raw Tonic: Crush one clove and let it sit for 10 mins (to activate allicin). Swallow with water or honey.",
@@ -1258,7 +1246,6 @@ const plants = [
       "The Scalp Treatment Oil: Crush 3–4 garlic cloves and infuse in 4 tablespoons of coconut oil for 30 minutes over low heat. Strain and cool. Massage into the scalp, leave for 30 minutes, then wash thoroughly. Garlic's antifungal and antibacterial compounds directly target dandruff-causing fungi and scalp infections. Traditional remedy across the Middle East, West Africa, and India for hair thinning and scalp health.",
       "⚠ Drug Interaction: Garlic has significant blood-thinning properties. People taking warfarin, aspirin, or other anticoagulants should use therapeutic amounts of garlic with caution and consult their healthcare provider.",
       "⚠ Do not apply undiluted raw garlic directly to skin — it can cause chemical burns.",
-      "⚠ If you take medication for diabetes, monitor your blood sugar closely with regular therapeutic use.",
     ],
     tips: "Spiritual Wisdom: Garlic represents 'Fearlessness'—it provides a strong energetic shield against negativity and illness.",
     rituals: [
@@ -1282,9 +1269,9 @@ const plants = [
   {
     id: 30,
     name: "Ginger",
-    heritageName: "uJinja",
+    heritageName: "Ujinja",
     zuluNote:
-      "Official isiZulu name. 'uJinja' is the widely accepted Zulu name for ginger, used across KZN in both everyday and traditional healing contexts.",
+      "Official isiZulu name. 'Ujinja' is the widely accepted Zulu name for ginger, used across KZN in both everyday and traditional healing contexts.",
     scientific: "Zingiber officinale",
     type: "Herbs/Roots",
     category: "Digestive",
@@ -1292,16 +1279,14 @@ const plants = [
     habitat: "Warm, humid climates with filtered sunlight",
     image: "images/ginger.webp",
     description:
-      "uJinja is the 'Warming Root.' It brings fire to the belly, moving energy and digestion promoting immune response.",
+      "Ujinja is the 'Warming Root.' It brings fire to the belly, moving energy and digestion promoting immune response.",
     physical: [
       "Nausea Relief: The primary remedy for morning sickness, motion sickness, and upset stomachs.",
       "Anti-Inflammatory: Reduces joint pain and muscle soreness.",
       "Circulatory Kick: Warms the body from the inside out to fight off the first signs of a cold.",
-      "Menstrual Pain Relief: Multiple clinical trials show ginger taken in the first days of the period reduces menstrual pain, performing comparably to common pain medication in some studies.",
     ],
     preparation: [
       "The Strong Brew: Slice 1 inch of fresh root and simmer in water for 10–15 mins. Add lemon and honey.",
-      "The Moon Cycle Tea: Drink a strong ginger tea 3–4 times daily for the first 3–4 days of the menstrual period to ease cramping.",
       "The Warm Compress: Grate ginger into a cloth soaked in warm water; apply to aching joints.",
       "The Warming Scalp Oil: Grate 1 tablespoon of fresh ginger and combine with 3 tablespoons of sesame or coconut oil. Warm gently, strain, and massage into the scalp. Leave for 20–30 minutes before washing. Ginger stimulates blood circulation to the scalp, activates sluggish follicles, and has antifungal properties that address dandruff. A traditional East African and Ayurvedic hair tonic.",
       "⚠ Drug Interaction: High therapeutic doses of ginger can have blood-thinning effects. People taking warfarin or blood-thinning medication should use with caution at medicinal doses — culinary amounts in cooking are generally fine.",
@@ -1328,9 +1313,9 @@ const plants = [
   {
     id: 31,
     name: "Neem Leaves",
-    heritageName: "uMsilinga",
+    heritageName: "Umsilinga",
     zuluNote:
-      "Official isiZulu name in KZN, widely used for the Neem tree. Important note: 'uMsilinga' is sometimes also applied to Moringa in the region — if both trees are growing in your garden, learn to identify each correctly before use.",
+      "Official isiZulu name in KZN, widely used for the Neem tree. Important note: 'Umsilinga' is sometimes also applied to Moringa in the region — if both trees are growing in your garden, learn to identify each correctly before use.",
     scientific: "Azadirachta indica",
     type: "Trees",
     category: "Skin",
@@ -1338,25 +1323,18 @@ const plants = [
     habitat: "Hot, dry areas; often planted for shade in coastal regions",
     image: "images/neem.webp",
     description:
-      "uMsilinga is the 'Village Pharmacy.' Its intensely bitter leaves are a primary tool for clearing the skin, treating scalp conditions, and purifying the blood.",
+      "Umsilinga is the 'Village Pharmacy.' Its intensely bitter leaves are a primary tool for clearing the skin, treating scalp conditions, and purifying the blood.",
     physical: [
       "Skin Purifier: Treats acne, eczema, and fungal infections with its antiseptic properties.",
       "Natural Insecticide: Repels lice, mites, and mosquitoes — azadirachtin is a documented natural insecticide.",
       "Blood Cleanser: Traditionally used to clear the body of internal heat and toxins.",
-      "Kidney & Urinary Support: In Ayurvedic tradition, neem's bitter, cooling nature is used to ease the urinary tract and support the kidneys in their daily work of filtering and releasing.",
-      "Blood Sugar Balance: Clinical research shows neem leaf extract can improve blood sugar control and insulin sensitivity, a use classified in Ayurveda as 'Prameha,' the traditional treatment of diabetes.",
-      "Oral & Gum Health: Neem's antibacterial compounds fight the bacteria behind plaque and gum disease. Chewing a neem twig as a natural toothbrush is a documented practice across Africa, India, and the Middle East, long before the modern toothbrush existed.",
     ],
     preparation: [
       "The Neem Wash: Boil a handful of leaves in 1 litre of water. Use the cooled water to wash the face or body.",
       "The Paste: Grind fresh leaves into a paste and apply directly to skin blemishes for 20 mins.",
       "The Anti-Dandruff Scalp Oil: Mix 10–15 drops of neem oil with 3 tablespoons of coconut oil (dilution is essential — neem oil alone is too strong). Massage into the scalp, leave for 30–60 minutes, then wash out with a gentle shampoo. Neem oil's antifungal and antibacterial properties directly target the Malassezia yeast that causes dandruff and seborrheic dermatitis. One of the most effective natural anti-dandruff treatments available.",
-      "The Blood & Kidney Tonic Tea: Steep 1 teaspoon of dried neem leaves in a cup of freshly boiled water for 5–10 minutes. Drink one cup daily for no more than 5–7 days at a time; this is a short internal cleanse, not a daily long-term tea. This same tea is the traditional preparation for supporting healthy blood sugar.",
-      "The Chewing Stick: Chew the end of a fresh neem twig until it softens into natural bristles, then use it to brush the teeth and gums. An ancestral practice for oral hygiene, still used today across Africa, India, and the Middle East.",
       "⚠ Neem oil must NEVER be ingested — for external use only. The processed leaf tea is used internally in traditional medicine, but neem oil is topical only.",
       "⚠ Avoid during pregnancy — neem is a traditional abortifacient at high doses.",
-      "⚠ Avoid the internal tea if you have existing kidney or liver disease; prolonged or excessive internal use has been linked to kidney and liver strain.",
-      "⚠ If you take medication for diabetes, monitor your blood sugar closely; combining neem with glucose-lowering medication may cause levels to drop too low.",
     ],
     tips: "Spiritual Wisdom: Neem represents 'Purity'—reminding us that even the most bitter experiences can be our greatest medicine.",
     rituals: [
@@ -1471,9 +1449,9 @@ const plants = [
   {
     id: 34,
     name: "Thyme",
-    heritageName: "iThayimi",
+    heritageName: "Ithayimi",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'iThayimi'. A Mediterranean herb introduced through European settlement. The name 'Thyme' derives from the Greek 'thymos' — meaning courage — and its Zululised form carries that energy forward.",
+      "No pre-colonial isiZulu name — Zululised as 'Ithayimi'. A Mediterranean herb introduced through European settlement. The name 'Thyme' derives from the Greek 'thymos' — meaning courage — and its Zululised form carries that energy forward.",
     scientific: "Thymus vulgaris",
     type: "Herbs",
     category: "Respiratory",
@@ -1481,7 +1459,7 @@ const plants = [
     habitat: "Dry, rocky soils in full sun; thrives in garden pots",
     image: "images/thyme.webp",
     description:
-      "iThayimi is the 'Lung Keeper.' A small but powerfully aromatic herb, it has been used for centuries to clear the chest and fight infection in the respiratory tract.",
+      "Ithayimi is the 'Lung Keeper.' A small but powerfully aromatic herb, it has been used for centuries to clear the chest and fight infection in the respiratory tract.",
     physical: [
       "Antimicrobial: Contains thymol, a natural compound that kills bacteria and fungi in the throat and lungs.",
       "Cough Relief: Relaxes the bronchial muscles to reduce the severity of dry or spasmodic coughs.",
@@ -1532,7 +1510,6 @@ const plants = [
       "Throat Healer: A gargle made from sage tea soothes sore throats and mouth ulcers.",
       "Hormonal Balance: Helps reduce hot flushes and night sweats associated with menopause.",
       "Memory Support: Inhibits the breakdown of acetylcholine in the brain, supporting sharper memory.",
-      "Blood Sugar Support: A human clinical trial in type 2 diabetes found sage tablets improved blood sugar and cholesterol over three months, backed by wider animal research.",
     ],
     preparation: [
       "The Gargle: Steep 4–5 leaves in hot water for 10 mins; cool slightly and use as a throat gargle.",
@@ -1564,9 +1541,9 @@ const plants = [
   {
     id: 36,
     name: "Basil",
-    heritageName: "iBhazili",
+    heritageName: "Ibhazili",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'iBhazili'. Originally from tropical Asia and Central Africa. Its African roots make this Zululisation a homecoming of sorts — the plant has always had African ancestry, even if the name arrived through trade.",
+      "No pre-colonial isiZulu name — Zululised as 'Ibhazili'. Originally from tropical Asia and Central Africa. Its African roots make this Zululisation a homecoming of sorts — the plant has always had African ancestry, even if the name arrived through trade.",
     scientific: "Ocimum basilicum",
     type: "Herbs",
     category: "Digestive",
@@ -1574,7 +1551,7 @@ const plants = [
     habitat: "Warm, sheltered spots in the garden or on a sunny windowsill",
     image: "images/basil.webp",
     description:
-      "iBhazili is the 'Sacred Leaf.' Known as the 'King of Herbs' in many traditions, it is both a digestive soother and a spiritual protector of the home.",
+      "Ibhazili is the 'Sacred Leaf.' Known as the 'King of Herbs' in many traditions, it is both a digestive soother and a spiritual protector of the home.",
     physical: [
       "Digestive Ease: Reduces gas, bloating, and stomach cramps after meals.",
       "Anti-Inflammatory: Contains eugenol, which reduces inflammation in the gut and joints.",
@@ -1609,9 +1586,9 @@ const plants = [
   {
     id: 37,
     name: "Turmeric",
-    heritageName: "iThumheriki",
+    heritageName: "Ithumheriki",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'iThumheriki'. Native to South Asia; deeply embedded in Indian, Ayurvedic, and now global healing traditions. The Zululisation honours both its foreign origin and its adoption into our healing landscape.",
+      "No pre-colonial isiZulu name — Zululised as 'Ithumheriki'. Native to South Asia; deeply embedded in Indian, Ayurvedic, and now global healing traditions. The Zululisation honours both its foreign origin and its adoption into our healing landscape.",
     scientific: "Curcuma longa",
     type: "Herbs/Roots",
     category: "Immune",
@@ -1619,12 +1596,11 @@ const plants = [
     habitat: "Tropical climates with rich, moist soil and partial shade",
     image: "images/turmeric.webp",
     description:
-      "iThumheriki is the 'Golden Healer.' Its deep orange root contains curcumin, one of the most studied natural anti-inflammatory compounds on earth.",
+      "Ithumheriki is the 'Golden Healer.' Its deep orange root contains curcumin, one of the most studied natural anti-inflammatory compounds on earth.",
     physical: [
       "Systemic Anti-Inflammatory: Reduces chronic inflammation that underlies arthritis, heart disease, and gut disorders.",
       "Liver Protection: Supports the liver in neutralising toxins and producing bile.",
       "Immune Activator: Stimulates the production of immune cells and acts as a natural antibiotic.",
-      "Joint & Arthritis Relief: Multiple clinical trials show turmeric extract can ease knee osteoarthritis pain and stiffness, with one trial finding it as effective as a common painkiller over six weeks.",
     ],
     preparation: [
       "The Golden Milk: Warm 1 tsp of turmeric powder in milk (dairy or plant-based) with black pepper and honey. The black pepper increases absorption by approximately 2000% — always combine them.",
@@ -1656,9 +1632,9 @@ const plants = [
   {
     id: 38,
     name: "Chamomile",
-    heritageName: "iKhamomayili",
+    heritageName: "Ikhamomayili",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'iKhamomayili'. Native to Europe and Western Asia; introduced to South Africa through Dutch and British settlement. The word 'chamomile' comes from the Greek 'khamai melon' meaning 'earth apple' — named for its gentle, apple-like scent.",
+      "No pre-colonial isiZulu name — Zululised as 'Ikhamomayili'. Native to Europe and Western Asia; introduced to South Africa through Dutch and British settlement. The word 'chamomile' comes from the Greek 'khamai melon' meaning 'earth apple' — named for its gentle, apple-like scent.",
     scientific: "Matricaria chamomilla",
     type: "Herbs",
     category: "Digestive",
@@ -1666,7 +1642,7 @@ const plants = [
     habitat: "Open fields and dry meadows; easily grown from seed",
     image: "images/chamomile.webp",
     description:
-      "iKhamomayili is the 'Mother's Herb.' Its soft, apple-scented flowers are one of the gentlest yet most effective remedies for calming the nervous system and the digestive tract.",
+      "Ikhamomayili is the 'Mother's Herb.' Its soft, apple-scented flowers are one of the gentlest yet most effective remedies for calming the nervous system and the digestive tract.",
     physical: [
       "Digestive Calm: Relieves cramping, gas, and irritable bowel symptoms by relaxing gut muscles.",
       "Sleep Support: Binds to the same receptors as mild sedatives to promote natural, restful sleep.",
@@ -1700,9 +1676,9 @@ const plants = [
   {
     id: 39,
     name: "Lemongrass",
-    heritageName: "uTshani belamula",
+    heritageName: "Utshani belamula",
     zuluNote:
-      "Descriptive isiZulu name — 'uTshani belamula' means 'lemon grass.' Confirmed in your own reference table. A naturally descriptive Zulu naming, combining 'utshani' (grass) with 'belamula' (of lemon), following the same pattern as other descriptive plant names in isiZulu.",
+      "Descriptive isiZulu name — 'Utshani belamula' means 'lemon grass.' Confirmed in your own reference table. A naturally descriptive Zulu naming, combining 'utshani' (grass) with 'belamula' (of lemon), following the same pattern as other descriptive plant names in isiZulu.",
     scientific: "Cymbopogon citratus",
     type: "Herbs",
     category: "Digestive",
@@ -1711,12 +1687,11 @@ const plants = [
       "Tropical climates; grows in dense clumps and thrives in KZN gardens",
     image: "images/lemongrass.webp",
     description:
-      "uTshani belamula is the 'Refreshing Cleanser.' Its bright, citrus scent cuts through heaviness in both the body and the spirit, making it a beloved remedy across Africa and Asia.",
+      "Utshani belamula is the 'Refreshing Cleanser.' Its bright, citrus scent cuts through heaviness in both the body and the spirit, making it a beloved remedy across Africa and Asia.",
     physical: [
       "Digestive Tonic: Relieves bloating, stomach cramps, and indigestion.",
       "Fever Reducer: Promotes perspiration to help the body naturally lower a fever.",
       "Detox Support: Helps the liver and kidneys flush out waste products.",
-      "Blood Pressure Support: Human trials show lemongrass can lower blood pressure, including as an add-on to standard antihypertensive medication.",
     ],
     preparation: [
       "The Cleansing Tea: Crush 2 stalks and simmer in water for 10 minutes. Add ginger and honey for extra warmth.",
@@ -1747,9 +1722,9 @@ const plants = [
   {
     id: 40,
     name: "Cloves",
-    heritageName: "iKhilove",
+    heritageName: "Ikhilove",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'iKhilove'. Introduced through Indian Ocean spice trade routes.",
+      "No pre-colonial isiZulu name — Zululised as 'Ikhilove'. Introduced through Indian Ocean spice trade routes.",
     scientific: "Syzygium aromaticum",
     type: "Spices",
     category: "Immune",
@@ -1758,12 +1733,11 @@ const plants = [
       "Tropical coastal areas; harvested from flower buds before they open",
     image: "images/cloves.webp",
     description:
-      "iKhilove is the 'Pain Extinguisher.' One of the most powerful natural analgesics on earth, its main compound eugenol is still used in modern dentistry today.",
+      "Ikhilove is the 'Pain Extinguisher.' One of the most powerful natural analgesics on earth, its main compound eugenol is still used in modern dentistry today.",
     physical: [
       "Pain Relief: Eugenol numbs nerve pain, particularly effective for toothaches and headaches.",
       "Antifungal & Antibacterial: One of the strongest natural antimicrobials known.",
       "Digestive Warmth: Stimulates digestive enzymes to reduce nausea and bloating.",
-      "Blood Sugar Support: A human pilot study found clove extract lowered after-meal blood sugar in both healthy and prediabetic volunteers, alongside supporting animal research.",
     ],
     preparation: [
       "The Tooth Relief: Press one whole clove against an aching tooth or gum and hold for 5 minutes.",
@@ -1771,7 +1745,6 @@ const plants = [
       "The Scalp Circulation Oil: Infuse 6–8 whole cloves in 4 tablespoons of olive or coconut oil over low heat for 20 minutes. Strain and cool. Massage into the scalp to stimulate blood circulation to follicles and address scalp infections. The eugenol in cloves has documented antifungal and antibacterial properties. Use whole-clove infused oil only — never apply clove essential oil undiluted.",
       "⛔ CRITICAL: Concentrated clove essential oil is extremely caustic. Applied undiluted to skin or gums, it causes chemical burns and tissue damage. Only use whole cloves or heavily diluted clove preparations topically.",
       "⚠ Drug Interaction: Cloves have blood-thinning properties — people taking warfarin or blood-thinning medication should avoid therapeutic clove preparations.",
-      "⚠ If you take medication for diabetes, monitor your blood sugar closely with regular therapeutic use.",
     ],
     tips: "Spiritual Wisdom: Cloves represent 'Precision' — they teach us to identify exactly where the pain is and address it directly, rather than numbing everything around it.",
     rituals: [
@@ -1790,7 +1763,7 @@ const plants = [
   {
     id: 41,
     name: "Bay Leaf",
-    heritageName: "i-Bay Leaf",
+    heritageName: "I-Bay Leaf",
     zuluNote:
       "No pre-colonial isiZulu name — referred to by the English name 'Bay Leaf' as noted in the reference table. A Mediterranean herb with no Zulu adaptation in common use yet.",
 
@@ -1802,7 +1775,7 @@ const plants = [
       "Warm, sheltered gardens; can grow into a large shrub or small tree",
     image: "images/bay-leaf.webp",
     description:
-      "i-Bay Leaf is the 'Herb of Victory.' Worn by ancient champions and healers alike, it is a deeply aromatic leaf that steadies digestion and fortifies the nervous system.",
+      "I-Bay Leaf is the 'Herb of Victory.' Worn by ancient champions and healers alike, it is a deeply aromatic leaf that steadies digestion and fortifies the nervous system.",
     physical: [
       "Digestive Aid: Stimulates digestive enzymes and reduces gas and bloating after meals.",
       "Blood Sugar Support: Compounds in bay leaves help improve insulin function.",
@@ -1834,7 +1807,7 @@ const plants = [
   {
     id: 42,
     name: "Oregano",
-    heritageName: "i-Oregano",
+    heritageName: "I-Oregano",
     zuluNote:
       "No pre-colonial isiZulu name — referred to by the common name 'Oregano'. No widely used Zulu phonetic adaptation exists yet.",
     scientific: "Origanum vulgare",
@@ -1844,7 +1817,7 @@ const plants = [
     habitat: "Dry, rocky soils in full sun; very hardy and easy to grow",
     image: "images/oregano.webp",
     description:
-      "i-Oregano is the 'Mountain Guardian.' Far more than a cooking herb, its oil is one of the most potent natural antimicrobials available, used to fight infections from the inside out.",
+      "I-Oregano is the 'Mountain Guardian.' Far more than a cooking herb, its oil is one of the most potent natural antimicrobials available, used to fight infections from the inside out.",
     physical: [
       "Powerful Antimicrobial: Contains carvacrol and thymol, which fight bacteria, viruses, and fungi.",
       "Respiratory Support: Helps break up mucus and soothe bronchial inflammation during infections.",
@@ -1890,7 +1863,6 @@ const plants = [
       "Antioxidant Rich: High in EGCG catechins that protect cells from oxidative damage and reduce cancer risk.",
       "Brain Support: L-theanine combined with natural caffeine improves focus and mood without anxiety.",
       "Metabolic Aid: Supports healthy weight by boosting fat oxidation and improving insulin sensitivity.",
-      "Cardiovascular Support: Meta-analyses of clinical trials show green tea catechins modestly lower blood pressure and LDL ('bad') cholesterol, with population studies linking regular drinkers to lower cardiovascular mortality.",
     ],
     preparation: [
       "The Mindful Cup: Steep 1 tsp of loose leaves in water at 80°C (not boiling) for 2–3 minutes. Boiling water destroys the delicate catechins.",
@@ -1933,16 +1905,12 @@ const plants = [
       "Bone Health: Rich in calcium, manganese, and fluoride to support strong bones and teeth.",
       "Allergy Relief: Contains quercetin and bioflavonoids that act as natural antihistamines — evidence is primarily from in vitro and animal studies; human clinical trials are limited but growing.",
       "Skin Soothing: Applied as a cooled tea rinse, it soothes eczema, rosacea, and sunburn. The unique aspalathin compound provides antioxidant protection against UV-induced oxidative stress in skin cells.",
-      "Blood Sugar Support: Aspalathin, a rare antioxidant found in no other plant, has been shown in South African research (Stellenbosch University, the SA Medical Research Council) to improve glucose uptake and insulin secretion, helping stabilise blood sugar. Evidence is strongest in animal studies, with human research still growing.",
-      "Digestive Ease: A traditional South African remedy for colic, stomach cramps, and digestive upset in both adults and infants.",
     ],
     preparation: [
-      "The Daily Brew: Steep 1 bag or 1 tsp of loose rooibos in boiling water for 5–7 minutes. Completely safe for all ages including infants, and traditionally given to soothe colic and stomach cramps in babies, one of the few caffeine-free teas confirmed safe for this.",
+      "The Daily Brew: Steep 1 bag or 1 tsp of loose rooibos in boiling water for 5–7 minutes. Completely safe for all ages including infants — one of the few caffeine-free teas confirmed safe for babies.",
       "The Skin Soothing Rinse: Brew a strong batch of rooibos, cool completely, and apply as a facial wash, body rinse, or compress on eczema, sunburn, or irritated skin. The aspalathin and nothofagin compounds provide gentle anti-inflammatory and antioxidant relief — increasingly featured in South African cosmeceutical products.",
       "The Scalp & Hair Rinse: Use cooled rooibos tea as a final hair rinse after washing. The antioxidants nourish the scalp, the tannins strengthen hair fibres, and the anti-inflammatory compounds soothe irritated scalps. A gentle, all-ages hair tonic.",
       "⚠ Note: Most evidence for rooibos health benefits beyond basic antioxidant activity is preclinical — large-scale human trials are still limited.",
-      "⚠ For infant colic, use a weak, well-cooled brew and check with a paediatrician first, especially for very young babies.",
-      "⚠ If you take medication for diabetes, monitor your blood sugar closely with regular or concentrated use.",
     ],
     tips: "Spiritual Wisdom: Rooibos represents 'Belonging' — it grows nowhere else on earth. It reminds us that we are each rooted in a specific place and people, and that this rootedness is our greatest gift.",
     rituals: [
@@ -1961,9 +1929,9 @@ const plants = [
   {
     id: 45,
     name: "Buchu",
-    heritageName: "iBhukhu",
+    heritageName: "Ibhukhu",
     zuluNote:
-      "Adapted from the Khoi word — 'iBhukhu' is the Zulu adoption of the Khoikhoi name. Buchu is one of South Africa's oldest documented medicines, predating colonial record-keeping by centuries.",
+      "Adapted from the Khoi word — 'Ibhukhu' is the Zulu adoption of the Khoikhoi name. Buchu is one of South Africa's oldest documented medicines, predating colonial record-keeping by centuries.",
     scientific: "Agathosma betulina",
     type: "Herbs",
     category: "Digestive",
@@ -1971,7 +1939,7 @@ const plants = [
     habitat: "Rocky mountain fynbos; endemic to the Cape Fold Mountains",
     image: "images/buchu.webp",
     description:
-      "iBhukhu is the 'Cape Healer.' One of South Africa's most treasured indigenous medicines, used by the Khoikhoi and San peoples for centuries to treat the gut, the kidneys, and wounds.",
+      "Ibhukhu is the 'Cape Healer.' One of South Africa's most treasured indigenous medicines, used by the Khoikhoi and San peoples for centuries to treat the gut, the kidneys, and wounds.",
     physical: [
       "Urinary Tract Health: A powerful antiseptic for the bladder and kidneys, clearing infections.",
       "Digestive Tonic: Relieves heartburn, indigestion, and intestinal cramps.",
@@ -2002,9 +1970,9 @@ const plants = [
   {
     id: 46,
     name: "Devil's Claw",
-    heritageName: "uZipho luka-develi",
+    heritageName: "Uzipho luka-develi",
     zuluNote:
-      "Descriptive isiZulu name — 'uZipho luka-develi' is a direct translation of 'Devil's Claw.' No pre-colonial Zulu name is widely documented as this is primarily a Kalahari plant.",
+      "Descriptive isiZulu name — 'Uzipho luka-develi' is a direct translation of 'Devil's Claw.' No pre-colonial Zulu name is widely documented as this is primarily a Kalahari plant.",
     scientific: "Harpagophytum procumbens",
     type: "Herbs",
     category: "Immune",
@@ -2012,7 +1980,7 @@ const plants = [
     habitat: "Sandy, arid soils of the Kalahari and Namib regions",
     image: "images/devils-claw.webp",
     description:
-      "uZipho luka-develi is the 'Desert Warrior.' Named for its fierce, hook-covered fruit, this root from the Kalahari is one of Africa's most powerful natural pain relievers.",
+      "Uzipho luka-develi is the 'Desert Warrior.' Named for its fierce, hook-covered fruit, this root from the Kalahari is one of Africa's most powerful natural pain relievers.",
     physical: [
       "Joint Pain Relief: Contains harpagoside, a compound clinically shown to reduce arthritis and back pain.",
       "Anti-Inflammatory: Comparable to some pharmaceutical anti-inflammatories without the side effects.",
@@ -2042,9 +2010,9 @@ const plants = [
   {
     id: 47,
     name: "Calendula",
-    heritageName: "iKalenda",
+    heritageName: "Ikalenda",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'iKalenda'. A clean phonetic adaptation following natural Zulu word patterns.",
+      "No pre-colonial isiZulu name — Zululised as 'Ikalenda'. A clean phonetic adaptation following natural Zulu word patterns.",
     scientific: "Calendula officinalis",
     type: "Plants/Flowers",
     category: "Skin",
@@ -2053,7 +2021,7 @@ const plants = [
       "Cool, sunny garden beds; one of the easiest flowers to grow from seed",
     image: "images/calendula.webp",
     description:
-      "iKalenda is the 'Sun Flower of Healing.' Its warm, golden petals mirror the sun's energy and are used to bring light to the skin and soothe the body's most sensitive tissues.",
+      "Ikalenda is the 'Sun Flower of Healing.' Its warm, golden petals mirror the sun's energy and are used to bring light to the skin and soothe the body's most sensitive tissues.",
     physical: [
       "Wound Healing: Accelerates the repair of cuts, burns, and cracked skin by stimulating new cell growth.",
       "Anti-Fungal: Effective against common skin fungal infections including athlete's foot.",
@@ -2083,9 +2051,9 @@ const plants = [
   {
     id: 48,
     name: "Elderflower",
-    heritageName: "i-Elda",
+    heritageName: "Ielda",
     zuluNote:
-      "No pre-colonial isiZulu name — Zululised as 'i-Elda'. Not indigenous to South Africa; introduced through European settlement. No widely used Zulu adaptation exists beyond this.",
+      "No pre-colonial isiZulu name — Zululised as 'Ielda'. Not indigenous to South Africa; introduced through European settlement. No widely used Zulu adaptation exists beyond this.",
     scientific: "Sambucus nigra",
     type: "Trees",
     category: "Respiratory",
@@ -2093,7 +2061,7 @@ const plants = [
     habitat: "Hedgerows, woodland edges, and damp, nutrient-rich soils",
     image: "images/elderflower.webp",
     description:
-      "i-Elda is the 'Elder of the Medicine Chest.' For centuries across Europe and Africa, almost every part of this tree has served as medicine — from fever to flu to deep grief.",
+      "Ielda is the 'Elder of the Medicine Chest.' For centuries across Europe and Africa, almost every part of this tree has served as medicine — from fever to flu to deep grief.",
     physical: [
       "Immune Shield: Elderberry (the cooked fruit) contains anthocyanins that reduce the duration and severity of flu.",
       "Fever Support: The flowers promote perspiration to help the body break a fever naturally.",
@@ -2124,9 +2092,9 @@ const plants = [
   {
     id: 49,
     name: "Stinging Nettle",
-    heritageName: "uHlaba",
+    heritageName: "Uhlaba",
     zuluNote:
-      "No confirmed pre-colonial isiZulu name — 'uHlaba' is an approximate Zulu term sometimes used for thorny or stinging plants. Stinging nettle is not indigenous to southern Africa. Use 'uHlaba' as a descriptive association rather than a formal heritage name.",
+      "No confirmed pre-colonial isiZulu name — 'Uhlaba' is an approximate Zulu term sometimes used for thorny or stinging plants. Stinging nettle is not indigenous to southern Africa. Use 'Uhlaba' as a descriptive association rather than a formal heritage name.",
     scientific: "Urtica dioica",
     type: "Herbs",
     category: "Immune",
@@ -2135,12 +2103,11 @@ const plants = [
       "Nitrogen-rich soils near water, compost heaps, and disturbed ground",
     image: "images/nettle.webp",
     description:
-      "uHlaba is the 'Fierce Nourisher.' Despite its sting, few plants on earth are as densely packed with minerals. Once cooked or dried, the sting disappears and leaves behind pure medicine.",
+      "Uhlaba is the 'Fierce Nourisher.' Despite its sting, few plants on earth are as densely packed with minerals. Once cooked or dried, the sting disappears and leaves behind pure medicine.",
     physical: [
       "Iron & Mineral Rich: One of the best plant sources of iron, calcium, and magnesium — excellent for anaemia.",
       "Allergy Relief: Acts as a natural antihistamine to reduce hay fever and seasonal allergic responses.",
       "Prostate Health: Traditionally used to reduce symptoms of benign prostatic hyperplasia.",
-      "Blood Sugar Support: Human trials show nettle extract can lower blood sugar and improve blood lipids in type 2 diabetes, a traditional use noted since Avicenna.",
     ],
     preparation: [
       "The Mineral Tea: Steep 2 tsp of dried nettle in hot water for 10–15 minutes for a deeply nourishing daily tonic.",
@@ -2173,9 +2140,9 @@ const plants = [
   {
     id: 50,
     name: "Ashwagandha",
-    heritageName: "i-Ashwagandha",
+    heritageName: "I-Ashwagandha",
     zuluNote:
-      "No isiZulu name exists — 'i-Ashwagandha' is used directly from the Sanskrit. This plant is indigenous to India and North Africa, not southern Africa. The Sanskrit name means 'strength of the horse' — a meaning that translates powerfully across cultures.",
+      "No isiZulu name exists — 'I-Ashwagandha' is used directly from the Sanskrit. This plant is indigenous to India and North Africa, not southern Africa. The Sanskrit name means 'strength of the horse' — a meaning that translates powerfully across cultures.",
     scientific: "Withania somnifera",
     type: "Herbs/Roots",
     category: "Spiritual",
@@ -2183,12 +2150,11 @@ const plants = [
     habitat: "Dry, stony soils in warm climates; related to the wild tomatillo",
     image: "images/ashwagandha.webp",
     description:
-      "i-Ashwagandha is the 'Strength of the Horse.' Its name in Sanskrit means exactly that — and it delivers, rebuilding depleted energy, calming the overwhelmed mind, and restoring vitality at the root level.",
+      "I-Ashwagandha is the 'Strength of the Horse.' Its name in Sanskrit means exactly that — and it delivers, rebuilding depleted energy, calming the overwhelmed mind, and restoring vitality at the root level.",
     physical: [
       "Adaptogenic: Helps the body regulate cortisol levels, reducing the physical impact of chronic stress.",
       "Thyroid Support: Studied for its ability to support underactive thyroid function.",
       "Deep Sleep: Promotes restorative, non-anxious sleep by calming an overactive nervous system.",
-      "Blood Sugar Support: A review of clinical studies in people with diabetes found ashwagandha significantly improved blood sugar, HbA1c, and cholesterol levels.",
     ],
     preparation: [
       "The Strength Tonic: Stir 1 tsp of powdered root into warm milk with honey and a pinch of cinnamon before bed.",
@@ -2197,7 +2163,6 @@ const plants = [
       "⛔ Drug Interactions: Ashwagandha has significant interactions with thyroid medications (can enhance thyroid hormone production — dangerous if on thyroid drugs), immunosuppressants, sedatives, and benzodiazepines. Always consult your healthcare provider before use if on any prescription medication.",
       "⚠ Avoid during pregnancy — ashwagandha has been used as an abortifacient in high doses in traditional practice.",
       "⚠ Rare cases of liver toxicity have been reported with high-dose ashwagandha supplements — use standardised, quality products and do not exceed recommended doses.",
-      "⚠ If you take medication for diabetes, monitor your blood sugar closely with regular use.",
     ],
     tips: "Spiritual Wisdom: Ashwagandha represents 'Restoration' — it speaks to those who have given everything and have nothing left. It says: rest, rebuild, and rise again.",
     rituals: [
@@ -2222,9 +2187,9 @@ const plants = [
   {
     id: 51,
     name: "Echinacea",
-    heritageName: "i-Echinacea",
+    heritageName: "I-Echinacea",
     zuluNote:
-      "No isiZulu name exists — 'i-Echinacea' is used directly from the Latin/Greek. This plant is indigenous to North America and was used ceremonially by many Native American nations as an offering to strengthen prayers and rituals.",
+      "No isiZulu name exists — 'I-Echinacea' is used directly from the Latin/Greek. This plant is indigenous to North America and was used ceremonially by many Native American nations as an offering to strengthen prayers and rituals.",
     scientific: "Echinacea purpurea",
     type: "Herbs",
     category: "Immune",
@@ -2232,7 +2197,7 @@ const plants = [
     habitat: "Open woodlands and prairies; grows well in sunny garden beds",
     image: "images/echinacea.webp",
     description:
-      "i-Echinacea is the 'Immune Sentinel.' Used for centuries by Native American peoples, it is one of the most widely researched herbs for activating the body's own defence systems at the first sign of illness.",
+      "I-Echinacea is the 'Immune Sentinel.' Used for centuries by Native American peoples, it is one of the most widely researched herbs for activating the body's own defence systems at the first sign of illness.",
     physical: [
       "Immune Activation: Stimulates the production of white blood cells, shortening the duration of colds and flu.",
       "Lymphatic Support: Helps move and clear congestion in the lymph nodes of the throat and neck.",
@@ -2270,9 +2235,9 @@ const plants = [
   {
     id: 52,
     name: "Plantain Leaf",
-    heritageName: "uMfuka",
+    heritageName: "Umfuka",
     zuluNote:
-      "No confirmed formal isiZulu name — 'uMfuka' is an approximate descriptive association. Plantain is not indigenous to southern Africa but has naturalised widely. It is sometimes referred to descriptively in Zulu as 'indlela' (the path plant) because it grows where people walk.",
+      "No confirmed formal isiZulu name — 'Umfuka' is an approximate descriptive association. Plantain is not indigenous to southern Africa but has naturalised widely. It is sometimes referred to descriptively in Zulu as 'indlela' (the path plant) because it grows where people walk.",
     scientific: "Plantago major",
     type: "Herbs",
     category: "Skin",
@@ -2280,7 +2245,7 @@ const plants = [
     habitat: "Compacted soils, footpaths, and lawns — grows wherever feet walk",
     image: "images/plantain-leaf.webp",
     description:
-      "uMfuka is the 'Footpath Healer.' One of the most overlooked medicines on earth, it grows exactly where it is needed most — underfoot, in the places where people gather and move.",
+      "Umfuka is the 'Footpath Healer.' One of the most overlooked medicines on earth, it grows exactly where it is needed most — underfoot, in the places where people gather and move.",
     physical: [
       "Wound First Aid: Crushed leaves applied directly to a cut, sting, or bite draw out toxins and support clotting. A clinical study found Plantago major ointment comparable to silver sulfadiazine for second-degree burn wound healing — significant evidence for an often-dismissed garden plant.",
       "Chest Support: The tea is a gentle expectorant that soothes dry, irritated lungs and bronchial tubes.",
@@ -2315,9 +2280,9 @@ const plants = [
   {
     id: 53,
     name: "Lemon Balm",
-    heritageName: "Ibhalsamu leli-Lemon",
+    heritageName: "Ibhalsamu leli-lemon",
     zuluNote:
-      "No isiZulu name exists — 'Ibhalsamu leli-Lemon' is a descriptive Zululised phrase meaning 'lemon balm.' Not indigenous to southern Africa. Its botanical name Melissa comes from the Greek word for honey bee — the flowers are beloved by bees.",
+      "No isiZulu name exists — 'Ibhalsamu leli-lemon' is a descriptive Zululised phrase meaning 'lemon balm.' Not indigenous to southern Africa. Its botanical name Melissa comes from the Greek word for honey bee — the flowers are beloved by bees.",
     scientific: "Melissa officinalis",
     type: "Herbs",
     category: "Spiritual",
@@ -2326,7 +2291,7 @@ const plants = [
       "Moist, partially shaded garden beds; spreads easily once established",
     image: "images/lemon-balm.webp",
     description:
-      "Ibhalsamu leli-Lemon is the 'Heart Herb.' Its gentle lemon scent works directly on the nervous system and the heart, easing anxiety, lifting grief, and restoring a sense of lightness to the spirit.",
+      "Ibhalsamu leli-lemon is the 'Heart Herb.' Its gentle lemon scent works directly on the nervous system and the heart, easing anxiety, lifting grief, and restoring a sense of lightness to the spirit.",
     physical: [
       "Anxiety Relief: Reduces cortisol and calms an overactive nervous system without causing drowsiness.",
       "Cold Sore Treatment: Contains rosmarinic acid which has been shown to inhibit the herpes simplex virus topically.",
@@ -2377,7 +2342,6 @@ const plants = [
       "Immune Powerhouse: Thymoquinone — its active compound — has potent antiviral, antibacterial, and studied anti-tumour properties in laboratory research.",
       "Respiratory Relief: Traditionally used to open airways in asthma and chronic bronchitis.",
       "Hormonal Balance: Studied for its potential to support thyroid and adrenal function.",
-      "Blood Pressure & Blood Sugar Support: Multiple meta-analyses of clinical trials confirm black seed can lower blood pressure and improve blood sugar and cholesterol in people with type 2 diabetes.",
     ],
     preparation: [
       "The Daily Tonic: Take half a teaspoon of cold-pressed black seed oil with honey each morning on an empty stomach.",
@@ -2409,9 +2373,9 @@ const plants = [
   {
     id: 55,
     name: "Yarrow",
-    heritageName: "iYaro",
+    heritageName: "Iyaro",
     zuluNote:
-      "No isiZulu name exists — 'iYaro' is a phonetic Zululised adaptation. Yarrow is not indigenous to southern Africa. Its name Achillea millefolium honours the Greek hero Achilles — making it one of the few plants whose common name, scientific name, and spiritual identity all tell the same story of a wounded warrior healed.",
+      "No isiZulu name exists — 'Iyaro' is a phonetic Zululised adaptation. Yarrow is not indigenous to southern Africa. Its name Achillea millefolium honours the Greek hero Achilles — making it one of the few plants whose common name, scientific name, and spiritual identity all tell the same story of a wounded warrior healed.",
     scientific: "Achillea millefolium",
     type: "Herbs",
     category: "Skin",
@@ -2419,7 +2383,7 @@ const plants = [
     habitat: "Open meadows, roadsides, and dry grasslands; extremely hardy",
     image: "images/yarrow.webp",
     description:
-      "iYaro is the 'Warrior's Wound Herb.' Named after the Greek hero Achilles who used it to stop the bleeding of his soldiers' wounds, it has been a battlefield and household remedy across every continent for thousands of years.",
+      "Iyaro is the 'Warrior's Wound Herb.' Named after the Greek hero Achilles who used it to stop the bleeding of his soldiers' wounds, it has been a battlefield and household remedy across every continent for thousands of years.",
     physical: [
       "Wound Closure: Applied directly to cuts to stop bleeding rapidly and prevent infection.",
       "Fever Management: Promotes perspiration to help the body work through a fever efficiently.",
@@ -2449,6 +2413,56 @@ const plants = [
         name: "The Marriage and Devotion Charm",
         method:
           "In European folk tradition, yarrow was given to newlyweds and placed over the marriage bed to ensure the couple remained together for at least seven years. Dry yarrow flowers and tie them with a red thread. Give them to someone you love, or place them where you sleep, as a symbol of committed, enduring devotion — the kind that stays not because it is easy, but because it is chosen.",
+      },
+    ],
+  },
+  {
+    id: 56,
+    name: "Devil's Thorn",
+    heritageName: "iNkunzana/e",
+    zuluNote:
+      "Community-confirmed isiZulu name, widely used across Zulu communities and also documented in the wider Nguni region. Also recorded regionally in northern KwaZulu-Natal as iHlwehlwa, the name this plant first entered the library under. Formal ethnobotanical catalogues of Zulu plant names remain incomplete, so a name's absence from older references does not make it any less real.",
+    scientific: "Sesamum senecioides (formerly Dicerocaryum senecioides)",
+    type: "Herbs",
+    category: "Hair",
+    origin: "Southern Africa",
+    habitat: "Disturbed, sandy soil and bare, red ground, especially in open grassland",
+    image: "images/devils-thorn.webp",
+    description:
+      "iNkunzana/e is a low, creeping herb whose crushed leaves lather into a natural soap. Treasured for generations as a gentle shampoo, it also carries a second, more guarded knowledge held by elder women around childbirth.",
+    physical: [
+      "Natural Shampoo: Crushed leaves and roots lather into a saponin-rich wash that cleans the scalp and softens the hair without stripping it.",
+      "Hair Growth Support: Long reputed to stimulate growth; laboratory research on its leaf compounds has since shown measurable hair growth effects.",
+      "Anti-inflammatory: Leaf extracts have shown genuine anti-inflammatory activity in scientific studies.",
+      "Traditional Food Source: The young leaves are eaten as a leafy vegetable in some communities.",
+      "Isihlambezo: One of the plants historically included in isihlambezo, herbal preparations taken by Zulu women in the final trimester of pregnancy to ease and hasten labour, a common and generations-old practice.",
+      "Community Reported: Practitioners and community members who have worked closely with this plant consistently report it easing a poor appetite, indigestion, menstrual cramps, and supporting women through the postpartum period. It is also valued for cleansing the kidneys.",
+      "Joint & Bone Relief: Widely reported for arthritis, rheumatism, and joint pain, using the root, and the dried, powdered thorns.",
+      "Gastric Relief: Said to numb the pain of gastric acid and ulcers. It is not considered a cure.",
+    ],
+    preparation: [
+      "The Lather: Crush a handful of fresh leaves with a little water and salt, and work between the hands until a natural, soapy lather forms. Massage into the scalp and hair, then rinse.",
+      "The Cold Infusion: Leaves soaked in water and kept chilled in the fridge, much like okra water, and drunk daily.",
+      "The Root and Thorn Powder: For arthritis and rheumatism, the root is used, or the dried thorns, ground into a fine powder.",
+      "⚠ Isihlambezo Caution: This is specialised knowledge passed between women and traditional healers, prepared and dosed by those experienced with it, never a general home remedy. Medical practitioners frequently caution against isihlambezo use, citing the risk of overly strong uterine contractions when the dose isn't guided by someone experienced. If pregnant, this is a decision to make with full information, ideally alongside both a healthcare provider and someone who carries the traditional knowledge.",
+      "⚠ If you have high blood pressure or a heart condition, consult your doctor before use.",
+    ],
+    tips: "Spiritual Wisdom: Inkunzana carries the spirit of the young bull who will not back down; what is sent against you finds nothing to hold onto, and slides away.",
+    rituals: [
+      {
+        name: "The Intelezi Shield",
+        method:
+          "Inkunzana is among the plants most trusted for intelezi, protective medicine prepared to ward off ubuthakathi and ill intent. Its thorned seed pods, built like small horns, are spiritually understood to fight back the way they look built to fight.",
+      },
+      {
+        name: "The Umlaza Wash",
+        method:
+          "Crush a handful of fresh leaves into a bucket of cold water by hand until it turns thick, foamy, and slippery. Using a small bundle of leafy twigs, often cut from a protective tree like Umsintsi or Umnuthu, sprinkle the water into every corner, doorway, and window of the home, a practice known as ukuchela or ukufafaza. Then pour what remains along the threshold and the gate, the boundary fortification known as ukubethelela. What conflict or illness left behind is stripped away, and the slipperiness left in its place means nothing bad can stick again. The same water resets a new tool, vehicle, or garment before it's trusted.",
+      },
+      {
+        name: "The Isithunzi Rite",
+        method:
+          "Because Inkunzana carries the bearing of a young bull unwilling to back down, it is sought before court cases and disputes, to steady a person's presence and authority before they have to stand their ground.",
       },
     ],
   },
