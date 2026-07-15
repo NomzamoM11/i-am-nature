@@ -2427,7 +2427,7 @@ const plants = [
     category: "Hair",
     origin: "Southern Africa",
     habitat: "Disturbed, sandy soil and bare, red ground, especially in open grassland",
-    image: "images/Devils-Thorn.webp",
+    image: "images/Devil's-Thorn.webp",
     description:
       "iNkunzana/e is a low, creeping herb whose crushed leaves lather into a natural soap. Treasured for generations as a gentle shampoo, it also carries a second, more guarded knowledge held by elder women around childbirth.",
     physical: [
